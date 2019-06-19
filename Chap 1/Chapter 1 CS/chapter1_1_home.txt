@@ -1,6 +1,5 @@
-*comment Define all attributes here
-*temp sergeant "Sergeant Kosnik"
-*temp kill_civilian 0
+*comment Define all temp variables here
+*finish
 [b]Chapter 1: Home Sweet Home[/b]
 *line_break
 *line_break
@@ -14,23 +13,10 @@
 *line_break
 *line_break
 Great. Running out of water and ammo, just what you needed. The men aren't enthused either, cowering as another hail of bullets send fragments of brick and mortar flying. ${sergeant}, a tough veteran who had seen more than his fair share of combat, turns to address you.
-*fake_choice
-	#Sir!
-		*set gender "male"
-		*set playersirmdm "sir"
-		*set playerheshe "he"
-		*set playerhisher "his"
-		*set playerhimher "him"
-		"Sir! Enemy across the street, light machine gun spotted! No go! We should retreat!"
-	#Madam!
-		*set gender "female"
-		*set playersirmdm "mdm"
-		*set playerheshe "she"
-		*set playerhisher "her"
-		*set playerhimher "her"
-		"Madam! Enemy across the street, light machine gun spotted! No go! We should retreat!"
 *line_break
 *line_break
+"Commander! Enemy across the street, light machine gun spotted! No go! We should retreat!"
+*page_break
 Glancing around, you realize how exposed your men are. The enemy has the high ground advantage, and it's going to be difficult getting across the street under fire.
 *line_break
 *line_break
@@ -192,7 +178,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		You kick open the door and charge into the building with rifle at the ready, your men right behind you. A frightened face spins around, blackened by soot and smoke, screaming words you cannot hear.
 		*fake_choice
 			#Shoot!!!
-				*set kill_civilian 1
+				*set chap1_kill_civilian 1
 				*set light_rounds -1
 				[b]Du-du-du-dum!!![/b]
 				*line_break
@@ -228,7 +214,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 				*goto 3_2_firefight
 				
 			#Don't shoot!!!
-				*set kill_civilian 0
+				*set chap1_kill_civilian 0
 				"Hands up! Don't move or I'll shoot!!" You scream, gesturing your rifle violently at the helpless man, who whimpers in meek compliance and raises his hands above his head. It's clear that he is just a civilian, his gaunt unkempt face a portrait of starvation and fear.
 				*line_break
 				*line_break
@@ -262,7 +248,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		${sergeant} produces a small mirror, standard issue tactical. You point your rifle at the window as he lifts the mirror just beyond the edge of the window sill. You count just one man in the room, his back facing the window. Good. They haven't detected you yet.
 		*fake_choice
 			#Shoot him before he spots you!
-				*set kill_civilian 1
+				*set chap1_kill_civilian 1
 				*set light_rounds -1
 				Stealthily raising your rifle above the sill, you squeeze the trigger, spraying blindly.
 				*line_break
@@ -295,7 +281,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 					*goto 3_3_firefight
 			#Sneak in via the window and try to capture him
 				*label 2_1_sneak_in
-				*set kill_civilian 0
+				*set chap1_kill_civilian 0
 				"Cover me. I'm going in." You whisper to ${sergeant}, motioning at the window, he answers with a solemn nod.
 				*line_break
 				*line_break
@@ -318,7 +304,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 				*goto 3_2_firefight
 			#Tap the window and try to communicate with him
 				*label 2_1_communicate
-				*set kill_civilian 0
+				*set chap1_kill_civilian 0
 				Tightening your grip on the trigger with your dominant hand, you give the window a series of short, hard raps.
 				*line_break
 				*line_break

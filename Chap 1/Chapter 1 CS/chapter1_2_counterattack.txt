@@ -1,1 +1,108 @@
-*temp sergeant "Sergeant Kosnik"
+*comment Define all temp variables here
+*temp counter_attack_score 0
+As the men go about securing the building, you breathe a sigh of relief. The day had begun like most others - with the higher ups calling for a "grand push". Most days all it meant was firing a few shots in the general direction of the enemy, not that anyone knew where they were, given the ever changing battle lines.
+*line_break
+*line_break
+But today's assault was far more determined, and the high command had ordered for a push into the town, whatever the costs. Many good men and women had died in the fighting on both sides. Even now, the sickening smell of death lingers about the air, brusquely burning your nostrils. At least the fighting is all over for now.
+*line_break
+*line_break
+You lean against the window, peering out at the smoldering burnt out husks of abandoned schools and destroyed homes. Even amongst the wreckage, a few civilians mill about, scavenging bits and pieces of whatever had not already been looted.
+*page_break
+[b]Vrrrrr…. Vrrrrmmmmm[/b]
+*line_break
+*line_break
+What the hell is that noise? The faint sound of engines and metal drifts across the town.
+*line_break
+*line_break
+Peering carefully out of the window, you spot a retrofitted truck, flanked by two rows of soldiers, but it's hard to make out the exact number from this distance. They had fitted on steel plates over the truck and placed a large cannon atop, one that could possibly shred a house in seconds. Fucking hell. Just when you thought it was over.
+*line_break
+*line_break
+At least they don't seem to be in a rush. And the enemy doesn’t seem to be advancing directly towards your location. Perhaps they still don't know that the town has fallen yet. Not that you would want to take a risk, given that the enemy is headed directly towards you, with a tank to boot.
+*line_break
+*line_break
+"Fucking hell. A tank, of all things, now?” ${sergeant} spits on the floor while fumbling with a spare magazine before slapping it into place within the rifle’s housing. "We're so fucked."
+*line_break
+*line_break
+“Commander, what now?” The men turn to you, waiting on your order.
+*fake_choice
+	*selectable_if (rpg_ammo > 0) #Hold your position and use the RPG to take out the tank!
+		“Prepare the RPG! Take out the truck first and we can pick off the rest after!” The Rocket Propelled Grenade will be your best bet against the impending threat posed by the oncoming armored vehicle. Even then, RPGs aren't the most accurate, but one can only hope. 		As it is, your men wouldn’t stand an iota of a chance if you engage the enemy directly.
+		*line_break
+		*line_break
+		“Roger that, commander!” quips the gunner, his voice laced with undertones of excitement and eagerness as he unslings the over-sized barrel from his shoulders. 
+		*line_break
+		*line_break
+		Glancing into the horizon, the looming silhouette of the tank draws closer with every passing minute, and soon they’ll be close enough to blast your cover to smithereens. 		Yet, the distance could prove decisive, and you doubt your gunner nailing the shot.
+		*line_break
+		*line_break
+		That said, taking the truck down would send them flying into a panic, and with the distance and cover, the platoon could possibly turn things around.
+		*line_break
+		*line_break
+		"Commander, we could fire a few shots to distract the enemy and draw them closer." ${sergeant} chimes in. "That way, we can get a sure shot."
+		*line_break
+		*line_break
+		The private spits. "And give away our location? Sergeant, I would very much like that turret to be turned away from us as it is."
+		*line_break
+		*line_break
+		"I don't hear any ideas from your little bitch mouth private."
+		*line_break
+		*line_break
+		"Well, we can wait and see what happens." The private hesitates. "		If they do get closer… We'll get them without exposing ourselves"
+		*line_break
+		*line_break
+		"Enough talk. Commander?"
+		*fake_choice
+			#Let the RPG fly! Any longer and we’re as good as dead
+				*set counter_attack_score +2
+				“Standby to fire!” You yell. As the gunner prepares to load the missile, you grab him by his shoulders, snapping his attention away from his task momentarily.
+				*line_break
+				*line_break
+				“We only have this one shot. Do not fuck this up.”	
+				*line_break
+				*line_break
+				The gunner gulps and nods compliantly, as an evident drop of sweat starts to trickle down from his forehead, a glistening streak amidst the dirt and camouflage strewn across his face.
+				*line_break
+				*line_break
+				Propping the weapon on the windowsill as an additional support, the gunner takes careful aim at the slowly encroaching tank.
+				*line_break
+				*line_break
+				“FIRE!!!”
+				*line_break
+				*line_break
+				The recoil of the heavy weapon slams the gunner backwards as the rocket sailed through the air towards the unsuspecting tank, leaving a trail of smoke in its wake. 
+				*line_break
+				*line_break
+				“Come on, come on….” you muttered under your breath, following the trajectory of the missile with an unrelenting stare.
+				*goto 4_1_1_rpg
+			#Fire a few shots at the enemy with your rifles to draw them closer, then blow that son of 	a bitch up
+				*set counter_attack_score +2
+				“Get ready to fire! On my command!” The gunner grunts in acknowledgement.
+				*line_break
+				*line_break
+				*label progress
+				You slowly take aim at one of the infantry units, your scope following his every movement. Making sure that your gunner is ready to fire at a moment’s notice, you gripped your trigger tighter and took a solitary shot.
+				Through your scope, the body of the soldier collapsed into the floor as the bullet lodged itself well within his chest. You quickly turn away from the windowsill, maintaining your cover. 
+				It seemed to work, you hear a few stray shots in the vicinity, their erraticness a sign that the enemy remains oblivious to your exact location.
+				Pressing your back against the wall, you take in a few ragged breaths as you hear the rumbling of the tank grows louder and louder. 
+				After a few moments, you turn around and sneak a peek through the window, careful not to expose too much of your head to the enemy. Sure enough, the tank was slowly making its way towards your vicinity with the foot soldiers breaking into a swift jog, clenching their rifles close to their chest.
+				You signal your gunner to take up position and wait for your orders. Propping the weapon on the windowsill as an additional support, the gunner took careful aim at the slowly encroaching tank. “Back blast check! Clear out!” 
+				“FIRE!!!”
+				The gunner tightened his grip on the trigger, and pulled. The recoil of the heavy weapon jerked the torso of the gunner backwards as the rocket sailed through the air towards the unsuspecting tank, leaving a trail of smoke in its wake. 
+				*goto 4_1_1_rpg
+			#Wait a little longer, it pays to be patient.
+				*set counter_attack_score +1
+				*set men -1
+				“Stand down, we’ll wait for the enemy to approach, then make the killing shot” You instructed your men to take up positions around the perimeter of the building, ready to assault the enemy once the RPG has been launched.
+				Time seemed to stretch on, minutes feel like hours, the constant low rumbling of the tank cutting through the stale air.
+
+				BOOOM!
+				The building rattled with an acute ferocity, sending a new cloud of dust erupting from the ceiling. 
+				“They’re fucking blowing everything up!” ${sergeant} yelled.
+				You barely have time to respond when another blast echoes to your right, this time a little too close for comfort as the adjacent wall shatters, and you raise your hand barely in time to block the rubble that was sent flying across the room.
+				Fuck, you didn’t count on the enemy launching a general attack on the area. If this keeps up, your platoon would be wiped out within minutes. You don’t have much of a choice anymore, an immediate counter-attack would be the best course of action.
+				“RPG launch, NOW NOW NOW!” You shouted at the top of your lungs, hoping that your gunner wasn’t too shaken up by the sudden assault. 
+				You turn to your left in time to register your gunner propping up the barrel of the RPG against a hole in the wall for support. “Back blast check! Clear out!” 
+				“What are you waiting for? An invite to the ball? FIRE!”
+				*goto 4_1_1_rpg
+	#Spread out and harass the enemy
+	#Approach and lay an ambush

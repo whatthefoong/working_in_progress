@@ -44,13 +44,14 @@
 *create nature 50
 *create tactics 50
 
-*comment renown/language
-*comment 0 for illiterate, 1 for spoken, 2 for spoken and written
+*comment renown & relationships
 *create renown 0
 
-*create astorin 0
-*create pugist 0
-*create belish 0
+*comment faction R/S
+*create MPRA 0
+*create LOM 0
+*create DFFM 0
+*create USS 0
 
 *comment game mechanics
 *create ending 0
@@ -87,18 +88,13 @@
 *create intronemesishisher "his"
 *create intronemesishimher "him"
 *create nemesis ""
+*create sergeant "Sergeant Kosnik"
 
 *comment NPCs R/S
 *create bestfriendrs 75
 
-*comment faction R/S
-*create MPRA 0
-*create LOM 0
-*create DFFM 0
-*create USS 0
-
 *comment events
-
+*create chap1_kill_civilian 0
 
 *comment achievements
 *comment save/load system
