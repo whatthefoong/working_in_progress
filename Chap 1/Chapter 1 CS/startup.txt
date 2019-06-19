@@ -1,0 +1,109 @@
+*title Sir Yes Sir!
+*author Foong Yi Zhuan @whatthefoong
+
+*scene_list
+	startup
+	chapter1_1_home
+	chapter1_2_counterattack
+	death
+	ending
+
+*comment character
+*create name "nobody"
+*create rank "2nd Lieutenant"
+*create age 18
+*create race ""
+*create background ""
+*create gender ""
+*create orientation "Straight"
+*create playersirmdm ""
+*create playerheshe ""
+*create playerhisher ""
+*create playerhimher ""
+*create dollars 100
+
+*comment key traits
+*create physical 5
+*create finesse 5
+*create intellect 5
+*create charm 5
+
+*comment specific traits
+*create demolitions 0
+*create driving 0
+*create engineering 0
+*create logistics 0
+*create marksmanship 0
+*create scouting 0
+*create strategy 0
+*create swimming 0
+
+*comment personality
+*create mind 50
+*create energy 50
+*create nature 50
+*create tactics 50
+
+*comment renown/language
+*comment 0 for illiterate, 1 for spoken, 2 for spoken and written
+*create renown 0
+
+*create astorin 0
+*create pugist 0
+*create belish 0
+
+*comment game mechanics
+*create ending 0
+
+*comment logistics
+*comment infantry level
+*create men 0
+*comment ammunition
+*create light_rounds 0
+*create heavy_rounds 0
+*comment explosives
+*create flash_bang 0
+*create smoke_grenade 0
+*create he_grenade 0
+*create rpg_ammo 0
+*create demolition_charge 0
+
+*comment bestfriend
+*create bestfriend "Pretty"
+*create bestfriendheshe "she"
+*create bestfriendhisher "her"
+*create bestfriendhimher "her"
+*create bestfriendbody ""
+*create bestfriendface ""
+*create bestfriendhair ""
+*create bestfriendhaircolour ""
+*create bestfriendeyecolour ""
+*create bestfriendnose ""
+*create bestfriendmouth ""
+
+*comment NPCs
+*create intronemesis "testnemesis"
+*create intronemesisheshe "he"
+*create intronemesishisher "his"
+*create intronemesishimher "him"
+*create nemesis ""
+
+*comment NPCs R/S
+*create bestfriendrs 75
+
+*comment faction R/S
+*create MPRA 0
+*create LOM 0
+*create DFFM 0
+*create USS 0
+
+*comment events
+
+
+*comment achievements
+*comment save/load system
+
+
+*comment *sm_init sir_yes_sir | 3
+*comment *sm_save 0 | false | Autosave - Startup
+*finish
