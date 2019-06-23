@@ -1,4 +1,3 @@
 *page_break
-You have died. again.
-and again. and again.
+You have died.
 *goto_scene ending
