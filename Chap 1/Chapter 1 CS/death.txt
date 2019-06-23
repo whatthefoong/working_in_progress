@@ -1,6 +1,4 @@
 *page_break
 You have died. again.
 and again
-gosh you suck
-holla
 *goto_scene ending
