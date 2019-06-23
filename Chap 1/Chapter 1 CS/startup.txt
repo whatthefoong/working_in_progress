@@ -1,5 +1,5 @@
 *title Sir Yes Sir!
-*author Foong Yi Zhuan @whatthefoong
+*author @whatthefoong
 
 *scene_list
 	startup
@@ -66,7 +66,7 @@
 *create flash_bang 0
 *create smoke_grenade 0
 *create he_grenade 0
-*create rpg_ammo 0
+*create rpg_ammo 1
 *create demolition_charge 0
 
 *comment bestfriend
