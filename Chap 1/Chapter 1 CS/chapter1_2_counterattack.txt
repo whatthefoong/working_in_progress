@@ -1,5 +1,5 @@
 *comment Define all temp variables here
-*temp counter_attack_score 2
+*temp counter_attack_score 0
 *temp truck_explode 0
 As the men go about securing the building, you breathe a sigh of relief. The day had begun like most others - with the higher ups calling for a "grand push". Most days all it meant was firing a few shots in the general direction of the enemy, not that anyone knew where they were, given the ever changing battle lines.
 *line_break
