@@ -1,4 +1,6 @@
 *comment Define all temp variables here
+*temp sergeant "Sergeant Kosnik"
+*temp kill_civilian 0
 [b]Chapter 1: Home Sweet Home[/b]
 *line_break
 *line_break
@@ -177,7 +179,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		You kick open the door and charge into the building with rifle at the ready, your men right behind you. A frightened face spins around, blackened by soot and smoke, screaming words you cannot hear.
 		*fake_choice
 			#Shoot!!!
-				*set chap1_kill_civilian 1
+				*set kill_civilian 1
 				*set light_rounds -1
 				[b]Du-du-du-dum!!![/b]
 				*line_break
@@ -192,7 +194,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 				*line_break
 				*line_break
 				"Bloody bastards. Putting their machine gun nests in civilian houses…" One of the men chimes in.
-				*page_break 
+				*page_break
 				"WATCH OUT!! GRENADE!!!" A dark metal chunk rolls down the stairs as ${sergeant} pushes you into the kitchen head first.
 				*label 2_11_grenade
 				*line_break
@@ -210,10 +212,10 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 				*line_break
 				*line_break
 				Still in your dazed state, your mind swims around desperately to try and regain control of your shell-shocked body.
-				*goto 3_2_firefight
+				*goto 3_1_firefight
 				
 			#Don't shoot!!!
-				*set chap1_kill_civilian 0
+				*set kill_civilian 0
 				"Hands up! Don't move or I'll shoot!!" You scream, gesturing your rifle violently at the helpless man, who whimpers in meek compliance and raises his hands above his head. It's clear that he is just a civilian, his gaunt unkempt face a portrait of starvation and fear.
 				*line_break
 				*line_break
@@ -247,7 +249,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		${sergeant} produces a small mirror, standard issue tactical. You point your rifle at the window as he lifts the mirror just beyond the edge of the window sill. You count just one man in the room, his back facing the window. Good. They haven't detected you yet.
 		*fake_choice
 			#Shoot him before he spots you!
-				*set chap1_kill_civilian 1
+				*set kill_civilian 1
 				*set light_rounds -1
 				Stealthily raising your rifle above the sill, you squeeze the trigger, spraying blindly.
 				*line_break
@@ -274,14 +276,11 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 				*line_break
 				*line_break
 				She rushes into the bare kitchen, pulling out a cleaver and rushing towards you
-				*if rpg_ammo = 1
-					*goto 3_1_firefight
-				*if rpg_ammo = 0
-					*goto 3_3_firefight
+				*goto 3_1_firefight
 			#Sneak in via the window and try to capture him
 				*label 2_1_sneak_in
-				*set chap1_kill_civilian 0
-				"Cover me. I'm going in." You whisper to ${sergeant}, motioning at the window, he answers with a solemn nod.
+				*set kill_civilian 0
+				"Cover me. I'm going in." You whisper to ${sergeant}, motioning at the window. He replies with a solemn nod.
 				*line_break
 				*line_break
 				Creeping up, you peek into the house, seeing the man kneeling on the ground in prayer. The house itself is plain and simple, a few hastily abandoned chairs surrounding an unfinished card game.
@@ -293,17 +292,22 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 				"I'M INNOCENT, I'M INNOCENT!!! Don't shoot please don't shoot please…" He whimpers, shock quickly turning to desperation as ${sergeant} hops up beside you with the rest of the men. He falls to his knees. "The rebels… upstairs… no choice… guns… innoce… please…"
 				*line_break
 				*line_break
-				The wretched man clings onto his knees, quaking with fear. The rest of the men quickly scan the room, clearing out the rest of the first floor and returning with a few half starved civilians, dressed in little more than tattered rags. "Wife, three kids. In the kitchen ${playersirmdm}."
+				The wretched man clings onto his knees, quaking with fear. The rest of your men quickly scan the room, clearing out the rest of the first floor and returning with a few half starved civilians, dressed in barely more than tattered rags. "Wife, three kids. In the kitchen ${playersirmdm}."
+				*label 2_2_result
 				*line_break
 				*line_break
-				"Shut the hell up soldier, do you want to personally inform the enemy that we're gathered for a fucking parade here?" ${sergeant} shoots him a dirty look, instantly shutting up the poor private. The family huddles in a corner as the man points up a flight of narrow stairs. Three. He mouths as he motions with his hand, or what was left of it, having been cleaved off at the wrist.
-				*line_break
-				*line_break
-				"I don't like the look of this ${playersirmdm}." ${sergeant} spits, rifle leveled and trained on the stairs.
-				*goto 3_2_firefight
+				*if rpg_ammo = 1 
+					"Shut the hell up soldier, do you want to personally inform the enemy that we're gathered for a fucking parade here?" ${sergeant} shoots him a dirty look, instantly shutting up the poor private. The family huddles in a corner as the man points up a flight of narrow stairs. Three. He mouths as he motions with his hand, or what was left of it, having been cleaved off at the wrist.
+					*line_break
+					*line_break
+					"I don't like the look of this ${playersirmdm}." ${sergeant} spits, rifle leveled and trained on the stairs.
+					*page_break
+					*goto 3_2_firefight
+				*if rpg_ammo = 0
+					*goto 3_4_story
 			#Tap the window and try to communicate with him
 				*label 2_1_communicate
-				*set chap1_kill_civilian 0
+				*set kill_civilian 0
 				Tightening your grip on the trigger with your dominant hand, you give the window a series of short, hard raps.
 				*line_break
 				*line_break
@@ -313,32 +317,29 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 				The man by the window jumped, visibly startled by the sudden stimulus. He spins around, and you immediately notice the deep-seated fear embedded in his eyes. Unarmed and dressed in tattered rags, there is no way this man is a soldier.
 				*line_break
 				*line_break
-				“I'M INNOCENT, I'M INNOCENT!!! Don't shoot please don't shoot please…" He whimpers, shock quickly turning to desperation as ${sergeant} hops up beside you with the rest of the men. He falls to his knees. "The rebels… upstairs… no choice… guns… innoce… please…"
+				Relaxing your grip on your gun, you gestured at the window. The man complies immediately, throwing the window open before retreating further away from the window. In an instant, you vault over the sill, the steel toed boots on your feet slamming into the creaky floor boards.
 				*line_break
 				*line_break
-				The wretched man clings onto his knees, quaking with fear. The rest of the men quickly scan the room, clearing out the rest of the first floor and returning with a few half-starved civilians, dressed in little more than tattered rags. "Wife, three kids. In the kitchen ${playersirmdm}."
+				"Who are you, and what are you doing here?" You demanded, your finger still resting within the trigger guard of the rifle held in front of your torso, hinting to the man that you mean business.
 				*line_break
 				*line_break
-				"Shut the hell up soldier, do you want to personally inform the enemy that we're gathered for a fucking parade here?" ${sergeant} shoots him a dirty look, instantly shutting up the poor private. The family huddles in a corner as the man points up a flight of narrow stairs. Three. He mouths as he motions with his hand, or what was left of it, having been cleaved off at the wrist.
-				*line_break
-				*line_break
-				"I don't like the look of this ${playersirmdm}." ${sergeant} spits, rifle leveled and trained on the stairs.
-				*goto 3_2_firefight
+				The man falls to his knees and babbles, "the rebels… upstairs… they took control… My family… innocent… please…"  The rest of your men quickly scan the room, clearing out the rest of the first floor and returning with a few half starved civilians, dressed in barely more than tattered rags. "Wife, three kids. In the kitchen ${playersirmdm}."
+				*goto 2_2_result
 			
 	#Grenades at the ready! We'll clear the room before they know what hit em!
 		You hold out your hand in a fist with your thumb pointing upwards, the instructed field signal for a grenade launch. Taking a quick glance around to ensure your men are fully covered, you turn to ${sergeant} and he nods back at you.
 		*line_break
 		*line_break
-		Grabbing the safety pin of the grenade, you twist it and give it a sharp pull. Leaning as close to the edge of the doorway as possible, you flick the grenade into the room and brace for the ensuing impact.
+		Grabbing the safety pin of the grenade, you twist it and give it a sharp pull. Leaning as close to the edge of the doorway as possible, a nimble flick of the wrist sends the grenade bouncing into the room, as you brace for the ensuing impact.
 		*line_break
 		*line_break
 		[b]KA-BOOM!![/b]
 		*line_break
 		*line_break
-		The wall behind you shudders as shrapnel whizzed through the doorway. Whoever’s inside the room couldn’t have possibly survived that pre-emptive strike.
+		The wall behind you shudders as shrapnel whizzed through the doorway. Whoever’s inside the room couldn’t have possibly survived such a pre-emptive strike.
 		*line_break
 		*line_break
-		“Go go go!!” You signal for your squad to storm the room. 
+		“Go go go!!” You signal for your squad to storm the room.
 		*line_break
 		*line_break
 		As the dust starts to clear, the first thing you notice is the tattered body laying face down on the floor. A closer inspection informed you that the man was completely unarmed, his plain clothes suggested no involvement in this bloody conflict.
@@ -375,22 +376,355 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		*line_break
 		*line_break
 		You kick open the door and charge into the building with rifle at the ready, your men right behind you. A frightened face spins around, blackened by soot and smoke, screaming words you cannot hear.
+		*fake_choice
+			#Shoot!
+				*set kill_civilian 1
+				*set light_rounds -1
+				[b]Du-du-du-dum!!![/b]
+				*line_break
+				*line_break
+				The body jerks back, mouth agape in shock as he slumps down against the yellowed wallpaper of what you now see is the living room. A splatter of fresh blood colors the walls - already pock-marked with numerous bullet holes.
+				*line_break
+				*line_break
+				It is a simple living space, a few basic chairs surround a table hosting an abandoned card game. There is a flight of stairs leading up to the second floor and another nondescript doorway leading to another part of the house.
+				*line_break
+				*line_break
+				Your men clear out the living space, ${sergeant} approaching the dead body to search the body. "Fucking hell ${playersirmdm}, he's a fucking civilian, ain't got nothing on him."
+				*line_break
+				*line_break
+				"Bloody bastards. Putting their machine gun nests in civilian houses…" One of the men chimes in.
+				*page_break
+				"No! Darling!!! Darling!!!" A hysterical scream pierces your ears as a frail woman rushed out from an adjacent room to cradle the man in her arms. Behind her, you see three young children peeking through the door frame, the oldest one not more than eight years of age, based on your estimate.
+				*line_break
+				*line_break
+				$!{sergeant} spun around and pointed your rifle at the woman.  "Hands where I can see them! And stand clear!"
+				*line_break
+				*line_break
+				*label 2_2_shoot
+				The woman freezes, choking back her tears and emotions. "We are not fighters. We are civilians! Why did you kill my husband? Why? We…"
+				*line_break
+				*line_break
+				"Fuck you… Fuck all of you!!! Spawn of devil. I curse all of you!!!" She screams, her chest heaving from anger, from grief, from desperation. She collapses from the exertion, her age all too visible on her graying brows. Her once proud chest heavy and despondent. Without warning, the woman suddenly dashed back into the kitchen.
+				*line_break
+				*line_break
+				[b]DA-DUP![/b] 				A heavy thud resounded directly above your head.
+				*line_break
+				*line_break
+				"Fucking hell, the RPG didn't manage to take out all of them?" Damn it, and here you thought the threat was neutralized.
+				*line_break
+				*line_break
+				Before you can react to the sound from above, the woman rushes back into the living room with a blood-curling scream, rushing towards you while brandishing a cleaver.
+				*line_break
+				*line_break
+				Fucking hell, you don't have time for this.
+				*fake_choice
+					#Screw this crazy lady, shoot her too!
+						*set kill_civilian +1
+						[b]BLAM![/b]
+						*line_break
+						*line_break
+						You barely have time to register the blood and gray matter splattered across the kitchen floor. This bitch asked for it, waving around a weapon and threatening an armed soldier. It's as if she wanted to die.
+						*line_break
+						*line_break
+						Trying to ignore the bodies of the civilians sprawled across the living room, you direct your attention towards the source of the noise.
+						*line_break
+						*line_break
+						Hugging the innermost wall of the stairwell, you instruct the rest of your men to get ready for whatever awaits you.
+						*goto 3_3_intermediate
+					#Overpower her, but don't kill her! She's a civilian after all.
+						No matter the case, a civilian is a civilian. You can’t deliberately kill someone in cold blood knowing that they’re not part of the conflict.
+						*line_break
+						*line_break
+						“Ma’am, calm down! I’m really sorry about your husband, but he just happened to be caught in the crossfire. Please, just get out of here.” You cry out as you grab the woman's wrists, managing to wrestle the cleaver from her bony hand. Immediately,the desolate figure before you crumples into a sobbing mess, as if the adrenaline left her body along with the cleaver.
+						*line_break
+						*line_break
+						Your heart falters but for a moment. This is war, nagged a voice in your head. People are bound to die. There’s nothing you can do about her husband. He was simply in the wrong place at the wrong time.
+						*line_break
+						*line_break
+						Silently, you direct your men towards the stairwell, signaling them to get into cover formation. Sticking to the innermost wall of the stairwell, you instruct the rest of your men to get ready for whatever awaits you.
+						*label 3_3_intermediate
+						*page_break
+						On your command, one of your men rushed up the stairs, the butt of his rifle pressed firmly upon his shoulder blade as he maintained a high alert.
+						*line_break
+						*line_break
+						"Clear!"
+						*line_break
+						*line_break
+						Great, at least the corridor's secure. Nonetheless, you can't let your guard down completely. Taking cautious steps, you slowly trudge up the stairwell, preparing for any unexpected nasty surprises. Glancing around, you eyes are immediately drawn to the room directly across the corridor. The door had been blown completely off its hinges, revealing the wreckage inside. No doubt a result of the direct RPG blast.
+						*line_break
+						*line_break
+						Keeping your eyes fixated on the room, you take slow steps towards it, cautious of any possible ambushes.
+						*line_break
+						*line_break
+						As you approach the door frame, you hear the cold, resounding thud once again. Pivoting around the entrance, you spun into the room, while ${sergeant} followed immediately. Amidst the wreckage, you spot one of the rebels lying face down on the floor with his lower body buried under a huge chunk of debris, breathing heavily as he tried to muster whatever strength he could to break free.
+						*line_break
+						*line_break
+						Upon hearing footsteps, he jerked his head up, and you are immediately greeted with an exhausted stare on a disheveled face, dyed with streaks of tears and blood. Despite the general haggardness and the weariness in his eyes, his youthful features allude to a mere teen that has barely reached the peak of his growth. 
+						*line_break
+						*line_break
+						You pause for a moment, the scenario serving as a reminder once again that despite fighting for the rebel cause, these "soldiers" are barely adults.
+						*line_break
+						*line_break
+						Before you can deliberate the next course of action, ${sergeant} rammed his rifle muzzle onto the teen's face and shoots him squarely between the eyes. The teenager's head jerks violently backwards then slams limply back onto the floor with a final spasm, a flash of fear frozen on his face as he barely had time to react before the bullet tore through the insides of his brains.
+						*line_break
+						*line_break
+						A moment of silence held the air for a few seconds. Then, with a nonchalant shrug, 						${sergeant} trods out into the corridor. "Come on, let's take what we can, then head down and contact HQ. We need to let them know that we've secured the objective."
+						*if kill_civilian = 0
+							*goto_scene chapter1_2_counterattack
+						*if kill_civilian = 1
+							*goto 3_5_kid_reaction_scene
+						*if kill_civilian = 2
+							*goto 3_5_kid_reaction_scene
+
+			#Don't Shoot
+				*label 2_2_dont_shoot
+				*set kill_civilian 0
+				"Hands up! Don't move or I'll shoot!!" You scream, gesturing your rifle violently at the helpless man, who whimpers in meek compliance and raises his hands above his head. It's clear that he is just a civilian, his gaunt unkempt face a portrait of starvation and fear.
+				*line_break
+				*line_break
+				It is a simple living space, a few basic chairs surround a table hosting an abandoned card game. There is a flight of stairs leading up to the second floor and another nondescript doorway leading to another part of the house.
+				*line_break
+				*line_break
+				The men clear out the living space, ${sergeant} approaching the civilian to conduct a search. "Hands where I can fucking see them. I wouldn't hesitate to put a bullet in your fucking skull."
+				*line_break
+				*line_break
+				"Clear. He's clean."
+				*line_break
+				*line_break
+				The civilian, clearly rattled from the RPG blast before, stammered out, "I… I'm not one of them! There were three of them, they seized the house before using the second level as their base. Ple.. please, just don't hurt my family." 
+				*line_break
+				*line_break
+				Ducking out of the kitchen, one of the men turned to you. "$!{playersirmdm}, he's got his whole family here. Fucking bastards are using civilian houses as machine gun nests!"
+				*line_break
+				*line_break
+				*goto 3_4_story				
 	#Look for another way in
+		Going through the front door would have been suicide. At best, the point man would be shot to pieces, with the rest of the squad using him as a meat shield. At worse… you shrug the thought away.
+		*line_break
+		*line_break
+		Quickly motioning to your men, you signal two soldiers to watch the door as you lead the rest to circle around the building, hopefully being able to sneak around and catch the enemy by surprise. ${sergeant} nods in surly agreement, hoisting his weapon and taking carefully calculated steps to reduce his noise profile.
+		*line_break
+		*line_break
+		Circling around the perimeter of the building, ${sergeant} points out a blackened window sill, a few shards of jagged glass all that remained of the window. He carefully sneaks below the sill as the rest of you cover his approach, ready to shoot anything that popped out of the window.
+		*line_break
+		*line_break
+		${sergeant} produces a small mirror, standard issue tactical. You point your rifle at the window as he lifts the mirror just beyond the edge of the window sill. You count just one man in the room, his back facing the window. Good. They haven't detected you yet.
+		*fake_choice
+			#Shoot him before he spots you!
+				Stealthily raising your rifle above the sill, you squeeze the trigger, spraying blindly.
+				*line_break
+				*line_break
+				[b]Du-du-du-dum!!![/b]
+				*line_break
+				*line_break
+				"No! Darling!!! Darling!!!" A hysterical scream pierces your ears as a frail woman rushed out from an adjacent room to cradle the man in her arms. Behind her, you see three young peeking through the door frame, the oldest one not more than eight years of age based on your estimate.
+				*line_break
+				*line_break
+				$!{sergeant} leads the way, vaulting into the house with one clean motion, weapons at the ready. The rest of you follow suit. "Hands where I can see them! And stand clear!"
+				*goto 2_2_shoot
+			#Sneak in via the window and try to capture him
+				*goto 2_1_sneak_in
+			#Tap the window and try to communicate with him
+				*goto 2_1_communicate
+				
 
 *label 2_3_run_away
+“Roger, ${playersirmdm}.” ${sergeant} reluctantly grumbled. “Stand down! Prepare to pull out!”
+*line_break
+*line_break
+Screw this, you thought, it’s really not worth the risk. You’re not even sure of the strength of the enemy’s forces, yet you can count with a single hand what’s left of your platoon. Orders be fucked, I’m not leading my men into a death trap. At least all of you will live to fight another day.
+*line_break
+*line_break
+You aimed your rifle at the LMG, providing cover for your men to make a break for safety. Following a few shots, you notice that your men had retreated to a safe spot with sufficient cover from enemy fire.
+*line_break
+*line_break
+“${playersirmdm}, move!” shouted ${sergeant} while firing at our assailants, providing you the opportunity to draw back.
+*line_break
+*line_break
+Without wasting any extra movements, you drop your rifle to your side and felt the tug of the sling as the rifle dangled along your torso. You break into a sprint for the nearest cover, making sure to avoid the line of cover fire from your platoon.
+*line_break
+*line_break
+Before long, you and your men have managed to backtrack to a point where the enemy’s guns can no longer reach. Heaving a sigh of relief, you start to rally your platoon to head back to the barracks, while secretly worrying about what the higher ups might do to you once you give them your mission report.
+*goto 3_6_cut_off
 
 *label 3_1_firefight
-*comment player killed civilian, got caught in grenade blast
-*comment firefight against 3 enemy from 2nd floor
+“Up the stairs, go go go!” You yell out to your men, all whom are left staggering from the impact of the blast. Pulling one private up to his feet, you aimed your rifle through the kitchen doorway, preparing for any follow up attacks. 
+*line_break
+*line_break
+Before you can dash out into the living room however, you feel a pair of hands grasping and clawing at your leg with a fierce tenacity. With highly trained reflexes, you immediately spin around and point your rifle at the source, only to find the civilian woman at the business end of your muzzle.
+*line_break
+*line_break
+“Give me back my husband, give him back, you murderers!!” Spits the woman as she thrashes about. 
+*line_break
+*line_break
+“${playersirmdm}, the enemies knows we’re here, dammit! We need to take action now!” ${sergeant} howls.
+*line_break
+*line_break
+Oh for fucks sake, you don’t have time for this. This hysterical bitch is risking the life of your men, and you can’t afford to let the enemy take the advantage while you are distracted.
+*fake_choice
+	#Shoot the woman, time is of the essence!
+		*set kill_civilian 2
+		[b]BLAM![/b]
+		*line_break
+		*line_break
+		You barely have time to register the blood and gray matter splattered across the kitchen floor while you rush your men out to the living room.
+		*line_break
+		*line_break
+		“Okay, up the stairs, stay alert!” ${sergeant} barks. 
+		*line_break
+		*line_break
+		Hugging the innermost wall of the stairwell, you instruct the rest of your men to get ready to overwhelm the opposing force.
+		*label 3_12_contact_youth_upstairs
+		*page_break
+		“Charge!” You scream as your team rushed up the stairs. In the room across the hallway, the personnel operating the LMG spins around. In that fleeting moment, you sense the fear in them as they stood slack-jawed, completely exposed and unprepared for this sudden ambush. Three young boys, no older than 16 at best. Before the realization fully sinks in, you are already instinctively squeezing the rifle trigger.
+		*line_break
+		*line_break
+		Merely seconds later, the lifeless bodies of the three boys fall to the floor with a resounding thud, their blank stares a hollow reflection of the souls that was no longer there.
+		*line_break
+		*line_break
+		“Check the rooms for supplies, we’re taking what we can with us outta here.” You snap at the rest of your team, the adrenaline and tension still coursing high from the ambush.
+		*line_break
+		*line_break
+		While the men are weaving in and out of the rooms, ${sergeant} jerks a thumb over his shoulder. “Well, building’s secured. We should make haste and get the hell out before enemy reinforcements arrive and fuck our asses over.”
+		*line_break`
+		*line_break
+		You silently agreed, desperate to bring your men out of this godforsaken place back to a safe respite as soon as possible. Moreover, you’ll never know if the three teens radioed for help before meeting their grisly ends.
+		*line_break
+		*line_break
+		“Right, let’s contact HQ and let them know that the objective’s secured. Check for any additional signs of resistance.”
+		*goto 3_5_kid_reaction_scene
+	#Spare her, you have no beef with her.
+		No matter the case, a civilian is a civilian. You can’t deliberately kill someone in cold blood knowing that they’re not part of the conflict.
+		*line_break
+		*line_break
+		“Ma’am, calm down! I’m really sorry about your husband, but he just happened to be caught in the crossfire. Please, just get out of here.” You cry out as you wrestle the woman’s hands away from your feet and dashed out into the living room. Out of the corner of your eye, you see the desolate figure crumple into a sobbing mess.
+		*line_break
+		*line_break
+		Your heart falters but for a moment. This is war, nagged a voice in your head. People are bound to die. There’s nothing you can do about her husband. He was simply in the wrong place at the wrong time.
+		*line_break
+		*line_break
+		Silently, you direct your men towards the stairwell, signaling them to get into cover formation. Sticking to the innermost wall of the stairwell, you instruct the rest of your men to get ready to overwhelm the opposing force.
+		*goto 3_12_contact_youth_upstairs
 
 *label 3_2_firefight
-*comment player spared civilian, knows there are 3 enemies on second floor, got caught in grenade blast
-*comment firefight against 3 enemy from 2nd floor
+*page_break
+“There are three of them sons of bitches up there?” You keep your voice hushed but urgent as you turned to the man and his family.
+*line_break
+*line_break
+“Y.. Yes. Please, just leave my family alone, we want no part of this.” The man replies meekly, his wife and children huddled by his side with their faces to the ground.
+*line_break
+*line_break
+“Then either get out or find cover, things are about to get real messy.” ${sergeant} growls. 
+*line_break
+*line_break
+You point your rifle at the kitchen doorway, taking cautious strides into the living room.
+*line_break
+*line_break
+Clear.
+*line_break
+*line_break
+The assailants are still upstairs, as helpless as rats caught in a trap with no means of escape. A small smirk escape from your lips, pleased with the knowledge that now you have the numerical and tactical advantage.
+*line_break
+*line_break
+Silently, you direct your men towards the stairwell, signaling them to get into cover formation.
+*line_break
+*line_break
+Flanking the innermost wall of the stairwell, you instruct the rest of your men to get ready to overwhelm the opposing force. 
+*goto 3_12_contact_youth_upstairs
 
-*label 3_3_firefight
+*label 3_4_story
+You peek into the kitchen, immediately noticing a woman huddling at the foot of the dining table, with three children, no more than eight years old, clinging on to the edge of her shirt.  
+*line_break
+*line_break
+Sighing, you turn your focus to the man. "You all should get out of here before more rebels arrive, or our troops will be moving in to secure the area. Either way, there remains a high possibility that the entire district will become a war zone, and you all wouldn't be able to remain safe by then." 
+*page_break
+[b]DA-DUP![/b] A sudden thud filled the room. Instantly, your eyes dart upwards as you trace the origin of the sounds.
+*line_break
+*line_break
+"What was that?" quipped ${sergeant}, and you notice the veins on his forearms becoming more prominent as he clutched his rifle tighter.
+*line_break
+*line_break
+That came from upstairs. Fuck, the gunners aren't dead yet? Although, you muse, given the destructive force of the RPG in an enclosed room, you wonder if anyone can really be considered lucky if they manage to survive the impact.
+*line_break
+*line_break
+You turn to the man, and the terror on his face a reflection of his fear and paranoia of what lies upstairs. Without further prompting, he strides into the kitchen and grabs his wife by the hand, and starts to herd his family out of the building, but not before casting another longing look at the living room, his eyes mentally burning into his brain the image of what was once his home.
+*line_break
+*line_break
+As the man hurriedly ushers his family through the main door, you gather your men and prep them for a response team to the unknown noise. Worst case scenario, there are more enemy soldiers lying in wait in the building.
+*line_break
+*line_break
+"Cover formation, up the stairs. Those bastards might be still alive. Stay alert!" You bark, as two men flank the side of the staircase, arms at the ready.
+*goto 3_3_intermediate
 
-*label progress
+*label 3_5_kid_reaction_scene
+*page_break
+After salvaging whatever seems to be usable, you gather your men in the living room as you do a quick situation analysis. The thick concrete dust claws its way into your throat, the itch from within unbearable. You grab your canteen and furiously guzzle down the contents, desperate to quell the furious burning inside.
+*line_break
+*line_break
+A high pitched sob echoes through the dead, hollow room, and you recall that your team are not the only survivors in the building.
+*page_break
+*if kill_civilian = 0
+	Turning to the kitchen, you catch a glimpse of the family of five still shivering in the corner of the dilapidated kitchen floor, no doubt traumatized by the outburst of violence of the past few hours.
+	*line_break
+	*line_break
+	“What are you waiting for, a freaking red carpet? It’s not bloody safe here so get the fuck out! Unless you want some bullet holes in your bodies as well as your furniture?” You bark fiercely at the man.
+	*line_break
+	*line_break
+	Scrambling to his feet, the man hurriedly shepherds his family through the front door, but not before stuttering out a thanks for sparing their lives.
+	*line_break
+	*line_break
+	You sigh to yourself. Civilians have no right being caught up in the midst of all this bloodshed. They simply were in the wrong place at the wrong time. Witnessing their plight, you can’t help but to wonder who has it worse, civilians forced to run from the repercussions of war, or soldiers like you fighting with no end in sight? You sigh, knowing that either way there’s no light at the end of this tunnel.
+	*line_break
+	*line_break
+	“All right, if everyone had caught their breaths, let’s secure the area!” ${sergeant}’s booming voice snaps you out of your thoughts. 
+	*goto_scene chapter1_2_counterattack
+*if kill_civilian = 1
+	Turning to the kitchen, you catch a glimpse of the the woman and her children still shivering in the corner of the dilapidated kitchen floor, still mourning the loss of her husband. 
+	*line_break
+	*line_break
+	At the sight, you feel a slight wrench deep within the recesses of your heart, further exacerbated by the guilt of killing her husband. True, civilians have no business in a place riddled with war and conflict, but that wasn’t entirely their fault. Maybe they were taken against their will. Maybe they had no other place they could go. Whatever the case, the result is this weeping wreck of a woman and her three children you see before you.
+	*line_break
+	*line_break
+	“Alright, miss. I know that now is not the best time, but if you treasure your life as well as your children’s, you will take them and flee. I don’t know where, but anywhere is better than here. Trust me, this will be swarming with military personnel before long, and staying here isn’t gonna make anyone’s life easier.” You muttered, trying to strike a balance between sounding authoritative, but at the same time compassionate and understanding.
+	*line_break
+	*line_break
+	As the woman continued to bawl her eyes out, you sighed before looking at ${sergeant}, jerking your head towards the woman. 
+	*line_break
+	*line_break
+	“Come on miss, up you go.” ${sergeant} approached the woman and placed his hands on the woman’s shoulder. Jumping at the sudden contact, the woman fell silent for a brief moment, but allowed ${sergeant} to help her to her feet. Wiping her eyes, she nodded as ${sergeant} repeated my intended message. She gave one last hollow look at the room before leading her kids out of the door, and one private gave a sigh of relief.
+	*line_break
+	*line_break
+	Clearing your throat, you holler at your men. “Secure the area, and make sure we don’t get caught out by any hidden surprises!”
+	*goto_scene chapter1_2_counterattack
+*if kill_civilian = 2
+	Turning to the kitchen, you catch a glimpse of the children still shivering in the corner of the dilapidated kitchen floor, no doubt traumatised by the outburst of violence of the past few hours.
+	*line_break
+	*line_break
+	You can’t help but pity these kids; being caught up in the war is already devastating enough, but compounded with losing their parents in the process, these children would have enough issues to deal with for a lifetime. Maybe it would be more humane to put them out of their misery…
+	*line_break
+	*line_break
+	No, you shake that thought out of your head. Better to let them live to see another day. 
+	*line_break
+	*line_break
+	“Go, scram, get to someplace safe!” You scream at the top of your lungs. The sudden outburst coupled with the intimidating scowl of a hulking figure carrying a loaded weapon proved sufficient to send them packing.
+	*line_break
+	*line_break
+	It’s for the best. After all, a war zone is no place for children.
+	*line_break
+	*line_break
+	Clearing your throat, you holler at your men. “Secure the area, and make sure we don’t get caught out by any hidden surprises!”
+	*line_break
+	*line_break
+	“Aye ${playersirmdm}!” 
+	*goto_scene chapter1_2_counterattack
 
-*goto_scene ending
-
-
+*label 3_6_cut_off
+*page_break
+After a mere five minutes of walking through the concrete ruins, you hear a familiar low rumbling. Your stomach drops, the sense of dread and foreboding almost palpable as you recognise the source.
+*line_break
+*line_break
+Frantically glancing around, you spot an abandoned building with half its walls collapsed on itself, probably a result of a siege the LOM laid a few days back. Ah fuck it, knowing what’s coming, at least having a serviceable cover is better than standing out in the open.
+*line_break
+*line_break
+“Take cover, NOW! Move your asses or stay here and get your balls shot off!” You screamed as you gestured maniacally to the building. You spot a few confused looks within your men as they broke into a run, nonetheless obeying your orders, but at the same time you see a couple of fearful faces, ${sergeant} included, whom probably dealt before with what is coming as well.
+*goto_scene chapter1_2_counterattack
