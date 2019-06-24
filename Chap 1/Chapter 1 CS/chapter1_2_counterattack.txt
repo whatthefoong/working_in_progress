@@ -279,7 +279,7 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 							Your platoon reforms in the building you had captured previously. With everyone accounted for you guide the unit to another set of buildings down the road. Thankfully, the enemy forces are still recovering from your last skirmish, buying your soldiers enough time to clear the new set of buildings and set up their new positions. 
 							*line_break
 							*line_break
-							 When the enemy’s infantry eventually made its way into your killzone, you gave the same commands, and chunked their forces once more before retreating yet again.
+							When the enemy’s infantry eventually made its way into your killzone, you gave the same commands, and chunked their forces once more before retreating yet again.
 							*line_break
 							*line_break
 							You repeated the tactic 4 more times. Certainly, there were some close calls. 3 of your soldiers received injuries while clearing buildings, encountering some straggling enemies. At one point you narrowly avoided death as the tank fired at the empty building to your left, perhaps out of frustration. To the tank, we were merely flies buzzing around its face, slowing its advance. 
@@ -297,7 +297,7 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 							It took an entire day of scampering from building to building, slowly wearing down the enemy’s forces. It wasn’t a graceful strategy, there was no heroic moment where the tide was turned in your favour. You were just a platoon of soldiers doing its best to push back a fucking tank. But with your guidance your team came out on top in this war of attrition. 
 							*line_break
 							*line_break
-							 The sound of light  golf claps from ${sergeant} behind you prompts you to turn around, peeling you attention away from the windowsill you had been spying out of.
+							The sound of light  golf claps from ${sergeant} behind you prompts you to turn around, peeling you attention away from the windowsill you had been spying out of.
 							*line_break
 							*line_break
 							“That was… incredible, Commander. I’m sorry I ever doubted your decision.”
@@ -538,8 +538,8 @@ What would you do?
 		His face contorts in agony as he clutches his shoulder, sinking to the ground. 		In the distance, the gunfire from the opposing side slowly petering out. Looks like	 it wouldn’t be long before your squad emerges victorious in this fight.
 		*goto 4_stat_check
 	#Beat a hasty retreat. You want to avoid any further pointless bloodshed.
-	   *set 4_counter_attack_score -1
-	   *set men -2
+		*set 4_counter_attack_score -1
+		*set men -2
 		“Pull out! We’ll have to come back with reinforcements to hold the objective!” After all, you’ll never know if the enemy will send out another wave of reinforcements. If that happens, you know for sure that with low supplies, your men don’t stand a chance at all. Best to head back to get reinforcements.
 		*line_break
 		*line_break
