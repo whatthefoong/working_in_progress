@@ -1,5 +1,4 @@
 *comment Define all temp variables here
-*finish
 [b]Chapter 1: Home Sweet Home[/b]
 *line_break
 *line_break
