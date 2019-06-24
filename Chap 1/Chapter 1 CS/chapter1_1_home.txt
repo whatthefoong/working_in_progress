@@ -1,4 +1,4 @@
-*comment Define all attributes here
+*comment Define all temp variables here
 *temp sergeant "Sergeant Kosnik"
 *temp kill_civilian 0
 [b]Chapter 1: Home Sweet Home[/b]
