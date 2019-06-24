@@ -456,24 +456,19 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 						Keeping your eyes fixated on the room, you take slow steps towards it, cautious of any possible ambushes.
 						*line_break
 						*line_break
-						As you approach the door frame, you hear the cold, resounding thud once again. Pivoting around the entrance, you spun into the room. Amidst the wreckage, you spot one of the teens lying face down on the floor with his lower body buried under a huge chunk of debris, breathing heavily as he tried to muster whatever strength he could to break free.
+						As you approach the door frame, you hear the cold, resounding thud once again. Pivoting around the entrance, you spun into the room, while ${sergeant} followed immediately. Amidst the wreckage, you spot one of the rebels lying face down on the floor with his lower body buried under a huge chunk of debris, breathing heavily as he tried to muster whatever strength he could to break free.
 						*line_break
 						*line_break
-						Upon hearing your footsteps, the teen jerked his head up, and you are immediately greeted with a weary stare on a disheveled face, dyed with streaks of tears and blood.
-						*page_break
-						You pause for a moment, then shoot him squarely between the eyes, barely turning your head away as the blood splattered onto his back, his head slammed limply back onto the floor.
+						Upon hearing footsteps, he jerked his head up, and you are immediately greeted with an exhausted stare on a disheveled face, dyed with streaks of tears and blood. Despite the general haggardness and the weariness in his eyes, his youthful features allude to a mere teen that has barely reached the peak of his growth. 
 						*line_break
 						*line_break
-						The heavy thud of boots landing on the wooden floor echoed across the corridor, and ${sergeant} burst into the room, his rifle raised. Upon seeing you standing in the middle of the room, his shoulders slackened visibly. "What the hell happened here?"
+						You pause for a moment, the scenario serving as a reminder once again that despite fighting for the rebel cause, these "soldiers" are barely adults.
 						*line_break
 						*line_break
-						"One of these fuckers were barely alive. I just put him out of his misery".
+						Before you can deliberate the next course of action, ${sergeant} rammed his rifle muzzle onto the teen's face and shoots him squarely between the eyes. The teenager's head jerks violently backwards then slams limply back onto the floor with a final spasm, a flash of fear frozen on his face as he barely had time to react before the bullet tore through the insides of his brains.
 						*line_break
 						*line_break
-						A moment of silence followed, as ${sergeant} took in the sight of the room, before settling his eyes upon the now lifeless body of the teen you shot.
-						*line_break
-						*line_break
-						${sergeant} sighed and trod out into the corridor. "Come on, let's take what we can, then head down and contact HQ. We need to let them know that we've secured the objective."
+						A moment of silence held the air for a few seconds. Then, with a nonchalant shrug, 						${sergeant} trods out into the corridor. "Come on, let's take what we can, then head down and contact HQ. We need to let them know that we've secured the objective."
 						*if kill_civilian = 0
 							*goto_scene chapter1_2_counterattack
 						*if kill_civilian = 1
