@@ -266,8 +266,6 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 							*line_break
 							*line_break
 							You turn away from your windowsill, to see ${sergeant} slack-jawed, still in awe at how smoothly that went. You resist the urge to sympathise with them, and instead strap on your pack and give them a light punch to the shoulder as you walk out the door. “Cmon Serg,  let’s go.”
-							*else
-							The armored truck remains a thorn in your side, but this position you have set up seems to be highly successful. If you held your ground, could you perhaps see the enemy’s command team rear their ugly head to rally the remaining troops? Then again, the enemy could locate your position at any moment, in which case you’d be squaring off against a metal monster capable of taking your whole platoon out in one shot.
 						#Repeat your guerrilla tactics from other buildings. 
 							*set counter_attack_score +1
 							“That’s a negative soldier, we’re falling back. All troops, regroup to our last building, over.” You feel the greed of taking out that armored truck tug at you, but you decide to play this a little more patiently. You can use the same tactic once more later, wear their forces down even more.
@@ -429,11 +427,11 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 	#Sneakily encircle the enemy and surprise them with an ambush!
 		*set charm +5
 		*set intellect +5
-		*if charm + intellect >= 15
-			*set 4_counter_attack_score +1
+		*if (charm + intellect) >= 15
+			*set counter_attack_score +1
 			[i]Stat Check: Charm + Intellect >= 15[/i]
-		*if charm + intellect < 15
-			*set 4_counter_attack_score -1
+		*if (charm + intellect) < 15
+			*set counter_attack_score -1
 			[i]Stat Check: Charm + Intellect < 15[/i]
 			The odds are stacked against you, outnumbered
 		*if men > 2
@@ -499,14 +497,14 @@ What would you do?
 		As the first three men provide cover fire, you charge up to a further position with the rest of your platoon, before unleashing another torrent of steel upon your enemies.
 		*if light_rounds > 4
 			*set light_rounds -4
-			*set 4_counter_attack_score +1
+			*set counter_attack_score +1
 			“Continue to engage!” You can feel the strain on your already parched throat as you attempted to make yourself heard above the cacophony. It seems that your words were hardly necessary, though, as the rest of your men pressed on with a newfound ferocity.
 			*line_break
 			*line_break
 			The disorder brought upon by the initial strike saw the enemy forces too dispersed to launch an organized counter offense. Within minutes, the enemy soldiers were clearly overpowered, most of their men either lay injured or dead, with a few stray lone wolves firing at your squad, managing to find proper cover to engage. Even so, that’s nothing your men can’t handle.
 			*goto 4_stat_check
 		*if light_rounds < 4
-			*set 4_counter_attack_score -1
+			*set counter_attack_score -1
 			Alright! Time to fucking end this shit show. The unorganized manner of the leftover infantry poses little threat to you, not with the way that your platoon is pressuring their forces with a hailstorm of bullets.
 			*line_break
 			*line_break
@@ -525,7 +523,7 @@ What would you do?
 			“Take cover! The rest of you, take them out immediately!” Inside your head, you cursed and kick yourself for being taken off guard by the enemy’s counterattack so much that you neglected your force preparation before engaging the enemy. All you can do is hope that you can eliminate their infantry before you are left with no more munitions on the open field.
 			*goto 4_stat_check
 	#Hold your ground! You can continue to engage the enemy in this position.
-		*set 4_counter_attack_score +1
+		*set counter_attack_score +1
 		No, ammunitions are already at an all time low, it might be suicide to just go in guns blazing. Best to stand your ground and pick them off little by little while retaining an optimal cover.
 		*line_break
 		*line_break
@@ -538,7 +536,7 @@ What would you do?
 		His face contorts in agony as he clutches his shoulder, sinking to the ground. 		In the distance, the gunfire from the opposing side slowly petering out. Looks like	 it wouldn’t be long before your squad emerges victorious in this fight.
 		*goto 4_stat_check
 	#Beat a hasty retreat. You want to avoid any further pointless bloodshed.
-		*set 4_counter_attack_score -1
+		*set counter_attack_score -1
 		*set men -2
 		“Pull out! We’ll have to come back with reinforcements to hold the objective!” After all, you’ll never know if the enemy will send out another wave of reinforcements. If that happens, you know for sure that with low supplies, your men don’t stand a chance at all. Best to head back to get reinforcements.
 		*line_break
@@ -591,10 +589,10 @@ What would you do?
 	*line_break
 	*line_break
 	*if rpg_ammo = 1
-		*set 4_counter_attack_score +1
+		*set counter_attack_score +1
 		“Then we better kill the armored truck commander first shall we? Take the RPG and grenades up to the church tower too. The rest of you spread out and pick off the men. Let’s go!”
 	*if rpg_ammo = 0
-		*set 4_counter_attack_score -1
+		*set counter_attack_score -1
 		“Well if you’ve any better ideas, let’s hear them. No? Then shut the hell up.” 		The private grimaces, but holds her tongue.
 		*line_break
 		*line_break
@@ -621,7 +619,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 *if ambush = 1
 	*if charm >= 10
 		[i]Stat Check: Charm >= 10[/i]
-		*set 4_counter_attack_score +1
+		*set counter_attack_score +1
 		*line_break
 		*line_break
 		Despite the distance of the bridge, the team makes it to the near bank with time to spare. You quickly organize the men into two teams, scurrying into the shallow ditches flanking the sides of the bridge with the enemy still approaching the bridge. Each soldier pulls out their remaining magazines and lay them on the ground in front of them for easy access, breathing hard from their exertion, staring as the enemy slowly approaches the bridge.
@@ -630,7 +628,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 		An officer wearing a garish red beret climbs out of the armored truck and barks out an order, prompting four men to amble cautiously across the bridge to secure your side of the bridge. The armored truck groans as it follows along, pushing onto the bridge, followed by the remaining six soldiers. It is a matter of time before they spot you, and you know you must time this to perfection.
 	*if charm < 10
 		[i]Stat Check: Charm < 10[/i]
-		*set 4_counter_attack_score -1
+		*set counter_attack_score -1
 		*line_break
 		*line_break
 		Given the distance of the bridge, the team hurries to the near bank just as the enemy begins to cross, giving you barely enough time to set up and catch your breath. You notice four men on your side of the river, having secured the bank and forcing you to take up improvised positions with a poor view of the bridge instead. The armored truck begins to push onto the bridge, an officer wearing a garish red beret barking out orders to the remaining six soldiers to follow behind.
@@ -641,7 +639,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 		# Open fire now!
 			*if men >= 8
 				[i]Stat Check: Men >= 8[/i]
-				*set 4_counter_attack_score +1
+				*set counter_attack_score +1
 				*line_break
 				*line_break
 				“OPEN FIRE!!! OPEN FIRE!!”
@@ -650,7 +648,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 				The platoon responds to your command with a racking hail of bullets, kicking up puffs of dirt, blood and concrete. Half of the enemy soldier collapse instantly, while the rest quickly dive for cover in confusion. They scurry behind whatever they can find, trying to locate the source of the gunfire and spraying blindly.
 			*if men < 8
 				[i]Stat Check: Men < 8[/i]
-				*set 4_counter_attack_score -1
+				*set counter_attack_score -1
 				*line_break
 				*line_break
 				“OPEN FIRE!!! OPEN FIRE!!”
@@ -661,10 +659,10 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 		# Wait till the truck reaches the middle of the bridge.
 			*if men >= 5
 				[i]Stat Check: Men >= 5[/i]
-				*set 4_counter_attack_score +2
+				*set counter_attack_score +2
 			*if men < 5
 				[i]Stat Check: Men < 5[/i]
-				*set 4_counter_attack_score +1
+				*set counter_attack_score +1
 			*line_break
 			*line_break
 			As the armored truck clambers to the middle of the bridge, you know that it is now or never. Taking a deep breath, you scream the command to fire, echoed by the cacophony of machine guns opening up on the enemy.
@@ -681,7 +679,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 		# Wait till the truck crosses the bridge before firing!
 			*if physical >= 5
 				[i]Stat Check: Physical >= 5[/i]
-				*set 4_counter_attack_score -1
+				*set counter_attack_score -1
 				*line_break
 				*line_break
 				Still counting on the element of surprise, you hold your fire as the enemy cross the bridge. Each second feels like an eternity as they inch closer and closer towards your position as your breath freezes in your chest, the tension palpable.
@@ -700,7 +698,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 				*goto bridge_ambush_check
 			*if physical < 5
 				[i]Stat Check: Physical < 5[/i]
-				*set 4_counter_attack_score +1
+				*set counter_attack_score +1
 				*line_break
 				*line_break
 				Still counting on the element of surprise, you hold your fire as the enemy cross the bridge. Each second feels like an eternity as they inch closer and closer towards your position as your breath freezes in your chest, the tension palpable.
@@ -716,8 +714,8 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 				*goto bridge_ambush_check
 
 *label bridge_ambush_check
-*if 4_counter_attack_score >= 1
-	*set 4_counter_attack_score +1
+*if counter_attack_score >= 1
+	*set counter_attack_score +1
 	*set truck_explode 1
 	The exchange of fire is intense, but your ambush has really overturned the odds and the enemy are panicking. Training your iron sights on the enemy officer, you squeeze off a single well-aimed shot.
 	*line_break
@@ -730,8 +728,8 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 	*line_break
 	In their effort to flee, the armored truck screams into reverse and pulls backwards, but instead of escaping, it crashes straight into the side of the bridge which gives way!!! It flies off the bridge, overturning and smashing into the stream. You’ve destroyed the enemy!!!
 	*goto 4_stat_check
-*if 4_counter_attack_score < 1
-	*set 4_counter_attack_score -1
+*if counter_attack_score < 1
+	*set counter_attack_score -1
 	Despite your best efforts, the enemy firepower is too great and they are responding in earnest. Your men are being shot at, and you’ve already taken a few casualties. It’s not looking good at all.
 	*line_break
 	*line_break
@@ -744,7 +742,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 *if ambush = 2
 	*if charm >= 5
 		[i]Stat Check: Charm >= 5[/i]
-		*set 4_counter_attack_score +1
+		*set counter_attack_score +1
 		*line_break
 		*line_break
 		The bridge might be a choke point, but it's too far. The best bet is to wait for the enemy to enter the square before taking them down in an ambush. Organizing the surviving soldiers into teams, you quickly order a ${sergeant} to take a few men to establish a machine gun nest at the church, while the rest of the men were to secure the buildings at the perimeter of the road junction.
@@ -759,7 +757,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 		Fuck.
 	*if charm < 5
 		[i]Stat Check: Charm < 5[/i]
-		*set 4_counter_attack_score -1
+		*set counter_attack_score -1
 		*set men -2
 		*line_break
 		*line_break
@@ -792,7 +790,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 			*set physical +5
 			*if men >= 8
 				[i]Stat Check: Men >= 8[/i]
-				*set 4_counter_attack_score +1
+				*set counter_attack_score +1
 				*line_break
 				*line_break
 				“OPEN FIRE!!! OPEN FIRE!!”
@@ -801,7 +799,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 				The platoon responds to your command with a racking hail of bullets, kicking up puffs of dirt, blood and concrete. Half of the enemy soldier collapse instantly, while the rest quickly dive for cover in confusion. They scurry behind whatever they can find, trying to locate the source of the gunfire and spraying blindly.
 			*if men < 8
 				[i]Stat Check: Men < 8[/i]
-				*set 4_counter_attack_score -1
+				*set counter_attack_score -1
 				*line_break
 				*line_break
 				“OPEN FIRE!!! OPEN FIRE!!”
@@ -810,7 +808,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 				The platoon, or what’s left of it opens fire on the enemy, but the paltry amount of firepower you can muster barely takes down two of the enemy soldiers. The rest quickly dive for cover and return covering fire, sending chunks of dirt spraying across your vision. A bullet lands just in front of you, sending you hunkering down behind the wall. Fuck!
 			*goto junction_ambush_check
 		#Radio the machine gun nest to light them up!
-			*set 4_counter_attack_score -1
+			*set counter_attack_score -1
 			*set men -4
 			*set physical +5
 			"${sergeant}! Open fire! NOW!"
@@ -837,7 +835,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 			Fuck. Your men are getting torn apart and there's nothing you can do.
 			*goto junction_ambush_check
 		#Fire a few shots to distract the enemy!
-			*set 4_counter_attack_score +1
+			*set counter_attack_score +1
 			*set finesse +5
 			[b]Bang! Bang Bang!![/b]
 			*line_break
@@ -860,12 +858,12 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 			With their attention diverted, you direct the rest of the men to flank around and hit the enemy from the rear. Two teams to flush out the enemy while a single team provide covering fire. Shots ring out, echoing the screams of men. 			In just a few moments, the enemy resistance has withered, with many of their comrades dead or dying. A few even turn tail and begin to flee.
 			*goto junction_ambush_check
 		*selectable_if (rpg_ammo = 1) #Fire the RPG and destroy the truck!
-			*set 4_counter_attack_score +2
+			*set counter_attack_score +2
 			*goto 4_1_fire_rpg
 
 *label junction_ambush_check
-*if 4_counter_attack_score >= 1
-	*set 4_counter_attack_score +1
+*if counter_attack_score >= 1
+	*set counter_attack_score +1
 	*page_break
 	[b]Dududududum!!![/b]
 	*line_break
@@ -879,8 +877,8 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 	A single shot rings out, silencing the officer as he jerks back in his seat before slumping over. Panic erupts amongst the enemy, men screaming and fleeing as the armored truck turns and drives off. Sporadic gunfire continues, but the bulk of the enemy has fled!!!
 	*goto 4_stat_check
 
-*if 4_counter_attack_score < 1
-	*set 4_counter_attack_score -1
+*if counter_attack_score < 1
+	*set counter_attack_score -1
 	*page_break
 	[b]Dududududum!!![/b]
 	*line_break
@@ -897,7 +895,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 *if ambush = 3
 	*set intellect +5
 	*set charm +5
-	*set 4_counter_attack_score +1
+	*set counter_attack_score +1
 	"${sergeant}! Get a few men and block up the main access road! Divert them to this alley over here, the rest of you, break off into teams and establish firing positions with the kill zone in the alley over there!"
 	*line_break
 	*line_break
@@ -921,7 +919,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 		# Open fire now!
 			*if men >= 8
 				[i]Stat Check: Men >= 8[/i]
-				*set 4_counter_attack_score +1
+				*set counter_attack_score +1
 				*line_break
 				*line_break
 				“OPEN FIRE!!! OPEN FIRE!!”
@@ -930,7 +928,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 				The platoon responds to your command with a racking hail of bullets, kicking up puffs of dirt, blood and concrete. Half of the enemy soldier collapse instantly, while the rest quickly dive for cover in confusion. They scurry behind whatever they can find, trying to locate the source of the gunfire and spraying blindly.
 			*if men < 8
 				[i]Stat Check: Men < 8[/i]
-				*set 4_counter_attack_score -1
+				*set counter_attack_score -1
 				*line_break
 				*line_break
 				“OPEN FIRE!!! OPEN FIRE!!”
@@ -957,7 +955,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 				Despite your limited firepower, the narrow alley gives the enemy soldiers nowhere to run as they are mowed down mercilessly by a hail of bullets! The remaining men scream in panic, cowering behind the armored truck and taking pot shots in your general direction and missing wildly.
 			*goto alley_ambush_check
 		# Wait till the truck is about to exit the alley before firing!
-			*set 4_counter_attack_score -2
+			*set counter_attack_score -2
 			Counting on the element of surprise, you wait while the enemy is about to exit the alley. This might give you a better shot at their rear, but the risk is also much higher. You take a deep breath, bringing your rifle level before firing into the backs of the enemy soldiers.
 			*line_break
 			*line_break
@@ -981,8 +979,8 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 
 *label alley_ambush_check
 *page_break
-*if 4_counter_attack_score >= 1
-	*set 4_counter_attack_score +1
+*if counter_attack_score >= 1
+	*set counter_attack_score +1
 	*set truck_explode 1
 	Pushing the enemy into the alley had rendered their armored truck useless, and now your men begin to toss grenades downwards onto the enemy. Screams and shouts are cut short by explosions, hot shrapnel putting an end to many of the enemy soldiers.
 	*line_break
@@ -992,8 +990,8 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 	*line_break
 	The armored truck explodes, shaking the entire building to its very foundation. One of the grenades must have found a weak spot! The remaining enemy troops flee instantly, throwing down their rifles and running in all directions as your men gun them down!
 	*goto 4_stat_check
-*if 4_counter_attack_score < 1
-	*set 4_counter_attack_score -1
+*if counter_attack_score < 1
+	*set counter_attack_score -1
 	[b]Dudududu-dum!!![/b]
 	*line_break
 	*line_break
@@ -1011,10 +1009,12 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 *goto 4_stat_check
 
 *label 4_stat_check
-*if counter_attack_score > 1
-	
-*elseif truck_explode = 1
-	
-*else
+*if counter_attack_score >= 1
+	barrack scene
+	*if truck_explode = 1
+		progress
+
+*if counter_attack_score < 1
+	hospital scene
 	
 
