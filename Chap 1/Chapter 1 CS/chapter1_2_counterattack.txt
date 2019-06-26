@@ -28,6 +28,8 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 *label 4_counter_attack_choice
 *fake_choice
 	*selectable_if (rpg_ammo > 0) #Hold your position and use the RPG to take out the armored truck!
+     *set finesse %+5
+     *set demolitions +1
 		“Prepare the RPG! Take out the truck first and we can pick off the rest after!” The Rocket Propelled Grenade will be your best bet against the impending threat posed by the oncoming armored vehicle. Even then, RPGs aren't the most accurate, but one can only hope. 		As it is, your men wouldn’t stand an iota of a chance if you engage the enemy directly.
 		*line_break
 		*line_break
@@ -55,7 +57,7 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 		"Enough talk. Commander?"
 		*fake_choice
 			#Let the RPG fly! Any longer and we’re as good as dead
-				*set counter_attack_score +2
+				*set counter_attack_score +1
 				“Standby to fire!” You yell. As the gunner hoists the RPG onto his shoulder, you pull him by his collar.
 				*line_break
 				*line_break
@@ -67,6 +69,8 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 				*line_break
 				Propping the weapon on the windowsill as an additional support, the gunner takes careful aim at the slowly encroaching armored truck.
 				*label 4_1_fire_rpg
+          *set rpg_ammo -1
+          *set demolitions +1
 				*line_break
 				*line_break
 				“FIRE!!! Fire the RPG!!!”
@@ -78,6 +82,7 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 				“Come on, come on….” you muttered under your breath, following the trajectory of the missile with an unrelenting stare.
 				*goto 4_1_1_rpg
 			#Fire a few shots at the enemy with your rifles to draw them closer, then blow that son of 	a bitch up
+          *set light_rounds -1
 				*set counter_attack_score +2
 				“Get ready to fire! On my command!” The gunner grunts in acknowledgement as he shimmies closer to the window and hoists the weapon onto his shoulder.
 				*line_break
@@ -154,7 +159,8 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 				“What are you waiting for? An invite to the ball? FIRE!”
 				*goto 4_1_1_rpg
 	#Spread out and harass the enemy
-		*set finesse +5
+		*set intellect %+5
+     *set strategy +1
 		Quickly assessing the immediate environment, you decide to use the line of buildings separating you and enemy as cover for a hit-and-run tactic.
 		*line_break
 		*line_break
@@ -204,7 +210,9 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 		*line_break
 		You could fire on the enemy right now. The armored truck is out of the question with your rifles, but cutting their infantry down to size would be great. Or you could wait to see if their leader shows up to take command. Take out the brains of the operation and these untrained soldiers will have no idea what to do. That said, it might never happen, and your window of opportunity gets smaller the longer you wait…
 		*fake_choice
-			#Take the opportunity to kill off their infantry!
+        #Take the opportunity to kill off their infantry!
+          *set light rounds -1
+          *set finesse %+5
 				*set counter_attack_score +1
 				“Team 1, on my command, open fire at enemy soldiers for 3 seconds. I repeat, 3 seconds. Then take cover.” The enemy continues to march almost nonchalantly, one of them even stopping to take a piss at the side of the road. Just a few more steps, and once the enemy enters the field of fire…
 				*line_break
@@ -242,7 +250,9 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 					*line_break
 					You consider this for a while. The initial plan had been to fall back to the last building and regroup, but with the enemy scattered and practically nobody guarding the armored truck, this might be the best opportunity to take out the metal beast for good.
 					*fake_choice
-						*selectable_if (rpg_ammo = 1) # Fire off the RPG and take out the armored truck!
+						*selectable_if (rpg_ammo = 1) #Fire off the RPG and take out the armored truck!
+                  *set demolitions +1
+                  *set rpg_ammo -1
 							*set counter_attack_score +1
 							You hate yourself for being this happy to cause destruction, but that’s a thought for another time. “Permission granted soldier! You only got one shot, make it count! Blow those suckers sky high!”
 							*line_break
@@ -266,7 +276,10 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 							*line_break
 							*line_break
 							You turn away from your windowsill, to see ${sergeant} slack-jawed, still in awe at how smoothly that went. You resist the urge to sympathise with them, and instead strap on your pack and give them a light punch to the shoulder as you walk out the door. “Cmon Serg,  let’s go.”
+                 *goto 4_stat_check
 						#Repeat your guerrilla tactics from other buildings. 
+                  *set marksmanship +1
+                  *set light_rounds -4
 							*set counter_attack_score +1
 							“That’s a negative soldier, we’re falling back. All troops, regroup to our last building, over.” You feel the greed of taking out that armored truck tug at you, but you decide to play this a little more patiently. You can use the same tactic once more later, wear their forces down even more.
 							*line_break
@@ -302,131 +315,136 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 							*line_break
 							*line_break
 							You laugh lightly. “Relax soldier. Letting that armored truck go might not have been the best idea. But we minimise losses like this while still pushing the enemy back. That’s a win in my book.” Your words trail off as you feel the fatigue start to hit you. You lean up against the brick wall, finally letting your eyes rest, if just for a moment.
-			#Wait and watch the enemy’s movement.
-				*set counter_attack_score +1
-				The enemy are caught out in panic, scurrying between rubble and crumbling house while cursing and shouting incoherently. Surely now an officer of sorts would reveal himself and try to reorganize the enemy.
-				*line_break
-				*line_break
-				“All teams hold your position.”
-				*line_break
-				*line_break
-				A minute passes. Then two. Then three.
-				*line_break
-				*line_break
-				Ten whole minutes pass of anxiously staring down the armored truck, its deadly barrel whirling side to side, as if sniffing out your position. You feel cold sweat form on your forehead, trickling down the bridge of your nose and gathering at the tip. 
-				*line_break
-				*line_break
-				At the 15 minute mark, you sigh as the enemy doesn’t show any sign of development.
-				*line_break
-				*line_break
-				“All teams, fall-” You bite your tongue before you can finish the command as the door of the armored truck swings open. A dark skinned, middle aged man pokes his head out, with a scruffy black beard and a red beret sitting atop his head. He shouts something you can’t make out from this distance, extending his hand out of his vehicle to signal to his men. Your eyes are glued on him. This is the guy you've been waiting for.
-				*line_break
-				*line_break
-				“Commander, could you repeat Last Mike?” The message over the radio snaps you back to reality. Mike… message. Right.
-				*line_break
-				*line_break
-				“Cancel Last Mike. All teams, do you have a vision of the man that just came out of the armored truck?”
-				*line_break
-				*line_break
-				“Team 1, that is a positive, over.”
-				*line_break
-				*line_break
-				“Team 2, that’s a positive, over.”
-				*line_break
-				*line_break
-				“Team 3, that’s a negative, over.”
-				*line_break
-				*line_break
-				“Team 4, negative over.”
-				*line_break
-				*line_break
-				2 teams can hit the target, that's probably better than nothing, but what if the commander isn't as important as you think he is? After all, anyone could wear a red beret.
-				*fake_choice
-					# Take the shot and kill the commander
-						*set counter_attack_score +1
-						*set men -3
-						“Teams 3 and 4, hold your position. Teams 1 and 2, keep your aim on that man, fire on my signal.” 
-						*line_break
-						*line_break
-						The man’s body from the neck down is still covered by the armored truck, it would be too risky to fire now. Just climb out a little more…
-						*line_break
-						*line_break
-						The enemy troops don’t seem as well trained as yours, as you watch the commander’s flailing gestures being heeded by nobody. Eventually, the beret-clad man climbs out of the armored vehicle to physically gather his men together, visibly frustrated.
-						*line_break
-						*line_break
-						Y’know... if you waited a little longer maybe an even higher ranking figure might show up-
-						*line_break
-						*line_break
-						Nah, fuck that.
-						*line_break
-						*line_break
-						“Fire!” The teams on you left rain hellfire down on the armored truck. The man, who had just gotten his feet out of the armored vehicle, falls to his knees in shock, his body riddled with lead.
-						*line_break
-						*line_break
-						A moment passes where both sides are unsure of what to do next. Once that brief moment passes, you watch the enemy come pouring out of their hiding places like rats, fleeing from the battlefield. The armored vehicle’s door is slammed shut, and it lets out a mechanical groan as it lurches back to reverse.  ${sergeant} gives a small whoop of joy behind you at the sight of the enemy’s retreat. You also feel a sense of elation build up inside you at this victory.
-						*line_break
-						*line_break
-						Your joy is short lived however. While the armored vehicle retreats you see the cannon begin to angle itself in your direction. No, just slightly left of you-
-						*line_break
-						*line_break
-						You snatch up your radio.
-						*line_break
-						*line_break
-						“Team 1 and 2, get out of there-”
-						*line_break
-						*line_break
-						[b]Dudududu-dum!! Dudududu-dum!!![/b]
-						*line_break
-						*line_break
-						Your command is cut short by a deafening explosion, as the armored truck fires a single shell at the building to your left; team 1s building. You feel the building you’re in rumble, ${sergeant} pulls you up onto your feet. "Let's get the fuck out of here!!!"
-						*line_break
-						*line_break
-						Grimacing, you make one last command. “All teams, regroup to our last building, I repeat, regroup to our last building, over!” You set the radio aside hurriedly and rush out the door, ${sergeant} following suit.
-						*goto 4_stat_check
-					#Wait for a better target. 
-						*set counter_attack_score -1
-						*set men -6
-						You only have this one chance to surprise the enemy. Taking out a few random soldiers would be helpful, but only by taking out a prominent figure with authority could you hope to turn the tide of this fight. It’s a gamble, but you decide to play it close to the chest.
-						*line_break
-						*line_break
-						“All teams, hold your position, fire on my signal.”
-						*line_break
-						*line_break
-						You stare down the enemy through your own sight with the intensity of a hawk. You scrutinize each soldier to the best of your ability, hoping to spy any indication of rank or power…
-						*line_break
-						*line_break
-						The enemy’s forces are made up of teenagers and young adults of various sizes. Some scrawny, some pudgy, but none seemed properly combat-trained. They wear civilian clothes and scraps of body armor. They hold their weapons at weird angles. No, nobody in this group seems like they could be a commander. Hell, none of them should even be soldiers, but this is war.
-						*line_break
-						*line_break
-						Just as you finish the thought, you realize that the forces have moved past your firing zone. You waited too long, and though the enemy is still unaware of your location, your platoon is no longer able to engage the enemy effectively.
-						*line_break
-						*line_break
-						You curse under your breath, and pound the wall with your fist in frustration.
-						*page_break
-						“All team, regroup to my location, I repeat regroup to my location, over.” The words leave a bad taste in your mouth. You let a golden opportunity go. Sure, the fight is still winnable, but it could have been far easier.
-						*line_break
-						*line_break
-						You turn to see ${sergeant} looking at you with a blank expression. You feel their judgement weigh heavily on you. 
-						*line_break
-						*line_break
-						“What’re you looking at, soldier.” You growl, reminding them of your rank. ${sergeant} immediately turns away, but it's apparent that your mistake here has left a bad impression on them.
-						*line_break
-						*line_break
-						The awkwardness in the room is palpable, and you decide you’ve had enough of it. You walk out the door to get a breath of fresh air as your men make their way to your building.
-						*line_break
-						*line_break
-						[b]Dudududu-dum!! Dudududu-dum!!![/b]
-						*line_break
-						*line_break
-						The cannon opens fire, hitting one of the returning teams! The soldier furthest from you falls to his knees, blood beginning to pool out onto the ground around him. Enemy soldiers come pouring out of the alleyway, storming towards you. It seems that while making their way to your position, the enemy have spotted your soldiers. With your soldiers spread out so thinly, you face turns pale at how fast the tables have been turned. 
-						*line_break
-						*line_break
-						Immediately you charge ahead, gunning down the opposition while giving your startled men some covering fire while they attempt to regroup. Both sides exchange heavy fire, but your men are heavily outnumbered and out-gunned. It's not looking too good.
-						*goto 4_stat_check
+                  *goto 4_stat_check
+        			#Wait and watch the enemy’s movement.
+        				*set counter_attack_score +1
+        				The enemy are caught out in panic, scurrying between rubble and crumbling house while cursing and shouting incoherently. Surely now an officer of sorts would reveal himself and try to reorganize the enemy.
+        				*line_break
+        				*line_break
+        				“All teams hold your position.”
+        				*line_break
+        				*line_break
+        				A minute passes. Then two. Then three.
+        				*line_break
+                  *line_break
+        				Ten whole minutes pass of anxiously staring down the armored truck, its deadly barrel whirling side to side, as if sniffing out your position. You feel cold sweat form on your forehead, trickling down the bridge of your nose and gathering at the tip. 
+        				*line_break
+        				*line_break
+        				At the 15 minute mark, you sigh as the enemy doesn’t show any sign of development.
+        				*line_break
+        				*line_break
+        				“All teams, fall-” You bite your tongue before you can finish the command as the door of the armored truck swings open. A dark skinned, middle aged man pokes his head out, with a scruffy black beard and a red beret sitting atop his head. He shouts something you can’t make out from this distance, extending his hand out of his vehicle to signal to his men. Your eyes are glued on him. This is the guy you've been waiting for.
+        				*line_break
+        				*line_break
+        				“Commander, could you repeat Last Mike?” The message over the radio snaps you back to reality. Mike… message. Right.
+        				*line_break
+        				*line_break
+        				“Cancel Last Mike. All teams, do you have a vision of the man that just came out of the armored truck?”
+        				*line_break
+        				*line_break
+        				“Team 1, that is a positive, over.”
+        				*line_break
+        				*line_break
+        				“Team 2, that’s a positive, over.”
+        				*line_break
+        				*line_break
+        				“Team 3, that’s a negative, over.”
+        				*line_break
+        				*line_break
+        				“Team 4, negative over.”
+        				*line_break
+        				*line_break
+        				2 teams can hit the target, that's probably better than nothing, but what if the commander isn't as important as you think he is? After all, anyone could wear a red beret.
+        				*fake_choice
+        					# Take the shot and kill the commander
+                       *set marksmanship +1
+        						*set counter_attack_score +1
+        						*set men -3
+        						“Teams 3 and 4, hold your position. Teams 1 and 2, keep your aim on that man, fire on my signal.” 
+        						*line_break
+        						*line_break
+        						The man’s body from the neck down is still covered by the armored truck, it would be too risky to fire now. Just climb out a little more…
+        						*line_break
+        						*line_break
+        						The enemy troops don’t seem as well trained as yours, as you watch the commander’s flailing gestures being heeded by nobody. Eventually, the beret-clad man climbs out of the armored vehicle to physically gather his men together, visibly frustrated.
+        						*line_break
+        						*line_break
+        						Y’know... if you waited a little longer maybe an even higher ranking figure might show up-
+        						*line_break
+        						*line_break
+        						Nah, fuck that.
+        						*line_break
+        						*line_break
+        						“Fire!” The teams on you left rain hellfire down on the armored truck. The man, who had just gotten his feet out of the armored vehicle, falls to his knees in shock, his body riddled with lead.
+        						*line_break
+        						*line_break
+        						A moment passes where both sides are unsure of what to do next. Once that brief moment passes, you watch the enemy come pouring out of their hiding places like rats, fleeing from the battlefield. The armored vehicle’s door is slammed shut, and it lets out a mechanical groan as it lurches back to reverse.  ${sergeant} gives a small whoop of joy behind you at the sight of the enemy’s retreat. You also feel a sense of elation build up inside you at this victory.
+        						*line_break
+        						*line_break
+        						Your joy is short lived however. While the armored vehicle retreats you see the cannon begin to angle itself in your direction. No, just slightly left of you-
+        						*line_break
+        						*line_break
+        						You snatch up your radio.
+        						*line_break
+        						*line_break
+        						“Team 1 and 2, get out of there-”
+        						*line_break
+        						*line_break
+        						[b]Dudududu-dum!! Dudududu-dum!!![/b]
+        						*line_break
+        						*line_break
+        						Your command is cut short by a deafening explosion, as the armored truck fires a single shell at the building to your left; team 1s building. You feel the building you’re in rumble, ${sergeant} pulls you up onto your feet. "Let's get the fuck out of here!!!"
+        						*line_break
+        						*line_break
+        						Grimacing, you make one last command. “All teams, regroup to our last building, I repeat, regroup to our last building, over!” You set the radio aside hurriedly and rush out the door, ${sergeant} following suit.
+        						*goto 4_stat_check
+        					#Wait for a better target. 
+                       *goto waitout
+        #Hold your fire, wait for more developments
+            *label waitout
+            *set counter_attack_score -1
+            *set men -6
+            You only have this one chance to surprise the enemy. Taking out a few random soldiers would be helpful, but only by taking out a prominent figure with authority could you hope to turn the tide of this fight. It’s a gamble, but you decide to play it close to the chest.
+            *line_break
+            *line_break
+            “All teams, hold your position, fire on my signal.”
+            *line_break
+            *line_break
+            You stare down the enemy through your own sight with the intensity of a hawk. You scrutinize each soldier to the best of your ability, hoping to spy any indication of rank or power…
+            *line_break
+            *line_break
+            The enemy’s forces are made up of teenagers and young adults of various sizes. Some scrawny, some pudgy, but none seemed properly combat-trained. They wear civilian clothes and scraps of body armor. They hold their weapons at weird angles. No, nobody in this group seems like they could be a commander. Hell, none of them should even be soldiers, but this is war.
+            *line_break
+            *line_break
+            Just as you finish the thought, you realize that the forces have moved past your firing zone. You waited too long, and though the enemy is still unaware of your location, your platoon is no longer able to engage the enemy effectively.
+            *line_break
+            *line_break
+            You curse under your breath, and pound the wall with your fist in frustration.
+            *page_break
+            “All team, regroup to my location, I repeat regroup to my location, over.” The words leave a bad taste in your mouth. You let a golden opportunity go. Sure, the fight is still winnable, but it could have been far easier.
+            *line_break
+            *line_break
+            You turn to see ${sergeant} looking at you with a blank expression. You feel their judgement weigh heavily on you. 
+            *line_break
+            *line_break
+            “What’re you looking at, soldier.” You growl, reminding them of your rank. ${sergeant} immediately turns away, but it's apparent that your mistake here has left a bad impression on them.
+            *line_break
+            *line_break
+            The awkwardness in the room is palpable, and you decide you’ve had enough of it. You walk out the door to get a breath of fresh air as your men make their way to your building.
+            *line_break
+            *line_break
+            [b]Dudududu-dum!! Dudududu-dum!!![/b]
+            *line_break
+            *line_break
+					The cannon opens fire, hitting one of the returning teams! The soldier furthest from you falls to his knees, blood beginning to pool out onto the ground around him. Enemy soldiers come pouring out of the alleyway, storming towards you. It seems that while making their way to your position, the enemy have spotted your soldiers. With your soldiers spread out so thinly, you face turns pale at how fast the tables have been turned. 
+            *line_break
+            *line_break
+					Immediately you charge ahead, gunning down the opposition while giving your startled men some covering fire while they attempt to regroup. Both sides exchange heavy fire, but your men are heavily outnumbered and out-gunned. It's not looking too good.
+            *goto 4_stat_check
 
 	#Sneakily encircle the enemy and surprise them with an ambush!
-		*set charm +5
-		*set intellect +5
+		*set charm %+5
+		*set intellect %+5
 		*if (charm + intellect) >= 15
 			*set counter_attack_score +1
 			[i]Stat Check: Charm + Intellect >= 15[/i]
@@ -488,6 +506,7 @@ Lastly, you could choose to make a tactical retreat. After all, your initial obj
 What would you do?
 *fake_choice
 	#Charge at the enemy! Utilize their confusion to your advantage!
+     *set physical %+5
 		“Let’s move! Engage them head on!" You scream at the rest. "Tactical movement in a 3 by 2 formation!”
 		*line_break
 		*line_break
@@ -523,6 +542,7 @@ What would you do?
 			“Take cover! The rest of you, take them out immediately!” Inside your head, you cursed and kick yourself for being taken off guard by the enemy’s counterattack so much that you neglected your force preparation before engaging the enemy. All you can do is hope that you can eliminate their infantry before you are left with no more munitions on the open field.
 			*goto 4_stat_check
 	#Hold your ground! You can continue to engage the enemy in this position.
+     *set logistics +1
 		*set counter_attack_score +1
 		No, ammunitions are already at an all time low, it might be suicide to just go in guns blazing. Best to stand your ground and pick them off little by little while retaining an optimal cover.
 		*line_break
@@ -637,9 +657,11 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 		It’s too late to backtrack, and pulling back would only expose your position. You can only hope that their vanguard doesn’t spot you before you open fire. But it is only a matter of time.
 	*fake_choice
 		# Open fire now!
+       *set light_rounds -3
 			*if men >= 8
 				[i]Stat Check: Men >= 8[/i]
 				*set counter_attack_score +1
+          *set physical %+5
 				*line_break
 				*line_break
 				“OPEN FIRE!!! OPEN FIRE!!”
@@ -657,6 +679,8 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 				The platoon, or what’s left of it opens fire on the enemy, but the paltry amount of firepower you can muster barely takes down two of the enemy soldiers. The rest quickly dive for cover and return covering fire, sending chunks of dirt spraying across your vision. A bullet lands just in front of you, sending you hunkering down behind the little cover provided by the ditch. Fuck!
 			*goto bridge_ambush_check
 		# Wait till the truck reaches the middle of the bridge.
+       *set light_rounds -3
+       *set physical %+5
 			*if men >= 5
 				[i]Stat Check: Men >= 5[/i]
 				*set counter_attack_score +2
@@ -677,6 +701,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 				Despite your limited firepower, the narrow bridge gives the enemy soldiers nowhere to run as they are mowed down mercilessly by a hail of bullets! The remaining men scream in panic, cowering behind the armored truck and taking pot shots in your general direction and missing wildly.
 			*goto bridge_ambush_check
 		# Wait till the truck crosses the bridge before firing!
+       *set light_rounds -3
 			*if physical >= 5
 				[i]Stat Check: Physical >= 5[/i]
 				*set counter_attack_score -1
@@ -786,11 +811,12 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 		*line_break
 		"We're getting shot up commander!!" The walkie cackles as gunfire echoes around the room. "Two of the guys just got hit!!"
 	*fake_choice
-		#Open fire now! Everyone open fire!!
-			*set physical +5
+		#Open fire now! Everyone open fire! 
+       *set light_rounds -3
 			*if men >= 8
 				[i]Stat Check: Men >= 8[/i]
 				*set counter_attack_score +1
+          *set physical %+5
 				*line_break
 				*line_break
 				“OPEN FIRE!!! OPEN FIRE!!”
@@ -809,8 +835,9 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 			*goto junction_ambush_check
 		#Radio the machine gun nest to light them up!
 			*set counter_attack_score -1
+        *set physical %+5
+        *set heavy_rounds -3
 			*set men -4
-			*set physical +5
 			"${sergeant}! Open fire! NOW!"
 			*line_break
 			*line_break
@@ -835,8 +862,9 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 			Fuck. Your men are getting torn apart and there's nothing you can do.
 			*goto junction_ambush_check
 		#Fire a few shots to distract the enemy!
+       *set light_rounds -3
 			*set counter_attack_score +1
-			*set finesse +5
+        *set charm %+5
 			[b]Bang! Bang Bang!![/b]
 			*line_break
 			*line_break
@@ -893,8 +921,6 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 	*goto 4_stat_check
 
 *if ambush = 3
-	*set intellect +5
-	*set charm +5
 	*set counter_attack_score +1
 	"${sergeant}! Get a few men and block up the main access road! Divert them to this alley over here, the rest of you, break off into teams and establish firing positions with the kill zone in the alley over there!"
 	*line_break
@@ -917,9 +943,11 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 	Despite the officer's warning, the armored vehicle slows and turns into the alley, just as planned for!
 	*fake_choice
 		# Open fire now!
+       *set light_rounds -3
 			*if men >= 8
 				[i]Stat Check: Men >= 8[/i]
 				*set counter_attack_score +1
+          *set physical %+5
 				*line_break
 				*line_break
 				“OPEN FIRE!!! OPEN FIRE!!”
@@ -937,6 +965,8 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 				The platoon, or what’s left of it opens fire on the enemy, but the paltry amount of firepower you can muster barely takes down two of the enemy soldiers. The rest quickly dive for cover and return covering fire, sending chunks of dirt spraying across your vision. A bullet lands just in front of you, sending you hunkering down behind the rubble. Fuck!
 			*goto alley_ambush_check
 		# Wait till the truck reaches the middle of the alley.
+       *set light_rounds -3
+       *set physical %+5
 			The tires of the armored truck crunches on to debris left strewn across the alleyway, the soldiers looking nervously around as they are hemmed in on both sides by the bricks and walls. With the narrow access, the truck can barely swivel it's gun turret, meaning that it can only fire straight ahead.
 			*line_break
 			*line_break
@@ -950,11 +980,14 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 			*line_break
 			*line_break
 			*if men >= 5
+          *set counter_attack_score +2
 				Smoke fills the air as screaming steel tears into the enemy ranks, killing almost all the enemy soldiers instantly and sending the rest of them into panic, screaming as they throw down their rifles and flee! 
 			*if men < 5
+          *set counter_attack_score +1
 				Despite your limited firepower, the narrow alley gives the enemy soldiers nowhere to run as they are mowed down mercilessly by a hail of bullets! The remaining men scream in panic, cowering behind the armored truck and taking pot shots in your general direction and missing wildly.
 			*goto alley_ambush_check
 		# Wait till the truck is about to exit the alley before firing!
+       *set light_rounds -3
 			*set counter_attack_score -2
 			Counting on the element of surprise, you wait while the enemy is about to exit the alley. This might give you a better shot at their rear, but the risk is also much higher. You take a deep breath, bringing your rifle level before firing into the backs of the enemy soldiers.
 			*line_break
@@ -982,6 +1015,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 *if counter_attack_score >= 1
 	*set counter_attack_score +1
 	*set truck_explode 1
+  *set he_grenade -2
 	Pushing the enemy into the alley had rendered their armored truck useless, and now your men begin to toss grenades downwards onto the enemy. Screams and shouts are cut short by explosions, hot shrapnel putting an end to many of the enemy soldiers.
 	*line_break
 	*line_break
