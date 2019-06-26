@@ -14,12 +14,6 @@
 *create age 18
 *create race ""
 *create background ""
-*create gender ""
-*create orientation "Straight"
-*create playersirmdm ""
-*create playerheshe ""
-*create playerhisher ""
-*create playerhimher ""
 *create dollars 100
 
 *comment key traits
@@ -37,12 +31,6 @@
 *create scouting 0
 *create strategy 0
 *create swimming 0
-
-*comment personality
-*create mind 50
-*create energy 50
-*create nature 50
-*create tactics 50
 
 *comment renown & relationships
 *create renown 0

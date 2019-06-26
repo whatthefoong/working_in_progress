@@ -29,7 +29,7 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 *fake_choice
 	*selectable_if (rpg_ammo > 0) #Hold your position and use the RPG to take out the armored truck!
      *set finesse %+5
-     *set demolitions +1
+     *set physical %+5
 		“Prepare the RPG! Take out the truck first and we can pick off the rest after!” The Rocket Propelled Grenade will be your best bet against the impending threat posed by the oncoming armored vehicle. Even then, RPGs aren't the most accurate, but one can only hope. 		As it is, your men wouldn’t stand an iota of a chance if you engage the enemy directly.
 		*line_break
 		*line_break
