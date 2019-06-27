@@ -42,6 +42,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 "$!{playersirmdm}? We're getting fucked hard here!!!"
 *set men 12
 *set light_rounds 8
+*set heavy_rounds 3
 *set smoke_grenade 1
 *set he_grenade 2
 *set rpg_ammo 1
@@ -49,7 +50,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 *fake_choice
 	#Smoke out and dash through the smoke screen
 		*set physical %+5
-		*set intellect +5
+		*set intellect %+5
 		*set smoke_grenade -1
 		*set men -1
 		"Smoke out! Smoke out!" You grab the long cylindrical grenade, wrenching the pin free before hurling it onto the road. It spins, a plume of white smoke jetting out from its tip, you count in staggered breaths, as taught back in training school. One thousand two thousand three thousand four thousand five thousand. A smoke screen forms, sufficiently covering the street.
@@ -77,8 +78,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		*goto 2_1_assault_building_norpg
 	#RPG the machine gun position and charge
 		*set physical %+5
-		*set demolitions %+5
-		*set tactics +5
+		*set demolitions +1
 		*set rpg_ammo -1
 		"RPG THE FUCK OUT OF THAT FUCKING GUNNER!"
 		*line_break
@@ -133,8 +133,6 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		*goto 2_1_assault_building_norpg
 	*disable_reuse #Retreat!
 		*set intellect %+5
-		*set physical %-5
-		*set nature +5
 		"Pull back! Retreat!!"
 		*line_break
 		*line_break
@@ -158,6 +156,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 *label 2_1_assault_building_norpg
 *fake_choice
 	#Go go go! Lead your men into the building!
+    *set physical %+5
 		You pull out your magazine to check that it's full before slapping it back into its housing. Would have been pretty stupid to barge into a room with an empty magazine wouldn't it?
 		*line_break
 		*line_break
@@ -237,6 +236,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 				*goto 3_1_firefight
 			
 	#Let's find another way in!
+     *set scouting +1
 		Going through the front door would have been suicide. At best, the point man would be shot to pieces, with the rest of the squad using him as a meat shield. At worse… you shrug the thought away.
 		*line_break
 		*line_break
@@ -280,6 +280,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 			#Sneak in via the window and try to capture him
 				*label 2_1_sneak_in
 				*set kill_civilian 0
+          *set finesse %+5
 				"Cover me. I'm going in." You whisper to ${sergeant}, motioning at the window. He replies with a solemn nod.
 				*line_break
 				*line_break
@@ -308,6 +309,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 			#Tap the window and try to communicate with him
 				*label 2_1_communicate
 				*set kill_civilian 0
+          *set charm %+5
 				Tightening your grip on the trigger with your dominant hand, you give the window a series of short, hard raps.
 				*line_break
 				*line_break
@@ -327,6 +329,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 				*goto 2_2_result
 			
 	#Grenades at the ready! We'll clear the room before they know what hit em!
+     *set demolitions +1
 		You hold out your hand in a fist with your thumb pointing upwards, the instructed field signal for a grenade launch. Taking a quick glance around to ensure your men are fully covered, you turn to ${sergeant} and he nods back at you.
 		*line_break
 		*line_break
@@ -357,6 +360,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 *label 2_2_assault_building_rpg
 *fake_choice
 	#Breach the building
+     *set physical %+5
 		You pull out your magazine to check that it's full before slapping it back into its housing. Would have been pretty stupid to barge into a room with an empty magazine wouldn't it?
 		*line_break
 		*line_break
@@ -499,6 +503,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 				*line_break
 				*goto 3_4_story				
 	#Look for another way in
+     *set scouting +1
 		Going through the front door would have been suicide. At best, the point man would be shot to pieces, with the rest of the squad using him as a meat shield. At worse… you shrug the thought away.
 		*line_break
 		*line_break
@@ -529,6 +534,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 				
 
 *label 2_3_run_away
+*set finesse %+5
 “Roger, ${playersirmdm}.” ${sergeant} reluctantly grumbled. “Stand down! Prepare to pull out!”
 *line_break
 *line_break

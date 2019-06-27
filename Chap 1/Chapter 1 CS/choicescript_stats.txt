@@ -75,21 +75,6 @@
 	percent Charm
 	percent Intellect
 *line_break
-[b]Personality[/b]
-*stat_chart
-	opposed_pair mind
-		Extrovert
-		Introvert
-	opposed_pair energy
-		Intuitive
-		Observant
-	opposed_pair nature
-		Logical
-		Emotional
-	opposed_pair tactics
-		Improvisational
-		Structured
-*line_break
 [b]Specific Skills[/b]
 *stat_chart
 	text Demolitions
@@ -154,35 +139,6 @@ Intellect: Influences your learning and perceptiveness.
 [b]Reputation[/b]
 *line_break
 Renown: How well known you are.
-
-[b]Personality[/b]
-*line_break
-Mind:
-*line_break
-Extrovert - Prefer social situations and enjoys interaction.
-*line_break
-Introvert - Prefer solitary activities and gets exhausted by interaction.
-
-
-Energy:
-*line_break
-Intuitive - Imaginative, creative and curious.
-*line_break
-Observant - Practical, logical and systematic.
-
-
-Nature:
-*line_break
-Emotional - Emotionally sensitive, focuses on harmony.
-*line_break
-Logical - Emotionally objective, focuses on efficiency.
-
-
-Tactics:
-*line_break
-Improvisational - Flexible and improvisational.
-*line_break
-Structured - Organized and rigid.
 *line_break
 *goto menu4
 
