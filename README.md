@@ -5,15 +5,17 @@ Git Instructions:
 When updating your work & committing:
 1. git fetch origin
 2. git merge origin/master
-^steps 1 & 2 basically updates your local copy to match master
+
 3. [make some changes]
 4. git status
-^the files you changed should be highlighted in red
 5. git add .
 6. git status
-^the files you changed should be highlighted in green
 7. git commit -m [comment on what you changed]
 8. git push
+
+^steps 1 & 2 basically updates your local copy to match master
+^step 4 the files you changed should be highlighted in red
+^step 6 the files you changed should be highlighted in green
 
 When navigating on cmd line:
 1. ls -> list all the files
