@@ -13,8 +13,10 @@ When updating your work & committing:
 7. git commit -m [comment on what you changed]
 8. git push
 
-^steps 1 & 2 basically updates your local copy to match master
+^steps 1 & 2 basically updates your local copy to match master -> if it prompts you for a reason for merge at step 2, just type ':wq' and press enter
+
 ^step 4 the files you changed should be highlighted in red
+
 ^step 6 the files you changed should be highlighted in green
 
 When navigating on cmd line:
