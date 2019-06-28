@@ -2,21 +2,18 @@ This is the readme for Sir Yes Sir (title is a wip)
 
 Git Instructions:
 
-Setting up (everything in square brackets are user-defined and do not include the square brackets i.e. [comment])
-1. git clone https://github.com/whatthefoong/working_in_progress.git
-2. git checkout -b [name_of_your_branch]
-3. [make some changes]
-4. git add .
-5. git commit -m [comment on what you changed]
-6. git push --set-upstream origin test_branch
-
-Subsequently, when updating your work & committing:
+When updating your work & committing:
 1. git fetch origin
 2. git merge origin/master
+^steps 1 & 2 basically updates your local copy to match master
 3. [make some changes]
-4. git add .
-5. git commit -m [comment on what you changed]
-6. git push
+4. git status
+^the files you changed should be highlighted in red
+5. git add .
+6. git status
+^the files you changed should be highlighted in green
+7. git commit -m [comment on what you changed]
+8. git push
 
 When navigating on cmd line:
 1. ls -> list all the files
@@ -28,3 +25,11 @@ Useful commands to know:
 3. git branch -vv -> shows you all the branch versions and upstreams
 4. git remote show origin -> show remote origin
 5. git branch --set-upstream-to origin/[branch_name] [other_branch_name] -> for setting upstreams
+
+Setting up (everything in square brackets are user-defined and do not include the square brackets i.e. [comment])
+1. git clone https://github.com/whatthefoong/working_in_progress.git
+2. git checkout -b [name_of_your_branch]
+3. [make some changes]
+4. git add .
+5. git commit -m [comment on what you changed]
+6. git push --set-upstream origin test_branch
