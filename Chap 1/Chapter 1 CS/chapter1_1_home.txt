@@ -41,7 +41,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 *line_break
 "Commander? We're getting fucked hard here!!!"
 *set men 12
-*set light_rounds 18
+*set light_rounds 12
 *set heavy_rounds 3
 *set smoke_grenade 1
 *set he_grenade 3
@@ -52,7 +52,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		*set physical %+5
 		*set intellect %+5
 		*set smoke_grenade -1
-		*set men -1
+		*set men -3
 		"Smoke out! Smoke out!" You grab the long cylindrical grenade, wrenching the pin free before hurling it onto the road. It spins, a plume of white smoke jetting out from its tip, you count in staggered breaths, as taught back in training school. One thousand two thousand three thousand four thousand five thousand. A smoke screen forms, sufficiently covering the street.
 		*line_break
 		*line_break
@@ -71,7 +71,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		A pale, familiar face stares right back at you.
 		*line_break
 		*line_break
-		Blood completely drained, jaws slackened in a horrified tableau. Blood drenches his neck, his body crumpled on the ground. He almost made it. Almost. Another soldier had been shot to pieces. He stood no chance against the LMG. [i]Fucking bastards![/i] You look around, your squad (or the remaining ${men} men) stand ready at the door leading into the base of the enemy building, clearly shaken.
+		Blood completely drained, jaws slackened in a horrified tableau. Blood drenches his neck, his body crumpled on the ground. He almost made it. Almost. Another soldier had been shot to pieces. He stood no chance against the LMG. [i]Fucking bastards![/i] You look around, only to see two more of your men collapsed on the ground, unmoving. Your squad (or the remaining ${men} men) stand ready at the door leading into the base of the enemy building, clearly shaken.
 		*line_break
 		*line_break
 		${sergeant} pulls himself together, mustering what's left of his courage. "On your order Commander!"
@@ -107,7 +107,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		*set charm %+5
 		*set intellect %+5
 		*set light_rounds -2
-		*set men -1
+		*set men -2
 		"Covering fire! Set up a fire base and engage!"
 		*line_break
 		*line_break
@@ -123,7 +123,10 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		At once, you pick up your rifle, sprinting across the treacherous killing ground. Less than 10 yards to go! The dreaded ack-ack of the guns erupt again, a few bullets straying near you as you dive into the dirt, slamming onto the ground! In a flash, you're pressed against the wall, keeping your figure compact as you peer upwards to judge the next move.
 		*line_break
 		*line_break
-		"FUCK THEY GOT HIM!!!" You turn, seeing one of the men standing still, his body wobbling slightly as his face contorts in shock, blood pouring down his uniform. His rifle slides out of his hand, clattering to the ground. [b]Bang! Bang!![/b] A puff of red mist explodes in his chest, hurling his body onto the ground like a rag-doll.
+		"FUCK THEY GOT HIM!!!" You turn, seeing one of the men standing still, his body wobbling slightly as his face contorts in shock, blood pouring down his uniform. His rifle slides out of his hand, clattering to the ground. [b]Bang! Bang!![/b] A puff of red mist explodes in his chest, hurling his body onto the ground like a rag-doll. 
+		*line_break
+		*line_break
+		His buddy, the person who yelled, turned around to try and help his friend up, but with his back turned he didn't see the second round of bullets until they entered his back and came out of his chest.
 		*line_break
 		*line_break
 		"I'll fucking kill them with my bare hands those bloody cock-suckers!" ${sergeant} bristles, before taking up position at the doors. The others stand at the side, weapons at the ready.
@@ -196,6 +199,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 				*page_break
 				"WATCH OUT!! GRENADE!!!" A dark metal chunk rolls down the stairs as ${sergeant} pushes you into the kitchen head first.
 				*label 2_11_grenade
+				*set men -1
 				*line_break
 				*line_break
 				You briefly register a huddle of bodies and timid faces pressed against the kitchen counter, the civilian and his wife, with their three children, dressed in little more than tattered rags.
@@ -207,7 +211,13 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 				The world explodes around you, a shrill bright light shredding the walls and furniture, a powerful cyclone of broken wood and glass shattering around you.
 				*line_break
 				*line_break
-				You know you're bleeding, but you can barely feel a thing. All that can be heard is ringing as you try to pull yourself back onto your feet in vain. ${sergeant} pushes you back down, firing his rifle at silhouettes like a possessed madman.
+				For a moment, all you see is white. There is no sound. You lie there suspended in the void. Slowly but surely, you are pulled back into your reality as your vision returns to you. You ignore the high-pitched ringing in your ears as you try to pull yourself back onto your feet, quickly surveying your men. 
+				*line_break
+				*line_break
+				You felt like the grenade blast had been weaker than you thought, and sure enough your suspicions are confirmed. You see one of your men blown to shreds over where the grenade had been. He sacrificed himself to protect his fellow soldiers and the civilians, by containing the blast with his own body.
+				*line_break
+				*line_break
+				Before you can even think of grieving, ${sergeant} pushes you back down, firing his rifle at silhouettes like a possessed madman.
 				*line_break
 				*line_break
 				Still in your dazed state, your mind swims around desperately to try and regain control of your shell-shocked body.
@@ -545,6 +555,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 
 *label 2_3_run_away
 *set finesse %+5
+*set light_rounds -1
 “Roger, commander.” ${sergeant} reluctantly grumbled. “Stand down! Prepare to pull out!”
 *line_break
 *line_break
