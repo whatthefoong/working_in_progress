@@ -4,7 +4,7 @@
 [b]Chapter 1: Home Sweet Home[/b]
 *line_break
 *line_break
-Bullets whiz over your head, sending you diving for cover behind a bullet ridden wall. Puffs of smoke explode out of the concrete as 7.62mm slugs slam into the walls of the street. You're breathing hard, drenched in sweat as you look at the scraggly squad before you — the last that's left of your platoon. They look to you, eyes peering out from dirty, blackened faces. These are desperate men, in desperate times.
+[b]Rat-tat-tat-tat!!![/b] Bullets whiz over your head, sending you diving for cover behind a bullet ridden wall. Puffs of smoke explode out of the concrete as 7.62mm slugs slam into the walls of the street. You're breathing hard, drenched in sweat as you look at the scraggly squad before you — the last that's left of your platoon. They look to you, eyes peering out from dirty, blackened faces. These are desperate men, in desperate times.
 *line_break
 *line_break
 "Sit-rep!" You bark out.
