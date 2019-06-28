@@ -18,6 +18,10 @@ Subsequently, when updating your work & committing:
 5. git commit -m [comment on what you changed]
 6. git push
 
+When navigating on cmd line:
+1. ls -> list all the files
+2. cd -> change directory
+
 Useful commands to know:
 1. git status -> shows you the status of your branch/commits
 2. git diff -> shows you the differences
