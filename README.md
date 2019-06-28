@@ -27,4 +27,4 @@ Useful commands to know:
 2. git diff -> shows you the differences
 3. git branch -vv -> shows you all the branch versions and upstreams
 4. git remote show origin -> show remote origin
-5. git --set-upstream-to origin/[branch_name] [other_branch_name] -> for setting upstreams
+5. git branch --set-upstream-to origin/[branch_name] [other_branch_name] -> for setting upstreams
