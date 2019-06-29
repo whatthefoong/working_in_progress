@@ -1,6 +1,7 @@
 This is the readme for Sir Yes Sir (title is a wip)
 
-Git Instructions:
+##Git Instructions:
+Everything in square brackets are user-defined and do not include the square brackets i.e. [comment]
 
 ######When updating your work & committing:
 1. git fetch origin
@@ -9,7 +10,7 @@ Git Instructions:
 4. git status
 5. git add .
 6. git status
-7. git commit -m [comment on what you changed]
+7. git commit -m "[comment on what you changed]"
 8. git push
 
 ^steps 1 & 2 basically updates your local copy to match master -> if it prompts you for a reason for merge at step 2, just type ':wq' and press enter
@@ -37,7 +38,7 @@ Git Instructions:
 4. git remote show origin -> show remote origin
 5. git branch --set-upstream-to origin/[branch_name] [other_branch_name] -> for setting upstreams
 
-Setting up (everything in square brackets are user-defined and do not include the square brackets i.e. [comment])
+Setting up
 1. git clone https://github.com/whatthefoong/working_in_progress.git
 2. git checkout -b [name_of_your_branch]
 3. [make some changes]
