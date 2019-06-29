@@ -588,7 +588,7 @@ What would you do?
 		*goto 4_stat_check
 
 *label 4_3_ambush_choice
-“Alright men, we might be outnumbered, but if we take them by surprise, we might just be able to come out of this as heroes. Or die as matyrs. So listen up.” The remains of your platoon huddle round, trying hard not to let their fatigue show.
+“Alright men, we might be outnumbered, but if we take them by surprise, we might just be able to come out of this as heroes. Or die as martyrs. So listen up.” The remains of your platoon huddle round, trying hard not to let their fatigue show.
 *line_break
 *line_break
 *if ambush = 1
