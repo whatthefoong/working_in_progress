@@ -71,7 +71,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		A pale, familiar face stares right back at you.
 		*line_break
 		*line_break
-		Blood completely drained, jaws slackened in a horrified tableau. Blood drenches his neck, his body crumpled on the ground. He almost made it. Almost. Another soldier had been shot to pieces. He stood no chance against the LMG. [i]Fucking bastards![/i] You look around, only to see two more of your men collapsed on the ground, unmoving. Your squad (or the remaining ${men} men) stand ready at the door leading into the base of the enemy building, clearly shaken.
+		Blood completely drained, jaws slackened in a horrified tableau. Blood drenches his neck, his body crumpled on the ground. He almost made it. Almost. Another soldier had been shot to pieces. He stood no chance against the LMG. [i]Fucking bastards![/i] You look around, only to see two more of your men collapsed on the ground, dead. Your squad (or the remaining ${men} men) stand ready at the door leading into the base of the enemy building, clearly shaken.
 		*line_break
 		*line_break
 		${sergeant} pulls himself together, mustering what's left of his courage. "On your order Commander!"
@@ -126,7 +126,16 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		"FUCK THEY GOT HIM!!!" You turn, seeing one of the men standing still, his body wobbling slightly as his face contorts in shock, blood pouring down his uniform. His rifle slides out of his hand, clattering to the ground. [b]Bang! Bang!![/b] A puff of red mist explodes in his chest, hurling his body onto the ground like a rag-doll. 
 		*line_break
 		*line_break
-		His buddy, the person who yelled, turned around to try and help his friend up, but with his back turned he didn't see the second round of bullets until they entered his back and came out of his chest.
+		"Don't fucking die on me you bastard!!" Another soldier sprints over, defiantly dragging his buddy, desperately throwing the dead man over his shoulder.
+		*line_break
+		*line_break
+		[b]Bang![/b]
+		*line_break
+		*line_break
+		A single shot rings out.
+		*line_break
+		*line_break
+		The soldier freezes, his back fully erect, his face expressionless, his eyes cold. Like a silent statue, he sinks to the ground, holes in his chest.
 		*line_break
 		*line_break
 		"I'll fucking kill them with my bare hands those bloody cock-suckers!" ${sergeant} bristles, before taking up position at the doors. The others stand at the side, weapons at the ready.
@@ -214,13 +223,13 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 				For a moment, all you see is white. There is no sound. You lie there suspended in the void. Slowly but surely, you are pulled back into your reality as your vision returns to you. You ignore the high-pitched ringing in your ears as you try to pull yourself back onto your feet, quickly surveying your men. 
 				*line_break
 				*line_break
-				You felt like the grenade blast had been weaker than you thought, and sure enough your suspicions are confirmed. You see one of your men blown to shreds over where the grenade had been. He sacrificed himself to protect his fellow soldiers and the civilians, by containing the blast with his own body.
+				One of the soldiers had sacrificed himself, throwing his body on the grenade and inadvertently saving the rest of you. He lies lifeless, his body torn and ragged, blackened and burnt. Another martyr. Another man dead at your command.
 				*line_break
 				*line_break
-				Before you can even think of grieving, ${sergeant} pushes you back down, firing his rifle at silhouettes like a possessed madman.
+				Gun fire shatters your musings as ${sergeant} pushes you down, firing his rifle at silhouettes like a possessed madman.
 				*line_break
 				*line_break
-				Still in your dazed state, your mind swims around desperately to try and regain control of your shell-shocked body.
+				You blink, your mind swimming desperately as you try to regain control of your shell-shocked body.
 				*goto 3_1_firefight
 				
 			#Don't shoot!!!
