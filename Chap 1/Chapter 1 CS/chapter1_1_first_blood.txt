@@ -1,16 +1,17 @@
 *comment Define all temp variables here
-*temp sergeant "Sergeant Kosnik"
-*temp kill_civilian 0
-[b]Chapter 1: Home Sweet Home[/b]
+[b]Chapter 1: First Blood[/b]
 *line_break
 *line_break
-[b]Rat-tat-tat-tat!!![/b] Bullets whiz over your head, sending you diving for cover behind a bullet ridden wall. Puffs of smoke explode out of the concrete as 7.62mm slugs slam into the walls of the street. You're breathing hard, drenched in sweat as you look at the scraggly squad before you — the last that's left of your platoon. They look to you, eyes peering out from dirty, blackened faces. These are desperate men, in desperate times.
+[b]Rat-tat-tat-tat!!![/b]
+*line_break
+*line_break
+Bullets whiz over your head, sending you diving for cover behind a bullet ridden wall. Puffs of smoke explode out of the concrete as 7.62mm slugs slam into the walls of the street. You're breathing hard, drenched in sweat as you look at the scraggly squad before you — the last that's left of your platoon. They look to you, eyes peering out from dirty, blackened faces. These are desperate men, in desperate times.
 *line_break
 *line_break
 "Sit-rep!" You bark out.
 *line_break
 *line_break
-"Mike high!" You roll your eyes, morale always had to be high, even in a shit show like this. "Whiskey low! Alpha low!" Your platoon sergeant barks out in a gruff voice. Whiskey… water. Alpha… ammunitions. He looks around, "Fuck me. Total strength 32, current strength 12. 17 dead. 4 missing. 2 wounded."
+"Mike high!" You roll your eyes, morale always had to be high, even in a shit show like this. "Whiskey low! Alpha low!" Your platoon sergeant barks out in a gruff voice. Whiskey… water. Alpha… ammunitions. He looks around, "Fuck me. Total strength 32, current strength 12. 16 dead. 4 missing. 2 wounded."
 *line_break
 *line_break
 Great. Running out of water and ammo, just what you needed. The men aren't enthused either, cowering as another hail of bullets send fragments of brick and mortar flying. ${sergeant}, a tough veteran who had seen more than his fair share of combat, turns to address you.
@@ -18,13 +19,13 @@ Great. Running out of water and ammo, just what you needed. The men aren't enthu
 *line_break
 "Commander! Enemy across the street, light machine gun spotted! No go! We should retreat!"
 *page_break
-Glancing around, you realize how exposed your men are. The enemy has the high ground advantage, and it's going to be difficult getting across the street under fire.
+Glancing around, you realize just how exposed your men are. The enemy has the high ground advantage, and it's going to be difficult getting across the street under fire.
 *line_break
 *line_break
-You count eighteen magazines between the twelve of you, three grenades, one smoke grenade and a single rocket propelled grenade - the burdensome RPG. The enemy continue to fire onto your position, a single light machine gun (LMG) spraying bullets. There's at least two others, armed with the standard bad-guy AK-47 getup, taking potshots at your position.
+You count eighteen magazines between the twelve of you, three grenades, one smoke grenade and a single Rocket Propelled Grenade - the burdensome RPG. The enemy continues to fire onto your position, a single light machine gun (LMG) spraying bullets. There's at least two others, armed with the standard bad-guy AK-47 getup, taking potshots at your position.
 *line_break
 *line_break
-Swallowing hard, you consider the tactics you could employ as the reliable ack-ack of the AK-47s reverberates through the air.
+Swallowing hard, you consider the tactics you could employ as the reliable [i]ack-ack[/i] of the AK-47s reverberates through the air.
 *line_break
 *line_break
 1. Toss the smoke before advancing through the smoke screen. This reduces the visibility of the enemy, but also your own soldiers. Besides, smoke never stopped no bullet.
@@ -52,7 +53,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		*set physical %+5
 		*set intellect %+5
 		*set smoke_grenade -1
-		*set men -3
+		*set men -4
 		"Smoke out! Smoke out!" You grab the long cylindrical grenade, wrenching the pin free before hurling it onto the road. It spins, a plume of white smoke jetting out from its tip, you count in staggered breaths, as taught back in training school. One thousand two thousand three thousand four thousand five thousand. A smoke screen forms, sufficiently covering the street.
 		*line_break
 		*line_break
@@ -89,10 +90,10 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		He hoists the RPG over his shoulder, waiting for a lull in the firing. Poor bastard won't even know what hit him. "Fire!!!" The trigger finger jerks slightly, sending the rocket tumbling along its way.
 		*line_break
 		*line_break
-		It spirals dramatically as it flies, spinning clumsily through the air, probably designed by an engineer who had never killed anyone in his/her life. And then probably assembled by a bunch of kids who had never seen their father. And now, it is about to take a few lives with it's eventual, final explosive end.
+		It spirals dramatically as it flies, spinning clumsily through the air, leaving a thin trail of smoke in its wake.
 		*line_break
 		*line_break
-		The rocket flings itself forward, leaving a thin trail of smoke in its wake, lumbering towards the window as the LMG fires wildly. Even from this distance, you see the eyes of the men operating the LMG widen as it dawns upon them. Three young boys, no older than 16 at best. One of them flinches, instinctively covering his face with his hand.
+		Even from this distance, you see the eyes of the men operating the LMG widen as it dawns upon them. Three young boys, no older than 16 at best. One of them flinches, instinctively covering his face with his hand.
 		*line_break
 		*line_break
 		[b]BOOM!!![/b] The window explodes into a ball of flame, incinerating everything and everyone. The ground tremors slightly, bricks raining onto the tarmac. The barrage of bullet ceases as the LMG position is completely destroyed. Fuck yes!
@@ -123,7 +124,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		At once, you pick up your rifle, sprinting across the treacherous killing ground. Less than 10 yards to go! The dreaded ack-ack of the guns erupt again, a few bullets straying near you as you dive into the dirt, slamming onto the ground! In a flash, you're pressed against the wall, keeping your figure compact as you peer upwards to judge the next move.
 		*line_break
 		*line_break
-		"FUCK THEY GOT HIM!!!" You turn, seeing one of the men standing still, his body wobbling slightly as his face contorts in shock, blood pouring down his uniform. His rifle slides out of his hand, clattering to the ground. [b]Bang! Bang!![/b] A puff of red mist explodes in his chest, hurling his body onto the ground like a rag-doll. 
+		"FUCK THEY GOT HIM!!!" You turn, seeing one of the men standing still, his body wobbling slightly as his face contorts in shock, blood pouring down his uniform. His rifle slides out of his hand, clattering to the ground. [i]Bang! Bang!![/i] A puff of red mist explodes in his chest, hurling his body onto the ground like a rag-doll. 
 		*line_break
 		*line_break
 		"Don't fucking die on me you bastard!!" Another soldier sprints over, defiantly dragging his buddy, desperately throwing the dead man over his shoulder.
@@ -190,7 +191,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		You kick open the door and charge into the building with rifle at the ready, your men right behind you. A frightened face spins around, blackened by soot and smoke, screaming words you cannot hear.
 		*fake_choice
 			#Shoot!!!
-				*set kill_civilian 1
+				*set chap1_kill_civilian 1
 				*set light_rounds -1
 				[b]Du-du-du-dum!!![/b]
 				*line_break
@@ -233,8 +234,8 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 				*goto 3_1_firefight
 				
 			#Don't shoot!!!
-				*set kill_civilian 0
-				"Hands up! Don't move or I'll shoot!!" You scream, gesturing your rifle violently at the helpless man, who whimpers in meek compliance and raises his hands above his head. It's clear that he is just a civilian, his gaunt unkempt face a portrait of starvation and fear.
+				*set chap1_kill_civilian 0
+				"Hands up! Don't move or I'll shoot!!" You scream, gesturing your rifle violently at the helpless man, who whimpers in meek compliance and raises his hands above his head. His gaunt unkempt face paints a portrait of starvation and fear. A mere civilian.
 				*line_break
 				*line_break
 				It is a simple living space, a few basic chairs surround a table hosting an abandoned card game. There is a flight of stairs leading up to the second floor and another nondescript doorway leading to another part of the house.
@@ -262,13 +263,13 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		Quickly motioning to your men, you signal two soldiers to watch the door as you lead the rest to circle around the building, hopefully being able to sneak around and catch the enemy by surprise. ${sergeant} nods in surly agreement, hoisting his weapon and taking carefully calculated steps to reduce his noise profile.
 		*line_break
 		*line_break
-		Circling around the perimeter of the building, ${sergeant} points out a blackened window sill, a few shards of jagged glass all that remained of the window. He carefully sneaks below the sill as the rest of you cover his approach, ready to shoot anything that popped out of the window.
+		Circling around the perimeter of the building, ${sergeant} points out a blackened window sill, a few shards of jagged glass were all that remained of the window. He carefully sneaks below the sill as the rest of you cover his approach, ready to shoot anything that popped out of the window.
 		*line_break
 		*line_break
-		${sergeant} produces a small mirror, standard issue tactical. You point your rifle at the window as he lifts the mirror just beyond the edge of the window sill. You count just one man in the room, his back facing the window. Good. They haven't detected you yet.
+		${sergeant} produces a small mirror, the standard issue for all conscripts. You point your rifle at the window as he lifts the mirror just beyond the edge of the window sill. You count just one man in the room, his back facing the window. Good. They haven't detected you yet.
 		*fake_choice
 			#Shoot him before he spots you!
-				*set kill_civilian 1
+				*set chap1_kill_civilian 1
 				*set light_rounds -1
 				Stealthily raising your rifle above the sill, you squeeze the trigger, spraying blindly.
 				*line_break
@@ -295,7 +296,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 				*goto 3_1_firefight
 			#Sneak in via the window and try to capture him
 				*label 2_1_sneak_in
-				*set kill_civilian 0
+				*set chap1_kill_civilian 0
 				*set finesse %+5
 				"Cover me. I'm going in." You whisper to ${sergeant}, motioning at the window. He replies with a solemn nod.
 				*line_break
@@ -324,7 +325,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 					*goto 3_4_story
 			#Tap the window and try to communicate with him
 				*label 2_1_communicate
-				*set kill_civilian 0
+				*set chap1_kill_civilian 0
 				*set charm %+5
 				Tightening your grip on the trigger with your dominant hand, you give the window a series of short, hard raps.
 				*line_break
@@ -335,18 +336,18 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 				The man by the window jumps, visibly startled by the sudden stimulus. He spins around, and you immediately notice the deep-seated fear embedded in his eyes. Unarmed and dressed in tattered rags, there is no way this man is a soldier.
 				*line_break
 				*line_break
-				Relaxing your grip on your gun, you gesture at the window. The man complies immediately, throwing the window open before retreating further away from the window. In an instant, you vault over the sill, the steel toed boots on your feet slamming into the creaky floor boards.
+				Relaxing your grip on your gun, you gesture at the window. The man complies immediately, throwing the window open before retreating further away from the window. In an instant, you vault over the sill, steel toed boots thumping onto the creaky floor boards.
 				*line_break
 				*line_break
-				"Who are you, and what are you doing here?" You demand, your finger still resting within the trigger guard of the rifle held in front of your torso, providing a clandestine hint to the man that you mean business.
+				"Who are you, and what are you doing here?" You demand, finger still resting within the trigger guard of the rifle.
 				*line_break
 				*line_break
-				The man falls to his knees and babbles, "the rebels… upstairs… they took control… My family… innocent… please…"  The rest of your men quickly scan the room, clearing out the rest of the first floor and returning with a few half starved civilians, dressed in barely more than tattered rags. "Wife, three kids. In the kitchen commander."
+				The man falls to his knees and babbles, "the LOM rebels… upstairs… they took control… My family… innocent… please…"  The rest of your men quickly scan the room, clearing out the rest of the first floor and returning with a few half starved civilians, dressed in barely more than tattered rags. "Wife, three kids. In the kitchen commander."
 				*goto 2_2_result
 			
 	#Grenades at the ready! We'll clear the room before they know what hit em!
 		*set demolitions +1
-		*set kill_civilian +1
+		*set chap1_kill_civilian +1
 		*set he_grenade -1
 		You hold out your hand in a fist with your thumb pointing upwards, the instructed field signal for a grenade launch. Taking a quick glance around to ensure your men are fully covered, you turn to ${sergeant} and he nods back at you.
 		*line_break
@@ -400,7 +401,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		You kick open the door and charge into the building with rifle at the ready, your men right behind you. A frightened face spins around, blackened by soot and smoke, screaming words you cannot hear.
 		*fake_choice
 			#Shoot!
-				*set kill_civilian 1
+				*set chap1_kill_civilian 1
 				*set light_rounds -1
 				[b]Du-du-du-dum!!![/b]
 				*line_break
@@ -441,17 +442,20 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 				Fucking hell, you don't have time for this.
 				*fake_choice
 					#Screw this crazy lady, shoot her too!
-						*set kill_civilian +1
+						*set chap1_kill_civilian +1
 						[b]BLAM![/b]
 						*line_break
 						*line_break
-						You barely have time to register the blood and gray matter splattered across the kitchen floor. This bitch asked for it, waving around a weapon and threatening an armed soldier. It's as if she wanted to die.
+						You barely have time to register the blood and gray matter splattered across the kitchen floor. 
 						*line_break
 						*line_break
-						Trying to ignore the bodies of the two civilians sprawled across the living room, you direct your attention towards the source of the noise.
+						One of the children screams, wailing as the older child pulls her away and shutting her up, before herding his siblings into the kitchen.
 						*line_break
 						*line_break
-						Hugging the innermost wall of the stairwell, you instruct the rest of your men to get ready for whatever awaits you.
+						Ignoring the bodies of the two civilians sprawled across the living room, you direct your attention towards the source of the noise.
+						*line_break
+						*line_break
+						You hug the innermost wall of the stairwell, you instruct the rest of your men to get ready for whatever awaits you.
 						*goto 3_3_intermediate
 					#Overpower her, but don't kill her! She's a civilian after all.
 						No matter the case, a civilian is a civilian. You can’t deliberately kill someone in cold blood knowing that they’re not part of the conflict.
@@ -472,7 +476,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 						"Clear!"
 						*line_break
 						*line_break
-						Great, at least the corridor's secure. Nonetheless, you can't let your guard down completely. Taking cautious steps, you slowly trudge up the stairwell, preparing for any unexpected nasty surprises. Glancing around, you eyes are immediately drawn to the room directly across the corridor. The door had been blown completely off its hinges, revealing the wreckage inside. No doubt a result of the direct RPG blast.
+						Great, at least the corridor's secure. Nonetheless, you can't let your guard down completely. Taking cautious steps, you slowly trudge up the stairwell, preparing for any unexpected nasty surprises. Glancing around, your eyes are immediately drawn to the room directly across the corridor. The door had been blown completely off its hinges, revealing the wreckage inside. No doubt a result of the direct RPG blast.
 						*fake_choice
 							#Storm the room with guns a-blazing!
 								There's no telling what's in the room. Best to take them by surprise by charging in. Clutching your rifle tighter, you break into a run and dash into the room, with ${sergeant} following closely behind.
@@ -505,13 +509,13 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 								*line_break
 								*line_break
 								A moment of silence held the air for a few seconds. Then, with a nonchalant shrug, 						${sergeant} trods out into the corridor. "Come on, let's take what we can, then head down and contact HQ. We need to let them know that we've accomplished the mission."
-								*if kill_civilian = 0
+								*if chap1_kill_civilian = 0
 									*goto_scene chapter1_2_counterattack
-								*if kill_civilian > 0
+								*if chap1_kill_civilian > 0
 									*goto 3_5_kid_reaction_scene
 			#Don't Shoot
 				*label 2_2_dont_shoot
-				*set kill_civilian 0
+				*set chap1_kill_civilian 0
 				"Hands up! Don't move or I'll shoot!!" You scream, gesturing your rifle violently at the helpless man, who whimpers in meek compliance and raises his hands above his head. It's clear that he is just a civilian, his gaunt unkempt face a portrait of starvation and fear.
 				*line_break
 				*line_break
@@ -545,6 +549,7 @@ Swallowing hard, you consider the tactics you could employ as the reliable ack-a
 		${sergeant} produces a small mirror, standard issue tactical. You point your rifle at the window as he lifts the mirror just beyond the edge of the window sill. You count just one man in the room, his back facing the window. Good. They haven't detected you yet.
 		*fake_choice
 			#Shoot him before he spots you!
+				*set chap1_kill_civilian 1
 				Stealthily raising your rifle above the sill, you squeeze the trigger, spraying blindly.
 				*line_break
 				*line_break
@@ -605,7 +610,7 @@ Before you can dash back out into the living room, you feel a pair of hands gras
 Oh for fucks sake, you don’t have time for this. This hysterical bitch is risking the life of your men, and you can’t afford to let the enemy take the advantage while you are distracted.
 *fake_choice
 	#Shoot the woman, time is of the essence!
-		*set kill_civilian +1
+		*set chap1_kill_civilian +1
 		[b]BLAM![/b]
 		*line_break
 		*line_break
@@ -619,10 +624,10 @@ Oh for fucks sake, you don’t have time for this. This hysterical bitch is risk
 		*label 3_12_contact_youth_upstairs
 		*line_break
 		*line_break
-		“Charge!” You scream as your team rushed up the stairs. In the room across the hallway, the personnel operating the LMG spins around. In that fleeting moment, you sense the fear in them as they stand slack-jawed, completely exposed and unprepared for this sudden ambush. Three young boys, no older than 16 at best. Before the realization fully sinks in, instinctively you are already squeezing the trigger.
+		“Charge!” You scream as your team rushed up the stairs. In the room across the hallway, the personnel operating the LMG spins around. In that fleeting moment, you sense the fear in them as they stand slack-jawed, completely exposed and unprepared for this sudden assault. Three young boys, no older than 16 at best. Before the realization fully sinks in, instinctively you are already squeezing the trigger.
 		*line_break
 		*line_break
-		Merely seconds later, the lifeless bodies of the three boys fall to the floor with a resounding thud, their blank stares a hollow reflection of the souls that are no longer there.
+		Within the blink of an eye, the threat is neutralized. The lifeless bodies of the three boys crash to the floor, their shock replaced by vacant, hollow stares. Their 		blood pooling and seeping into the floor boards. 
 		*line_break
 		*line_break
 		“Check the rooms for supplies, we’re taking what we can with us outta here.” You snap at the rest of your team, the adrenaline and tension still coursing high from the ambush.
@@ -631,7 +636,7 @@ Oh for fucks sake, you don’t have time for this. This hysterical bitch is risk
 		While the men are weaving in and out of the rooms, ${sergeant} jerks a thumb over his shoulder. “Well, building’s secured. We should make haste and get the hell out before enemy reinforcements arrive and fuck our asses over.”
 		*line_break
 		*line_break
-		You silently agreed, desperate to bring your men out of this godforsaken place and back to a safe respite as soon as possible. Moreover, you’ll never know if the three teens radioed for help before meeting their grisly ends.
+		You silently agreed, desperate to bring your men out of this godforsaken place and back to base. Besides, the enemy might be launching a counter attack anytime.
 		*line_break
 		*line_break
 		“Right, let’s contact HQ and let them know that the objective’s secured. Check for any additional signs of resistance.”
@@ -707,7 +712,7 @@ After salvaging whatever seems to be usable, you gather your men in the living r
 A high pitched sob echoes through the dead, hollow room, and you recall that your team are not the only survivors in the building.
 *line_break
 *line_break
-*if kill_civilian = 0
+*if chap1_kill_civilian = 0
 	Turning to the kitchen, you catch a glimpse of the family of five still shivering in the corner of the dilapidated kitchen floor, no doubt traumatized by the outburst of violence of the past few hours.
 	*line_break
 	*line_break
@@ -724,7 +729,7 @@ A high pitched sob echoes through the dead, hollow room, and you recall that you
 	*line_break
 	*line_break
 	*goto_scene chapter1_2_counterattack
-*if kill_civilian = 1
+*if chap1_kill_civilian = 1
 	Turning to the kitchen, you catch a glimpse of the the woman and her  shivering in the corner of the dilapidated kitchen floor, still mourning the loss of her husband. 
 	*line_break
 	*line_break
@@ -744,7 +749,7 @@ A high pitched sob echoes through the dead, hollow room, and you recall that you
 	*line_break
 	*line_break
 	*goto_scene chapter1_2_counterattack
-*if kill_civilian = 2
+*if chap1_kill_civilian = 2
 	Turning to the kitchen, you catch a glimpse of the children still shivering in the corner of the dilapidated kitchen floor, no doubt traumatized by the outburst of violence of the past few hours.
 	*line_break
 	*line_break

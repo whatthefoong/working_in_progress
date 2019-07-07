@@ -1,9 +1,9 @@
-*title Sir Yes Sir!
+*title Blood on My Hands
 *author @whatthefoong
 
 *scene_list
 	startup
-	chapter1_1_home
+	chapter1_1_first_blood
 	chapter1_2_counterattack
 	death
 	ending
@@ -57,25 +57,7 @@
 *create rpg_ammo 1
 *create demolition_charge 0
 
-*comment bestfriend
-*create bestfriend "Pretty"
-*create bestfriendheshe "she"
-*create bestfriendhisher "her"
-*create bestfriendhimher "her"
-*create bestfriendbody ""
-*create bestfriendface ""
-*create bestfriendhair ""
-*create bestfriendhaircolour ""
-*create bestfriendeyecolour ""
-*create bestfriendnose ""
-*create bestfriendmouth ""
-
 *comment NPCs
-*create intronemesis "testnemesis"
-*create intronemesisheshe "he"
-*create intronemesishisher "his"
-*create intronemesishimher "him"
-*create nemesis ""
 *create sergeant "Sergeant Kosnik"
 
 *comment NPCs R/S
@@ -85,8 +67,8 @@
 *create chap1_kill_civilian 0
 
 *comment achievements
-*comment save/load system
 
+*comment save/load system
 
 *comment *sm_init sir_yes_sir | 3
 *comment *sm_save 0 | false | Autosave - Startup

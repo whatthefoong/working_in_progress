@@ -1,4 +1,33 @@
-*finish
+Thank you for playing the Alpha! This is the end of the first chapter for the game. I hope you enjoyed it (:
+*line_break
+*line_break
+Enjoyed it? Hated it? I'd love to hear from you! WiP authors like myself thrive on feedback (and support), give us more feedback, and we will give you a more awesome game!
+*line_break
+*line_break
+Let me know if you find any typos, bugs, or issues or if you have suggestions for the storyline, relationship with other characters and game-play mechanics!
+*line_break
+*line_break
+Also do follow us on Twitter, Instagram, Facebook and Patreon to keep up with updates and show your support! It's completely free but it would mean so very much.
+*line_break
+*line_break
+Facebook: 
+*link https://www.facebook.com/whatthefoong/
+*line_break
+Instagram: 
+*link https://www.instagram.com/what.the.foong/
+*line_break
+Twitter: 
+*link https://twitter.com/WhatTheFoong
+*line_break
+Patreon: 
+*link https://www.patreon.com/whatthefoong
+*line_break
+Forum: 
+*link https://forum.choiceofgames.com/t/sir-yes-sir-wip-idea-pitch/35970
+*line_break
+*line_break
+Remember to like, comment and give a follow! Thank you and have a great one!! (:
+*ending
 
 *temp char_type ""
 *temp IE ""
