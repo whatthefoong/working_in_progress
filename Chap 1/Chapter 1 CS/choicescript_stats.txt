@@ -1,5 +1,4 @@
 *temp choice 1
-
 *label screen
 [b]Character Details[/b]
 *stat_chart
@@ -15,8 +14,14 @@
 	*goto men_logs
 *if choice = 3
 	*goto char_rs
+*comment
+*comment unnecessary code
 *if choice = 4
+	*goto world_map
+*if choice = 5
 	*goto stat_glossary
+*comment unnecessary code
+*comment
 
 *label menu1
 *choice
@@ -26,8 +31,11 @@
 	#Relationships
 		*set choice 3
 		*goto screen
-	#Stat Glossary
+	#World Map
 		*set choice 4
+		*goto world_map
+	#Stat Glossary
+		*set choice 5
 		*goto stat_glossary
 
 *label menu2
@@ -38,8 +46,11 @@
 	#Relationships
 		*set choice 3
 		*goto screen
-	#Stat Glossary
+	#World Map
 		*set choice 4
+		*goto world_map
+	#Stat Glossary
+		*set choice 5
 		*goto stat_glossary
 
 *label menu3
@@ -50,8 +61,11 @@
 	# Men and Logistics
 		*set choice 2
 		*goto screen
-	#Stat Glossary
+	#World Map
 		*set choice 4
+		*goto world_map
+	#Stat Glossary
+		*set choice 5
 		*goto stat_glossary
 
 *label menu4
@@ -64,7 +78,25 @@
 		*goto screen
 	#Relationships
 		*set choice 3
+		*goto world_map
+	#Stat Glossary
+		*set choice 5
+		*goto stat_glossary
+
+*label menu5
+*choice
+	#Character Stats
+		*set choice 1
 		*goto screen
+	# Men and Logistics
+		*set choice 2
+		*goto screen
+	#World Map
+		*set choice 4
+		*goto screen
+	#Stat Glossary
+		*set choice 5
+		*goto stat_glossary
 
 *label charstats
 *line_break
@@ -124,6 +156,11 @@ Factions:
 *line_break
 *goto menu3
 
+*label world_map
+*image map-min.png
+*comment *gosub_scene csideimg_map-min
+*goto menu4
+
 *label stat_glossary
 [b]Main Traits[/b]
 *line_break
@@ -134,12 +171,12 @@ Finesse: Influences your accuracy, agility and stealth.
 Charm: Influences your tact and leadership.
 *line_break
 Intellect: Influences your learning and perceptiveness.
-
-
+*line_break
+*line_break
 [b]Reputation[/b]
 *line_break
-Renown: How well known you are.
+Renown: How well known you are, this impacts the way other people treat you and view you. Fame has it's uses, but anonymity can be surprising useful as well.
 *line_break
-*goto menu4
+*goto menu5
 
 
