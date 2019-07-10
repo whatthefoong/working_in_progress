@@ -59,9 +59,11 @@
 
 *comment NPCs
 *create sergeant "Sergeant Kosnik"
+*create doctor "Doctor Sonia"
 
 *comment NPCs R/S
-*create bestfriendrs 75
+*create sergeant_rs 0
+*create doctor_rs 0
 
 *comment events
 *create chap1_kill_civilian 0
