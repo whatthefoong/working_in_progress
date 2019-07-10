@@ -19,19 +19,19 @@ What the hell is that noise? The faint sound of engines and metal drifts across 
 Peering carefully out of the window, you spot a retrofitted truck, flanked by two rows of soldiers, but it's hard to make out the exact number from this distance. They had fitted on steel plates over the truck and placed a large cannon atop, one that could possibly shred a house in seconds. Fucking hell. Just when you thought it was over.
 *line_break
 *line_break
-At least they don't seem to be in a rush. And the enemy doesn’t seem to be advancing directly towards your location. Perhaps they still don't know that the town has fallen yet. Not that you would want to take a risk, given that the enemy is headed directly towards you, with a armored truck to boot.
+At least they don't seem to be in a rush. And the enemy doesn’t seem to be advancing directly towards your location. Perhaps they still don't know that the town has fallen yet. Not that you would want to take a risk, given that the enemy is headed directly towards you, with an armored truck to boot.
 *line_break
 *line_break
-"Fucking hell. A armored truck, of all things, now?” ${sergeant} spits on the floor while fumbling with a spare magazine before slapping it into place within the rifle’s housing. "We're so fucked."
+"Fucking hell. An armored truck, of all things, now?” ${sergeant} spits on the floor while fumbling with a spare magazine before slapping it into place within the rifle’s housing. "We're so fucked."
 *line_break
 *line_break
 “Commander, what now?” The men turn to you, anxiously waiting on your order.
 *label 4_counter_attack_choice
 *fake_choice
-	*selectable_if (rpg_ammo > 0) #Hold your position and use the RPG to take out the armored truck!
+	*selectable_if (rpg_ammo > 0) #Hold your position and use the Rocket Propelled Grenade (RPG) to take out the armored truck!
 		*set finesse %+5
 		*set physical %+5
-		“Prepare the RPG! Take out the truck first and we can pick off the rest after!” The Rocket Propelled Grenade will be your best bet against the impending threat posed by the oncoming armored vehicle. Even then, RPGs aren't the most accurate, but one can only hope. 		As it is, your men wouldn’t stand an iota of a chance if you engage the enemy directly.
+		“Prepare the RPG! Take out the truck first and we can pick off the rest after!” It will be your best bet against the impending threat posed by the oncoming armored vehicle. Even then, RPGs aren't the most accurate, but one can only hope. 		As it is, your men wouldn’t stand an iota of a chance if you engage the enemy directly.
 		*line_break
 		*line_break
 		“Roger that, commander!” quips the gunner, his voice laced with undertones of excitement and eagerness as he unslings the over-sized barrel from his shoulders. 
@@ -119,7 +119,7 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 				“Stand down, we’ll wait for the enemy to approach, then make the killing shot” You instruct your men to take up firing positions around the perimeter of the building, ready to fire on command.
 				*line_break
 				*line_break
-				Corporal Paulista brings two of the men to set up the machine gun in the adjacent building, carrying boxes of heavy munitions with them.
+				Corporal Paulista brings two of the men to set up the machine gun in the adjacent building, carrying the heavy munitions with them.
 				*line_break
 				*line_break
 				Time seems to stretch on, the constant low rumbling of the truck cutting through the dusty air. Boots crunching against gravel. The low voices of the enemy as they comb through the outskirts of town.
@@ -153,7 +153,7 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 				*line_break
 				“What are you waiting for? An invite to the ball? FIRE!”
 				*goto 4_1_1_rpg
-	#Spread out and harass the enemy
+	#Spread out and harass the enemy!
 		*set intellect %+5
 		*set strategy +1
 		Quickly assessing the immediate environment, you decide to use the line of buildings separating you and enemy as cover for a hit-and-run tactic.
@@ -249,7 +249,7 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 							*set demolitions +1
 							*set rpg_ammo -1
 							*set counter_attack_score +1
-							You hate yourself for being this happy causing wanton destruction, but that’s a thought for another time. “Permission granted soldier! You only got one shot, make it count! Blow those suckers sky high!”
+							The armored truck is the key threat, and the earlier it is neutralized, the better. “Permission granted soldier! You only got one shot, make it count! Blow those suckers sky high!”
 							*line_break
 							*line_break
 							“Yes commander!” You can practically feel the excitement of the soldier over the radio, making you feel a little better about your own sentiments. “Team 1, 3 and 4, hold your position and reload, but do not fire!”
@@ -261,7 +261,7 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 							You feel like your lungs are going to explode as you continue to hold your breath, bracing yourself for the explosion from either the armored truck or the RPG, when finally-
 							*line_break
 							*line_break
-							[b]BOOM[/b]
+							[b]BOOM!!![/b]
 							*line_break
 							*line_break
 							You flinch. For a second you fear that the armored truck had opened fire, but as you peer into your scope to look you see a humongous puncture into the side of the armored truck, smoke and flames billowing out from it. You hear the creaking of steel plating as the armored truck wheezes its last breath before collapsing into itself. You allow yourself a sigh of relief as you relish in the behemoth’s death. What remains of the enemy begin to crawl out of hiding, retreating away from the battle. It seems that taking out the armored truck and half their soldiers was enough to deter their advance - and who could blame them?
@@ -395,9 +395,9 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 									*goto 4_stat_check
 								#Wait for a better target. 
 									*goto waitout
-			#Hold your fire, wait for more developments
+			#Hold your fire and wait for the situation to develop further
 				*label waitout
-				*set counter_attack_score -1
+				*set counter_attack_score -2
 				*set men -6
 				You only have this one chance to surprise the enemy. Taking out a few random soldiers would be helpful, but only by taking out a prominent figure with authority could you hope to turn the tide of this fight. It’s a gamble, but you decide to play it close to the chest.
 				*line_break
@@ -461,13 +461,13 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 		The enemy is still quite a distance away and there are a few possible locations you could set the ambush. There’s a small bridge fording a stream on the outskirts of the village that could provide the perfect bottleneck, catching the enemy as they cross the bridge would leave them with little cover. However, the vegetation on both banks of the stream is sparse, and there’s a high chance that any returning fire would result in high casualties.
 		*line_break
 		*line_break
-		Another option is to wait for the enemy to approach, engaging them in the main crossroad of the village. A crumbling church pockmarked with bullet holes provide the perfect vantage point, from which you can rain hell upon the enemy and hopefully take out the majority of their infantry. That being said, the church sticks out like a sore thumb, and if the armored truck zeros in on the tower... 
+		Another option is to wait for the enemy to approach, engaging them in the main junction of the village. A crumbling church pockmarked with bullet holes provide the perfect vantage point, from which you can rain hell upon the enemy and hopefully take out the majority of their infantry. That being said, the church sticks out like a sore thumb, and if the armored truck zeros in on the tower... 
 		*line_break
 		*line_break
-		Then again, you could just hole up in the debris and ambush them in one of the narrow alleyways. While the window of opportunity is much smaller and the fight will likely devolve into a nasty slug-fest in the rubble, at least the armored truck won’t be able to intervene too much - or at least that’s what you hope.
+		Lastly, you could hole up in the debris and ambush them in one of the narrow alleyways. While the window of opportunity is much smaller and the fight will likely devolve into a nasty slug-fest in the rubble, at least the armored truck won’t be able to intervene too much - or at least that’s what you hope.
 		*line_break
 		*line_break
-		All the options aren’t perfect, but delaying anymore would mean the enemy would soon fall upon you. You have to make a choice. Now.
+		The options aren’t perfect, but delaying anymore would mean the enemy would soon fall upon you. You have to make a choice. Now.
 		*temp ambush 0
 		*fake_choice
 			#Set up the ambush at the bridge, bottlenecking the enemy advance
@@ -476,7 +476,7 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 			#Set up the ambush at the junction, taking the high ground
 				*set ambush 2
 				*goto 4_3_ambush_choice
-			#Set up the ambush in the alleyway, forcing the enemy to abandon their armor
+			#Set up the ambush in the alleyway, limiting the effectiveness of the enemy armor
 				*set ambush 3
 				*goto 4_3_ambush_choice
 
@@ -492,7 +492,7 @@ Yes! You silently cheer as the missile comes into contact with the side of the t
 ${sergeant} turns to you, anxiously awaiting the next order. “What now, commander? We should use this opportunity to take out the rest of the soldiers while they’re running around like headless chickens.”
 *line_break
 *line_break
-Hmm, the sergeant has a point. Best to strike while the iron is hot, as they say. If you rush out and engage the enemy, you might be able to capitalize on the situation and mop the floor with them. After all, you doubt the enemy are highly trained soldiers, merely nationalistic zealots with an appetite for blood and a trigger-happy finger. Having at least received proper military training, your men might be able to overwhelm them with tactical and military expertise.
+Hmm, the sergeant has a point. Best to strike while the iron is hot. If you rush out and engage the enemy, you might be able to capitalize on the situation and mop the floor with them. After all, you doubt the enemy are highly trained soldiers, merely nationalistic zealots with an appetite for blood and a trigger-happy finger. Having at least received proper military training, your men might be able to overwhelm them with tactical and military expertise.
 *line_break
 *line_break
 However, by charging out into the open, you will be sacrificing your best source of cover. By standing your ground your platoon’s chances of survival would be higher, but given that your men have been fighting for quite some time, you are unsure of the effects the war of attrition might have on your men.
@@ -588,7 +588,8 @@ What would you do?
 		*goto 4_stat_check
 
 *label 4_3_ambush_choice
-“Alright men, we might be outnumbered, but if we take them by surprise, we might just be able to come out of this as heroes. Or die as matyrs. So listen up.” The remains of your platoon huddle round, trying hard not to let their fatigue show.
+“Alright men, we might be outnumbered, but if we take them by surprise, we might just be able to come out of this as heroes. Or die as martyrs. So listen up.” The remains of your platoon huddle round, trying hard not to let their fatigue show.
+*label 4_3_ambush_choice_addendum
 *line_break
 *line_break
 *if ambush = 1
@@ -609,12 +610,31 @@ What would you do?
 	*if rpg_ammo = 1
 		*set counter_attack_score +1
 		“Then we better kill the armored truck commander first shall we? Take the RPG and grenades up to the church tower too. The rest of you spread out and pick off the men. Let’s go!”
+		*line_break
+		*line_break
+		"But Commander, what if we miss?"
 	*if rpg_ammo = 0
 		*set counter_attack_score -1
 		“Well if you’ve any better ideas, let’s hear them. No? Then shut the hell up.” 		The private grimaces, but holds her tongue.
 		*line_break
 		*line_break
 		“Any other smart asses want to say something? Good. Let’s get a move on, quickly!”
+	*fake_choice
+		#Change your approach and set up the ambush at the bridge instead, bottlenecking the enemy approach
+			*set ambush 1
+			"${sergeant}… Actually, the private might not be completely wrong. Let's set up at the bridge instead."
+			*line_break
+			*line_break
+			${sergeant} grimaces, but shrugs, acquiescing to your orders.
+			*goto 4_3_ambush_choice_addendum
+		#Change your approach and set up the ambush at the alleyway instead, limiting the effectiveness of the enemy armor
+			*set ambush 3
+			"${sergeant}… Actually, the private might not be completely wrong. Let's set up at the alleyway instead."
+			*line_break
+			*line_break
+			${sergeant} grimaces, but shrugs, acquiescing to your orders.
+			*goto 4_3_ambush_choice_addendum
+		#Fuck it. Decision is final. Keep the current approach!
 *if ambush = 3
 	“They have a armored truck, so we must force them to fight in the alleyway. Hole up in the ruins alongside it. Once I open fire, everyone light them up.”
 	*line_break
@@ -632,8 +652,10 @@ What would you do?
 	*line_break
 	*line_break
 	“Follow me, and keep low. Let’s go!”
-*page_break
+*line_break
+*line_break
 The ammunition is redistributed hastily before you lead your men out of the house, keeping your bodies low and rifles slung behind you. With the ominous low growl of the armored truck approaching getting louder and louder with each heartbeat, you push your men to move faster, gritting your teeth through the harsh bite of broken bricks and gravel into your elbows and knees.
+*page_break
 *if ambush = 1
 	*if charm >= 10
 		[i]Stat Check: Charm >= 10[/i]
@@ -991,7 +1013,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 		# Wait till the truck is about to exit the alley before firing!
 			*set light_rounds -3
 			*set counter_attack_score -2
-			Counting on the element of surprise, you wait while the enemy is about to exit the alley. This might give you a better shot at their rear, but the risk is also much higher. You take a deep breath, bringing your rifle level before firing into the backs of the enemy soldiers.
+			Counting on the element of surprise, you wait while the enemy is about to exit the alley. This might give you a better shot at their rear but the risk is also much higher as the advantage of constricting their armor in the alleyway would be lost. You take a deep breath, bringing your rifle level before firing into the backs of the enemy soldiers.
 			*line_break
 			*line_break
 			[b]Ratatatat-tat!!! Ratatatat-tat!!![/b]
@@ -1047,6 +1069,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 
 *label 4_stat_check
 *comment remove this
+*page_break
 *goto_scene ending
 *if counter_attack_score >= 1
 	*comment barrack scene

@@ -1,0 +1,120 @@
+Thank you for playing the Alpha! This is the end of the first chapter for the game. I hope you enjoyed it (:
+*line_break
+*line_break
+Enjoyed it? Hated it? I'd love to hear from you! WiP authors like myself thrive on feedback (and support), give us more feedback, and we will give you a more awesome game!
+*line_break
+*line_break
+Let me know if you find any typos, bugs, or issues or if you have suggestions for the storyline, relationship with other characters and game-play mechanics!
+*line_break
+*line_break
+Also do follow us on Twitter, Instagram, Facebook and Patreon to keep up with updates and show your support! It's completely free but it would mean so very much.
+*line_break
+*line_break
+Facebook: 
+*link https://www.facebook.com/whatthefoong/
+*line_break
+Instagram: 
+*link https://www.instagram.com/what.the.foong/
+*line_break
+Twitter: 
+*link https://twitter.com/WhatTheFoong
+*line_break
+Patreon: 
+*link https://www.patreon.com/whatthefoong
+*line_break
+Forum: 
+*link https://forum.choiceofgames.com/t/sir-yes-sir-wip-idea-pitch/35970
+*line_break
+*line_break
+Remember to like, comment and give a follow! Thank you and have a great one!! (:
+*ending
+
+*temp char_type ""
+*temp IE ""
+*temp IO ""
+*temp FT ""
+*temp IS ""
+*if mind >= 50
+	*set IE "E"
+*if mind < 50
+	*set IE "I"
+*if energy >= 50
+	*set IO "I"
+*if energy < 50
+	*set IO "O"
+*if nature >= 50
+	*set FT "F"
+*if nature < 50
+	*set FT "T"
+*if tactics >= 50
+	*set IS "I"
+*if tactics < 50
+	*set IS "S"
+*comment determining char_type
+*set char_type IE & IO
+*set char_type char_type & FT
+*set char_type char_type & IS
+*page_break
+[b]The End[/b]
+*line_break
+*line_break
+At only ${age}, ${name} is a young ${race}
+*if gender = "Male"
+	boy
+*if gender = "Female"
+	girl
+who was torn away from home, forced to be a slave and a gladiator in the Roman Republic. ${name} is
+*if char_type = "IITS"
+	a planner, alway with a creative strategic plan for every problem. Independent and hardworking, ${playerheshe} strives to excel at everything that ${playerheshe} does, but is a little clueless in romance. An ambitious yet highly private person, emotions are just something that ${playerheshe} isn't too good at.
+*if char_type = "IITI"
+	a inventor, who is always curious to find out why things are. $!{playerheshe} is always coming up with new ideas and information, mostly because the world is simple and straightforward to ${playerhimher}. Sometimes, that means hurting other people's feelings… but the truth is the most important, right?
+*if char_type = "EITS"
+	a strong leader who always finds a way, or makes one. $!{playerheshe} is a natural born leader, ruthlessly efficient and charismatic. The best part about life is achieving new goals and "winning", whatever that may be. Sometimes, that means that other people will have to pay the price, but that's life.
+*if char_type = "EITI"
+	smart and curious, always eager for an intellectual challenge. $!{playerheshe} loves destroying dogma and arguing new ideas… just for the heck of it. Knowledgeable, excitable and full of ideas, ${name} doesn't care about tradition. This sometimes makes the stifling nature of the real world a chore, rules are meant to broken! 
+*if char_type = "IIFS"
+	relatively quiet, yet a strong and passionate idealist. A walking contradiction, ${playerheshe} makes sure to right the wrongs in the world, but not at the expense of self. Decisive, passionate and altruistic, ${name} is a force for all that is good. Sometimes, this means fighting against deep-rooted evils that… simply can't be solved overnight.
+*if char_type = "IIFI"
+	always there to help people, regardless of the cost. A true idealist, ${playerheshe} is guided by principles, not logic, and always strives to remain pure in intention. To this mantra ${playerheshe} lives and dies, which sometimes makes it difficult to survive in the cruel world that is real life. Still, you can't fault ${playerhimher} for trying! It's the thought that counts!
+*if char_type = "EIFS"
+	a charismatic leader who inspires ${playerhisher} peers and draws people to ${playerhisher} cause. $!{playerheshe} believes in the inner goodness of people, and will always find a way to help solve the problems of ${playerhisher} people. Sometimes, this means being indecisive when making hard decisions where ideals and feelings get challenged and hurt.
+*if char_type = "EIFI"
+	always positive and smiling, a highly sociable and creative person. A true free spirit ${playerheshe} strives to change the world with ${playerhisher} ideas, often with a zeal and confidence that draws other in. Popular and friendly, ${playerheshe} is the life of any party. Such powerful emotional convictions however, do come with costs such as actually focusing and getting things done. 
+*if char_type = "IOTS"
+	the most logical person in any room, always basing ${playerhisher} knowledge on facts and numbers. Someone who is bound by integrity and responsibility, ${playerheshe} always gets things done once ${playerheshe} gives ${playerhisher} word, regardless of the cost. Honest, practical and dutiful, ${playerheshe} always keeps to the facts as emotions are just inefficient. However, when there's a need to bend rules or show a little compassion, ${playerheshe} can sometimes seem a little unreasonable.
+*if char_type = "IOFS"
+	the kind of person who leaps to the defense of ${playerhisher} friends and family. Not the type to claim credit, ${playerheshe} works tirelessly and thanklessly to help others. Reliable and hardworking, there is nothing ${playerheshe} can't do if ${playerheshe} sets ${playerhisher} mind to it. Given ${playerhisher} commitment and emotional investment, ${name} sometimes finds it hard to divorce ${playerhisher} emotions and can often be found trying to do too many things for too many people.
+*if char_type = "EOTS"
+	a manager, always capable of making sure the team moves forward. The world is a messy place, and ${playerheshe} is just the type to create order out of chaos. Dedicated and organized, ${playerheshe} believes in the dichotomy of right and wrong, with no space for gray areas. As a leader, this sometimes makes it difficult when something novel comes along.
+*if char_type = "EOFS"
+	a people pleaser, sociable and popular. $!{playerheshe} loves attention and will always lead ${playerhisher} team to glory and fame. With great practical abilities, ${name} is not just a leader, but a go-getter. Not afraid of dirty work, ${playerheshe} always fights for the people ${playerheshe} leads. This sometimes means that when criticized, ${playerheshe} can get quite defensive and sensitive, especially when ${playerhisher} efforts go unnoticed.
+*if char_type = "IOTI"
+	always experimenting, thinking of what's the next new thing to try. To ${name}, the world is ${playerhisher} playground and ${playerheshe} loves coming up with new ideas that would make things better. Always optimistic and spontaneous, ${playerheshe} is never stressed out, even in the worst situations. Sometimes, that does mean putting ${playerhimher}self in highly risky situations… not always a good idea when in Rome.
+*if char_type = "IOFI"
+	the type who always explores and jumps and new ideas. Always creating, innovating and finding ways to do things different, ${playerheshe} loves creating new things. Relaxed and creative, ${playerheshe} always strives to express ${playerhimher}self in different ways. Sometimes, that makes it hard for others to truly value ${playerhimher}. After all, if you judge a fish by its ability to climb a tree, it will live its whole life believing it is stupid.
+*if char_type = "EOTI"
+	smart and energetic, the sort who enjoys taking risks and living on the edge. $!{playerheshe} loves to be the center of attention, always optimistic and flitting around as a social butterfly. ${name} dares to be different, often coming up with new ideas and actually doing them. Sometimes, that makes ${playerhimher} take unnecessary risks, which might backfire.
+*if char_type = "EOFI"
+	a person who is very spontaneous and exciting to be with. Always excitable and in the moment, ${playerheshe} often breaks out with the jokes and songs, injecting their personality into the world around them. A great people pleaser, ${playerheshe} is always welcomed warmly by all ${playerhisher} friends. Sometimes, that means being unable to face problems head on and plan for the future.
+*line_break
+*line_break
+*if ending = 3
+	
+*if ending = 2
+
+*if ending = 1
+	
+*if ending = 0
+	
+*page_break The End
+Thank you for playing Sir Yes Sir! I hope you enjoyed it (:
+*line_break
+*line_break
+If you want to see more, or see where ${name} ends up, remember to support the game by leaving a review and rating! Comments and likes help small-time authors like us continue to pursue our bad decisions… I mean passions!
+*line_break
+*line_break
+Let me know if you find any typos, bugs, or issues. If you have suggestions for the storyline, relationship with other characters and game-play mechanics, let me know as well by dropping a message to @nauhziy!!!
+*line_break
+*line_break
+Enjoyed it? Hated it? I'd love to hear from you! Authors like myself thrive on feedback. Drop a comment, review and share the game with your friends and family! (:
+*ending

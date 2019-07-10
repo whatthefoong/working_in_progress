@@ -1,0 +1,75 @@
+*title Blood on My Hands
+*author @whatthefoong
+
+*scene_list
+	startup
+	chapter1_1_first_blood
+	chapter1_2_counterattack
+	death
+	ending
+
+*comment character
+*create name "nobody"
+*create rank "2nd Lieutenant"
+*create age 18
+*create race ""
+*create background ""
+*create dollars 100
+
+*comment key traits
+*create physical 5
+*create finesse 5
+*create intellect 5
+*create charm 5
+
+*comment specific traits
+*create demolitions 0
+*create driving 0
+*create engineering 0
+*create logistics 0
+*create marksmanship 0
+*create scouting 0
+*create strategy 0
+*create swimming 0
+
+*comment renown & relationships
+*create renown 0
+
+*comment faction R/S
+*create MPRA 0
+*create LOM 0
+*create DFFM 0
+*create USS 0
+
+*comment game mechanics
+*create ending 0
+
+*comment logistics
+*comment infantry level
+*create men 0
+*comment ammunition
+*create light_rounds 0
+*create heavy_rounds 0
+*comment explosives
+*create flash_bang 0
+*create smoke_grenade 0
+*create he_grenade 0
+*create rpg_ammo 1
+*create demolition_charge 0
+
+*comment NPCs
+*create sergeant "Sergeant Kosnik"
+
+*comment NPCs R/S
+*create bestfriendrs 75
+
+*comment events
+*create chap1_kill_civilian 0
+
+*comment achievements
+
+*comment save/load system
+
+*comment *sm_init sir_yes_sir | 3
+*comment *sm_save 0 | false | Autosave - Startup
+*finish
