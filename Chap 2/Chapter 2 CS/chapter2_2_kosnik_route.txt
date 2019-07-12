@@ -1,0 +1,60 @@
+*label 2_4_1_kosnik_patrol
+Being back at the barracks means that you have to fulfill your regular nondescript duties. Time flies by as you continue to churn out mission plans, conduct physical and tactical drills, and fulfill your weekly patrol duties. After a few weeks of rest, the aches and bruises incurred from the previous mission has already fade away into a distant memory.
+*line_break
+*line_break
+Thursday night rolls by, and you get ready for your scheduled patrol around the vicinity of the barracks. You sigh, picking up your standard issued military field bag, checking once again that you have enough water to last through the next couple of hours, before heading off to sign out a rifle from the armory - your only companion in this dark, lonely night. An unnecessary precaution, you think to yourself. Nothing ever happens on these boring patrols. Security along the barracks perimeter is already tight enough as it is; only a fool would even attempt to approach it. You take a step outside the heavy wrought iron gates, the cool, crisp breeze a welcoming change to the stale air within. Trudging along, the gravel crunches under your feet noisily, the steady rhythm providing a weirdly comforting solace as it cuts into the still silence of the night.
+*line_break
+*line_break
+The boredom sets in sooner than you expect. You feel a yawn emerging, and make no effort to stifle it out here in the empty road. You can't wait to finish your route as you mindlessly put one foot in front of the other. Within minutes, you approach a familiar fork as the gravel road branches into two opposing but connected paths that meet further back, essentially forming a closed loop. In between them lies another trail, the absence of greenery along a solitary line a sign of countless pair of boots trekking through it the past few months that rejoins the road a little further down. You slowly contemplate the possible routes you can take. To your left, the preassigned route that you're supposed to take, but to your right, the exact same route but just in a different direction. Or, you could choose to take a shortcut through the middle path and rejoin the patrol route a little further down.
+*fake_choice
+	#comment need continue working on the description for the three choices, for now move on
+	#Take the left route, the pre-assigned patrol route that you've been taking for ages.
+		Nope. you're not going to stray off the assigned route. It might be boring, but it'll be over soon before you know it anyway. If the higher ups found out that you took another path than the assigned one… Actually, you're not sure what they'll do, as you have never heard of such a case happening. Oh well, better to stick to the tried and tested route then. However, the boredom soon overwhelms you, as you head down the same old path as you do. You decide to break into a jog, partially to keep yourself awake, while knowing that the faster you complete your route the faster you can head back and rest.
+		*line_break
+		*line_break
+		After a good forty five minutes of jogging, you've made good progress on your route, plus the endorphin rush means you're more awake then ever. Hears noise, ducks into the forest nearby and approach the warehouse.
+		*goto 2_4_11_approach_warehouse
+	#Take the right route, shake things up a little bit. You'll finish your patrol route anyway.
+		Just take the right path, what difference does it make? Either way, you'll end up back at this fork again upon completing the patrol loop. Might as well change things a bit to make things a little more exciting for you before the boredom overtakes you.
+		*goto 2_4_11_approach_warehouse
+	#Head off the beaten path in the middle. It's a shortcut, but who will know you took it?
+		Eh, no one's gonna know if I take a minor shortcut. Besides, judging from how well worn out the path is, its definitely been used by some others during their patrol as well. End up saving half a hour.
+		*label 2_4_11_approach_warehouse
+		Taking cautious steps, you approach the warehouse steadily. As the distance between you and the warehouse shrinks, you start to pick up more apparent noises - the scraping sound of objects being dragged across the floor, hushed whispers and the occasional grunt - confirming your suspicions. You press your back against the side of the warehouse, feeling the coolness of the concrete through your sweat-drenched uniform. Peeking around the corner, you spot a small van with its doors wide open. Two lean figures stagger out of the warehouse door, clutching a large cardboard box each, the contents heavy judging by the way it was throwing off their gait. Far too focused on their tasks, the two men heave the boxes onto the van before turning back again.
+		*line_break
+		*line_break
+		As the two figures walk towards the warehouse, you caught a closer glimpse of the figures before you duck back down behind the wall. Two men, with a similar athletic build, sporting identical buzz cuts, one of them half a head shorter than the other. To your utmost surprise, you recognize their attire: the all-too-familiar MRPA uniform. That revelation threw you off guard momentarily, before you regain your composure and your gears in your brain started to churn, linking all that you've witnessed pointing to an undeniable fact. 		Damn it! How can your own soldiers be looting supplies, from civilians no less?
+		*line_break
+		*line_break
+		You feel your jaw tighten as grit your teeth in frustration. You know you don't have much time to think of the next course of action, as the two men will be emerging from the warehouse any minute now. Best to take action while they are occupied, if you should take action at all.
+		*fake_choice
+			#Stop their means of escape!
+				Take out their means of transportation first, you reason. You sneak around the corner, approaching the van while keeping your figure crouched and as inconspicuous as possible, aided by the low humming of the van's engine. You reach the van in a few lengthy strides and slide around the side away from the warehouse, avoiding the line of sight from the warehouse door.
+				*line_break
+				*line_break
+				"Hey! Who the fuck…??" A loud voice booms, sending chills down your neck. FUCK! You turn and spot a figure fumbling to open the door from the side mirror, Fuck! You forgot to account for the possibility of another person inside the vehicle. With stealth out of the window, you slide your rifle from your side and point it at the man jumping out of the front seat, a stockier figure donning the same MRPA uniform.
+				*line_break
+				*line_break
+				"Stop! Keep your hands where I can see them or I'll put a bullet in you!" You yell out, squaring the stock of the rifle against your shoulder blade. The driver immediately freezes in place, a look of shock and confusion on his face. You hear urgent footsteps coming towards your direction, no doubt the other two partners-in-crime, alerted by the commotion.
+				*line_break
+				*line_break
+				You keep your gun fixed on the driver while stepping away from the van, putting more distance between you and the perpetrators. As the other two figures pop around the front of the van, they start to charge towards you before noticing the rifle pointed straight at them and grinding to an abrupt halt, raising their hands above their heads in surrender.
+				*line_break
+				*line_break
+				"Stay where you are, and get on the floor. Any sign of resistance and I'll shoot. Get it?" You repeat yourself for the benefit of the newcomers, a lot calmer this time. The driver looks at the other two, unsure of what to do, while the shorter of the two looters nudges both of them, urging them to get down. A flicker of hesitation before the other two drop to their knees warily.
+				*goto 2_4_13_looters_nego
+				*page_break
+				You squint your eyes slightly, sizing up the motley crew. Completely unarmed with the engine still running, they must be preparing for a quick getaway. A stroke of luck then, that there was an impromptu change of plans while patrolling, else the group would have most likely gotten away with it. You vaguely recognize the taller of the two warehouse crew, having seen him around the barracks a few times. Probably a soldier from another detachment.
+			#Confront them directly!
+				You decide to wait for the two looters to come out of the warehouse before catching them by surprise. You're pretty sure they went into the warehouse unarmed, and thus having a rifle serves as an overpowering advantage.
+				*line_break
+				*line_break
+				You steady your breath, listening intently for the signs. A few painfully slow minutes later, you hear the familiar crunching of gravel. Glancing around the corner, you see the two figures reach the van once again, the large boxes in their hands obstructing their views. 				You take the opportunity to burst out of your hiding place and dash right behind the two men, currently preoccupied trying to unload the goods.
+				*line_break
+				*line_break
+				"Hands up where I can see them! Try anything funny and I'll shoot!"
+				#comment progress
+			#Just walk away. I need more time to think of what to do.
+				Step on a branch and expose yourself. "Who's there?" Dammit, you don't have a choice. Confront them nonetheless hahaha.
+				*label 2_4_13_looters_nego
+				
