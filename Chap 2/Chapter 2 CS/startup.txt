@@ -58,12 +58,14 @@
 *create demolition_charge 0
 
 *comment NPCs
-*create sergeant "Sergeant Kosnik"
-*create doctor "Doctor Sonia"
+*create sergeant "Kosnik"
+*create doctor "Sonia"
+*create mrpa_official "Egor"
 
 *comment NPCs R/S
 *create sergeant_rs 0
 *create doctor_rs 0
+*create mroa_official_rs 0
 
 *comment events
 *create chap1_kill_civilian 0

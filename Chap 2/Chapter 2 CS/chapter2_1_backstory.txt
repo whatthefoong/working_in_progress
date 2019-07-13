@@ -78,7 +78,7 @@ You snap back to reality to see ${doctor} leaning forward, waving a stick of cin
 *line_break
 *line_break
 “It’s the middle of the night right now, unfortunately for you. Having been out of it for 4 days straight you’re probably not ready to go back to bed anytime soon. I guess [i]little ol’ me[/i] will have to keep you company.” A mirthful smile spreads across her face. It’s clear she’s trying to lighten the mood.
-	*fake_choice
+*fake_choice
 	#Cinnamon huh… it smells really good. 
 		*set relationship_sonia %+5
 		“Glad you like it. It’s a trick my mum taught me. I’ve had anxiety since I was a little kid, and every time I had a bad day, she would make a cup of cinnamon tea for me. The smell helps me re-centre myself, I guess. I keep a whole bundle with me at all times.”

@@ -1078,4 +1078,3 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 
 *if counter_attack_score < 1
 	*goto_scene chapter2_1_backstory sonia_route
-

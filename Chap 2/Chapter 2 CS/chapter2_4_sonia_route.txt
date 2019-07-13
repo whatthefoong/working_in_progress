@@ -1,0 +1,165 @@
+*comment Sonia's route
+*temp morovian_miner 0
+*temp morovian_farmer 0
+*temp morovian_hadan 0
+*if sonia = 1
+
+Another mundane day. You lie in your pristine white hospital bed, in the same position as you were for the entire week. In your time here, you've tried to make small talk with your fellow patients, but they're usually sedated or too exhausted to talk. The staff don't entertain your attempts at casual conversation either. They come in, change your bandages, scribble things on a clipboard, then leave. How diligent.
+*line_break
+*line_break
+The only person who has even tried conversing with you is ${doctor}. If only she were here, you think to yourself.
+*line_break
+*line_break
+As if on cue, your train of thought is broken abruptly by a commotion just outside the ward.
+*line_break
+*line_break
+"You can't be fucking serious!"
+*line_break
+*line_break
+Its Doctor ${doctor}. Her voice is raised and laced with venom, uncharacteristic of what you know of her.
+*line_break
+*line_break
+"We didn't have a choice, ${Sonia}. You know how this place works." A monotone voice replies, unprovoked by Sonia.
+*line_break
+*line_break
+"That doesn't make this okay! We could have saved her, if we had just-"
+*line_break
+*line_break
+"Look, I don't like this just as much as you do, but there's nothing we can do now. Cool yourself off and get back to work."
+*line_break
+*line_break
+You hear footsteps of what you presume is ${doctor}'s coworker grows softer away from the ward as they walk away from the conversation.
+*line_break
+*line_break
+${doctor} enters the room, her face haggard, her hand resting on the door frame to support herself. Her eyes are glazed over, defeated. After a moment of staring at the ground she turns up, noticing your presence.
+*line_break
+*line_break
+She smiles weakly. "Sorry you had to hear all that, ${name}.
+*fake_choice
+	#What happened?
+		"So you were eavesdropping?" she asks coyly, cocking an eyebrow. 		She chuckles as you try to find an excuse. 
+		*line_break
+		*line_break
+		"Relax, I'm only teasing. Hearing someone yelling across the hallway shouldn't be considered eavesdropping." she jokes as she walks towards you.
+	#You look tired, are you alright?
+		*set relationship_sonia %+5
+		Her expression lightens. "What kind of doctor am I, letting the patient comfort me." she chides herself under her breath.
+		*line_break
+		*line_break
+		"I'm fine, thank you for asking." she straightens her back, walking towards you. 
+	#I can knock the daylights out of him if you want.
+		*set relationship_sonia %-5
+		She shakes her head. "Honestly commander, not everything needs to be settled with violence."
+		*line_break
+		*line_break
+		"I appreciate you looking out for me, but he's my coworker, my friend. No need for punching." she smiles patiently as she begins walking towards you.
+She leans against the wall, reaches into her inner pocket for a stick of cinnamon, bringing it close to her nose.
+*line_break
+*line_break
+"One of my patients here is a kid. Her name is Anastasia, a Morovian girl, only 7 years old. She had the most beautiful black eyes and the rosiest cheeks, just the sweetest bundle of joy." ${doctor} explains, smiling at the image.
+*line_break
+*line_break
+"She suffers from a specific lung disease. Its fatal if untreated, but luckily when she was brought in while we could still save her. She's been in our care for about 2 months now, and is… was, recovering. In less than a month she might even have been discharged, able to go back to living like a normal kid."
+*line_break
+*line_break
+${doctor} pauses. "But then we got a new patient. A politician, middle-aged guy. Same disease, coincidentally. He was still in the mild stages of the disease. He could have lived healthily for another 6 months. But he demanded to be treated immediately. We only had so much of the medicine available here. I prescribed him some mild painkillers for his chest pain and told him to wait for the next shipment arriving in 2 months."
+*line_break
+*line_break
+"Last night, Anastasia's condition escalated. When I went to look for the medication… it wasn't there. With no other choice, I put her on laughing gas to ease the pain." ${doctor}'s expression hardens. "The entire time she was smiling, smiling through the tears, smiling through the pain. She said… she trusted me to save her."
+*line_break
+*line_break
+There's a long pause. 
+*line_break
+*line_break
+"After 6 hours, Anastasia passed away this morning."
+*page_break
+"When my coworkers came in just now, I asked what happened to the medicine. Apparently, the new patient paid an enormous sum to be treated by another doctor, without my notice. The hospital directors agreed."
+*line_break
+*line_break
+"Because of the way things are… because he was [i]Torian[/i]… we had to listen to him. We used the last of the medication. And because of that, she's dead."
+*line_break
+*line_break
+From your perspective you can't see her face. Her eyes are obscured by her bangs which haven't been clipped up like usually are. But she's trembling.
+*line_break
+*line_break
+The stick of spice in her hand suddenly snaps in her grip. Both of you watch the two halves hit the floor.
+*line_break
+*line_break
+She laughs sadly at all of this. "Maybe I should trade these cinnamon sticks for blunts…"
+*fake_choice
+	#You did your best.
+		She doesn't look at you. "If 'my best' is watching a 7-year old die, then 'my best' isn't good enough."
+		*line_break
+		*line_break
+		"		There's no use berating yourself like this. There was nothing more you could have done." you try to rationalize. "You stayed by her side the whole night, you did your best to ease her pain. You're a great doctor, Ms ${doctor}. I'm sure Anastasia thought the same."
+		*line_break
+		*line_break
+		She sighs, massaging the bridge of her nose in an attempt to compose herself.
+		*line_break
+		*line_break
+		"Yes… Listen, I'm… I'm sorry, I don't mean to be all pessimistic like this. Thanks for trying to cheer me up. I just… need time." 
+		*line_break
+		*line_break
+		You nod, able to understand some of the grief she must be going through.
+		*line_break
+		*line_break
+		"I just wonder… if Anastasia had been born a Torian… would I still get to see her smile today? This Torian, Morovian divide… it has to end." 
+	#Fuckin Torians...
+		"Fuckin Torians…" you unconsciously mutter under your breath. You find yourself surprised by your own words. The MRPA is made up of mostly Torian supporters, and you hadn't thought to question them until now.
+		*line_break
+		*line_break
+		There's a moment of silence between the two of you.
+		*line_break
+		*line_break
+		"Yup, those are our bosses." ${doctor} mutters. "This whole hospital is funded by them too, so we don't really get a say in these decisions." 
+		*line_break
+		*line_break
+		"I'm a foreigner. I came here because I wanted to save people. I don't care if you're Torian, Morovian, Hadan, whatever. I'll treat you if you're hurt. Because regardless of your birthplace, your life is precious."
+		*line_break
+		*line_break
+		She bends down to pick up the broken cinnamon stick. "I understand its not so simple for you folks. But this unfairness… it just can't go on."
+	#This is just the world we live in, unfortunately.
+		"What can we do? We're tiny pieces on this giant game board of politics, we can't change the way things are." You laugh at the futility of it all. 
+		*line_break
+		*line_break
+		${doctor} is silent. "Do you truly believe that?" 
+		*line_break
+		*line_break
+		The sudden resolve in her voice surprises you. "No that's not-" you stammer, trying to restate your intentions.
+		*line_break
+		*line_break
+		"No its fine, I'm not accusing you of anything." she reassures. "Its just that… maybe I'm just an optimist, but I think we can do better."
+		*line_break
+		*line_break
+		"This whole Torian vs Morovian situation is stupid to me. This divide has taken so many lives… why do we keep doing these things to ourselves?"
+		*line_break
+		*line_break
+		"Maybe I'm just some naive foreigner, but if you're my patient, I don't care if you're Morovian, Torian or Hadan, I'll still treat you. Because regardless of your birthplace, your life is precious." 
+		*line_break
+		*line_break
+		Her sense of purpose and ambition shakes you, and makes you ponder about your own life. What have you been fighting for?
+		*line_break
+		*line_break
+		"Sorry, I just blurted some things out. I think I just need to get some rest." ${doctor} says, rubbing her puffy tired eyes.
+At the worst possible timing, there's a knock on the door. Sonia quickly makes herself presentable. She throws the broken cinnamon into the bin, rubs the tears in her eyes, and arranges her hair neatly before answering "Come in." 
+*line_break
+*line_break
+The door swings wide open as a large man sporting a XL-sized black suit enters. He has a shiny bald head, which reflects the light directly into your eyes as he enters the ward, dazing you. He has a… rounded figure, and lumbers rather than walks. At his collar he displays a bright red bowtie. What brings this cartoon-brought-to-life here, you think to yourself. 
+*line_break
+*line_break
+"Ah Good Morning! You must be Doctor ${Sonia}, its a pleasure to meet you." he cheerily greets the doctor, his voice as large as his person. ${doctor} has regained her composure, shaking his hand (which engulfs her's). "The pleasure is mine, Mr…"
+*line_break
+*line_break
+"${mrpa_official} Maximov, at your service! Ah, but Mr ${mrpa_official} is fine, Mr Maximov would be my father!" He laughs heartily. Sonia back smiles politely.
+*line_break
+*line_break
+""Well Mr ${mrpa_official}, what can I help you with today?" Sonia puts her hands into the pockets of her coat. Looking at the 2 of them side by side, it looks as though a corgi is talking up to an elephant. Its almost comical.
+*line_break
+*line_break
+"I just had to come in person to thank the person who saved my good friend, [b]Mr Garcia[/b]."
+*line_break
+*line_break
+At the mention of the name, for a split-second you watch ${doctor}'s composure drop. There is a sudden intensity in her eyes, the veins on the side of her head tensing. Mr ${mrpa_official} seems to not have noticed this, however, as he continues blabbering.
+*line_break
+*line_break
+"He was in a terrible state, 

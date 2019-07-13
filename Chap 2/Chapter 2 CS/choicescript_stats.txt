@@ -158,6 +158,7 @@ Allies:
 *stat_chart
 	percent sergeant
 	percent doctor
+	percent mrpa_official
 *line_break
 *goto menu3
 
