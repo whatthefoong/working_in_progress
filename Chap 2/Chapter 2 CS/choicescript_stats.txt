@@ -154,6 +154,12 @@ Factions:
 	percent DFFM
 	percent USS
 *line_break
+Allies:
+*stat_chart
+	percent sergeant
+	percent doctor
+	percent mrpa_official
+*line_break
 *goto menu3
 
 *label world_map
