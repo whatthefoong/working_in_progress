@@ -102,10 +102,21 @@ You snap back to reality to see ${doctor} leaning forward, waving a stick of cin
 		Doctor ${doctor} seemingly reads your mind. “If you’re worried about your guys, don’t. The injured ones are downstairs recovering steadily. I think the rest have been sent back to your camp.”
 		*goto sonia_smalltalk
 	#I’ll [i]gladly[/i] spend the night with your ${doctor}~
-		*set relationship_sonia %-5
-		Her smile vanishes, replaces pursed lips forming a straight line.
-		“Don’t push it, bub.
-		*goto sonia_smalltalk
+		*if charm >= 10
+			*set relationship_sonia %+5
+			${doctor} snorts, rolling her eyes.
+			*line_break
+			*line_break
+			"Yes, [b]clearly[/b] injured men with fractured ribs and bullet wounds are a real turn on for me." she jokes sarcastically. 
+			*line_break
+			*line_break
+			There's a stillness in the air before you decide to drop the casanova act, as both of you quietly chuckle to yourselves.
+			*goto sonia_smalltalk
+		*else
+			*set relationship_sonia %-5
+			Her smile vanishes, replaces pursed lips forming a straight line.
+			“Don’t push it, bub.
+			*goto sonia_smalltalk
 		
 *label sonia_smalltalk
 ${doctor} crosses her legs. She picks up a cup of tea that was waiting atop the bedside table – cinnamon tea, no doubt. 
