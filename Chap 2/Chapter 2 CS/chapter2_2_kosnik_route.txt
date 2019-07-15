@@ -1,60 +1,182 @@
 *label 2_4_1_kosnik_patrol
-Being back at the barracks means that you have to fulfill your regular nondescript duties. Time flies by as you continue to churn out mission plans, conduct physical and tactical drills, and fulfill your weekly patrol duties. After a few weeks of rest, the aches and bruises incurred from the previous mission has already fade away into a distant memory.
+Being back at the barracks means that you have to fulfill your regular duties. Time flies by as you continue to churn out mission plans, conduct physical and tactical drills, and fulfill your weekly patrol duties. After a few weeks of rest, the aches and bruises incurred from the previous mission has already fade away into a distant memory.
 *line_break
 *line_break
 Thursday night rolls by, and you get ready for your scheduled patrol around the vicinity of the barracks. You sigh, picking up your standard issued military field bag, checking once again that you have enough water to last through the next couple of hours, before heading off to sign out a rifle from the armory - your only companion in this dark, lonely night. An unnecessary precaution, you think to yourself. Nothing ever happens on these boring patrols. Security along the barracks perimeter is already tight enough as it is; only a fool would even attempt to approach it. You take a step outside the heavy wrought iron gates, the cool, crisp breeze a welcoming change to the stale air within. Trudging along, the gravel crunches under your feet noisily, the steady rhythm providing a weirdly comforting solace as it cuts into the still silence of the night.
 *line_break
 *line_break
-The boredom sets in sooner than you expect. You feel a yawn emerging, and make no effort to stifle it out here in the empty road. You can't wait to finish your route as you mindlessly put one foot in front of the other. Within minutes, you approach a familiar fork as the gravel road branches into two opposing but connected paths that meet further back, essentially forming a closed loop. In between them lies another trail, the absence of greenery along a solitary line a sign of countless pair of boots trekking through it the past few months that rejoins the road a little further down. You slowly contemplate the possible routes you can take. To your left, the preassigned route that you're supposed to take, but to your right, the exact same route but just in a different direction. Or, you could choose to take a shortcut through the middle path and rejoin the patrol route a little further down.
+The boredom sets in sooner than you expect. You feel a yawn emerging, and make no effort to stifle it out here in the empty road. You can't wait to finish your route as you mindlessly put one foot in front of the other. Within minutes, you approach a familiar fork as the gravel road branches into two opposing but connected paths that meet further back, essentially forming a closed loop. In between them lies another trail, the absence of greenery along a solitary line a sign of countless pair of boots trekking through it the past few months that rejoins the left fork a little further down. You slowly contemplate the possible routes you can take. To your left, the pre-assigned route that you're supposed to take, but to your right, the exact same route but just in a different direction. Or, you could choose to take a shortcut through the middle path and rejoin the patrol route a little further down, cutting down the time you need to finish your patrol.
 *fake_choice
-	#comment need continue working on the description for the three choices, for now move on
 	#Take the left route, the pre-assigned patrol route that you've been taking for ages.
-		Nope. you're not going to stray off the assigned route. It might be boring, but it'll be over soon before you know it anyway. If the higher ups found out that you took another path than the assigned one… Actually, you're not sure what they'll do, as you have never heard of such a case happening. Oh well, better to stick to the tried and tested route then. However, the boredom soon overwhelms you, as you head down the same old path as you do. You decide to break into a jog, partially to keep yourself awake, while knowing that the faster you complete your route the faster you can head back and rest.
+		Nope. you're not going to stray off the assigned route. It might be boring, but it'll be over soon before you know it anyway. If the higher ups found out that you took another route than the assigned one… Oh well, better to stick to the tried and tested route. You sigh as you continue to trudge down the long, winding road.
 		*line_break
 		*line_break
-		After a good forty five minutes of jogging, you've made good progress on your route, plus the endorphin rush means you're more awake then ever. Hears noise, ducks into the forest nearby and approach the warehouse.
+		However, the boredom soon overwhelms you, as you continue down the same old pathway you've been walking through countless times. You decide to break into a jog, partially to keep yourself awake, while knowing that the sooner you complete your route, the sooner you can head back and rest. Picking up the pace, you welcome the cool night breeze that brushes against your cheeks. 
+		*line_break
+		*line_break
+		Half an hour later, you've made good progress on your route, plus the endorphin rush keeps you're more awake then ever. Looking back, you realized that you've covered quite a lot of distance. It won't be long now before you reach the fork and start making your way back. Alright! You've probably saved half the time that you usually take. Taking a moment to catch your breath, you lumber down the road.
 		*goto 2_4_11_approach_warehouse
-	#Take the right route, shake things up a little bit. You'll finish your patrol route anyway.
-		Just take the right path, what difference does it make? Either way, you'll end up back at this fork again upon completing the patrol loop. Might as well change things a bit to make things a little more exciting for you before the boredom overtakes you.
+	#Take the right route, shake things up a little bit.
+		Just take the right path, you think to yourself. What difference will it make? Either way, you'll end up back at this fork again upon completing the patrol. Might as well shake things up a bit to make it a little fresher for you before the boredom overtakes you. Turning away from the usual route, you trudge down the long, winding path to the right.
+		*line_break
+		*line_break
+		A few miles later, you feel your steps getting more lethargic by the minute. Well, this isn't working, you're still bored out of your wits. You try to shake the fatigue out of your system, focusing on the dimly lit path. Good lord, you can't wait to finish this mindless patrol. You can already imagine yourself back in your bunk after a much needed shower.
+		*line_break
+		*line_break
+		Oh well, all the more reason to get this over and done with. You quicken your pace slightly, the thought of a good night rest spurring you on.
 		*goto 2_4_11_approach_warehouse
-	#Head off the beaten path in the middle. It's a shortcut, but who will know you took it?
-		Eh, no one's gonna know if I take a minor shortcut. Besides, judging from how well worn out the path is, its definitely been used by some others during their patrol as well. End up saving half a hour.
+	#Head off into the path in the middle.
+		No one's gonna find out if I take a minor detour, you think to yourself. Besides, judging from how well worn out the path is, you reckon a few rebellious soldiers had utilized this shortcut as well. Might as well, since it'll save you some time.
+		*line_break
+		*line_break
+		You slowly make your way down as the densely packed trees filter out more of the moonlight, leaving the trail barely lit. Coupled with the stillness of the air, the forest seems to give off an eerie feeling, but you feel an odd sense of calm as you push through the increasingly dense vegetation. Surprisingly, you feel right at home walking through the forest path.
+		*line_break
+		*line_break
+		After trekking for twenty minutes, you spot the familiar road illuminated by the streetlights. Alright! You step out onto the gravel, rejoining the initial path you were supposed to take, the openness of the road heralding the cooling night breeze. Judging by the familiar landmarks in your sights, you reckon that you've saved about half an hour or so.
 		*label 2_4_11_approach_warehouse
-		Taking cautious steps, you approach the warehouse steadily. As the distance between you and the warehouse shrinks, you start to pick up more apparent noises - the scraping sound of objects being dragged across the floor, hushed whispers and the occasional grunt - confirming your suspicions. You press your back against the side of the warehouse, feeling the coolness of the concrete through your sweat-drenched uniform. Peeking around the corner, you spot a small van with its doors wide open. Two lean figures stagger out of the warehouse door, clutching a large cardboard box each, the contents heavy judging by the way it was throwing off their gait. Far too focused on their tasks, the two men heave the boxes onto the van before turning back again.
 		*line_break
 		*line_break
-		As the two figures walk towards the warehouse, you caught a closer glimpse of the figures before you duck back down behind the wall. Two men, with a similar athletic build, sporting identical buzz cuts, one of them half a head shorter than the other. To your utmost surprise, you recognize their attire: the all-too-familiar MRPA uniform. That revelation threw you off guard momentarily, before you regain your composure and your gears in your brain started to churn, linking all that you've witnessed pointing to an undeniable fact. 		Damn it! How can your own soldiers be looting supplies, from civilians no less?
+		[b]THUD!![/b]
+		*line_break
+		*line_break
+		A loud noise breaks out from the rundown building up ahead, startling you slightly. You recognize it as one of the olden warehouses belonging to the village in the vicinity. Strange, there shouldn't be any movement within the warehouse by this time of the night. You sneak into the bushes off the side of the road, keeping out of sight while slowly approaching the building to investigate.
+		Taking cautious steps, you approach the warehouse steadily. As the distance between you and the warehouse shrinks, you start to pick up more apparent noises - the scraping sound of objects being dragged across the floor, hushed whispers and the occasional grunt - confirming your suspicions. You press your back against the side of the warehouse, feeling the coolness of the concrete through your sweat-drenched uniform. Peeking around the corner, you spot a small van with its doors wide open. Two lean figures stagger out of the warehouse door, clutching a large cardboard box each, the contents heavy judging by the way it was throwing off their gait. Far too focused on their tasks, the two men heave the boxes onto the van before turning, striding towards the warehouse once again.
+		*line_break
+		*line_break
+		As the two move closer, you catch a closer glimpse of the figures before you duck back down behind the wall. Two men, with a similar athletic build, sporting identical buzz cuts, one of them half a head shorter than the other. To your utmost surprise, you recognize their attire: the all-too-familiar MRPA uniform. That revelation threw you off guard momentarily, before you regain your composure and your gears in your brain started to churn, linking all that you've witnessed pointing to an undeniable fact. 		Damn it! How can your own soldiers be looting supplies, from civilians no less?
 		*line_break
 		*line_break
 		You feel your jaw tighten as grit your teeth in frustration. You know you don't have much time to think of the next course of action, as the two men will be emerging from the warehouse any minute now. Best to take action while they are occupied, if you should take action at all.
 		*fake_choice
 			#Stop their means of escape!
-				Take out their means of transportation first, you reason. You sneak around the corner, approaching the van while keeping your figure crouched and as inconspicuous as possible, aided by the low humming of the van's engine. You reach the van in a few lengthy strides and slide around the side away from the warehouse, avoiding the line of sight from the warehouse door.
+				Disable their means of transportation first, you reason. You sneak around the corner, approaching the van while keeping your figure crouched and as inconspicuous as possible, aided by the low humming of the van's engine. You reach the van in a few lengthy strides and slide around the side away from the warehouse, avoiding the line of sight from the warehouse door.
 				*line_break
 				*line_break
-				"Hey! Who the fuck…??" A loud voice booms, sending chills down your neck. FUCK! You turn and spot a figure fumbling to open the door from the side mirror, Fuck! You forgot to account for the possibility of another person inside the vehicle. With stealth out of the window, you slide your rifle from your side and point it at the man jumping out of the front seat, a stockier figure donning the same MRPA uniform.
+				"Hey! Who the fuck…??" A loud voice booms, sending chills down your neck. You turn and spot a figure fumbling to open the door from the side mirror, Fuck! You forgot to account for the possibility of another person inside the vehicle. With stealth out of the window, you slide your rifle from your side and point it at the man jumping out of the front seat, a stockier figure donning the same MRPA uniform.
 				*line_break
 				*line_break
-				"Stop! Keep your hands where I can see them or I'll put a bullet in you!" You yell out, squaring the stock of the rifle against your shoulder blade. The driver immediately freezes in place, a look of shock and confusion on his face. You hear urgent footsteps coming towards your direction, no doubt the other two partners-in-crime, alerted by the commotion.
+				"Stop! Put your hands where I can see them or I'll put a bullet in you!" You yell out, squaring the stock of the rifle against your shoulder blade. The driver immediately freezes in place, a look of shock and confusion on his face. You hear urgent footsteps coming towards your direction, no doubt the other two partners-in-crime, alerted by the commotion.
 				*line_break
 				*line_break
 				You keep your gun fixed on the driver while stepping away from the van, putting more distance between you and the perpetrators. As the other two figures pop around the front of the van, they start to charge towards you before noticing the rifle pointed straight at them and grinding to an abrupt halt, raising their hands above their heads in surrender.
 				*line_break
 				*line_break
-				"Stay where you are, and get on the floor. Any sign of resistance and I'll shoot. Get it?" You repeat yourself for the benefit of the newcomers, a lot calmer this time. The driver looks at the other two, unsure of what to do, while the shorter of the two looters nudges both of them, urging them to get down. A flicker of hesitation before the other two drop to their knees warily.
+				"Stay where you are, and get on the floor. Any sign of resistance and I'll shoot. Get it?" You repeat yourself for the benefit of the newcomers, a lot calmer this time. The driver looks at the other two, unsure of what to do, while the shorter of the two looters nudges the rest, urging them to get down. A flicker of hesitation, before the other two drop to their knees warily.
 				*goto 2_4_13_looters_nego
-				*page_break
-				You squint your eyes slightly, sizing up the motley crew. Completely unarmed with the engine still running, they must be preparing for a quick getaway. A stroke of luck then, that there was an impromptu change of plans while patrolling, else the group would have most likely gotten away with it. You vaguely recognize the taller of the two warehouse crew, having seen him around the barracks a few times. Probably a soldier from another detachment.
 			#Confront them directly!
-				You decide to wait for the two looters to come out of the warehouse before catching them by surprise. You're pretty sure they went into the warehouse unarmed, and thus having a rifle serves as an overpowering advantage.
+				You decide to wait for the two looters to come out of the warehouse before catching them by surprise. You're pretty sure they went into the warehouse completely unarmed, as they need both hands to be unoccupied. Moreover, they probably aren't expecting company. Having a rifle with you now serves as an overpowering advantage.
 				*line_break
 				*line_break
-				You steady your breath, listening intently for the signs. A few painfully slow minutes later, you hear the familiar crunching of gravel. Glancing around the corner, you see the two figures reach the van once again, the large boxes in their hands obstructing their views. 				You take the opportunity to burst out of your hiding place and dash right behind the two men, currently preoccupied trying to unload the goods.
+				You steady your breath, listening intently for the signs. A few painfully slow minutes later, you hear the familiar crunching of gravel. Glancing around the corner, you see the two figures reach the van once again, the large boxes in their hands obstructing their views. 				You take the opportunity to burst out of your hiding place and position yourself a safe distance behind the two men, currently preoccupied with unloading the goods.
 				*line_break
 				*line_break
-				"Hands up where I can see them! Try anything funny and I'll shoot!"
-				#comment progress
-			#Just walk away. I need more time to think of what to do.
-				Step on a branch and expose yourself. "Who's there?" Dammit, you don't have a choice. Confront them nonetheless hahaha.
+				"Turn around, and put your hands up where I can see them!" You boom, pointing your rifle straight at the two men.
+				*line_break
+				*line_break
+				A reverberating thud echoes through the night as one of the looters drop the box he's carrying onto the floor. Spinning around, the two stare at you with an expression of confusion and anger plastered across their faces, which is quickly replaced by fear as they register the gun in your hands. Their hands immediately shoot up into the air in surrender, their eyes widen in obvious panic.
+				*line_break
+				*line_break
+				A slight movement in your peripheral vision catches your eye. Noticing the passenger door of the van ajar, you shift a few steps to your left, all the while ensuring that your rifle remains pointed towards the two looters. As you gain a clearer field of vision into the front seats of the van, the sight of a slightly chubbier man in the same MRPA uniform cowering in his seat greets your eyes. Looking up, his eyes meet yours and he gives a small yelp and thrusts his empty hands in front of his face. "Don't shoot me, don't shoot me!!"
+				*line_break
+				*line_break
+				"Get out of the van and join the rest. And don't even think about trying anything funny." You growl as you cock your rifle, shifting your glance back at the two MRPA looters. The audible [i]click[/i] of the bullet entering the chamber hints to the three that you mean business. With a whimper, the driver scramble out of his seat, joining the other two with their backs pressing against the van.
+				*goto 2_4_13_looters_nego
+			#Stay put, you need a little more time to figure things out.
+				Okay, you need some more time to assess the situation. On the off-chance that these guys are armed, they can easily put you in a disadvantageous position. You glance back at the van, the side door ajar to reveal the interior half-packed with goods. Oh good. If they aim to maximize the capacity of the van, they will definitely take a while longer, giving you a little more time to work with.
+				*line_break
+				*line_break
+				A sudden movement from the front of the van 
+				#comment more work here
 				*label 2_4_13_looters_nego
-				
+				*page_break
+				You squint your eyes slightly, sizing up the motley crew. Completely unarmed and with the engine still running, they must be preparing for a quick getaway. A stroke of luck then, that you had an impromptu change of plans while patrolling, else the group would have most likely gotten away with it. You vaguely recognize both of the looters, having seen them around the barracks a few times from the other detachments. Not surprising, given the time you have spent in there. To your puzzlement, however, you could not find the face of the driver familiar for the life of you, despite the MRPA emblem sprawled across his right chest.
+				*line_break
+				*line_break
+				You look at the trio staring straight back at you, the tension in the air palpable. The silence looms over all of you as you realize that you have no idea what to do in such a scenario. Damn it, you didn't really think this through. Seizing the opportunity, the driver speaks up carefully, his voice smooth and soothing, perhaps intentionally so.
+				*line_break
+				*line_break
+				"Ahh… Before you say anything, can I offer you a little… proposition? I'm sure we can come to a mutually beneficial agreement… commander" He hastily adds the last bit, glancing at the rank insignia on your shoulders.
+				*line_break
+				*line_break
+				You narrowed your eyes at him. "I'm listening." His words pique your interest, but nonetheless you keep your rifle trained on them in case they intend to pull a fast one over you.
+				*line_break
+				*line_break
+				The driver clear his throat. "Well, we can offer you a little something for you if you are willing to turn a blind eye regarding this little incident. Something to line your pockets a little with, hmm? Then we can both pretend that this meeting never happened and be on our merry way."
+				*line_break
+				*line_break
+				"Besides," he adds, "most of the villagers have fled to other towns, as you know, being near a military base could potentially mean trouble, should the LOM forces come knocking. As such, the supplies in this warehouse have been left here for quite some time. Since they're just sitting there going to waste, we figured that there's no harm in us using them for our own benefit. Now we're paying you to simply look the other way, everyone gains something eh? How does three hundred bucks sound?"
+				*fake_choice
+					#Refuse his proposition.
+						You squeeze the trigger, sending a lone bullet flying through the air a few meters above the roof of the van. The loud [i]BANG![/b] reverberates through the air, and the three looters drops to the floor with lightning speed, their hands firmly covering their heads.
+						*line_break
+						*line_break
+						"Shut it! One more word from you, and the next bullet will meet flesh, that I guarantee. Now scram! Leave before I change my mind about showing you any mercy at all."
+						*line_break
+						*line_break
+						Clambering to their feet, the trio dash along the open road, fleeing the scene as fast as they could. You smirk slightly, watching their silhouettes diminish into a speck into the horizon, before turning your attention back to the warehouse.
+						*line_break
+						*line_break
+						You do a quick sweep of the interior as well as the perimeter of the warehouse, making sure that there aren't any more of them hiding or sneaking around. Once the vicinity is secure, you turn your attention back to the van. Peering into the interior, you find rows of nondescript cardboard boxes packed tightly against one another. The sound of the bottom of the box scraping the coarse lining of the van hits your ears as you drag one out, chucking it down to the floor. The moonlight illuminates the interior of the box, and you are able to distinguish its contents. You push your hands deep within the box, scooping out syringes, pills, bandages, among many other medical supplies.
+						*line_break
+						*line_break
+						Going through the other boxes, you uncover a myriad of provisions and necessities, ranging from canned food to even simple weapons like switchblades or machetes. A mischievous thought pops into your head as you feel the pull of temptation. Maybe those three guys have the right idea. These stuff are merely wasting space, rotting in this warehouse for god knows how long. Maybe it doesn't hurt to "confiscate" some of these for your own sake…
+						*fake_choice
+							#No you don't! Return the stuff back to the warehouse immediately.
+								You feel ashamed that you would even consider grabbing some of these stuff yourself. Heck, you're no better than the looters if you do. Shaking that heinous thought out of your head, you reach for your radio communication device and contact for help back at the barracks. After informing the barracks of the current situation, they assure you that they will contact the relevant personnel from the village. As you wait, you slowly unload the boxes from the van, stacking them on the floor. Son of a bitch, these things are heavy. Though, the weight of these boxes will never compare to the weight of your guilt have you not intervened.
+								*line_break
+								*line_break
+								Before long, a couple of civilians arrive at the scene, introducing themselves as the people managing the warehouse. One of them grabs your hand, shaking it with an intense fervor, thanking you profusely, while the rest start to carry the boxes back into the warehouse. Explaining that you're simply doing your job, you reassure the man, advising him to tighten the security measures of the old warehouses.
+								*line_break
+								*line_break
+								With the relevant personnel on site, you don't see any further excuse to hang around. Muttering a quick excuse and a goodbye, you turn and start to head back along the lonely path back to the barracks.
+								*goto 2_4_2_return_base
+							#Now's your chance, take some of the stuff for yourself!
+					#Take their offer. Why not?
+						Hmm, just like he said, there's no harm in taking a little side benefit for yourself. After all, it's going to be a hassle turning them in by yourself while they have three people and a van.
+						*line_break
+						*line_break
+						"All right. Try anything funny and I'll put one through your skull!" You lower your rifle slightly, but your finger continues to coil around the trigger. The trio glance around, before the driver sighs and digs out his wallet, pulling out a wad of cash.
+						*line_break
+						*line_break
+						*label 2_4_1_2_take_bribe
+						"Okay, I'm coming over with the money. Alone. No funny business, I swear." The driver inches slowly towards you, raising his hands back into the air. Upon reaching where you are, he carefully extends his hand, offering you the cash. You quickly swipe it from his grubby hand and back away, while he continue to place his hands on the air.
+						*line_break
+						*line_break
+						"Pleasure doing business with you." The driver smirks, turning around to rejoin his companions.
+						*line_break
+						*line_break
+						"Alright, get the hell out of here. Stay any longer and I might just change my mind." Snarling, you continue to grip the rifle tightly. With no need for further prompting, the three looters hop into the van and speed off, kicking up a trail of dust in their wake.
+						*line_break
+						*line_break
+						As the van disappears into the horizon, you make your way back to the barracks, the unexpected profit putting a wide smile on your face and a spring in your step.
+						*goto 2_4_2_return_base
+					#What? That's not even decent money. Ask for a proper bribe.
+						"So you're telling me, your lives are only worth three hundred dollars? Come on, that's not even a proper bribe."
+						*line_break
+						*line_break
+						"Come on, that's the most I can squeeze out now. Take it or leave it." The driver huffs, but the beads of sweat on his forehead tells you that he's getting more nervous by the minute.
+						*line_break
+						*line_break
+						"It's like you're not even trying. I could just end this right now, you know?" Raising your rifle, you take your aim at one of the looters. As you took aim, you enjoy the sight of the three looters in a frenzy.
+						*line_break
+						*line_break
+						"Wait wait wait! Okay okay I'll double the offer! Just put the gun down!" You smile to yourself. Classic scare tactics, it always works.
+						*line_break
+						*line_break
+						You slide your rifle down to your side and take small steps towards the looters. Damn, that was easy.
+						*line_break
+						*line_break
+						"But, for that amount of money, we would require something else, a little service from you. As you can see, you have a gun. Keep us safe for a moment of the journey, and you'll get the money. We'll be driving further down, and if we are ambushed along the main road our efforts will be for nothing."
+						*line_break
+						*line_break
+						You consider his proposition for a moment. Hmm, if I just take the smaller bribe, I can just leave now. Taking the bigger bribe might drag me further down this rabbit hole.
+						*fake_choice
+							#Take the previous offer.
+								"Alright, I'll just take the three hundred. But I better not catch you sniffing around here anymore, you hear me?" You lower your rifle slightly, but your finger continues to coil around the trigger. The trio glance around, before the driver sighs and digs out his wallet, pulling out a wad of cash.
+								*goto 2_4_1_2_take_bribe
+							#Agree to protect them.
+								"Alright, I'll do it.
+
+*label 2_4_2_return_base
+
+					
