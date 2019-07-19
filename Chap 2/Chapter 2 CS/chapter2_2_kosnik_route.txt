@@ -1,3 +1,5 @@
+*comment Kosnik's route
+*temp stop_looters 0
 *label 2_4_1_kosnik_patrol
 Being back at the barracks means that you have to fulfill your regular duties. Time flies by as you continue to churn out mission plans, conduct physical and tactical drills, and fulfill your weekly patrol duties. After a few weeks of rest, the aches and bruises incurred from the previous mission has already fade away into a distant memory.
 *line_break
@@ -85,8 +87,14 @@ The boredom sets in sooner than you expect. You feel a yawn emerging, and make n
 				Okay, you need some more time to assess the situation. On the off-chance that these guys are armed, they can easily put you in a disadvantageous position. You glance back at the van, the side door ajar to reveal the interior half-packed with goods. Oh good. If they aim to maximize the capacity of the van, they will definitely take a while longer, giving you a little more time to work with.
 				*line_break
 				*line_break
-				A sudden movement from the front of the van 
-				#comment more work here
+				A sudden movement from the front of the van catches your attention. A stout, stubby little man emerges, exhaling out a cloud of smoke. Damn it, you did not notice the presence of a third person, hidden by a blind spot from your vantage point. As he walks towards the back of the van, towards your hiding place, you attempt to pull your head back behind the wall, though not fast enough, as your eyes meet his for a brief moment.
+				*line_break
+				*line_break
+				"Hey! Who the fuck..?" God damn it, your cover's blown. No point keeping yourself hidden then. Not like you have much of a choice now.
+				*line_break
+				*line_break
+				You burst out of your hiding place, aiming your rifle straight at the driver. "Don't move! One step and I'll put a bullet in you!" The threat stops the man dead in his tracks. 
+				*comment progress
 				*label 2_4_13_looters_nego
 				*page_break
 				You squint your eyes slightly, sizing up the motley crew. Completely unarmed and with the engine still running, they must be preparing for a quick getaway. A stroke of luck then, that you had an impromptu change of plans while patrolling, else the group would have most likely gotten away with it. You vaguely recognize both of the looters, having seen them around the barracks a few times from the other detachments. Not surprising, given the time you have spent in there. To your puzzlement, however, you could not find the face of the driver familiar for the life of you, despite the MRPA emblem sprawled across his right chest.
@@ -107,6 +115,7 @@ The boredom sets in sooner than you expect. You feel a yawn emerging, and make n
 				"Besides," he adds, "most of the villagers have fled to other towns, as you know, being near a military base could potentially mean trouble, should the LOM forces come knocking. As such, the supplies in this warehouse have been left here for quite some time. Since they're just sitting there going to waste, we figured that there's no harm in us using them for our own benefit. Now we're paying you to simply look the other way, everyone gains something eh? How does three hundred bucks sound?"
 				*fake_choice
 					#Refuse his proposition.
+						*set stop_looters = 1
 						You squeeze the trigger, sending a lone bullet flying through the air a few meters above the roof of the van. The loud [i]BANG![/b] reverberates through the air, and the three looters drops to the floor with lightning speed, their hands firmly covering their heads.
 						*line_break
 						*line_break
@@ -122,16 +131,22 @@ The boredom sets in sooner than you expect. You feel a yawn emerging, and make n
 						Going through the other boxes, you uncover a myriad of provisions and necessities, ranging from canned food to even simple weapons like switchblades or machetes. A mischievous thought pops into your head as you feel the pull of temptation. Maybe those three guys have the right idea. These stuff are merely wasting space, rotting in this warehouse for god knows how long. Maybe it doesn't hurt to "confiscate" some of these for your own sake…
 						*fake_choice
 							#No you don't! Return the stuff back to the warehouse immediately.
-								You feel ashamed that you would even consider grabbing some of these stuff yourself. Heck, you're no better than the looters if you do. Shaking that heinous thought out of your head, you reach for your radio communication device and contact for help back at the barracks. After informing the barracks of the current situation, they assure you that they will contact the relevant personnel from the village. As you wait, you slowly unload the boxes from the van, stacking them on the floor. Son of a bitch, these things are heavy. Though, the weight of these boxes will never compare to the weight of your guilt have you not intervened.
+								You feel ashamed that you would even consider grabbing some of these stuff yourself. Heck, you're no better than the looters if you do. Shaking that heinous thought out of your head, you reach for your radio communication device and contact for help back at the barracks. After informing the barracks of the current situation, they assure you that they will contact the relevant personnel from the village. As you wait, you slowly unload the boxes from the van, stacking them on the floor. Son of a bitch, these things are heavy. Though, the weight of these boxes will never compare to the weight of your guilt if you chose to pilfer these for yourself.
 								*line_break
 								*line_break
 								Before long, a couple of civilians arrive at the scene, introducing themselves as the people managing the warehouse. One of them grabs your hand, shaking it with an intense fervor, thanking you profusely, while the rest start to carry the boxes back into the warehouse. Explaining that you're simply doing your job, you reassure the man, advising him to tighten the security measures of the old warehouses.
 								*line_break
 								*line_break
-								With the relevant personnel on site, you don't see any further excuse to hang around. Muttering a quick excuse and a goodbye, you turn and start to head back along the lonely path back to the barracks.
+								With the relevant personnel on site, you don't see any further excuse to hang around. Muttering a quick excuse and a goodbye, you turn and start to head back along the solitary path back to the barracks.
 								*goto 2_4_2_return_base
 							#Now's your chance, take some of the stuff for yourself!
+								Ever the opportunist, you grab as much as you can, prioritizing the smallest but most valuable objects - antibiotics, vitamins, switchblades, and so on. Before you know it, your field bag is bursting at the seams. Given the right connections, you are sure that you can find buyers who will definitely be interested in these, thus making a handsome sum from it.
+								*line_break
+								*line_break
+								Exiting the warehouse, you start to make your way back to the barracks, ignoring the conspicuous van sitting out there in the open. Oh well, it provides the perfect camouflage for your misdeeds. You could claim that you attempted to stop the looters, but sadly they made away with some of the supplies in the warehouse, with no one the wiser.
+								*goto 2_4_2_return_base
 					#Take their offer. Why not?
+						*set stop_looters = 0
 						Hmm, just like he said, there's no harm in taking a little side benefit for yourself. After all, it's going to be a hassle turning them in by yourself while they have three people and a van.
 						*line_break
 						*line_break
@@ -145,19 +160,20 @@ The boredom sets in sooner than you expect. You feel a yawn emerging, and make n
 						"Pleasure doing business with you." The driver smirks, turning around to rejoin his companions.
 						*line_break
 						*line_break
-						"Alright, get the hell out of here. Stay any longer and I might just change my mind." Snarling, you continue to grip the rifle tightly. With no need for further prompting, the three looters hop into the van and speed off, kicking up a trail of dust in their wake.
+						"Alright, get the hell out of here. Stay any longer and I might just change my mind." Snarling, you continue to grip the rifle tightly. With no need for further prompting, the three looters clamor into the van and speed off, kicking up a trail of dust in their wake.
 						*line_break
 						*line_break
 						As the van disappears into the horizon, you make your way back to the barracks, the unexpected profit putting a wide smile on your face and a spring in your step.
 						*goto 2_4_2_return_base
 					#What? That's not even decent money. Ask for a proper bribe.
-						"So you're telling me, your lives are only worth three hundred dollars? Come on, that's not even a proper bribe."
+						*set stop_looters = 0
+						"You're telling me, your lives are only worth three hundred dollars? That's not even a proper bribe."
 						*line_break
 						*line_break
-						"Come on, that's the most I can squeeze out now. Take it or leave it." The driver huffs, but the beads of sweat on his forehead tells you that he's getting more nervous by the minute.
+						"Come on man, that's the most I can squeeze out now. Take it or leave it." The driver huffs, but the beads of sweat on his forehead tells you that he's getting more nervous by the minute.
 						*line_break
 						*line_break
-						"It's like you're not even trying. I could just end this right now, you know?" Raising your rifle, you take your aim at one of the looters. As you took aim, you enjoy the sight of the three looters in a frenzy.
+						"It's like you're not even trying. I could just end this shit show of a negotiation right now, you know?" Raising your rifle, you take your aim at one of the looters. As you took aim, you enjoy the sight of the three looters scurrying in a frenzy.
 						*line_break
 						*line_break
 						"Wait wait wait! Okay okay I'll double the offer! Just put the gun down!" You smile to yourself. Classic scare tactics, it always works.
@@ -166,17 +182,157 @@ The boredom sets in sooner than you expect. You feel a yawn emerging, and make n
 						You slide your rifle down to your side and take small steps towards the looters. Damn, that was easy.
 						*line_break
 						*line_break
-						"But, for that amount of money, we would require something else, a little service from you. As you can see, you have a gun. Keep us safe for a moment of the journey, and you'll get the money. We'll be driving further down, and if we are ambushed along the main road our efforts will be for nothing."
+						"But, for that amount of money, we would require something else, a little… ahh… service from you. As you can see, you have a gun. Keep us safe on our journey back, and you'll get the money after. It isn't safe this time of the night, with thieves and looters abound. Just driving a van like this is as good as painting a bullseye right on our asses, and we don't want to take that risk."
 						*line_break
 						*line_break
-						You consider his proposition for a moment. Hmm, if I just take the smaller bribe, I can just leave now. Taking the bigger bribe might drag me further down this rabbit hole.
+						You look at him incredulously. Does he really not spot the irony in what he just uttered? Nonetheless, you consider his proposition for a moment. The extra income would be really helpful, considering your current financial difficulties. However, if I just take the smaller bribe, I can cut off my involvement with the situation here and now. Taking the bigger bribe might drag me further down this rabbit hole, and who knows where that might lead.
 						*fake_choice
 							#Take the previous offer.
 								"Alright, I'll just take the three hundred. But I better not catch you sniffing around here anymore, you hear me?" You lower your rifle slightly, but your finger continues to coil around the trigger. The trio glance around, before the driver sighs and digs out his wallet, pulling out a wad of cash.
+								*line_break
+								*line_break
 								*goto 2_4_1_2_take_bribe
 							#Agree to protect them.
-								"Alright, I'll do it.
+								"Alright, I'll do it." You gulp. This better not come back to bite you in the ass.
+								*line_break
+								*line_break
+								"Great! We just need an escort till we reach our own hideout. We'll drive you back once we're done unloading all this stuff." The driver turns and hops into the van while the other two soldiers continue to pack and arrange the boxes within the interior of the van.
+								*line_break
+								*line_break
+								"Okay… hop in. You can leave your bag in the back with the rest of the stuff. Of course, these two will be sitting at the back. You'll be up here in front with me, in case things go south we'll need you to jump right into action." As if on cue, the two soldiers climb in and crouch themselves down within any empty crevice they can find. You chuck your field bag onto the nearest stack of boxes before heading to the front seat with your rifle in your arms.
+								*line_break
+								*line_break
+								The driver wastes no time and floors the pedal the moment you slam the front door shut. The purring of the engine fills the awkward silence between you two, as you stare outside the window, occasionally glancing back at the driver cautiously. After cruising down the road for ten minutes, the vehicle unexpectedly swerves into the forest, and you feel yourself rattling in your seat as the van rolls over an uneven terrain. Your body tenses up as you reach for your rifle, preparing for the worst.
+								*line_break
+								*line_break
+								"Relax, this is just one of our more covert routes. Can't have a hideout without it being hidden, can you?" chuckles the driver, as he continues to swerve deeper into the forest, expertly avoiding the trees before the vehicle comes to a dirt path barely narrow enough to fit a vehicle. The driver then continues to navigate with utmost precision, and you can't help but to wonder how many times have they done this before.
+								*line_break
+								*line_break
+								After another 15 minutes, the van pulls up before a dilapidated shack. 
+								*comment work on it again
+								*goto 2_4_2_return_base
 
 *label 2_4_2_return_base
-
-					
+*comment return to base, interaction with Kosnik, LOM broadcast, DFFM letter, threatens you if you choose not to help out. 
+After a good night's rest, you feel much more refreshed, despite the events of the previous night. Following a hearty breakfast at the mess hall, you head towards your office to finish the patrol report, as well as draft up the mission brief for the upcoming objective. You park yourself in front of the computer, settling into your usual routine, with the clicking of the keyboard keys the only sound keeping you company.
+*line_break
+*line_break
+A few hours later, you feel your eyes becoming extremely dry. You squeeze them shut for a moment, massaging your temples. Some caffeine would be good right about now. The very thought of a nice, warm cup of coffee already starts to warm you from the inside as you head towards the pantry with a purposeful stride.
+*line_break
+*line_break
+Bursting into the pantry, the odd sight of Sergeant ${sergeant} hunching over and sporting an intense look of concentration catches your attention. Walking over to the table, you spot a miniature radio partially obscured by the sergeant's head. As if finally noticing your presence, ${sergeant} looks up for a moment, his brows still knitted together tightly. You shoot him a quizzical look, cocking your head to one side,
+*line_break
+*line_break
+"Ah, commander. Come sit with me, you need to hear this. I was flipping through channels when I picked this up." ${sergeant} kicks a chair from under the table, sending it sliding across the floor towards you. Despite your perplexity at the sergeant's odd behavior, you grab the chair and spin it around, sitting yourself down in front of the table as ${sergeant} twists one of the knob, cranking up the volume. A gritty voice cuts through the fuzzy white noise, interrupted by the occasional burst of static. 
+*line_break
+*line_break
+"… Morovia for Morovians. We must overthrow th… [i]bzzztt[/i]… who call themselves the government, but are in reality Torian dogs. Under their rules, we are but playthings to the Torians. No longer shall this be the case! We will take down the Morovian Republic People's Army, and those who would willingly ally themselves with them. Then, and only then, can we... [i]bzz[/i]… a Morovia for the people. We will continue to push through the front lines, and must not be afraid to use force against the loyalist dogs. To those listening, if you surrender yourself to the LOM, we are willing to extend our aid, but if you continue to stand with the current government, do not expect any mercy from us. Bringing to you this broadcast from Giralmore, this is the Liberators of Morov…"
+*line_break
+*line_break
+Before the last sentence can be finished, Sergeant ${sergeant} picks up the radio, and with an angry roar he hurls the radio across the room. With an audible loud smash as it collides with the wall, the radio shatters into a smattering of tiny fragments. The sudden outburst of anger shocks you momentarily, as you have never seen the sergeant so worked up.
+*line_break
+*line_break
+"What gives, man?!" You walk over to examine the remains of the radio, picking up a few pieces of broken plastic. The force of the sergeant's throw left an obvious indentation in the middle of the wall, as what's left of the radio lies in pieces on the floor, fragmented beyond repaid. Turning back, you notice ${sergeant} still standing, his shallow breaths an obvious symptom of his rage.
+*page_break
+You approach the sergeant with utmost caution, fearful that he might take his anger out on his surroundings, or even worse, you. ${sergeant} tilts his head towards the ceiling, inhaling deeply with his eyes closed. "Dude, what's wrong?"
+*line_break
+*line_break
+"It's nothing much." ${sergeant} cuts you off brusquely.
+*line_break
+*line_break
+"You mean to say you chucked a radio like a major league baseball player for no reason? Seriously, what's bothering you?"  Sliding back into your seat. you cross your arms and rest them against the table top, looking expectantly at the sergeant's hulking figure towering over you. He opens his mouth slightly, but no sound escapes from his lips. Sighing, he knits his brows in frustration, plopping back down as the chair creaks loudly under his large frame.
+*fake_choice
+	*comment set diff relationship increase for all 3 options
+	#Convince him to spill.
+		"Come on, we've been through hell and back, can't you trust me at least a little? I just wanna help."
+		*line_break
+		*line_break
+		${sergeant} regards you with a pensive expression. After a few moments, he pipes up, "You're right, you're right. It's not that I don't trust you, it's just that it's difficult for me to open up about this. But since its you, I don't think that's an issue."
+		*goto 2_4_2_1_kosnik_woes
+	#Assure him that everything will be fine.
+		"Well, whatever it is, I'm sure everything will be fine. So chin up and don't fret too much over it, yeah?" You pat ${sergeant} lightly on the shoulder, giving him a slight grin
+		*line_break
+		*line_break
+		"You don't know that." ${sergeant} murmurs under his breath, though his expression seems to soften somewhat.
+		*goto 2_4_2_1_kosnik_woes
+	#Leave him alone, he's not ready to talk.
+		${sergeant} remains uncharacteristically silent, as he continues to stare at the table, avoiding your eyes.
+		*line_break
+		*line_break
+		"Fine, I guess I can't force you to talk about something you're not ready to." You sigh. Perhaps it'll be best to give him some space to himself. You grab your coffee and step towards the door.
+		*line_break
+		*line_break
+		"Wait! Alright, fine…" ${sergeant} pipes up, catching you in your tracks.
+		*label 2_4_2_1_kosnik_woes
+		*line_break
+		*line_break
+		"It's… it's my mother. I left her back at our old hometown, near the outskirts of Ruzno, Based on the broadcast, those LOM motherfuckers might already be nearby…" You perk up in your seat. You've rarely heard the sergeant discuss his family, though you've heard some rumors that he doesn't exactly have a peachy childhood. Given his gruff nature and looks, it's not a exactly dinner conversation material as well.
+		*line_break
+		*line_break
+		"Anyway, if the LOM has already taken control of the area, I'm worried that she might be in danger. Knowing her, I don't think she'll just go quietly without putting up a fight. People in my family are stubborn and tough that way, heh." You grin at the sergeant, mumbling a quick "you don't say". ${sergeant} gives a quick chuckle in reply.
+		*line_break
+		*line_break
+		"Yeah. My mother is the only family I have left. I… Honestly, I can't bear to lose her too, not before I…"
+		*line_break
+		*line_break
+		The news must have shaken him up pretty badly. Of all the times spent with him, this is the first time seeing ${sergeant} in such a vulnerable state, not even when he's completely drunk. Speaking of which… an idea creeps into your head, one which put a devilish grin upon your lips.
+		*line_break
+		*line_break
+		"Hey, you know what will make you feel better? How does a night out in the bar with a couple of the boys sound? It's been so long since we last went. My treat."
+		*line_break
+		*line_break
+		${sergeant} lifts his head, his eyes light up ever so slightly. "Man, you really do know how to cheer a guy up. I'll take you up on that offer."
+		*line_break
+		*line_break
+		"Hey, I know you well enough. See you tonight then. I have to get back to my work." You give ${sergeant} a smug grin before standing up and getting ready to leave.
+		*line_break
+		*line_break
+		You are almost out of the door when you hear ${sergeant} call you by your name. You turn around, and notice ${sergeant} looking at you sheepishly, before muttering out a quick "thanks".
+		*comment "Hey, you know what'll perk you up? A night at the bar. Come on, my treat." 	Kosnik gets tipsy, spills more of his backstory, you kiss him (maybe)
+		
+*label 2_4_3_DFFM_letter
+A dull, throbbing pain flares up in your head as you try to sit up in your bed, the glare of the morning sun piercing your eyes relentlessly. Man, your alcohol tolerance has really gone down. You used to be able to shake away the headache and go for a half hour morning jog right before breakfast, but now the hangover from the night before hits you like a ton of bricks. You squeeze your eyes shut, trying to will away the grogginess, but to no avail. You could really use a fresh pot of coffee, though judging from the amount of sunlight pouring through the window, you'd be lucky to grab a slice of bread from the mess hall.
+*line_break
+*line_break
+With immense effort, you try to push yourself off the bed despite your vision still appearing to be swaying slightly. As you shoot your hands out beside you to support your weight, your left hand brushes past a smooth surface, a stark contrast to the coarse material of the issued bedsheets, a sense of perplexity registering in your brain. You look down to see an envelope partially tucked under your pillow, a good half of it sticking out as if to intentionally catch your attention. Strange, you spot nothing of the sort the previous night, but no surprises there, seeing that you can't even remember how you got back in the first place.
+*line_break
+*line_break
+You pick up the envelope as your vision starts to blur back into focus. On the middle, your full rank and name are neatly calligraphed in cursive, the handwriting atypical of any military related correspondence you have seen before, piquing your interest even more. Whoever placed it here obviously wanted your full attention. You crassly tear open the back of the envelope and took out a piece of paper deftly folded into half. You unfold the paper and pore over the words written in a similarly organized font.
+*line_break
+*line_break
+*if stop_looters = 1
+	[i]Dear Commander,
+	*line_break
+	*line_break
+	You have been so kind as to interrupt our business, and thus we have suffered quite a bit of setbacks directly because of your actions. As such, we believe that you do owe us a little something as repayment. Our requirements are simple, We will need a copy of the patrol route that the guards will use for the following week. Once you have acquired a copy, place it behind the flagpole facing the gate at 12 midnight, before you head off to bed tonight.
+	*line_break
+	*line_break
+	Now, before you refuse, let me remind you that we know everything about you, including your personal background information. In other words, if you fail to comply to our demands, no harm might befall you, but we cannot ensure that the same thing can be said for your family. We have agents everywhere, so we have the abilities to back up our words. The ball is in your court.
+	[/i]
+	*line_break
+	*line_break
+	You re-read the letter a few times, the content shocking you out of your drunken stupor. They must be the same group of people behind the raid on the warehouse a few days back. Damn it! You can't be sure whether the letter is a hoax, but should the words be trusted… No, you refuse to believe that they have means to get to your family. They are safely behind MRPA territory after all. But this doesn't seem to be the work of LOM soldiers. After all, how could one simply walk into a MRPA barracks?
+	*line_break
+	*line_break
+	FUCK! The anger got the better of you as you clench your fist tightly, crunching the piece of paper within. It might be safer to play to their demands, but that would mean that you might compromise the integrity of the barrack's security should you leak the patrol routes. At the same time you cannot risk your family's safety. Or… would it be possible to pull a fast one over these bastards? Send them a fabricated route? No, there are certain risks to that as well. If they happen to realize that you tricked them, the consequences could be worse than you can imagine.
+	*goto 2_4_3_1_choice_to_letter
+*if stop_looters = 0
+		[i]Dear Commander,
+	*line_break
+	*line_break
+	You have been so kind as to help us with our endeavors two days ago, and as such we have been able to benefit slightly. As thanks, we would like to make you a similar offer once again. Our request is simple, We will need a copy of the patrol route that the guards will use for the following week. Once you have acquired a copy, place it behind the flagpole facing the gate at 12 midnight, before you head off to bed tonight.
+	*line_break
+	*line_break
+	You can choose to ignore this letter, but let me assure you, you will be better off with our aid. We know that your family condition is somewhat… delicate, and if you do us the proper favors we can assure you that the debt will not go unpaid. We expect good things from you, and hope that you make the right decision.
+	[/i]
+	*line_break
+	*line_break
+	You stare at the letter incredulously, re-reading it a few times.
+	*label 2_4_3_1_choice_to_letter
+	*fake_choice
+		#Accept their terms
+			*comment do it, can't risk your family's safety
+		#Send them a fake copy
+			*comment access the files, edit them and place them at their desired location
+		#Don't do anything. This must be a practical joke!
+			*comment life goes on as usual
