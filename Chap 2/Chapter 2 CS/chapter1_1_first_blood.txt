@@ -1,4 +1,4 @@
-*comment Define all temp variables here
+*set location "Orlotek"
 [b]Chapter 1: First Blood[/b]
 *line_break
 *line_break

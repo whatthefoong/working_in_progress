@@ -4,7 +4,7 @@
 *stat_chart
 	text Rank
 	text Name
-	text Age
+	text Location
 	text Race
 	text Background
 	text Dollars

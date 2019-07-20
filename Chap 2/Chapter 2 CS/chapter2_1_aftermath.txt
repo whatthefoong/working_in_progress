@@ -1,151 +1,12 @@
 [b]Chapter 2: Aftermath[/b]
 *line_break
 *line_break
-*label sonia_route
-*set met_doctor 1
-Nothingness envelops you. You can’t feel your arms, your legs, your body… only a light, ethereal floating sensation in an endless void of darkness. It’s almost… calming.
-*line_break
-*line_break
-With no indication of the passage of time, you don’t feel anything. Days have passed… or is it weeks? Years? You’re not sure, but somehow you feel at peace. Maybe this is fine, staying here like this…
-*line_break
-*line_break
-"Hey."
-*line_break
-*line_break
-There is a voice in the darkness, disrupting the tranquility. You feel your brow furrow in response to the sudden sound. Oh, you can feel your brow. And your face. Slowly, you feel the rest of your body come back to you, as if your consciousness had drifted back into it.
-*line_break
-*line_break
-"You’re awake, aren’t you?"
-*line_break
-*line_break
-Your eyes flutter open.
-*line_break
-*line_break
-White. With light grey specks. The first thing you see is the ceiling of a hospital ward. You squint as your eyes adjust to the white light shining directly down on you. You slowly realize you are lying down in a hospital bed.
-*line_break
-*line_break
-In your peripherals you see a figure, standing by your side. From your perspective, its features are cast in shadow.
-*line_break
-*line_break
-"It looks like the commander is waking up." The voice is feminine, with a… foreign accent, you think. The figure scribbles something on a clipboard, the papers rustling faintly.
-*line_break
-*line_break
-"It says here that you're…"
-*fake_choice
-	# Alexandra
-		*set name "Alexandra"
-	# Igor
-		*set name "Igor"
-	# Pavlov
-		*set name "Pavlov"
-	# My name is...
-		*input_text name
-"Officer ${name}, yes?"
-*line_break
-*line_break
-You begin to try and sit upright, but only get a third of the way there before a sharp pain jolts you. It’s almost as if pure lightning was passing through your guts, making its way up to your brain. You grimace at the pain, collapsing back into the bed.
-*line_break
-*line_break
-“Whoa there. Easy now.” A pair of gentle arms catch you, and gently positions you in an upright sitting position. A light aroma of cinnamon wafts across your senses.
-*line_break
-*line_break
-Blinking to adjust to the brightness, you start to make out the features of the mysterious individual.
-*line_break
-*line_break
-The lady that stands by your bedside has smooth, dark brown hair, almost maroon, flowing down to her lower back. A few strands help to frame her peach-toned face. Her sea-foam irises are aimed downwards at her clipboard, which she has returned to writing on.
-*line_break
-*line_break
-She has a slender build, with obvious curves in spite of the long white doctor's coat that hangs loosely over her shoulders. Underneath her coat she wears a simple olive tank top and black leggings.
-*line_break
-*line_break
-The rapping on her clipboard pauses as she gazes at you, the creases on her face smoothing out as she smiles.
-*line_break
-*line_break
-"Good day Commander, I'm Doctor Sonia, you can thank me for nursing you back to life." She winks.
-*fake_choice
-	# Thank you so much.
-		*set doctor_rs %+10
-		"No worries. To be honest, your body did most of the heavy lifting. You’re rather lucky to have survived from a wound like that."
-	# Where am I?
-		She laughs. "Must have hit your head pretty hard huh."
-	# ...
-		"The silent type huh. You must have been through a lot"
-
-*label hospital_where_am_i
-*line_break
-*line_break
-"Anyway, you're now in the Haris James Hospital, in Giralmore. We are under the protection of your comrades, the Morovian Republic People’s Army. Your sergeant… ${sergeant} was his name I think. He brought you and a handful of men back from Orlotek 4 days ago after MRPA's failed push to seize the mining town. "
-*line_break
-*line_break
-"From what I've heard, the Liberators of Morovia are dug in pretty deep, with the coup leader General Kontessa leading the efforts personally. The MRPA casualties mount everyday, and we try to save everyone we can."
-*line_break
-*line_break
-You remember the battle against the LOM.
-*line_break
-*line_break
-You remember the acrid smells of gunpowder and discharge.
-*line_break
-*line_break
-You remember the bloodied MRPA uniforms of your men as they collapsed to the ground.
-*page_break
-"Hey now-"
-*line_break
-*line_break
-Sonia places her hand on your shoulder, but you can't hear what she's saying. Everything is so… muffled.
-*line_break
-*line_break
-Your mind is flooded with dark visions of bloodshed and gore. The blood flooding over you, choking you… your chest hurts, you want to scream-
-*line_break
-*line_break
-Suddenly a wave of spice hits your nose. The powerful aroma of cinnamon envelops you, pushing away those dark thoughts and embracing you in its comforting presence.
-*line_break
-*line_break
-You snap back to reality to see Sonia leaning forward, waving a stick of cinnamon in front of your face. Her expression is calm and gentle, encouraging you with a small smile.
-*line_break
-*line_break
-"Smells good doesn’t it? It’s my favorite. I like giving them out to my patients, helps them calm down."
-*line_break
-*line_break
-Seeing you return to your senses, she places the spice into your palm. She then pulls a wooden stool over and sits by your side, as your breathing slows and returns to its regular pace.
-*line_break
-*line_break
-"It’s the middle of the night right now, unfortunately for you. Having been out of it for 4 days straight you’re probably not ready to go back to bed anytime soon. I guess [i]little ol’ me[/i] will have to keep you company." A mirthful smile spreads across her face. 
-*label smalltalk_sonia
-*fake_choice
-	#W-wait it’s nighttime?!
-		There are no windows, but the ward was dimly lit.
-		*line_break
-		*line_break
-		The doctor chuckles lightly and gestures at you to lower your volume. “Yes, all the other patients are asleep so please keep it down. These walls are anything but soundproof.”
-		*line_break
-		*line_break
-		Other patients… it dawns on you that you don’t know the whereabouts of your men. Or if they even survived.
-		*line_break
-		*line_break
-		Doctor ${doctor} seemingly reads your mind. “If you’re worried about your guys, don’t. The injured ones are downstairs recovering steadily. I think the rest have been sent back to your camp.”
-	#I’ll [i]gladly[/i] spend the night with your Dr Sonia~
-		*set doctor_rs %-10
-		Her smile vanishes, replaces pursed lips forming a straight line.
-		“Don’t push it, bub.”
-	#Cinnamon huh… it smells really good. 
-		*set doctor_rs %+10
-		“Glad you like it. It’s a trick my mum taught me. I’ve had anxiety since I was a little kid, and every time I had a bad day, she would make a cup of cinnamon tea for me. The smell helps me re-centre myself, I guess. I keep a whole bundle with me at all times.”
-		*line_break
-		*line_break
-		Sonia reveals the underside of her doctor's coat, showing off an inner pocket full of cinnamon sticks.
-		*line_break
-		*line_break
-		“Feel free to ask if you want more. I have a whole stash of them in my office. It’s kind of become an obsession at this point.” The doctor chuckles quietly to herself, recalling better times.
-*line_break
-*line_break
-Sonia crosses her legs. She picks up a cup of tea that was waiting atop the bedside table – cinnamon tea, no doubt.
-*line_break
-*line_break
-She takes a sip, sighing as she sits onto a plastic chair beside your bed.
-*line_break
-*line_break
-“Anyhow, we’ve got some time to kill before the sun comes up. So how did you end up shot up and in my hospital?”
-*goto_scene chapter2_2_backstory 
+*if chap1_kosnik_or_sonia = 0
+	*set location "Vanka"
+	*goto kosnik_route
+*if chap1_kosnik_or_sonia = 1
+	*set location "Giralmore"
+	*goto sonia_route
 
 *label kosnik_route
 Having beaten back the counter-attack, you radio in the good news back to high command. With a few words of brusque congratulations, they inform you that reinforcements would arrive shortly to relief your position.
@@ -293,4 +154,151 @@ You nod.
 *line_break
 *line_break
 "Well, that makes your winning rate 100% doesn't it?" Sergeant ${sergeant} chuckles. "So what brings you to this war?"
-*goto_scene chapter2_2_backstory 
+*goto_scene chapter2_2_backstory kosnik_route
+
+
+*label sonia_route
+*set met_doctor 1
+Nothingness envelops you. You can’t feel your arms, your legs, your body… only a light, ethereal floating sensation in an endless void of darkness. It’s almost… calming.
+*line_break
+*line_break
+With no indication of the passage of time, you don’t feel anything. Days have passed… or is it weeks? Years? You’re not sure, but somehow you feel at peace. Maybe this is fine, staying here like this…
+*line_break
+*line_break
+"Hey."
+*line_break
+*line_break
+There is a voice in the darkness, disrupting the tranquility. You feel your brow furrow in response to the sudden sound. Oh, you can feel your brow. And your face. Slowly, you feel the rest of your body come back to you, as if your consciousness had drifted back into it.
+*line_break
+*line_break
+"You’re awake, aren’t you?"
+*line_break
+*line_break
+Your eyes flutter open.
+*line_break
+*line_break
+White. With light grey specks. The first thing you see is the ceiling of a hospital ward. You squint as your eyes adjust to the white light shining directly down on you. You slowly realize you are lying down in a hospital bed.
+*line_break
+*line_break
+In your peripherals you see a figure, standing by your side. From your perspective, its features are cast in shadow.
+*line_break
+*line_break
+"It looks like the commander is waking up." The voice is feminine, with a… foreign accent, you think. The figure scribbles something on a clipboard, the papers rustling faintly.
+*line_break
+*line_break
+"It says here that you're…"
+*fake_choice
+	# Alexandra
+		*set name "Alexandra"
+	# Igor
+		*set name "Igor"
+	# Pavlov
+		*set name "Pavlov"
+	# My name is...
+		*input_text name
+"Officer ${name}, yes?"
+*line_break
+*line_break
+You begin to try and sit upright, but only get a third of the way there before a sharp pain jolts you. It’s almost as if pure lightning was passing through your guts, making its way up to your brain. You grimace at the pain, collapsing back into the bed.
+*line_break
+*line_break
+“Whoa there. Easy now.” A pair of gentle arms catch you, and gently positions you in an upright sitting position. A light aroma of cinnamon wafts across your senses.
+*line_break
+*line_break
+Blinking to adjust to the brightness, you start to make out the features of the mysterious individual.
+*line_break
+*line_break
+The lady that stands by your bedside has smooth, dark brown hair, almost maroon, flowing down to her lower back. A few strands help to frame her peach-toned face. Her sea-foam irises are aimed downwards at her clipboard, which she has returned to writing on.
+*line_break
+*line_break
+She has a slender build, with obvious curves in spite of the long white doctor's coat that hangs loosely over her shoulders. Underneath her coat she wears a simple olive tank top and black leggings.
+*line_break
+*line_break
+The rapping on her clipboard pauses as she gazes at you, the creases on her face smoothing out as she smiles.
+*line_break
+*line_break
+"Good day Commander, I'm Doctor Sonia, you can thank me for nursing you back to life." She winks.
+*fake_choice
+	# Thank you so much.
+		*set doctor_rs %+10
+		"No worries. To be honest, your body did most of the heavy lifting. You’re rather lucky to have survived from a wound like that."
+	# Where am I?
+		She laughs. "Must have hit your head pretty hard huh."
+	# ...
+		"The silent type huh. You must have been through a lot"
+
+*label hospital_where_am_i
+*line_break
+*line_break
+"Anyway, you're now in the Haris James Hospital, in Giralmore. We are under the protection of your comrades, the Morovian Republic People’s Army. Your sergeant… ${sergeant} was his name I think. He brought you and a handful of men back from Orlotek 4 days ago after MRPA's failed push to seize the mining town. "
+*line_break
+*line_break
+"From what I've heard, the Liberators of Morovia are dug in pretty deep, with the coup leader General Kontessa leading the efforts personally. The MRPA casualties mount everyday, and we try to save everyone we can."
+*line_break
+*line_break
+You remember the battle against the LOM.
+*line_break
+*line_break
+You remember the acrid smells of gunpowder and discharge.
+*line_break
+*line_break
+You remember the bloodied MRPA uniforms of your men as they collapsed to the ground.
+*page_break
+"Hey now-"
+*line_break
+*line_break
+Sonia places her hand on your shoulder, but you can't hear what she's saying. Everything is so… muffled.
+*line_break
+*line_break
+Your mind is flooded with dark visions of bloodshed and gore. The blood flooding over you, choking you… your chest hurts, you want to scream-
+*line_break
+*line_break
+Suddenly a wave of spice hits your nose. The powerful aroma of cinnamon envelops you, pushing away those dark thoughts and embracing you in its comforting presence.
+*line_break
+*line_break
+You snap back to reality to see Sonia leaning forward, waving a stick of cinnamon in front of your face. Her expression is calm and gentle, encouraging you with a small smile.
+*line_break
+*line_break
+"Smells good doesn’t it? It’s my favorite. I like giving them out to my patients, helps them calm down."
+*line_break
+*line_break
+Seeing you return to your senses, she places the spice into your palm. She then pulls a wooden stool over and sits by your side, as your breathing slows and returns to its regular pace.
+*line_break
+*line_break
+"It’s the middle of the night right now, unfortunately for you. Having been out of it for 4 days straight you’re probably not ready to go back to bed anytime soon. I guess [i]little ol’ me[/i] will have to keep you company." A mirthful smile spreads across her face. 
+*label smalltalk_sonia
+*fake_choice
+	#W-wait it’s nighttime?!
+		There are no windows, but the ward was dimly lit.
+		*line_break
+		*line_break
+		The doctor chuckles lightly and gestures at you to lower your volume. “Yes, all the other patients are asleep so please keep it down. These walls are anything but soundproof.”
+		*line_break
+		*line_break
+		Other patients… it dawns on you that you don’t know the whereabouts of your men. Or if they even survived.
+		*line_break
+		*line_break
+		Doctor ${doctor} seemingly reads your mind. “If you’re worried about your guys, don’t. The injured ones are downstairs recovering steadily. I think the rest have been sent back to your camp.”
+	#I’ll [i]gladly[/i] spend the night with your Dr Sonia~
+		*set doctor_rs %-10
+		Her smile vanishes, replaces pursed lips forming a straight line.
+		“Don’t push it, bub.”
+	#Cinnamon huh… it smells really good. 
+		*set doctor_rs %+10
+		“Glad you like it. It’s a trick my mum taught me. I’ve had anxiety since I was a little kid, and every time I had a bad day, she would make a cup of cinnamon tea for me. The smell helps me re-centre myself, I guess. I keep a whole bundle with me at all times.”
+		*line_break
+		*line_break
+		Sonia reveals the underside of her doctor's coat, showing off an inner pocket full of cinnamon sticks.
+		*line_break
+		*line_break
+		“Feel free to ask if you want more. I have a whole stash of them in my office. It’s kind of become an obsession at this point.” The doctor chuckles quietly to herself, recalling better times.
+*line_break
+*line_break
+Sonia crosses her legs. She picks up a cup of tea that was waiting atop the bedside table – cinnamon tea, no doubt.
+*line_break
+*line_break
+She takes a sip, sighing as she sits onto a plastic chair beside your bed.
+*line_break
+*line_break
+“Anyhow, we’ve got some time to kill before the sun comes up. So how did you end up shot up and in my hospital?”
+*goto_scene chapter2_2_backstory sonia_route
