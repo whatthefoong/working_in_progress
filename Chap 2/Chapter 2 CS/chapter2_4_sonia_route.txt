@@ -1,5 +1,6 @@
 *comment Sonia's route
 *temp violence 0
+*temp shadyguy 0
 *if sonia = 1
 
 Another mundane day. You lie in your pristine white hospital bed, in the same position as you were for the entire week. In your time here, you've tried to make small talk with your fellow patients, but they're usually sedated or too exhausted to talk. The staff don't entertain your attempts at casual conversation either. They come in, change your bandages, scribble things on a clipboard, then leave. How diligent.
@@ -17,7 +18,7 @@ As if on cue, your train of thought is broken abruptly by a commotion just outsi
 Its Doctor ${doctor}. Her voice is raised and laced with venom, uncharacteristic of what you know of her.
 *line_break
 *line_break
-"We didn't have a choice, ${Sonia}. You know how this place works." A monotone voice replies, unprovoked by Sonia.
+"We didn't have a choice, ${doctor}. You know how this place works." A monotone voice replies, unprovoked by Sonia.
 *line_break
 *line_break
 "That doesn't make this okay! We could have saved her, if we had just-"
@@ -52,6 +53,8 @@ She smiles weakly. "Sorry you had to hear all that, ${name}.
 		*line_break
 		*line_break
 		"I appreciate you looking out for me, but he's my coworker, my friend. No need for punching." she smiles patiently as she begins walking towards you.
+*line_break
+*line_break
 She leans against the wall, reaches into her inner pocket for a stick of cinnamon, bringing it close to her nose.
 *line_break
 *line_break
@@ -140,13 +143,14 @@ She laughs sadly at all of this. "Maybe I should trade these cinnamon sticks for
 		*line_break
 		*line_break
 		"Sorry, I just blurted some things out. I think I just need to get some rest." ${doctor} says, rubbing her puffy tired eyes.
+*page_break
 At the worst possible timing, there's a knock on the door. Sonia quickly makes herself presentable. She throws the broken cinnamon into the bin, rubs the tears in her eyes, and arranges her hair neatly before answering "Come in." 
 *line_break
 *line_break
 The door swings wide open as a large man sporting a XL-sized black suit enters. He has a shiny bald head, which reflects the light directly into your eyes as he enters the ward, dazing you. He has a… rounded figure, and lumbers rather than walks. At his collar he displays a bright red bow-tie. What brings this cartoon-brought-to-life here, you think to yourself. 
 *line_break
 *line_break
-"Ah Good Morning! You must be Doctor ${Sonia}, its a pleasure to meet you." he cheerily greets the doctor, his voice as large as his person. ${doctor} has regained her composure, shaking his hand (which engulfs her's). "The pleasure is mine, Mr…"
+"Ah Good Morning! You must be Doctor ${doctor}, its a pleasure to meet you." he cheerily greets the doctor, his voice as large as his person. ${doctor} has regained her composure, shaking his hand (which engulfs her's). "The pleasure is mine, Mr…"
 *line_break
 *line_break
 "${mrpa_official} Maximov, at your service! Ah, but Mr ${mrpa_official} is fine, Mr Maximov would be my father!" He laughs heartily. Sonia back smiles politely.
@@ -406,3 +410,355 @@ You decide to…
 		*goto 2_4_1_stealing_meds
 		
 *label 2_4_1_stealing_meds
+*page_break
+Another week has passed. Thankfully, your body has recovered just enough for you to walk around with a crutch under you arm. The doctors assure you that in just another week you'll be fit enough to return to the barracks.
+*line_break
+*line_break
+No longer confined to your white sheets, you spend most of the last week exploring more of the Haris James Hospital. The doctors were kind enough to let you wander, so long as you returned at the right times for appointments and check-ups. Perhaps they thought following schedules was something a military commander would be disciplined enough to do, and they weren't wrong.
+*line_break
+*line_break
+The Haris James Hospital is a government owned hospital, open to the public. It is well-furnished, with several floors of facilities to wards. At the moment, it is pretty understaffed. According to ${doctor}, once war broke out, a good number of medical staff requested to be relocated elsewhere, or simply resigned. Mostly Torians who fled back to their hometown, she said.
+*line_break
+*line_break
+The hospital receives a majority of its fundings from Torian investors, thus, there is a very evident bias towards them. On one occasion you witnessed a commotion over the counter of a Morovian man having made to wait for several hours, and just a few moments later, a Torian lady came in and was tended to immediately. You wonder; if you had been rejected the day you were brought in because of your race, would you still be alive today?
+*line_break
+*line_break
+You're wondering about as you do. You somehow manage to make your way up to the higher floors, where there are less people around. Hobbling about the white hallways with a crutch you've grown rather proficient in under your right arm, you indulge in the tranquility, the gentle breeze from the air-conditioner, the subtle smell from the cinnamon you keep in your shirt pocket, a gift from the sweet Doctor ${doctor}…
+*line_break
+*line_break
+[b]CRAAAAASHHHHH!!!![/b]
+*line_break
+*line_break
+You flinch at the sudden crashing sound. It sounded like a large metal object had toppled over onto the ground, followed by numerous rattling sounds, almost like ball bearings. You make a 180 degree turn as best as you can and make your way over to the room to your left.
+*page_break
+You push open the white door with your free hand. Peering in, you see that this is a storage room for medical supplied, with several cabinets, cupboards and drawers lined up against the wall. In the middle of the room, a metallic shelf on wheels lies on its side on the ground. Around 20 bottles of pills are scattered around it - some open with their contents emptied.
+*line_break
+*line_break
+Lying next to the shelf is a man in his 50s, sprawled on the ground. Short in stature, and balding pretty badly, the man dons the same white coat as the doctors you have interacted with.
+*line_break
+*line_break
+He groans, rubbing the back of his head. "Stupid, stupid…" he mutters to himself, unaware of your presence. 
+*line_break
+*line_break
+As he pushes himself off the ground, he notices you standing at the doorway. The two of you lock gazes for a moment.
+*line_break
+*line_break
+"Are you ok? Did you hurt yourself?" you ask, limping forward. In the back of your mind you wonder how strange this must look; a man in crutches offering to help a doctor up.
+*line_break
+*line_break
+"N-no I'm fine!" the doctor waves you away, as he picks himself up. Now able to see his face now, you notice his oddly panicky expression, his forehead glistening with sweat. How bad was his fall? 
+*line_break
+*line_break
+You survey the field of scattered pills of red and blue and yellow and white. You [i[would[/i] offer to help, but unfortunately your current ailments prevent you from doing so.
+*line_break
+*line_break
+"D-don't worry about clumsy ol' me, I just had a little fall, that's all. I'm perfectly fine." he dismisses you with a shaky laugh. "I'll get someone to clean this place up in a moment." The man begins to try and wave you out of the room.
+*line_break
+*line_break
+Something is amiss here. Just… his demeanor, the hint of fear in his tone, and his insistent attempts to push you out of the crime scene. 
+*line_break
+*line_break
+You scan his person over with your eyes, and notice how peculiarly chunky his coat appears, right where the pockets are. You make out the outline of several cylindrical-shapes in his pockets, identical to the bottles strewn about on the floor.
+*line_break
+*line_break
+Is he… stealing the medicine?
+*fake_choice
+	#Confront the doctor.		
+		*set charm %+5
+		Despite the doctor's best attempts to usher you out, you stand your ground. There's some shady business happening here, and you intend to get to the bottom of it.
+		*line_break
+		*line_break
+		The man seems to realize your suspicion, and grows even more flustered. He stammers to find something to say, but you cut him off.
+		*line_break
+		*line_break
+		"Hey Doc, what do you have there in your pockets?"
+		*line_break
+		*line_break
+		The short man freezes up, turning ghostly pale. Despite you being on crutches, you seem to hold the high ground, as you still tower over this shuddering old man.
+		*line_break
+		*line_break
+		"J-j-just my phone, and my wallet-" he stammers.
+		*line_break
+		*line_break
+		"Let me see it." your voice overpowers it.
+		*line_break
+		*line_break
+		He hesitates for a while, shuddering before you, nervously playing with the hem of his coat. You recognize the look in his eyes. That look of fear, deciding whether to fight or flee. 
+		*line_break
+		*line_break
+		He comes to a decision, and tries to pull a fast one by suddenly dashing past you on your right side - your handicapped side. But you're ready for him. The crutch under your arm juts out, tripping him mid-dash. The man is sent crashing back to the ground.
+		*line_break
+		*line_break
+		As he topples over, several orange translucent cylinders with white tops fall out of his pockets. Pill bottles. Your suspicions are confirmed.
+		*line_break
+		*line_break
+		Before the man can recover, you side-step across to block his exit once more. You ready yourself for any other funny business he may try to pull, maybe he'll sweep your legs, or roll past, or pull a gun out or-
+		*line_break
+		*line_break
+		[b]sniff sniff…[/b]
+		*line_break
+		*line_break
+		You falter. Is he… crying?
+		*page_break
+		The man doesn't get up after his fall. Instead he grovels in front of you, prostrating himself like you're some deity. Admittedly, it is effective in lowering your guard.
+		*line_break
+		*line_break
+		"P-please forgive me.. please just pretend you didn't see me here today."
+		*line_break
+		*line_break
+		You pause a moment before pressing for more information. "Who are you, and what were you going to do with this medicine? Sell it?"
+		*line_break
+		*line_break
+		The man whimpers more at your accusatory tone. "N-no! No, I was going… I was going to use it to treat the Morovians in the outskirts."
+		*line_break
+		*line_break
+		"I'm sure you have seen the atrocities of this hospital, sir. We have to reject so many Morovians who need medical attention, all because these filthy Torians are hoarding everything to themselves! I… I just wanted to be able to help my fellow Morovians a little more, look out for the little people…"
+		*line_break
+		*line_break
+		"I offer to treat some of the poorer folks along the outskirts for cheap. Its an… undocumented business, so I need to get my supplies like this. Ooh… I'm so pathetic…"
+		*line_break
+		*line_break
+		You consider your options for a moment. You could stop him here, do the hospital a favor and apprehend him here. But his intentions don't appear malicious, perhaps you could just turn a blind eye? Maybe its best to just report this incident to the hospital staff…
+		*fake_choice
+			#Apprehend the doctor.
+				No… the thought of stealing medicine doesn't sit well with you. You think back to the case of Anastasia, and how she suffered because the medication she needed wasn't there when she needed it. This hospital's biased treatment is far from ideal - but you don't want anyone else to have to suffer like Anastasia.  
+				*line_break
+				*line_break
+				You say firmly, "I know your intentions are good, but I can't allow you to take medicine that's been prescribed for patients here. This isn't the answer!"
+				*line_break
+				*line_break
+				The man looks up at you from his groveling position. His expression contorts in a mixture of shock, sadness, desperation and fear. 
+				*line_break
+				*line_break
+				With no other option, the man yells on survival instinct, and leaps at you.
+				*if physical >= 15
+					*set physical %+5
+					Thankfully, you were prepared for his attack. You recall in your training how the most dangerous beasts are the ones that are pushed into a corner. 
+					*line_break
+					*line_break
+					You pivot on your left foot, stepping back and to the side so the doctor tackles the air. Pain shoots through your body from the sudden exertion, but you grit your teeth and hold yourself together. Then, you bring your crutch up, and with a quick [b]WHACK[/b] you hit him on the back of the head with the metal instrument. 
+					*line_break
+					*line_break
+					He collapses onto the ground for the third time today. Taking the opportunity, you throw the crutch aside and pin the doctor down to the ground. Holding his  right arm against his back, his left arm pinned by your left foot, and your shin on his thighs, you press your weight down on the man, immobilizing him.
+					*line_break
+					*line_break
+					You begin shouting for help, shouting for someone to assist you. You ignore the doctors whimpers for help. Sure enough, while the floor was quiet, there was still staff hiding in some of the rooms who eventually came over to investigate the source of the commotion.
+					*line_break
+					*line_break
+					Security was called, and the doctor was taken away. You gave your side of the story to the officers and other doctors, and was thanked for your assistance, but was also advised to avoid being directly involved in future matters. 
+					*line_break
+					*line_break
+					Life resumed, though the staff seemed more watchful of you, making sure this crazy commander didn't go wandering into random rooms anymore. You didn't hear about any news of what happened with the doctor - you didn't even know his name, now that you think about it. The hospital likely wanted to keep this incident private. Everyone pretended like nothing had happened, and slowly but surely, the whole debacle faded into a memory.
+					*page_break
+					*goto 2_4_3_sonia_romance
+				*if physical < 15
+					*set relationship_sonia %+5
+					You had anticipated the doctor's movements, and just as you were in the process of out-maneuvering him, a sudden jolt of pain flared up through your body. Fuck, you overexerted yourself.
+					*line_break
+					*line_break
+					In that brief moment of paralysis, the doctor pushed you to the ground. Despite being short and scrawny, his leap was fueled by fear and adrenaline. He overpowers your injured self, and begins pummeling you across the face.
+					*line_break
+					*line_break
+					His blows rain down on you. Your head collides against the marble floor, sending reverberations into your very skull. Your vision gets blurry, the world is spinning.
+					*line_break
+					*line_break
+					You feel the man's weight leave your body, followed by the faint sound of footsteps getting further and further away. No… he's getting away…
+					*line_break
+					*line_break
+					The corners of your vision get darker and darker, closing in on you, until you are engulfed in the darkness yet again. You drift off into the void.
+					*page_break
+					You come to in a soft, familiar bed. You are back in your ward, safe and alive.
+					*line_break
+					*line_break
+					"About time you woke up."
+					*line_break
+					*line_break
+					You turn to your right to see the familiar figure of ${doctor}, sitting on a stool by your bedside, her legs crossed, a saucer and teacup balanced in her hands.
+					*line_break
+					*line_break
+					"Honestly, are you [i]trying[/i] to stay here longer?" she chides, putting the tea aside. She acts nonchalant, but you know better. Looking at the eye bags under her eyes, the sag in her shoulders… she's been caring for you since you passed out. 
+					*line_break
+					*line_break
+					"I'm… sorry-" You try to apologize, but wince as soon as you make any slight adjustment to your head. It is now that you realize that your entire head has been wrapped up in bandages. 
+					*line_break
+					*line_break
+					${doctor} soothes you and gently adjusts you back into a comfortable position. As she reaches across you, you can't help but take in the homely cinnamon aroma you've come to associate with her. 
+					*line_break
+					*line_break
+					She sighs, returning to her seat. "Alright let's do it this way then. I'm going to ask you some questions, and you can use your fingers to tell me yes or no. 1 finger for yes, 2 for no, okay?"
+					*line_break
+					*line_break
+					You're in no position to reply. Over the course of the next hour, Sonia explained the events that had occurred, and occasionally asked questions to confirm your side of the story.
+					*line_break
+					*line_break
+					You had been found sprawled on the ground of the storage room, unconscious, but thankfully not in critical condition. A few minor concussions that don't seem to pose any immediate harm. 
+					*line_break
+					*line_break
+					You were brought to ${doctor}, who immediately began applying first aid. Meanwhile, security began investigating. They noticed that a number of bottles of important medication had gone missing, and that a certain doctor had not been seen since that morning. With confirmation from your end, ${doctor} confirmed the identity of the doctor, and notified the relevant people.
+					*line_break
+					*line_break
+					"Did you catch him stealing the medicine?" ${doctor} asks.
+					*line_break
+					*line_break
+					You raise 1 finger.
+					*line_break
+					*line_break
+					"Did you confront him about it?"
+					*line_break
+					*line_break
+					1 finger.
+					*line_break
+					*line_break
+					"Did you actually think you could've stopped him in your state?"
+					*line_break
+					*line_break
+					You hesitate for a moment before raising 1 finger. ${doctor} reaches forward to lift a second finger on your hand.
+					*line_break
+					*line_break
+					"Honestly, could you stop making me worry every single day? I can't take my eyes off you for one second." she laments, rubbing the bridge of her nose.
+					*line_break
+					*line_break
+					You smile to yourself. Aww.. she's worried about me.
+					*line_break
+					*line_break
+					${doctor} scribbles something on a clipboard, before placing onto the table side. She gets up, dusts herself off and begins walking out the door. "Well, you seem to be in good condition, so I'm going to get back to tending to my other patients. Try not to get yourself into any more trouble alright?"
+					*line_break
+					*line_break
+					Just before she disappears behind the door frame, she turns to look at your immobile, bandaged self lying on the bed. "Though, looking at you right now, that seems a little difficult. Have a nice week~"
+					*line_break
+					*line_break
+					With a wink, she exits, leaving you to groan internally at the thought of staying stationary for a week. Again.
+					*goto 2_4_3_sonia_romance
+				#Let the doctor go.
+				You sigh. Maybe your time here in the hospital has made you soft, but seeing numerous cases of Morovian injustice… perhaps this theft can be forgiven. He's like a Robin Hood, surely that's a noble act?
+				*line_break
+				*line_break
+				You step aside, not looking at him. He glances at you, unsure of what to do next.
+				*line_break
+				*line_break
+				"Go. I never saw you here today."
+				*line_break
+				*line_break
+				He scrambles to his feet, hastily stuffing the pill bottles back into his coat before running out the door, muttering words of thanks on the way out. 
+				*line_break
+				*line_break
+				You look at the mess left in the room. You consider telling one of the hospital staff to clean it up, but that would make you seem suspicious as unauthorized personnel in a restricted area. You hope the doctor comes back to clean up his mess soon, and close the door behind you.
+				*set shadyguy 1
+				*goto 2_4_2_doctor_meets_shady_guy
+			#Let the doctor go... but follow him just in case.
+				*set finesse %+5
+				You step aside, not looking at him. He glances at you, unsure of what to do next.
+				*line_break
+				*line_break
+				"Just go."
+				*line_break
+				*line_break
+				He scrambles to his feet, hastily stuffing the pill bottles back into his coat before running out the door, muttering words of thanks on the way out. 
+				*line_break
+				*line_break
+				You wait a few seconds. 3…2…1…
+				*line_break
+				*line_break
+				You poke your head out of the room to see the doctor still running down the hall, about to turn a corner. You close the door behind you and quickly - but silently - follow behind. 
+				*line_break
+				*line_break
+				You have yet to decide whether he is trustworthy or not, and hence decide to follow him for a little while. After all, you've been itching for some action this past week - and your next appointment is 6 hours away, you've got plenty of time!
+				*line_break
+				*line_break
+				You notice that he opts for taking the emergency stairs, rather than the lift, as if to avoid bumping into anyone else. How curious.
+				*line_break
+				*line_break
+				You enter the stairwell as quietly as you can. Unable to match the man's speed in scampering down the stairs due to your current disability, you peer down the side of the stairs at the railings, to see which floor he was heading for. You spy his tiny hands gripping the hand-rail all the way down to the 5th floor, before it disappears, along with the sound of his footsteps.
+				*line_break
+				*line_break
+				With that information, you head to the lift lobby, enter a vacant lift and begin heading for the 5th floor.
+				*set shadyguy 2
+				*goto 2_4_2_doctor_meets_shady_guy
+			#Report the incident to ${doctor}.		
+				Well, this is certainly a matter better handled by the hospital's management. This isn't the military - your rank here has little power.
+				*line_break
+				*line_break
+				Deciding to back away for now, 				you step aside,  gesturing for him to leave via the open doorway.
+				*line_break
+				*line_break
+				He hesitates, but quickly decides to take the opportunity. 				He scrambles to his feet, hastily stuffing the pill bottles back into his coat before running out the door, muttering words of thanks on the way out. 
+				*line_break
+				*line_break
+				You hobble out, closing the door behind you. You watch the short figure scamper through the halls and round a corner. If he's smart he'll take the stairs to avoid people, you think to yourself. You begin walking back to the lift lobby.
+				*line_break
+				*line_break
+				A lift arrives and you enter. As you begin to descend you ponder who to turn to. You've learned that the hospital board highly favors Torians - they would be overjoyed to tear into a Morovian supporter. The other doctors and nurses who have treated you are relatively nice and polite, but don't seem to be the type to stick their necks out for things out of their pay grade.
+				*line_break
+				*line_break
+				No… you need someone more politically neutral. Someone like-
+				*line_break
+				*line_break
+				"${name}?"
+				*line_break
+				*line_break
+				The doors to the lift open to reveal the familiar brown haired lady in a doctor's coat who had been nursing you these past few weeks.
+				*line_break
+				*line_break
+				"Doctor ${doctor}, just the person I was looking for, are you free now?"
+				*line_break
+				*line_break
+				She's somewhat stunned by your sudden proposition. "Ah, I was just about to head down to the cafeteria for lunch actually."
+				*line_break
+				*line_break
+				"Perfect! Let me join you, I have something I would like to discuss." you say, already pressing the button for the cafeteria.
+				*line_break
+				*line_break
+				She cocks an eyebrow at your enthusiasm, but decides to play along, a mirthful smile lingering on her lips. "Alright, but you're paying."
+				*set shadyguy 3
+				*goto 2_4_2_doctor_meets_shady_guy
+	#Leave the doctor, but tail him in secret.
+		*set finesse %+5
+		You have your suspicions, but you choose not to pursue them head on. You allow yourself to be ushered out of the room by the doctor, who tries to explain himself further, going on about a bad knee injury that made him fall over in the first place.
+		*line_break
+		*line_break
+		"Well, I'll call a cleaner to come in and tidy this mess up. I need to make a move first, I'm in a-a bit of a hurry. Have a nice day!" the doctor waves before briskly walking away.
+		*line_break
+		*line_break
+		You wait a few seconds. 3…2…1…
+		*line_break
+		*line_break
+		You close the door behind you and quickly - but silently - follow behind. 
+		*line_break
+		*line_break
+		You have yet to decide whether he is trustworthy or not, and hence decide to follow him for a little while. After all, you've been itching for some action this past week - and your next appointment is 6 hours away, you've got plenty of time!
+		*line_break
+		*line_break
+		You notice that he opts for taking the emergency stairs, rather than the lift, as if to avoid bumping into anyone else. How curious.
+		*line_break
+		*line_break
+		You enter the stairwell as quietly as you can. Unable to match the man's speed in scampering down the stairs due to your current disability, you peer down the side of the stairs at the railings, to see which floor he was heading for. You spy his tiny hands gripping the hand-rail all the way down to the 5th floor, before it disappears, along with the sound of his footsteps.
+		*line_break
+		*line_break
+		With that information, you head to the lift lobby, enter a vacant lift and begin heading for the 5th floor.
+		*set shadyguy 2
+		*goto 2_4_2_doctor_meets_shady_guy
+	#Ignore the doctor and go on with your day.
+		Something is clearly amiss here, but to be frank - this does not concern you. You're a patient, not a detective! You choose not to get involved in all this, and pretend you didn't see anything. After all, innocence is bliss, is it not? 
+		*line_break
+		*line_break
+		You exit the room without needing the doctor to usher you. He tries to explain himself further, going on about some old knee injury that made him fall over, but you're not paying attention.
+		*line_break
+		*line_break
+		"Well, I'll call a cleaner to come in and tidy this mess up. I need to make a move first, I'm in a-a bit of a hurry. Have a nice day!" the doctor waves before briskly walking away.
+		*line_break
+		*line_break
+		You wave back. You look at the clock, and realize its almost lunch time. You decide to make your way to the cafeteria, and put this incident behind you.
+		*set shadyguy 1
+		*goto 2_4_2_doctor_meets_shady_guy
+	
+*label 2_4_2_doctor_meets_shady_guy
+As the lift doors open, you enter… the cafeteria? The delicious aroma of freshly toasted bread, savory fried chicken and perhaps a creamy mushroom soup hits you in the face.Given that its lunch time, the place is packed with doctors, nurses, vistitors and patients.
+*line_break
+*line_break
+*if shadyguy = 1
+	You ignore the growling coming from your stomach as you join the human traffic, trying to keep a low profile as you skulk around, looking for the doctor. 
+	*line_break
+	*line_break
+	
+*if shadyguy = 2
+*if shadyguy = 3
