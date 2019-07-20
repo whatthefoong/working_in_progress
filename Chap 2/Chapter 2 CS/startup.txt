@@ -5,8 +5,12 @@
 	startup
 	chapter1_1_first_blood
 	chapter1_2_counterattack
-	death
+	chapter2_1_aftermath
+	chapter2_2_backstory
+	chapter2_3_kosnik_route
+	chapter2_4_sonia_route
 	ending
+	death
 
 *comment character
 *create name "nobody"
@@ -62,10 +66,14 @@
 *create doctor "Sonia"
 *create mrpa_official "Egor"
 
+*comment NPCs met
+*create met_doctor 0
+*create met_mrpa 0
+
 *comment NPCs R/S
-*create sergeant_rs 0
+*create sergeant_rs 30
 *create doctor_rs 0
-*create mroa_official_rs 0
+*create mrpa_official_rs 0
 
 *comment events
 *create chap1_kill_civilian 0
