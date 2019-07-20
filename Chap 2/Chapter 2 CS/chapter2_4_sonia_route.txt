@@ -106,7 +106,6 @@ She laughs sadly at all of this. "Maybe I should trade these cinnamon sticks for
 		*line_break
 		*line_break
 		"I just wonder… if Anastasia had been born a Torian… would I still get to see her smile today? This Torian, Morovian divide… it has to end." 
-		*page_break
 	#Fuckin Torians...
 		"Fuckin Torians…" you unconsciously mutter under your breath. You find yourself surprised by your own words. The MRPA is made up of mostly Torian supporters, and you hadn't thought to question them until now.
 		*line_break
@@ -121,7 +120,6 @@ She laughs sadly at all of this. "Maybe I should trade these cinnamon sticks for
 		*line_break
 		*line_break
 		She bends down to pick up the broken cinnamon stick. "I understand its not so simple for you folks. But this unfairness… it just can't go on."
-		*page_break
 	#This is just the world we live in, unfortunately.
 		"What can we do? We're tiny pieces on this giant game board of politics, we can't change the way things are." You laugh at the futility of it all. 
 		*line_break
@@ -145,7 +143,7 @@ She laughs sadly at all of this. "Maybe I should trade these cinnamon sticks for
 		*line_break
 		*line_break
 		"Sorry, I just blurted some things out. I think I just need to get some rest." ${doctor} says, rubbing her puffy tired eyes.
-		*page_break
+*page_break
 At the worst possible timing, there's a knock on the door. Sonia quickly makes herself presentable. She throws the broken cinnamon into the bin, rubs the tears in her eyes, and arranges her hair neatly before answering "Come in." 
 *line_break
 *line_break
