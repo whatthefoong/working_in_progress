@@ -154,11 +154,11 @@ Factions:
 	percent DFFM
 	percent USS
 *line_break
-Allies:
+People:
 *stat_chart
-	percent sergeant
-	percent doctor
-	percent mrpa_official
+	percent sergeant_rs Sergeant ${sergeant}
+	percent doctor_rs Doctor ${doctor}
+	percent mrpa_official_rs Mr ${mrpa_official}
 *line_break
 *goto menu3
 
