@@ -1073,7 +1073,9 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 *label 4_stat_check
 *page_break End of Chapter 1: First Blood
 *if counter_attack_score >= 1
-	*goto_scene chapter2_pre_backstory kosnik_route
+	*set chap1_kosnik_or_sonia 0
+	*goto_scene chapter2_pre_backstory
 
 *if counter_attack_score < 1
-	*goto_scene chapter2_pre_backstory sonia_route
+	*set chap1_kosnik_or_sonia 1
+	*goto_scene chapter2_pre_backstory

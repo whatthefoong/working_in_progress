@@ -9,13 +9,14 @@
 	chapter2_2_backstory
 	chapter2_3_kosnik_route
 	chapter2_4_sonia_route
+	chapter3_dawn
 	ending
+	world_map
 	death
 
 *comment character
 *create name "nobody"
-*create rank "2nd Lieutenant"
-*create age 18
+*create rank "Commander"
 *create race ""
 *create background ""
 *create dollars 100
@@ -36,18 +37,6 @@
 *create strategy 0
 *create swimming 0
 
-*comment renown & relationships
-*create renown 0
-
-*comment faction R/S
-*create MPRA 0
-*create LOM 0
-*create DFFM 0
-*create USS 0
-
-*comment game mechanics
-*create ending 0
-
 *comment logistics
 *comment infantry level
 *create men 0
@@ -60,6 +49,28 @@
 *create he_grenade 0
 *create rpg_ammo 1
 *create demolition_charge 0
+
+*comment renown & relationships
+*create renown 0
+
+*comment faction R/S
+*create MPRA 0
+*create LOM 0
+*create DFFM 0
+*create USS 0
+
+*comment game mechanics
+*create ending 0
+*comment world map
+*create location "Orlotek"
+*create location_choice ""
+*create travel_hours 0
+*comment time
+*create game_hour 168
+*create hour 0
+*create day 0
+*create month 0
+*create year 0
 
 *comment NPCs
 *create sergeant "Kosnik"
@@ -76,6 +87,9 @@
 *create mrpa_official_rs 0
 
 *comment events
+*comment 0 for kosnik 1 for sonia
+*create chap1_kosnik_or_sonia 0
+*comment 0 for no civ killed, 1 for man killed, 2 for man and wife killed
 *create chap1_kill_civilian 0
 
 *comment achievements

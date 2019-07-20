@@ -1,0 +1,637 @@
+*comment This contains the travel computation mechanics for the world map
+*comment distance to time conversion
+*comment road ~50km / Hr
+*comment path = round(road time * 1.5)
+
+*comment road thru forest = round(road time * 2)
+*comment road thru mountain = round(road time * 3)
+*comment boat thru river = road time
+
+*comment plantation = round(road time * 2.5)
+*comment forest = round(road time * 5)
+*comment mountain = round(road time * 10)
+*comment river = round(road time * 40)
+
+*comment in the future we should have location specific buffs
+*label world_map_start
+*gosub_scene world_time time_display
+*gosub_scene csideimg_map-min
+$!{rank}, you're currently in ${location}.
+*line_break
+Where would you like to travel to?
+*comment Cities
+*if location = "Dovica"
+	*fake_choice
+		# Horiad via boat (3 Hours)
+			*set location_choice "Horiad"
+			*set travel_hours 3
+		# Kobelin (4 Hours)
+			*set location_choice "Kobelin"
+			*set travel_hours 4
+		# Kobelin Farmland (3 Hours)
+			*set location_choice "Kobelin Farmland"
+			*set travel_hours 3
+		# Novina via boat (6 Hours)
+			*set location_choice "Novina"
+			*set travel_hours 6
+		# Zornov's Grove via Wakagar River (18 Hours)
+			*set location_choice "Zornov's Grove"
+			*set travel_hours 18
+*if location = "Giralmore"
+	*fake_choice
+		# Clover Wood (9 Hours)
+			*set location_choice "Clover Wood"
+			*set travel_hours 9
+		# Giral Forest (8 Hours)
+			*set location_choice "Giral Forest"
+			*set travel_hours 8
+		# Lonely Hill (13 Hours)
+			*set location_choice "Lonely Hill"
+			*set travel_hours 13
+		# Orlotek (1 Hours)
+			*set location_choice "Orlotek"
+			*set travel_hours 1
+		# Ruzno (1.5 Hours)
+			*set location_choice "Ruzno"
+			*set travel_hours 1.5
+		# Slavec Mountains - Central (34 Hours)
+			*set location_choice "Slavec Mountains - Central"
+			*set travel_hours 34
+		# Slavec Mountains - South (17 Hours)
+			*set location_choice "Slavec Mountains - South"
+			*set travel_hours 17
+		# Vanka (6 Hours)
+			*set location_choice "Vanka"
+			*set travel_hours 6
+*if location = "Kobelin"
+	*fake_choice
+		# Dinaric Ridge (16 Hours)
+			*set location_choice "Dinaric Range"
+			*set travel_hours 16
+		# Dovica (4 Hours)
+			*set location_choice "Dovica"
+			*set travel_hours 4
+		# Horiad (4.5 Hours)
+			*set location_choice "Horiad"
+			*set travel_hours 4.5
+		# Inkaz (9 Hours)
+			*set location_choice "Inkaz"
+			*set travel_hours 9
+		# Kobelin Farmland (2.5 Hours)
+			*set location_choice "Kobelin Farmland"
+			*set travel_hours 2.5
+		# Lutengrad (15 Hours)
+			*set location_choice "Lutengrad"
+			*set travel_hours 15
+		# Novina (1.5 Hours)
+			*set location_choice "Novina"
+			*set travel_hours 1.5
+		# Sutin (4.5 Hours)
+			*set location_choice "Sutin"
+			*set travel_hours 4.5
+*if location = "Lutengrad"
+	*fake_choice
+		# Fraven (2 Hours)
+			*set location_choice "Fraven"
+			*set travel_hours 2
+		# Holly Thicket (11 Hours)
+			*set location_choice "Holly Thicket"
+			*set travel_hours 11
+		# Jazin (5 Hours)
+			*set location_choice "Jazin"
+			*set travel_hours 5
+		# Inkaz (12 Hours)
+			*set location_choice "Inkaz"
+			*set travel_hours 12
+		# Kobelin (15 Hours)
+			*set location_choice "Kobelin"
+			*set travel_hours 15
+		# Slavec Mountains - North (9 Hours)
+			*set location_choice "Slavec Mountains - North"
+			*set travel_hours 9
+		# Sutin (13.5 Hours)
+			*set location_choice "Sutin"
+			*set travel_hours 13.5
+*if location = "Strazova"
+	*fake_choice
+		# Cancove (1.5 Hours)
+			*set location_choice "Strazova"
+			*set travel_hours 1.5
+		# Jazin (2 Hours)
+			*set location_choice "Jazin"
+			*set travel_hours 2
+		# Madre (4 Hours)
+			*set location_choice "Madre"
+			*set travel_hours 4
+		# Strazov Plantation (5 Hours)
+			*set location_choice "Strazov Plantation"
+			*set travel_hours 5
+	
+*comment NW Towns
+*if location = "Cancove"
+	*fake_choice
+		# Strazova (1.5 Hours)
+			*set location_choice "Strazova"
+			*set travel_hours 1.5
+		# Strazov Plantation (2.5 Hours)
+			*set location_choice "Strazov Plantation"
+			*set travel_hours 2.5
+		# Poppany (3 Hours)
+			*set location_choice "Poppany"
+			*set travel_hours 3
+*if location = "Fraven"
+	*fake_choice
+		# Holly Thicket (5 Hours)
+			*set location_choice "Fraven"
+			*set travel_hours 5
+		# Jazin (3 Hours)
+			*set location_choice "Jazin"
+			*set travel_hours 3
+		# Lutengrad (2 Hours)
+			*set location_choice "Lutengrad"
+			*set travel_hours 2
+		# Trev (1.5 Hours)
+			*set location_choice "Trev"
+			*set travel_hours 1.5
+		# Poppany (3 Hours)
+			*set location_choice "Poppany"
+			*set travel_hours 3
+*if location = "Jazin"
+	*fake_choice
+		# Fraven (3 Hours)
+			*set location_choice "Fraven"
+			*set travel_hours 3
+		# Holly Thicket (5 Hours)
+			*set location_choice "Holly Thicket"
+			*set travel_hours 5
+		# Lutengrad (5 Hours)
+			*set location_choice "Lutengrad"
+			*set travel_hours 5
+		# Strazova (2 Hours)
+			*set location_choice "Strazova"
+			*set travel_hours 2
+		# Strazov Plantation (5 Hours)
+			*set location_choice "Strazov Plantation"
+			*set travel_hours 5
+*if location = "Poppany"
+	*fake_choice
+		# Cancove (3 Hours)
+			*set location_choice "Cancove"
+			*set travel_hours 3
+		# Fraven (3 Hours)
+			*set location_choice "Fraven"
+			*set travel_hours 3
+		# Strazov Plantation (5 Hours)
+			*set location_choice "Strazov Plantation"
+			*set travel_hours 5
+		# Trev (1.5 Hours)
+			*set location_choice "Trev"
+			*set travel_hours 1.5
+*if location = "Trev"
+	*fake_choice
+		# Fraven (1.5 Hours)
+			*set location_choice "Fraven"
+			*set travel_hours 1.5
+		# Holly Thicket (5 Hours)
+			*set location_choice "Holly Thicket"
+			*set travel_hours 5
+		# Poppany (1.5 Hours)
+			*set location_choice "Poppany"
+			*set travel_hours 1.5
+
+*comment SW Towns
+*if location = "Madre"
+	*fake_choice
+		# Giral Forest (12.5 Hours)
+			*set location_choice "Giral Forest"
+			*set travel_hours 12.5
+		# Madrevan Plantation (4 Hours)
+			*set location_choice "Madrevan Plantation"
+			*set travel_hours 4
+		# Strazova (4 Hours)
+			*set location_choice "Strazova"
+			*set travel_hours 4
+		# Vanka (2 Hours)
+			*set location_choice "Vanka"
+			*set travel_hours 2
+*if location = "Orlotek"
+	*fake_choice
+		# Boledov (6 Hours)
+			*set location_choice "Boledov"
+			*set travel_hours 6
+		# Giral Forest (20 Hours)
+			*set location_choice "Giral Forest"
+			*set travel_hours 20
+		# Giralmore (3 Hours)
+			*set location_choice "Giralmore"
+			*set travel_hours 3
+		# Ivonan (7 Hours)
+			*set location_choice "Ivonan"
+			*set travel_hours 7
+		# Slavec Mountains - Central (32 Hours)
+			*set location_choice "Slavec Mountains - Central"
+			*set travel_hours 32
+		# Slavec Mountains - South (9 Hours)
+			*set location_choice "Slavec Mountains - South"
+			*set travel_hours 9
+*if location = "Ruzno"
+	*fake_choice
+		# Clover Wood via Jade Brook (15 Hours)
+			*set location_choice "Clover Wood"
+			*set travel_hours 15
+		# Clover Wood via the bridge (6 Hours)
+			*set location_choice "Clover Wood"
+			*set travel_hours 6
+		# Giralmore (1.5 Hours)
+			*set location_choice "Giralmore"
+			*set travel_hours 1.5
+		# Slavec Mountains - South (6 Hours)
+			*set location_choice "Slavec Mountains - South"
+			*set travel_hours 6
+*if location = "Vanka"
+	*fake_choice
+		# Clover Wood (8 Hours)
+			*set location_choice "Clover Wood"
+			*set travel_hours 8
+		# Giral Forest (10 Hours)
+			*set location_choice "Giral Forest"
+			*set travel_hours 10
+		# Giralmore (6 Hours)
+			*set location_choice "Giralmore"
+			*set travel_hours 6
+		# Lonely Hill (6 Hours)
+			*set location_choice "Lonely Hill"
+			*set travel_hours 6
+		# Madre (2 Hours)
+			*set location_choice "Madre"
+			*set travel_hours 2
+		# Madrevan Plantation (6 Hours)
+			*set location_choice "Madrevan Plantation"
+			*set travel_hours 6
+
+*comment NE Towns
+*if location = "Inkaz"
+	*fake_choice
+		# Dinaric Ridge (23.5 Hours)
+			*set location_choice "Dinaric Ridge"
+			*set travel_hours 23.5
+		# Kobelin (9 Hours)
+			*set location_choice "Kobelin"
+			*set travel_hours 9
+		# Lutengrad (12 Hours)
+			*set location_choice "Lutengrad"
+			*set travel_hours 12
+		# Slavec Mountains - North (11.5 Hours)
+			*set location_choice "Slavec Mountains - North"
+			*set travel_hours 11.5
+		# Sutin (3 Hours)
+			*set location_choice "Sutin"
+			*set travel_hours 3
+*if location = "Sutin"
+	*fake_choice
+		# Dinaric Ridge (19 Hours)
+			*set location_choice "Dinaric Ridge"
+			*set travel_hours 19
+		# Inkaz (3 Hours)
+			*set location_choice "Inkaz"
+			*set travel_hours 3
+		# Kobelin (4.5 Hours)
+			*set location_choice "Kobelin"
+			*set travel_hours 4.5
+		# Kobelin Farmland (7.5 Hours)
+			*set location_choice "Kobelin Farmland"
+			*set travel_hours 7.5
+		# Lutengrad (13.5 Hours)
+			*set location_choice "Lutengrad"
+			*set travel_hours 13.5
+		# Slavec Mountains - North (20.5 Hours)
+			*set location_choice "Slavec Mountains - North"
+			*set travel_hours 20.5
+
+*comment SE Towns
+*if location = "Boledov"
+	*fake_choice
+		# Ivonan (3.5 Hours)
+			*set location_choice "Ivonan"
+			*set travel_hours 3.5
+		# Orlotek (6 Hours)
+			*set location_choice "Orlotek"
+			*set travel_hours 6
+		# Slavec Mountains - Central (38 Hours)
+			*set location_choice "Slavec Mountains - Central"
+			*set travel_hours 38
+		# Slavec Mountains - South (18 Hours)
+			*set location_choice "Slavec Mountains - South"
+			*set travel_hours 18
+		# Zornov's Grove (12 Hours)
+			*set location_choice "Zornov's Grove"
+			*set travel_hours 12
+*if location = "Horiad"
+	*fake_choice
+		# Dovica via boat (3 Hours)
+			*set location_choice "Dovica"
+			*set travel_hours 3
+		# Kobelin (4.5 Hours)
+			*set location_choice "Kobelin"
+			*set travel_hours 4.5
+		# Kobelin Farmland (7 Hours)
+			*set location_choice "Kobelin Farmland"
+			*set travel_hours 7
+		# Ivonan via boat (2 Hours)
+			*set location_choice "Ivonan"
+			*set travel_hours 2
+		# Zornov's Grove via boat (6 Hours)
+			*set location_choice "Zornov's Grove"
+			*set travel_hours 6
+*if location = "Ivonan"
+	*fake_choice
+		# Boledov (3.5 Hours)
+			*set location_choice "Boledov"
+			*set travel_hours 3.5
+		# Horiad via boat (2 Hours)
+			*set location_choice "Horiad"
+			*set travel_hours 2
+		# Orlotek (7 Hours)
+			*set location_choice "Orlotek"
+			*set travel_hours 7
+		# Slavec Mountains - Central (22.5 Hours)
+			*set location_choice "Slavec Mountains - Central"
+			*set travel_hours 22.5
+		# Zornov's Grove (13 Hours)
+			*set location_choice "Zornov's Grove"
+			*set travel_hours 13
+*if location = "Novina"
+	*fake_choice
+		# Dinaric Ridge (8 Hours)
+			*set location_choice "Dinaric Ridge"
+			*set travel_hours 8
+		# Dovica via boat (6 hours)
+			*set location_choice "Dovica"
+			*set travel_hours 6
+		# Kobelin (1.5 Hours)
+			*set location_choice "Kobelin"
+			*set travel_hours 1.5
+		# Kobelin Farmland (6 Hours)
+			*set location_choice "Kobelin Farmland"
+			*set travel_hours 6
+
+*comment Farmland
+*if location = "Kobelin Farmland"
+	*fake_choice
+		# Horiad (7 Hours)
+			*set location_choice "Horiad"
+			*set travel_hours 7
+		# Kobelin (2.5 Hours)
+			*set location_choice "Kobelin"
+			*set travel_hours 2.5
+		# Novina (6  Hours)
+			*set location_choice "Novina"
+			*set travel_hours 6
+		# Sutin (7.5 Hours)
+			*set location_choice "Sutin"
+			*set travel_hours 7.5
+*if location = "Madrevan Plantation"
+	*fake_choice
+		# Clover Wood (12.5 Hours)
+			*set location_choice "Clover Wood"
+			*set travel_hours 12.5
+		# Lonely Hill (6 Hours)
+			*set location_choice "Lonely Hill"
+			*set travel_hours 6
+		# Madre (4 Hours)
+			*set location_choice "Madre"
+			*set travel_hours 4
+		# Vanka (6 Hours)
+			*set location_choice "Vanka"
+			*set travel_hours 6
+*if location = "Strazov Plantation"
+	*fake_choice
+		# Cancove (2.5 Hours)
+			*set location_choice "Cancove"
+			*set travel_hours 2.5
+		# Jazin (5 Hours)
+			*set location_choice "Jazin"
+			*set travel_hours 5
+		# Poppany (5 Hours)
+			*set location_choice "Poppany"
+			*set travel_hours 5
+		# Strazova (5 Hours)
+			*set location_choice "Strazova"
+			*set travel_hours 5
+
+*comment Forest
+*if location = "Clover Wood"
+	*fake_choice
+		# Giral Forest (20 Hours)
+			*set location_choice "Giral Forest"
+			*set travel_hours 20
+		# Giralmore (9 Hours)
+			*set location_choice "Giralmore"
+			*set travel_hours 9
+		# Lonely Hill (3 Hours)
+			*set location_choice "Lonely Hill"
+			*set travel_hours 3
+		# Ruzno via Jade Brook (15 Hours)
+			*set location_choice "Ruzno"
+			*set travel_hours 11
+		# Ruzno via the bridge (6 Hours)
+			*set location_choice "Ruzno"
+			*set travel_hours 6
+		# Madrevan Plantation (12.5 Hours)
+			*set location_choice "Madrevan Plantation"
+			*set travel_hours 12.5
+		# Vanka (8 Hours)
+			*set location_choice "Vanka"
+			*set travel_hours 8
+*if location = "Giral Forest"
+	*fake_choice
+		# Clover Wood (20 Hours)
+			*set location_choice "Clover Wood"
+			*set travel_hours 20
+		# Giralmore (8 Hours)
+			*set location_choice "Giralmore"
+			*set travel_hours 8
+		# Holly Thicket via Scarlet River (25 Hours)
+			*set location_choice "Holly Thicket"
+			*set travel_hours 25
+		# Lonely Hill (18 Hours)
+			*set location_choice "Lonely Hi	ll"
+			*set travel_hours 18
+		# Madre (12.5 Hours)
+			*set location_choice "Madre"
+			*set travel_hours 12.5
+		# Orlotek (20 Hours)
+			*set location_choice "Orlotek"
+			*set travel_hours 20
+		# Slavec Mountains - Central (22 Hours)
+			*set location_choice "Slavec Mountains - Central"
+			*set travel_hours 22
+		# Vanka (10 Hours)
+			*set location_choice "Vanka"
+			*set travel_hours 10
+*if location = "Holly Thicket"
+	*fake_choice
+		# Fraven (5 Hours)
+			*set location_choice "Fraven"
+			*set travel_hours 5
+		# Giral Forest via Scarlet River (25 Hours)
+			*set location_choice "Giral Fo	rest"
+			*set travel_hours 25
+		# Jazin (5 Hours)
+			*set location_choice "Jazin"
+			*set travel_hours 5
+		# Lutengrad (11 Hours)
+			*set location_choice "Lutengrad"
+			*set travel_hours 11
+		# Slavec Mountains - Central (31 Hours)
+			*set location_choice "Slavec Mountains - Central"
+			*set travel_hours 31
+		# Slavec Mountains - North (27 Hours)
+			*set location_choice "Slavec Mountains - North"
+			*set travel_hours 27
+		# Trev (5 Hours)
+			*set location_choice "Trev"
+			*set travel_hours 5
+*if location = "Zornov's Grove"
+	*fake_choice
+		# Boledov (12 Hours)
+			*set location_choice "Boledov"
+			*set travel_hours 12
+		# Dovica via Wakagar River (18 Hours)
+			*set location_choice "Dovica"
+			*set travel_hours 18
+		# Horiad via Wakagar River (14 Hours)
+			*set location_choice "Hori	ad"
+			*set travel_hours 14
+		# Ivonan (13 Hours)
+			*set location_choice "Ivonan"
+			*set travel_hours 13
+		# Slavec Mountains - Central (47 Hours)
+			*set location_choice "Slavec Mountains - Central"
+			*set travel_hours 47
+		# Slavec Mountains - South (29 Hours)
+			*set location_choice "Slavec Mountains - South"
+			*set travel_hours 29
+
+*comment Mountains
+*if location = "Dinaric Ridge"
+	*fake_choice
+		# Inkaz (23.5 Hours)
+			*set location_choice "Inkaz"
+			*set travel_hours 23.5
+		# Kobelin (16 Hours)
+			*set location_choice "Kobelin"
+			*set travel_hours 16
+		# Novina (8 Hours)
+			*set location_choice "Novina"
+			*set travel_hours 8
+		# Sutin (19 Hours)
+			*set location_choice "Sutin"
+			*set travel_hours 19
+*if location = "Lonely Hill"
+	*fake_choice
+		# Clover Wood (3 Hours)
+			*set location_choice "Clover Wood"
+			*set travel_hours 3
+		# Giralmore (13 Hours)
+			*set location_choice "Giralmore"
+			*set travel_hours 13
+		# Giral Forest (18 Hours)
+			*set location_choice "Giral Forest"
+			*set travel_hours 18
+		# Madrevan Plantation (6 Hours)
+			*set location_choice "Madrevan Plantation
+			*set travel_hours 6
+		# Vanka (6 Hours)
+			*set location_choice "Vanka"
+			*set travel_hours 6
+*if location = "Slavec Mountains - North"
+	*fake_choice
+		# Holly Thicket (27 Hours)
+			*set location_choice "Holly Thicket"
+			*set travel_hours 27
+		# Inkaz (11.5 Hours)
+			*set location_choice "Inkaz"
+			*set travel_hours 11.5
+		# Lutengrad (9 Hours)
+			*set location_choice "Lutengrad"
+			*set travel_hours 9
+		# Slavec Mountains - Central (49 Hours)
+			*set location_choice "Slavec Mountains - Central"
+			*set travel_hours 49
+		# Sutin (20.5 Hours)
+			*set location_choice "Sutin"
+			*set travel_hours 20.5
+*if location = "Slavec Mountains - Central"
+	*fake_choice
+		# Boledov (38 Hours)
+			*set location_choice "Boledov"
+			*set travel_hours 38
+		# Giral Forest (22 Hours)
+			*set location_choice "Giral Forest"
+			*set travel_hours 22
+		# Giralmore (34 Hours)
+			*set location_choice "Giralmore"
+			*set travel_hours 34
+		# Holly Thicket (31 Hours)
+			*set location_choice "Holly Thicket"
+			*set travel_hours 31
+		# Ivonan (22.5 Hours)
+			*set location_choice "Ivonan"
+			*set travel_hours 22.5
+		# Orlotek (32 Hours)
+			*set location_choice "Orlotek"
+			*set travel_hours 32
+		# Slavec Mountains - North (49 Hours)
+			*set location_choice "Slavec Mountains - North"
+			*set travel_hours 49
+		# Slavec Mountains - South (42 Hours)
+			*set location_choice "Slavec Mountains - South"
+			*set travel_hours 42
+		# Zornov's Grove (47 Hours)
+			*set location_choice "Zornov's Grove"
+			*set travel_hours 47
+*if location = "Slavec Mountains - South"
+	*fake_choice
+		# Boledov (18 Hours)
+			*set location_choice "Boledov"
+			*set travel_hours 18
+		# Giralmore (17 Hours)
+			*set location_choice "Giralmore"
+			*set travel_hours 17
+		# Orlotek (9 Hours)
+			*set location_choice "Orlotek"
+			*set travel_hours 9
+		# Ruzno (6 Hours)
+			*set location_choice "Ruzno"
+			*set travel_hours 6
+		# Slavec Mountains - Central (42 Hours)
+			*set location_choice "Slavec Mountains - Central"
+			*set travel_hours 42
+		# Zornov's Grove (29 Hours)
+			*set location_choice "Zornov's Grove"
+			*set travel_hours 29
+
+*gosub check_travel_more_12
+*gosub travel_func
+*return
+
+*comment functions
+*label travel_func
+*set game_hour +travel_hours
+*set location location_choice
+*return
+
+*label check_travel_more_12
+*if travel_hours < 12
+	*return
+*if travel_hours >= 12
+	${rank}, are you sure you want to travel to ${location_choice}?
+	*line_break
+	It will take ${travel_hours} hours.
+	*fake_choice
+		# Yes, what are you waiting for!
+			*gosub travel_func
+			*return
+		# No, I want to go somewhere else
+			*goto_scene world_map

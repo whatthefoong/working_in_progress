@@ -1,0 +1,50 @@
+*label time_calc
+*set hour (game_hour modulo 24)
+*if game_hour > 24
+	*set day round((game_hour / 24) modulo 30)
+*if game_hour > (24*30)
+	*set month round((game_hour / (30*24)) modulo 12)
+*if game_hour > (24*265)
+	*set year round(game_hour / (365*24))
+*return
+
+*label time_display
+*gosub time_calc
+*if year > 1
+	${year} years
+	*if month > 1
+		${month} months
+	*if month = 1
+		1 month
+	*if day > 1
+		${day} days
+	*if day = 1
+		1 day
+*if year = 1
+	1 year
+	*if month > 1
+		${month} months
+	*if month = 1
+		1 month
+	*if day > 1
+		${day} days
+	*if day = 1
+		1 day
+*if year = 0
+	*if month > 1
+		${month} months
+	*if month = 1
+		1 month
+	*if day > 1
+		${day} days
+	*if day = 1
+		1 day
+Post Independence.
+*line_break
+Time Now: 
+*if (game_hour modulo 1) = 0
+	${hour}:00
+*if (game_hour modulo 1) = 0.5
+	${hour}:50
+hours
+*return
