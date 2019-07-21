@@ -3,6 +3,7 @@
 
 *scene_list
 	startup
+	world_map
 	chapter1_1_first_blood
 	chapter1_2_counterattack
 	chapter2_1_aftermath
@@ -11,13 +12,12 @@
 	chapter2_4_sonia_route
 	chapter3_dawn
 	ending
-	world_map
 	death
 
 *comment character
 *create name "nobody"
 *create rank "Commander"
-*create race ""
+*create allegiance "MRPA"
 *create background ""
 *create dollars 100
 
@@ -62,11 +62,18 @@
 *comment game mechanics
 *create ending 0
 *comment world map
-*create location "Orlotek"
+*create location_name "Giralmore"
+*create location "giralmore"
+*create location_choice_name ""
 *create location_choice ""
 *create travel_hours 0
+*create travel_hours_check 12
+*create travel_disrupt 0
+
 *comment time
+*comment change this only
 *create game_hour 168
+*comment don't touch these
 *create hour 0
 *create day 0
 *create month 0
