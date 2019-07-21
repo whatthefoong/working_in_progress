@@ -57,7 +57,7 @@ He sits beside you. With his helmet off, you can now clearly see his features. H
 A hand-rolled cigarette smolders as it hangs loosely from his lips. He offers you a similarly fashioned cigarette.
 *fake_choice
 	# Accept the cigarette and take a puff.
-	*set sergeant_rs %+10
+		*set sergeant_rs %+10
 		You graciously accept the offer and place it between your lips, giving the wheel a strong flick of the thumb to produce a meek fire that shivers in the wind. Shielding it in your other hand, you watch the brown paper tip curls into a bright ember.
 		*line_break
 		*line_break
@@ -96,6 +96,7 @@ Kosnik takes a long drag from his own cigarette.  You watch the glowing end inch
 *line_break
 *line_break
 His words are barely audible over the roar of the engine and the howls of the wind, but they reach you. Sergeant ${sergeant} unconsciously touches the scar on his face.
+*fake_choice
 	# We fight to protect our loved ones. Gotta live to keep doing that.
 		"Well. We survived didn't we? But hey, I'm just fighting to protect my family back home."
 		*line_break
@@ -108,7 +109,7 @@ His words are barely audible over the roar of the engine and the howls of the wi
 			"I'm just glad that we spared those civilians back there. Wouldn't know how I would be able to face myself if we didn't."
 			*line_break
 			*line_break
-			Sergeant ${kosnik} smiles, watching the dust clouds dance and spirit away from the truck.
+			Sergeant ${sergeant} smiles, watching the dust clouds dance and spirit away from the truck.
 		*if chap1_kill_civilian > 0
 			"And what about the civilian back there? With all due respect Commander…"
 			*line_break
@@ -154,8 +155,7 @@ You nod.
 *line_break
 *line_break
 "Well, that makes your winning rate 100% doesn't it?" Sergeant ${sergeant} chuckles. "So what brings you to this war?"
-*goto_scene chapter2_2_backstory kosnik_route
-
+*goto_scene chapter2_2_backstory
 
 *label sonia_route
 *set met_doctor 1
@@ -301,4 +301,4 @@ She takes a sip, sighing as she sits onto a plastic chair beside your bed.
 *line_break
 *line_break
 “Anyhow, we’ve got some time to kill before the sun comes up. So how did you end up shot up and in my hospital?”
-*goto_scene chapter2_2_backstory sonia_route
+*goto_scene chapter2_2_backstory

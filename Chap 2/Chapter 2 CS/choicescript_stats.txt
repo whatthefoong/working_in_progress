@@ -1,13 +1,14 @@
 *temp choice 1
 *label screen
+*temp dollar_stat "$${dollars}"
 [b]Character Details[/b]
 *stat_chart
 	text Rank
 	text Name
-	text Location
-	text Race
+	text location_name Location
+	text Allegiance
 	text Background
-	text Dollars
+	text dollar_stat Dollars
 *if choice = 1
 	*goto charstats
 *if choice = 2
