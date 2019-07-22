@@ -1,274 +1,277 @@
-*temp kosnik 0
-*temp sonia 0
 *temp join_rationale 0
-*temp family_bg 0
-
 *comment setting the background for MC
-*if kosnik = 1
-	Sergeant Kosnik drags a chair and plops it beside you, the screeching of the metal legs as they rattle across the wooden floor pierced the stale, damp air. "Heck of time we went through back there eh? How're you holding up?"
-	*line_break
-	*line_break
-	You shrug nonchalantly, brushing off the sergeant's concern with a feeble "fine".
-	*line_break
-	*line_break
-	Positioning himself on the edge of the chair, Sergeant Kosnik leans his elbows on his knees before cocking his head to the side. 	"So, I've been serving with you for quite a while now eh. Come to think of it, you haven't once told me why did you choose to join the army? You don't really strike me as the type for this line of work." Sergeant Kosnik grunts as he pulls out a cigarette, rolling it between his fingers for a while before raising it to his lips. 
-	*line_break
-	*line_break
-	You remain silent for a moment, glancing hesitantly at the sergeant as he clicks his lighter. In your short stint in the army, he has been a reliable ally, following your orders with due diligence, but yet not afraid to help you take command in times of crises. Heck, the events of the past few days has already proven that you can entrust your life in this man's hands. No harm telling him your story, you muse, as the familiar, acrid smoke that you've gotten used to waft through your nose.
-	*goto 2_2_1_choice_rationale
-*if sonia = 1
-	"How're we doing this fine day? Feeling better?" trills the doctor as she enters the room, her usual perky attitude providing a stark contrast to the bleak aura of the hospital wards.
-	*line_break
-	*line_break
-	You manage to eke out a small shrug at the rhetorical question, wincing as a dull pain pressed against your shoulders. "Eh, could be a lot worse."
-	*line_break
-	*line_break
-	Sonia chuckles softly. "That's right, at least your condition is stabilizing, as compared to that terrible state you were in when you were brought here. Anyway, I'll just do some routine checks. It might take awhile, but I'll leave you to your rest after I'm done, I promise." Sonia chirps, before turning to one of the nurses and mutters some instructions. 	Your eyes instinctively follow the doctor as she flits around the room, fiddling with the machines and tubes weaving around your bed.
-	*line_break
-	*line_break
-	"So, a military personnel, huh? We don't get many of your types around these parts, with camps having their own military hospitals and clinics and whatnots. What made you join the army in the first place?" Sonia inquires, snapping you out of your reverie. You can't help but notice that despite the question, her eyes remain fixated on her tasks, occasionally glancing down to her clipboard to scribble a few lines - probably asking out of courtesy or to simply start a conversation rather than legitimate curiosity.
-	*line_break
-	*line_break
-	Oh well, why the heck not, she'll be here for awhile, and you, probably even longer.
-	*label 2_2_1_choice_rationale
-	*line_break
-	*line_break
-	Thinking back, the choice you made to join the military wasn't one that was made in the spur of the moment, but rather through intense deliberation. There were a lot of factors that cumulated into this major decision, but ultimately the biggest driving force for you is…
-	*fake_choice
-		#Money! The military pays well, and I could use the steady paycheck.
-			*set join_rationale 1
-			You sigh. The reason seems superficial, but you can't deny that it was, and still is, in fact, a pressing concern.
-			*line_break
-			*line_break
-			"What can I say? The army provides a steady, sizable income. Comparatively, a military career is more lucrative than any other career option I had at the time, at least. Not to mention, the escalation of tension within the country proved to be an advantageous moment. The government wanted more soldiers; young people like me. And so I thought, why not? It's the perfect opportunity."
-			*line_break
-			*line_break
-			True enough, the conflict could not have come at a more opportune time. As the riots and protests of the Liberators Of Morovia, the LOM, became more bloody and violent, the demand for soldiers to suppress such threats saw a constant increase. The Morovian government started to entice many able-bodied men and women to join the Morovian Republic People's Army, the MRPA, and are more than willing to pay a higher rate. Thus, you decided to pack your bags and head straight to the nearest recruitment center, which thereafter they shipped you off to the nearest drill camp.
-			*line_break
-			*line_break
-			Granted, the trainings were physically and mentally exhausting, but you managed to rise above that. Given your above-average performance, you soon caught the eye of your commanders, which gave you an opportunity to take up command positions within a MRPA battalion, and before long you rose to the rank of a captain, having command of your own unit. Of course, a higher rank means a better pay as well.
-			*page_break
-			*if kosnik = 1
-				"Hey, don't sweat it! I know tons of guys who enlisted for the cha-ching. Ain't no shame in that. Hell, I've managed to keep my family well-fed all these months because of what I do here." Sergeant Kosnik guffaws, slapping your back. You smile sheepishly in return, slightly relieved that the sergeant understands your motivation, allowing you to feel a little more at ease.
-				*line_break
-				*line_break
-				"Yeah, at least the money's going back to my family, where it'll at least be useful."
-				*line_break
-				*line_break
-				"Speaking of which, you haven't really mentioned your family much huh? They doing well?"
-				*line_break
-				*line_break
-				The sarge's question elicits a double take from you. You have never had this sort of conversation with him before, and you don't remember him being so talkative. But then again, you both went through quite the harrowing battle together a few days ago. Maybe that's the reason why he's taking such an interest in your life, as fellow brother-in-arms.
-				*line_break
-				*line_break
-				Hmm, but now that the sarge mentions it, it's been ages since you've last talked to your family.
-				*goto 2_2_1_choice_family
-			*if sonia = 1
-				Sonia sighs. "Well, I can't really blame you. It's hard to find work as it is, given the current state of the country. Luckily for me, medical professionals became pretty high in demand, and I was entrusted with this ward barely months into my understudy program."  
-				*line_break
-				*line_break
-				"Hmm, seems like the war has its benefits as well, huh?" You quip, though you wish your comment was made purely in jest. Looking up, you notice that Sonia's expression turns into a contemplative one, and you suddenly see the subtle signs of exhaustion on Sonia's face, the symptoms of fatigue that is slowly taking its toll on her.
-				*line_break
-				*line_break
-				Clearing your throat, you try to break away from the topic. "Well, I wasn't always this desperate for money, but given my family's circumstances, I did what I have to do."
-				*line_break
-				*line_break
-				"Oh? That's the first I time I've heard you mention your family, isn't it?" The distraction proves to be effective, piquing Sonia's curiosity at the mention of your upbringing, her expression regaining a semblance of her usual cheery self.
-				*line_break
-				*line_break
-				Hmm, come to think of it, it's been ages since you've last talked to your family.
-				*label 2_2_1_choice_family
- 				You don't really mention it to others that often, but you come from a family of…
-				*fake_choice
-					#thriving entrepreneurs with booming businesses.
-						*set family_bg 1
-						*set charm +1
-						Your family has always been running a couple of small businesses here and there. After all, your father was a Hadan migrant that came to Morovia to expand his trade business, bringing cheap supplies from Morovia back into Hada, as well as make use of the cheaper labor and manufacturing costs of Morovia, which was how he came to meet the blossoming young daughter of a local factory owner, whom he married a few years after. In fact, much of your childhood has been spent with your parents educating you on business strategies, how to read and negotiate with people, smooth-talking them over to get things done your way. "The art of the deal", as your father likes to call it. Sadly, with the independence of Morovia from Torim, the withdrawal of Torian investment dealt a large blow to your family's ventures. Without the proper finances. they simply could not compete with the larger conglomerates.
-						*line_break
-						*line_break
-						Before long, your family's businesses ran dry and collapsed upon itself. Luckily, your family has a sizable saving. Coupled with the inheritance from the previous generations, your family's coffers would at least be able to last for a quite a while. However, you know that this is only a temporary solution, as the cost of living and basic necessities are rising exponentially as the conflict means that resources are getting scarcer by the day. 
-						*line_break
-						*line_break
-						*if kosnik =1
-							However, you're not sure if you should mention your half Hadan heritage to the sergeant. You've known him long enough to know that the nationalistic sentiments within the man flows strongly and proudly. Any questionable part of your heritage would only diminish your credibility. No, better to conveniently leave out that part and let him see you as his trusty comrade-in-arms, striving for a better Morovia.
-							*line_break
-							*line_break
-							"My parents were entrepreneurs, but they couldn't sustain their business when the Torians left the country. With a failing business, I must do what I can to help support my parents and my siblings." You muttered.
-							*line_break
-							*line_break
-							"Man, that's tough, but on the bright side at least we're not dependent on those Torian bastards any more, right? I mean, the Torians and Hadans did take advantage of our people, our land, our resources. No sir, Morovia should belong to the Morovians! And hey, once we get back on our feet, I'm sure your family business would pick up again." Sarge threw the butt onto the floor, grinding it with the tip of his boot. "Ah well, at least things are starting to pick up with you here in the MRPA huh? I bet your family has less to worry about now that you're picking up the slack. Hey, anytime you need help, you feel free to approach me yeah?"
-							*line_break
-							*line_break
-							With that, Sergeant Kosnik swings his muscular frame around the seat of the chair and stumble onto his feet. Placing both his hands on your shoulders, he gives you one last pat before turning around, brusquely brushing aside the flap of the tent and stepping back outside.
-						*if sonia =1
-							You sigh, hesitantly explaining to Sonia your parent's failing businesses while trying to gloss over your heritage as much as you can. You don't really like mentioning the fact that your father comes from Hada, especially with tensions running high within the country, and being from a mixed family might trigger some… extreme reactions from more nationalistic idealists. But with Sonia, you feel that she would be more understanding at least.
-							*line_break
-							*line_break
-							Although Sonia continues to tinker with the medical equipment in your room, her reduced pace suggests her increasing investment and interest in your story.
-							*line_break
-							*line_break
-							"Well, to me a patient is a patient. That's all that really matters to me, at least. To be completely honest, I don't really care if you're Hadan or Morovian, or even fully Torian. Heck, a bullet wound doesn't discriminate, so why should I?" 
-							*line_break
-							*line_break
-							Dropping the clipboard to her side, Sonia glances up and meets your eye with a reassuring smile. "Anyway, I've completed your checks. Your body's holding up pretty well so far. A few more days of quality rest, and you could even be walking out of the hospital yourself. Emphasis on the rest, yeah?"
-							*line_break
-							*line_break
-							With that, Sonia turns around flits out into the corridor. Even after she leaves the room, you feel her words echoing inside your head, enveloping you with a warm feeling.
-					#middle class farmers and landowners. 
-						*set family_bg 2
-						*set finesse +1
-						Coming from a long line of Morovian farmers, your family has been involved in the agriculture industry for ages. As a matter of fact, your grandparents were able to afford a few hectares of land, and since then your family has been able to make a comfortable living by selling off fruits and produce. Of course, the occasional drought or flood meant that the year's bounty is at the mercy of the weather, but your family's experience in the field has allowed them to take countermeasures by diversifying their crops. Your time spent on the plantations as you were growing up were pretty enjoyable as well, where any free time not helping out in the field is spend weaving through the trees in the vast plantation, climbing trees and picking fruits as you deem fit. Your family wasn't filthy rich, but they managed to provide you with a decent life.
-						*line_break
-						*line_break
-						These days, however, things were not going as well as they used to be. By a stroke of luck, the conflict between the LOM and the MRPA has not spread to the immediate vicinity of your hometown, but the rising tension has led to fewer workers willing to continue working in the fields, citing either the potential to be caught up in the firefight or the need to return back to their own villages to ensure the safety of their families as a reason to leave. As the number of workers dwindled, there is only so much your family themselves can handle, and as such they had to resort to selling half the plantation off to wealthier merchants.
-						*line_break
-						*line_break
-						You sigh out loud. "My family used to own a few plantations in Madre, but last I heard a few months ago, they're struggling with the manpower needed to maintain the plantations, with the conflict and whatnot. I haven't been able to contact them since, and I'm in the dark of any current developments in the area. It's worrying, to say the least."
-						*line_break
-						*line_break
-						*if kosnik =1
-							Sergeant Kosnik pulls the chair closer. "Shit, man. I had no idea. I'm sure they're safe, didn't recent reports mention that Madre is still free from LOM influence? That should give you a peace of mind for now, right?
-							*line_break
-							*line_break
-							You turn to Sergeant Kosnik and smile weakly. "Yeah, I guess. I'll just have to wait and see then. Thanks."
-							*line_break
-							*line_break
-							"Alright, it ain't getting any earlier. I gotta go check up on the other men. You have a good rest, commander."
-							*line_break
-							*line_break
-							With that, Sergeant Kosnik swings his muscular frame around the seat of the chair and stumble onto his feet. Placing both his hands on your shoulders, he gives you one last pat before turning around, brusquely brushing aside the flap of the tent and stepping back outside.
-						*if sonia =1
-							"I know you're worried about your family, but it's not like you can do anything about that while you're lying in bed here. My advice is, follow the doctor's orders, and the faster you get better, the faster you can contact your family and make sure all is well with them." Sonia chides, giving the impression of a mother scolding a belligerent child.
-							*line_break
-							*line_break
-							You hate to admit it, but she's right - you can't do anything while you're confined to your bed right now. You give a weary sigh before nodding your head in compliance.
-							*line_break
-							*line_break
-							Dropping the clipboard to her side, Sonia glances up and meets your eye with a reassuring smile. "Anyway, I've completed your checks. Your body's holding up pretty well so far. A few more days of quality rest, and you could even be walking out of the hospital yourself. Emphasis on the rest, got it?"
-							*line_break
-							*line_break
-							With that, Sonia turns around flits out into the corridor, leaving your room silent and empty once again.
-					#humble and hardworking miners.
-						*set family_bg 3
-						*set physical +1
-						Your family has been making a living in the mines for as long as you can remember, you yourself are no exception. In your early childhood years, you have been helping out by panning for ores by the riverside. As you got older, you started accompanying the older men deeper into the mines to excavate whatever precious metals you can lay your eyes on.  Sure, the work was taxing, but on the bright side you did manage to tone your body better than any gym routine could provide. Although your family made barely the minimum wage, they made do with the simpler things in life, preferring to be contented with what you already have, than coveting for more material possessions.
-						*line_break
-						*line_break
-						However, as the conflict escalated, parts of the mine were seized by the government, laying claim to the minerals excavated in order to help fund the war effort. As most of the minerals are being siphoned off to fatten the MRPA reserves, your family is getting even less than the paltry sum they were originally given, but hey, at least they still have a job. However, you can't help but worry about your family making ends meet.
-						*line_break
-						*line_break
-						"My family has been working in the mines down at Ruzno for a couple of generations now. Recently it seems that the MRPA has established their presence at the mines, so I'm not sure how things are at the moment. I haven't been in contact with them for awhile now…"
-						*if kosnik =1	
-							*line_break
-							*line_break
-							Sergeant Kosnik falls silent for a while, before looking back at you. "You know, my parents used to work in the mines… Now it's just my mom. But that's a story for another time. Anyway, what I want to say is this: miners are fucking tough, tougher than you think. If anything happens, I'm sure they'll be able to deal with it. So chin up, brother, I'm sure your family is doing well"
-							*line_break
-							*line_break
-							The sergeant's words lights up a small spark of hope in you, and unknowingly you find yourself smirking at him, with a mumbled thanks.
-							*line_break
-							*line_break
-							"Alright, it ain't getting any earlier. I gotta go check up on the other men. You have a good rest, commander."
-							*line_break
-							*line_break
-							With that, Sergeant Kosnik swings his muscular frame around the seat of the chair and stumble onto his feet. Placing both his hands on your shoulders, he gives you one last pat before turning around, brusquely brushing aside the flap of the tent and stepping back outside.
-						*if sonia =1
-							"I know you're worried about your family, but it's not like you can do anything about that while you're lying in bed here. My advice is, follow the doctor's orders, and the faster you get better, the faster you can contact your family and make sure all is well with them." Sonia chides, giving the impression of a mother scolding a belligerent child.
-							*line_break
-							*line_break
-							You hate to admit it, but she's right - you can't do anything while you're confined to your bed right now. You give a weary sigh before nodding your head in compliance.
-							*line_break
-							*line_break
-							Dropping the clipboard to her side, Sonia glances up and meets your eye with a reassuring smile. "Anyway, I've completed your checks. Your body's holding up pretty well so far. A few more days of quality rest, and you could even be walking out of the hospital yourself. Emphasis on the rest, got it?"
-							*line_break
-							*line_break
-							With that, Sonia turns around flits out into the corridor, leaving your room silent and empty once again.
-		#My love for the country! To fight for what I believe is right.
-			*set join_rationale 2
-			"I just want to do my part as a citizen of this country, as simple as that."
-			*line_break
-			*line_break
-			"Wow, such patriotism! You'd make a fine role model for all the other soldiers, I'm sure."
-			*line_break
-			*line_break
-			You feel your cheeks flush slightly. "N… no, it's just that… A country at war with itself is only going to tear itself apart eventually, not to mention the repercussions it will have on the citizens for years to come. I just want to help prevent that from happening to the best of my abilities."
-			*line_break
-			*line_break
-			Right, Morovia is your home, after all. After the Torians left, you were as excited as any other that Morovia finally got its independence. However, a faction of the military were unhappy that many Torians still held important positions in the political and financial sector, and as such broke away and declared a coup under the name of the Liberators of Morovia, the LOM. The ensuing uprisings and sieges escalated far quicker than anyone expected, and the tension swept the entire nation into a state of frenzy. Hence, when you saw the news report from the military encouraging more people to enlist, you immediately leaped at the chance to sign up as a fresh recruit.
-			*line_break
-			*line_break
-			Of course, the trainings were physically and mentally exhausting, but spurred on by the frequent news reports of civilian casualties and mindless destruction, you pushed through the drills with utmost drive. Before long, your stellar performance caught the eye of several commanders within the Morovian Republic People's Army, and before long you rose quickly to the rank of a Captain and were given command of your own unit within the MRPA.
-			*line_break
-			*line_break
-			*if kosnik =1
-				Sergeant Kosnik draws another long puff before sighing, a stream of smoke emerging from his nostrils. "Yeah, I kinda get what you mean. Heck, I don't do this for enjoyment, I ain't some sick freak. But the way things are going now, it won't be long before the entire nation goes up in flames. And that sure won't be a pretty sight for anyone. Sometimes I worry for my mother back at home, you know. It ain't easy getting by alone, and now she'll have to worry about being caught up in this fucking mess."
-				*line_break
-				*line_break
-				As the sergeant mentions his concern, you can't help but worry about your own family as well. It's been ages since they've kept in touch with you, and you always fear that something might happen to them if you don't manage to keep in contact. 
-				*line_break
-				*line_break
-				As if reading your mind, Sergeant Kosnik asks, "What about your family? You worried about them? Actually, come to think of it, I've never heard you talk much about your family, though we've been serving in the same unit together for quite awhile."
-				*line_break
-				*line_break
-				He's right. Come to think of it, you haven't really sat down and talked to the sergeant like this before.
-				*goto 2_2_1_choice_family
-			*if sonia =1
-				"That's really pretty noble of you. Can't say I disagree though. Ever since this mess started, the hospital has became busier and busier with each passing day. The staff are already burning out, and yet the rate of patients coming in aren't slowing down in the slightest." Sonia furrowed her brows as she appear to sink deeper into thought.
-				*line_break
-				*line_break
-				Clearing your throat, you try to break away from the topic. "Well, we'll just have to do our best and hope things work out for themselves, like what my ma used to say."
-				*line_break
-				*line_break
-				"Oh? That's the first I time I've heard you mention your family, isn't it?" The distraction proves to be effective, piquing Sonia's curiosity at the mention of your upbringing, her expression regaining a semblance of her usual cheery self.
-				*line_break
-				*line_break
-				Hmm, come to think of it, it's been ages since you've last talked to your family.
-				*goto 2_2_1_choice_family
-		#the excitement of it all! You've always envisioned yourself in a military career.
-			*set join_rationale 3
-			"To be frank, I've always wanted to do something a little larger than life, something extraordinary. The military seems like a perfect choice, don't you think?"
-			*line_break
-			*line_break
-			The way you see it, the various factions of the civil war are merely insignificant, inconsequential. The Liberators of Morovia broke away from the military to stage a coup, protesting against the Torian presence in the political and economic realm even though the Torians promised full independence for Morovia. As a response, the Torians started to back whatever's left of the military, forming the Morovian Republic People's Army in order to counter the threat posed by the LOM. To be honest, you're not as concerned with the politics of it all. All you knew was that when the MRPA was seeking new recruits, you jumped in immediately with little hesitation.
-			*line_break
-			*line_break
-			After enlistment, your enthusiasm and drive for the military pushed you to take your trainings more seriously than your peers, and with that you produced excellent results, catching the eye of several commanders. Before long, you rose quickly to the rank of a Captain and were given command of your own unit within the MRPA.
-			*line_break
-			*line_break
-			*if kosnik =1
-				A low hissing sound escapes from Sergeant Kosnik's lips as he inhales. "God damn, you're even crazier than me, you son of a bitch. And I thought I had a few screws loose, staying in the army in such a crazy ass time."
-				*line_break
-				*line_break
-				Shaking his head, the sarge takes one last drag of his cigarette before flicking the butt onto the floor and grinding it with the sole of his boot.
-				*line_break
-				*line_break
-				You chuckle softly. "Yeah, I guess it's pretty crazy. I mean, I'd still do it all over again though, beats anything else I could possibly do back at home."
-				*line_break
-				*line_break
-				"Oh yeah? Where're you from then? Haven't heard you talk about your hometown or your family before, though we've been serving on the same bloody unit for some time already, eh?"
-				*line_break
-				*line_break
-				Right. You didn't have many opportunities to have a nice little chat like this with the sarge before. 
-				*goto 2_2_1_choice_family
-			*if sonia =1
-				"Wow, really? You joined the army because you just wanted to?" Sonia exclaims, drawing her attention away from the EKG machine momentarily.
-				*line_break
-				*line_break
-				"Well, yeah. Wasn't it the same for you? Y'know, when you decided to pursue medicine?"
-				*line_break
-				*line_break
-				A silence envelops the room for a moment as Sonia contemplates your statement. "Since you put it that way… then yeah I guess it's kind of the same."
-				*line_break
-				*line_break
-				"There you have it. Anyway, it beats anything else I could possibly do back at home, probably will just get stuck with what my family has been doing for years"
-				*line_break
-				*line_break
-				"Oh, really? What does your family do?"
-				*line_break
-				*line_break
-				Right, You didn't expect Sonia to follow up with more questions. 
-				*goto 2_2_1_choice_family
-			
+*page_break
+*if chap1_kosnik_or_sonia = 0
+	*goto kosnik_route_1
+*if chap1_kosnik_or_sonia = 1
+	*goto sonia_route_1
 
+*label kosnik_route_1
+Sergeant Kosnik drags a chair and plops it beside you, the screeching of the metal legs as they rattle across the wooden floor pierced the stale, damp air. "Heck of time we went through back there eh? How're you holding up?"
+*line_break
+*line_break
+You shrug nonchalantly, brushing off the sergeant's concern with a feeble "fine".
+*line_break
+*line_break
+Positioning himself on the edge of the chair, Sergeant Kosnik leans his elbows on his knees before cocking his head to the side. 	"So, I've been serving with you for quite a while now eh. Come to think of it, you haven't once told me why did you choose to join the army? You don't really strike me as the type for this line of work." Sergeant Kosnik grunts as he pulls out a cigarette, rolling it between his fingers for a while before raising it to his lips. 
+*line_break
+*line_break
+You remain silent for a moment, glancing hesitantly at the sergeant as he clicks his lighter. In your short stint in the army, he has been a reliable ally, following your orders with due diligence, but yet not afraid to help you take command in times of crises. Heck, the events of the past few days has already proven that you can entrust your life in this man's hands. No harm telling him your story, you muse, as the familiar, acrid smoke that you've gotten used to waft through your nose.
+*goto 2_2_1_choice_rationale
+
+*label sonia_route_1
+"How're we doing this fine day? Feeling better?" trills the doctor as she enters the room, her usual perky attitude providing a stark contrast to the bleak aura of the hospital wards.
+*line_break
+*line_break
+You manage to eke out a small shrug at the rhetorical question, wincing as a dull pain pressed against your shoulders. "Eh, could be a lot worse."
+*line_break
+*line_break
+Sonia chuckles softly. "That's right, at least your condition is stabilizing, as compared to that terrible state you were in when you were brought here. Anyway, I'll just do some routine checks. It might take awhile, but I'll leave you to your rest after I'm done, I promise." Sonia chirps, before turning to one of the nurses and mutters some instructions. 	Your eyes instinctively follow the doctor as she flits around the room, fiddling with the machines and tubes weaving around your bed.
+*line_break
+*line_break
+"So, a military personnel, huh? We don't get many of your types around these parts, with camps having their own military hospitals and clinics and whatnots. What made you join the army in the first place?" Sonia inquires, snapping you out of your reverie. You can't help but notice that despite the question, her eyes remain fixated on her tasks, occasionally glancing down to her clipboard to scribble a few lines - probably asking out of courtesy or to simply start a conversation rather than legitimate curiosity.
+*line_break
+*line_break
+Oh well, why the heck not, she'll be here for awhile, and you, probably even longer.
+*goto 2_2_1_choice_rationale
+	
+*label 2_2_1_choice_rationale
+*line_break
+*line_break
+Thinking back, the choice you made to join the military wasn't one that was made in the spur of the moment, but rather through intense deliberation. There were a lot of factors that cumulated into this major decision, but ultimately the biggest driving force for you is…
+*fake_choice
+	#Money! The military pays well, and I could use the steady paycheck.
+		*set join_rationale 1
+		You sigh. The reason seems superficial, but you can't deny that it was, and still is, in fact, a pressing concern.
+		*line_break
+		*line_break
+		"What can I say? The army provides a steady, sizable income. Comparatively, a military career is more lucrative than any other career option I had at the time, at least. Not to mention, the escalation of tension within the country proved to be an advantageous moment. The government wanted more soldiers; young people like me. And so I thought, why not? It's the perfect opportunity."
+		*line_break
+		*line_break
+		True enough, the conflict could not have come at a more opportune time. As the riots and protests of the Liberators Of Morovia, the LOM, became more bloody and violent, the demand for soldiers to suppress such threats saw a constant increase. The Morovian government started to entice many able-bodied men and women to join the Morovian Republic People's Army, the MRPA, and are more than willing to pay a higher rate. Thus, you decided to pack your bags and head straight to the nearest recruitment center, which thereafter they shipped you off to the nearest drill camp.
+		*line_break
+		*line_break
+		Granted, the trainings were physically and mentally exhausting, but you managed to rise above that. Given your above-average performance, you soon caught the eye of your commanders, which gave you an opportunity to take up command positions within a MRPA battalion, and before long you rose to the rank of a captain, having command of your own unit. Of course, a higher rank means a better pay as well.
+		*page_break
+		*if kosnik = 1
+			"Hey, don't sweat it! I know tons of guys who enlisted for the cha-ching. Ain't no shame in that. Hell, I've managed to keep my family well-fed all these months because of what I do here." Sergeant Kosnik guffaws, slapping your back. You smile sheepishly in return, slightly relieved that the sergeant understands your motivation, allowing you to feel a little more at ease.
+			*line_break
+			*line_break
+			"Yeah, at least the money's going back to my family, where it'll at least be useful."
+			*line_break
+			*line_break
+			"Speaking of which, you haven't really mentioned your family much huh? They doing well?"
+			*line_break
+			*line_break
+			The sarge's question elicits a double take from you. You have never had this sort of conversation with him before, and you don't remember him being so talkative. But then again, you both went through quite the harrowing battle together a few days ago. Maybe that's the reason why he's taking such an interest in your life, as fellow brother-in-arms.
+			*line_break
+			*line_break
+			Hmm, but now that the sarge mentions it, it's been ages since you've last talked to your family.
+			*goto 2_2_1_choice_family
+		*if sonia = 1
+			Sonia sighs. "Well, I can't really blame you. It's hard to find work as it is, given the current state of the country. Luckily for me, medical professionals became pretty high in demand, and I was entrusted with this ward barely months into my understudy program."  
+			*line_break
+			*line_break
+			"Hmm, seems like the war has its benefits as well, huh?" You quip, though you wish your comment was made purely in jest. Looking up, you notice that Sonia's expression turns into a contemplative one, and you suddenly see the subtle signs of exhaustion on Sonia's face, the symptoms of fatigue that is slowly taking its toll on her.
+			*line_break
+			*line_break
+			Clearing your throat, you try to break away from the topic. "Well, I wasn't always this desperate for money, but given my family's circumstances, I did what I have to do."
+			*line_break
+			*line_break
+			"Oh? That's the first I time I've heard you mention your family, isn't it?" The distraction proves to be effective, piquing Sonia's curiosity at the mention of your upbringing, her expression regaining a semblance of her usual cheery self.
+			*line_break
+			*line_break
+			Hmm, come to think of it, it's been ages since you've last talked to your family.
+			*label 2_2_1_choice_family
+			You don't really mention it to others that often, but you come from a family of…
+			*fake_choice
+				#thriving entrepreneurs with booming businesses.
+					*set background 1
+					*set charm +1
+					Your family has always been running a couple of small businesses here and there. After all, your father was a Hadan migrant that came to Morovia to expand his trade business, bringing cheap supplies from Morovia back into Hada, as well as make use of the cheaper labor and manufacturing costs of Morovia, which was how he came to meet the blossoming young daughter of a local factory owner, whom he married a few years after. In fact, much of your childhood has been spent with your parents educating you on business strategies, how to read and negotiate with people, smooth-talking them over to get things done your way. "The art of the deal", as your father likes to call it. Sadly, with the independence of Morovia from Torim, the withdrawal of Torian investment dealt a large blow to your family's ventures. Without the proper finances. they simply could not compete with the larger conglomerates.
+					*line_break
+					*line_break
+					Before long, your family's businesses ran dry and collapsed upon itself. Luckily, your family has a sizable saving. Coupled with the inheritance from the previous generations, your family's coffers would at least be able to last for a quite a while. However, you know that this is only a temporary solution, as the cost of living and basic necessities are rising exponentially as the conflict means that resources are getting scarcer by the day. 
+					*line_break
+					*line_break
+					*if kosnik =1
+						However, you're not sure if you should mention your half Hadan heritage to the sergeant. You've known him long enough to know that the nationalistic sentiments within the man flows strongly and proudly. Any questionable part of your heritage would only diminish your credibility. No, better to conveniently leave out that part and let him see you as his trusty comrade-in-arms, striving for a better Morovia.
+						*line_break
+						*line_break
+						"My parents were entrepreneurs, but they couldn't sustain their business when the Torians left the country. With a failing business, I must do what I can to help support my parents and my siblings." You muttered.
+						*line_break
+						*line_break
+						"Man, that's tough, but on the bright side at least we're not dependent on those Torian bastards any more, right? I mean, the Torians and Hadans did take advantage of our people, our land, our resources. No sir, Morovia should belong to the Morovians! And hey, once we get back on our feet, I'm sure your family business would pick up again." Sarge threw the butt onto the floor, grinding it with the tip of his boot. "Ah well, at least things are starting to pick up with you here in the MRPA huh? I bet your family has less to worry about now that you're picking up the slack. Hey, anytime you need help, you feel free to approach me yeah?"
+						*line_break
+						*line_break
+						With that, Sergeant Kosnik swings his muscular frame around the seat of the chair and stumble onto his feet. Placing both his hands on your shoulders, he gives you one last pat before turning around, brusquely brushing aside the flap of the tent and stepping back outside.
+					*if sonia =1
+						You sigh, hesitantly explaining to Sonia your parent's failing businesses while trying to gloss over your heritage as much as you can. You don't really like mentioning the fact that your father comes from Hada, especially with tensions running high within the country, and being from a mixed family might trigger some… extreme reactions from more nationalistic idealists. But with Sonia, you feel that she would be more understanding at least.
+						*line_break
+						*line_break
+						Although Sonia continues to tinker with the medical equipment in your room, her reduced pace suggests her increasing investment and interest in your story.
+						*line_break
+						*line_break
+						"Well, to me a patient is a patient. That's all that really matters to me, at least. To be completely honest, I don't really care if you're Hadan or Morovian, or even fully Torian. Heck, a bullet wound doesn't discriminate, so why should I?" 
+						*line_break
+						*line_break
+						Dropping the clipboard to her side, Sonia glances up and meets your eye with a reassuring smile. "Anyway, I've completed your checks. Your body's holding up pretty well so far. A few more days of quality rest, and you could even be walking out of the hospital yourself. Emphasis on the rest, yeah?"
+						*line_break
+						*line_break
+						With that, Sonia turns around flits out into the corridor. Even after she leaves the room, you feel her words echoing inside your head, enveloping you with a warm feeling.
+				#middle class farmers and landowners. 
+					*set background 2
+					*set finesse +1
+					Coming from a long line of Morovian farmers, your family has been involved in the agriculture industry for ages. As a matter of fact, your grandparents were able to afford a few hectares of land, and since then your family has been able to make a comfortable living by selling off fruits and produce. Of course, the occasional drought or flood meant that the year's bounty is at the mercy of the weather, but your family's experience in the field has allowed them to take countermeasures by diversifying their crops. Your time spent on the plantations as you were growing up were pretty enjoyable as well, where any free time not helping out in the field is spend weaving through the trees in the vast plantation, climbing trees and picking fruits as you deem fit. Your family wasn't filthy rich, but they managed to provide you with a decent life.
+					*line_break
+					*line_break
+					These days, however, things were not going as well as they used to be. By a stroke of luck, the conflict between the LOM and the MRPA has not spread to the immediate vicinity of your hometown, but the rising tension has led to fewer workers willing to continue working in the fields, citing either the potential to be caught up in the firefight or the need to return back to their own villages to ensure the safety of their families as a reason to leave. As the number of workers dwindled, there is only so much your family themselves can handle, and as such they had to resort to selling half the plantation off to wealthier merchants.
+					*line_break
+					*line_break
+					You sigh out loud. "My family used to own a few plantations in Madre, but last I heard a few months ago, they're struggling with the manpower needed to maintain the plantations, with the conflict and whatnot. I haven't been able to contact them since, and I'm in the dark of any current developments in the area. It's worrying, to say the least."
+					*line_break
+					*line_break
+					*if kosnik =1
+						Sergeant Kosnik pulls the chair closer. "Shit, man. I had no idea. I'm sure they're safe, didn't recent reports mention that Madre is still free from LOM influence? That should give you a peace of mind for now, right?
+						*line_break
+						*line_break
+						You turn to Sergeant Kosnik and smile weakly. "Yeah, I guess. I'll just have to wait and see then. Thanks."
+						*line_break
+						*line_break
+						"Alright, it ain't getting any earlier. I gotta go check up on the other men. You have a good rest, commander."
+						*line_break
+						*line_break
+						With that, Sergeant Kosnik swings his muscular frame around the seat of the chair and stumble onto his feet. Placing both his hands on your shoulders, he gives you one last pat before turning around, brusquely brushing aside the flap of the tent and stepping back outside.
+					*if sonia =1
+						"I know you're worried about your family, but it's not like you can do anything about that while you're lying in bed here. My advice is, follow the doctor's orders, and the faster you get better, the faster you can contact your family and make sure all is well with them." Sonia chides, giving the impression of a mother scolding a belligerent child.
+						*line_break
+						*line_break
+						You hate to admit it, but she's right - you can't do anything while you're confined to your bed right now. You give a weary sigh before nodding your head in compliance.
+						*line_break
+						*line_break
+						Dropping the clipboard to her side, Sonia glances up and meets your eye with a reassuring smile. "Anyway, I've completed your checks. Your body's holding up pretty well so far. A few more days of quality rest, and you could even be walking out of the hospital yourself. Emphasis on the rest, got it?"
+						*line_break
+						*line_break
+						With that, Sonia turns around flits out into the corridor, leaving your room silent and empty once again.
+				#humble and hardworking miners.
+					*set background 3
+					*set physical +1
+					Your family has been making a living in the mines for as long as you can remember, you yourself are no exception. In your early childhood years, you have been helping out by panning for ores by the riverside. As you got older, you started accompanying the older men deeper into the mines to excavate whatever precious metals you can lay your eyes on.  Sure, the work was taxing, but on the bright side you did manage to tone your body better than any gym routine could provide. Although your family made barely the minimum wage, they made do with the simpler things in life, preferring to be contented with what you already have, than coveting for more material possessions.
+					*line_break
+					*line_break
+					However, as the conflict escalated, parts of the mine were seized by the government, laying claim to the minerals excavated in order to help fund the war effort. As most of the minerals are being siphoned off to fatten the MRPA reserves, your family is getting even less than the paltry sum they were originally given, but hey, at least they still have a job. However, you can't help but worry about your family making ends meet.
+					*line_break
+					*line_break
+					"My family has been working in the mines down at Ruzno for a couple of generations now. Recently it seems that the MRPA has established their presence at the mines, so I'm not sure how things are at the moment. I haven't been in contact with them for awhile now…"
+					*if kosnik =1	
+						*line_break
+						*line_break
+						Sergeant Kosnik falls silent for a while, before looking back at you. "You know, my parents used to work in the mines… Now it's just my mom. But that's a story for another time. Anyway, what I want to say is this: miners are fucking tough, tougher than you think. If anything happens, I'm sure they'll be able to deal with it. So chin up, brother, I'm sure your family is doing well"
+						*line_break
+						*line_break
+						The sergeant's words lights up a small spark of hope in you, and unknowingly you find yourself smirking at him, with a mumbled thanks.
+						*line_break
+						*line_break
+						"Alright, it ain't getting any earlier. I gotta go check up on the other men. You have a good rest, commander."
+						*line_break
+						*line_break
+						With that, Sergeant Kosnik swings his muscular frame around the seat of the chair and stumble onto his feet. Placing both his hands on your shoulders, he gives you one last pat before turning around, brusquely brushing aside the flap of the tent and stepping back outside.
+					*if sonia =1
+						"I know you're worried about your family, but it's not like you can do anything about that while you're lying in bed here. My advice is, follow the doctor's orders, and the faster you get better, the faster you can contact your family and make sure all is well with them." Sonia chides, giving the impression of a mother scolding a belligerent child.
+						*line_break
+						*line_break
+						You hate to admit it, but she's right - you can't do anything while you're confined to your bed right now. You give a weary sigh before nodding your head in compliance.
+						*line_break
+						*line_break
+						Dropping the clipboard to her side, Sonia glances up and meets your eye with a reassuring smile. "Anyway, I've completed your checks. Your body's holding up pretty well so far. A few more days of quality rest, and you could even be walking out of the hospital yourself. Emphasis on the rest, got it?"
+						*line_break
+						*line_break
+						With that, Sonia turns around flits out into the corridor, leaving your room silent and empty once again.
+	#My love for the country! To fight for what I believe is right.
+		*set join_rationale 2
+		"I just want to do my part as a citizen of this country, as simple as that."
+		*line_break
+		*line_break
+		"Wow, such patriotism! You'd make a fine role model for all the other soldiers, I'm sure."
+		*line_break
+		*line_break
+		You feel your cheeks flush slightly. "N… no, it's just that… A country at war with itself is only going to tear itself apart eventually, not to mention the repercussions it will have on the citizens for years to come. I just want to help prevent that from happening to the best of my abilities."
+		*line_break
+		*line_break
+		Right, Morovia is your home, after all. After the Torians left, you were as excited as any other that Morovia finally got its independence. However, a faction of the military were unhappy that many Torians still held important positions in the political and financial sector, and as such broke away and declared a coup under the name of the Liberators of Morovia, the LOM. The ensuing uprisings and sieges escalated far quicker than anyone expected, and the tension swept the entire nation into a state of frenzy. Hence, when you saw the news report from the military encouraging more people to enlist, you immediately leaped at the chance to sign up as a fresh recruit.
+		*line_break
+		*line_break
+		Of course, the trainings were physically and mentally exhausting, but spurred on by the frequent news reports of civilian casualties and mindless destruction, you pushed through the drills with utmost drive. Before long, your stellar performance caught the eye of several commanders within the Morovian Republic People's Army, and before long you rose quickly to the rank of a Captain and were given command of your own unit within the MRPA.
+		*line_break
+		*line_break
+		*if kosnik =1
+			Sergeant Kosnik draws another long puff before sighing, a stream of smoke emerging from his nostrils. "Yeah, I kinda get what you mean. Heck, I don't do this for enjoyment, I ain't some sick freak. But the way things are going now, it won't be long before the entire nation goes up in flames. And that sure won't be a pretty sight for anyone. Sometimes I worry for my mother back at home, you know. It ain't easy getting by alone, and now she'll have to worry about being caught up in this fucking mess."
+			*line_break
+			*line_break
+			As the sergeant mentions his concern, you can't help but worry about your own family as well. It's been ages since they've kept in touch with you, and you always fear that something might happen to them if you don't manage to keep in contact. 
+			*line_break
+			*line_break
+			As if reading your mind, Sergeant Kosnik asks, "What about your family? You worried about them? Actually, come to think of it, I've never heard you talk much about your family, though we've been serving in the same unit together for quite awhile."
+			*line_break
+			*line_break
+			He's right. Come to think of it, you haven't really sat down and talked to the sergeant like this before.
+			*goto 2_2_1_choice_family
+		*if sonia =1
+			"That's really pretty noble of you. Can't say I disagree though. Ever since this mess started, the hospital has became busier and busier with each passing day. The staff are already burning out, and yet the rate of patients coming in aren't slowing down in the slightest." Sonia furrowed her brows as she appear to sink deeper into thought.
+			*line_break
+			*line_break
+			Clearing your throat, you try to break away from the topic. "Well, we'll just have to do our best and hope things work out for themselves, like what my ma used to say."
+			*line_break
+			*line_break
+			"Oh? That's the first I time I've heard you mention your family, isn't it?" The distraction proves to be effective, piquing Sonia's curiosity at the mention of your upbringing, her expression regaining a semblance of her usual cheery self.
+			*line_break
+			*line_break
+			Hmm, come to think of it, it's been ages since you've last talked to your family.
+			*goto 2_2_1_choice_family
+	#the excitement of it all! You've always envisioned yourself in a military career.
+		*set join_rationale 3
+		"To be frank, I've always wanted to do something a little larger than life, something extraordinary. The military seems like a perfect choice, don't you think?"
+		*line_break
+		*line_break
+		The way you see it, the various factions of the civil war are merely insignificant, inconsequential. The Liberators of Morovia broke away from the military to stage a coup, protesting against the Torian presence in the political and economic realm even though the Torians promised full independence for Morovia. As a response, the Torians started to back whatever's left of the military, forming the Morovian Republic People's Army in order to counter the threat posed by the LOM. To be honest, you're not as concerned with the politics of it all. All you knew was that when the MRPA was seeking new recruits, you jumped in immediately with little hesitation.
+		*line_break
+		*line_break
+		After enlistment, your enthusiasm and drive for the military pushed you to take your trainings more seriously than your peers, and with that you produced excellent results, catching the eye of several commanders. Before long, you rose quickly to the rank of a Captain and were given command of your own unit within the MRPA.
+		*line_break
+		*line_break
+		*if kosnik =1
+			A low hissing sound escapes from Sergeant Kosnik's lips as he inhales. "God damn, you're even crazier than me, you son of a bitch. And I thought I had a few screws loose, staying in the army in such a crazy ass time."
+			*line_break
+			*line_break
+			Shaking his head, the sarge takes one last drag of his cigarette before flicking the butt onto the floor and grinding it with the sole of his boot.
+			*line_break
+			*line_break
+			You chuckle softly. "Yeah, I guess it's pretty crazy. I mean, I'd still do it all over again though, beats anything else I could possibly do back at home."
+			*line_break
+			*line_break
+			"Oh yeah? Where're you from then? Haven't heard you talk about your hometown or your family before, though we've been serving on the same bloody unit for some time already, eh?"
+			*line_break
+			*line_break
+			Right. You didn't have many opportunities to have a nice little chat like this with the sarge before. 
+			*goto 2_2_1_choice_family
+		*if sonia =1
+			"Wow, really? You joined the army because you just wanted to?" Sonia exclaims, drawing her attention away from the EKG machine momentarily.
+			*line_break
+			*line_break
+			"Well, yeah. Wasn't it the same for you? Y'know, when you decided to pursue medicine?"
+			*line_break
+			*line_break
+			A silence envelops the room for a moment as Sonia contemplates your statement. "Since you put it that way… then yeah I guess it's kind of the same."
+			*line_break
+			*line_break
+			"There you have it. Anyway, it beats anything else I could possibly do back at home, probably will just get stuck with what my family has been doing for years"
+			*line_break
+			*line_break
+			"Oh, really? What does your family do?"
+			*line_break
+			*line_break
+			Right, You didn't expect Sonia to follow up with more questions. 
+			*goto 2_2_1_choice_family
 *goto 
 
 *label 2_3_letter
