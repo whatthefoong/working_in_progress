@@ -304,7 +304,7 @@ You pick up the envelope as your vision starts to blur back into focus. On the m
 	[i]Dear Commander,
 	*line_break
 	*line_break
-	You have been so kind as to interrupt our business, and thus we have suffered quite a bit of setbacks directly because of your actions. As such, we believe that you do owe us a little something as repayment. Our requirements are simple, We will need a copy of the patrol route that the guards will use for the following week. Once you have acquired a copy, place it behind the flagpole facing the gate at 12 midnight, before you head off to bed tonight.
+	You have been so kind as to interrupt our business, and thus we have suffered quite a bit of setbacks directly because of your actions. As such, we believe that you do owe us a little something as repayment. Our requirements are simple: we will require a copy of the patrol route that the guards will use for the following week. Once you have acquired a copy, place it behind the rightmost flagpole facing the gate at 1am tonight. Of course, your efforts will not go unrewarded - we are willing to offer you a little something to fatten your wallet with, and we can assure you that the funds will reach you in a completely discreet manner.
 	*line_break
 	*line_break
 	Now, before you refuse, let me remind you that we know everything about you, including your personal background information. In other words, if you fail to comply to our demands, no harm might befall you, but we cannot ensure that the same thing can be said for your family. We have agents everywhere, so we have the abilities to back up our words. The ball is in your court.
@@ -317,22 +317,94 @@ You pick up the envelope as your vision starts to blur back into focus. On the m
 	FUCK! The anger got the better of you as you clench your fist tightly, crunching the piece of paper within. It might be safer to play to their demands, but that would mean that you might compromise the integrity of the barrack's security should you leak the patrol routes. At the same time you cannot risk your family's safety. Or… would it be possible to pull a fast one over these bastards? Send them a fabricated route? No, there are certain risks to that as well. If they happen to realize that you tricked them, the consequences could be worse than you can imagine.
 	*goto 2_4_3_1_choice_to_letter
 *if stop_looters = 0
-		[i]Dear Commander,
+	[i]Dear Commander,
 	*line_break
 	*line_break
-	You have been so kind as to help us with our endeavors two days ago, and as such we have been able to benefit slightly. As thanks, we would like to make you a similar offer once again. Our request is simple, We will need a copy of the patrol route that the guards will use for the following week. Once you have acquired a copy, place it behind the flagpole facing the gate at 12 midnight, before you head off to bed tonight.
+	First and foremost, we would like to extend our thanks for your kind help with our endeavor two days ago. It is nice knowing that someone isn't as… upright as some would expect. Anyway, as a way of thanking you, we would like to make you a similar offer once again. Our request is simple, We will need a copy of the patrol route that the guards will use for the following week. Once you have acquired a copy, place it behind the rightmost flagpole facing the gate at 1am tonight. Once we receive it, we can assure you that the funds will reach you in a completely discreet manner.
 	*line_break
 	*line_break
-	You can choose to ignore this letter, but let me assure you, you will be better off with our aid. We know that your family condition is somewhat… delicate, and if you do us the proper favors we can assure you that the debt will not go unpaid. We expect good things from you, and hope that you make the right decision.
+	You can choose to ignore this letter, but let me assure you, you will be better off with our aid. We know that your family condition is somewhat financially… delicate, and if you do us the proper favors we can assure you that the debt will not go unpaid. We expect good things from you, and eagerly await your response.
 	[/i]
 	*line_break
 	*line_break
-	You stare at the letter incredulously, re-reading it a few times.
+	You stare at the letter incredulously, re-reading it a few times. It seems that the looters that you helped the other day aren't as simple as they appear to be. Their proposition seems tempting, but that would mean potentially compromising the integrity of the barrack's security should you reveal the patrol routes. Of course, there's always the option to ignore the letter, removing yourself from any further affiliations with this unknown group. Better yet, you could send them a fake patrol route to mess with them a little, though the way that they managed to dig up information about your family circumstances are a little disconcerting…
 	*label 2_4_3_1_choice_to_letter
 	*fake_choice
-		#Accept their terms
-			*comment do it, can't risk your family's safety
-		#Send them a fake copy
-			*comment access the files, edit them and place them at their desired location
-		#Don't do anything. This must be a practical joke!
-			*comment life goes on as usual
+		#Accept their terms and leave them the patrol route
+			*if stop_looters = 1
+				The barracks be damned, you simply can't risk the safety of your family. Besides, it'll take an organized assault of a huge scale to completely eliminate the sheer number of trained soldiers in this place, whereas your family is completely unprotected. If you rationalize it this way, the choice becomes painfully obvious.
+			*if stop_looters = 0
+				Damn it! It's simply an offer you can't refuse. In any case, what major damage can leaking the patrol routes cause to the barracks? It'll take an organized assault of a huge scale to completely eliminate the sheer number of trained soldiers in this place, and bypassing the patrol routes won't change that. No harm in making a quick buck.
+			*line_break
+			*line_break
+			After a quick washing up, you head down to the office, making sure to go about your usual tasks in order to avoid looking suspicious. The hours roll by painfully, as the other commanders and officers start to leave the office in droves, having finished their work for the day. You pretend to be poring through a document on your computer, typing away furiously at "edits" that will be deleted in a few minutes. Once the door swings to a close as the last person leaves the room, you boot up the necessary documents: the map of the surrounding areas of the barracks and an overlay showing the route for the upcoming week's patrol.
+			*line_break
+			*line_break
+			Taking a cursory glance across the office and confirming that you are well and truly alone, you slam the print button. The erratic whirring of the printer unnerves you as you keep stealing glances at the door, half expecting it to fly open suddenly. The moment the paper slides out onto the printing tray, you snatch it and stuff it into a plain, white envelope, shoving it down your left pocket as you take your leave.
+			*line_break
+			*line_break
+			Heading back to your bunk after a hasty dinner, you hop onto your bed to read a book, keeping to yourself as much as possible. Midnight soon rolls around, and most of your bunk mates are snoring obnoxiously, while the rest are scattered around the rooms with their eyes glued to their phones. 
+			*line_break
+			*line_break
+			You casually slip out of the bunk and head straight to the instructed location. At this time of the night, you barely see anyone else wandering around the grounds. You breathe a sigh of relief as you reach the flagpole uninterrupted. Your eyes dart around your surroundings, and only when you're convinced that you're really alone that you slip the letter out of your pocket and drop it to the floor, giving the envelope a swift kick, driving it as close to the base of the flagpole as possible. Breaking into a brisk trot, you make a beeline for your bunk, without turning back for even an instance.
+			*goto 2_4_4_ambush
+		#Leave them a false route
+			*if stop_looters = 1
+				How dare they threaten you?! You can just take the high road, but now they've made it personal, especially after threatening your family. Well, you don't have to play by their rules. A false route should be able to throw a wrench in their plans just fine. Oh, you can already taste the confusion and mayhem it'll cause, the sweetness lingering in your mouth.			
+			*if stop_looters = 0
+				Just because you happen to be caught up in the looting fiasco, that does not mean that you are a tool for this mysterious organization as they please. If they think that they can manipulate you to their every whim, they've got another thing coming. Alright, its time to teach them a lesson not to mess with you.
+			*line_break
+			*line_break
+			After a quick washing up, you head down to the office, making sure to go about your usual tasks in order to avoid looking suspicious. The hours roll by painfully, as the other commanders and officers start to leave the office in droves, having finished their work for the day. You pretend to be poring through a document on your computer, typing away furiously at "edits" that will be deleted in a few minutes. Once the door swings to a close as the last person leaves the room, you boot up the necessary documents: the map of the surrounding areas of the barracks and an overlay showing the route for the upcoming week's patrol.
+			*line_break
+			*line_break
+			An evil grin sneaks across your lips as you change most of the pathways on the overlay, editing the major checkpoints of the route. Satisfied with your work, you give it one final inspection and hit the print button. The printer whirs to life, and in seconds births your masterpiece into the printing tray. You grab it and fold it neatly into an empty envelope, stuffing it into your pocket before leaving the office.
+			*line_break
+			*line_break
+			Midnight soon rolls around, and most of your bunk mates are snoring obnoxiously, while the rest are scattered around with their eyes glued to their phones. You casually slip out of the bunk and head straight for the drop-off site. At this time of the night, you barely see anyone else wandering around the grounds. You breathe a sigh of relief as you reach the flagpole uninterrupted. Your eyes take a quick sweep around your surroundings. Seeing no one else around, you surreptitiously slip the letter out of your pocket and drop it to the floor, giving the envelope a swift kick, driving it as close to the base of the flagpole as possible. With the deed done, you amble back to your bunk with a mischievous sneer.
+			*goto 2_4_5_LOM_aid
+		#Don't do anything. This must be a hoax!
+			You tear the paper into shreds, dumping them into the trashcan by the door as you make your way to the washroom. What nonsense is this? It must be some elaborate prank note your subordinates left you while you were out having fun yesterday night. Even if the note is real, what's the worse that can happen? Pushing that thought out of your mind, you continue on your daily routine, the letter long forgotten by the night.
+			*goto 2_4_5_LOM_aid
+  
+*label 2_4_4_ambush
+*comment kena ambushed by LOM, fight LOM with patrol soldiers. Epic fight scene?
+
+*label 2_4_5_LOM_aid
+*comment chance upon LOM distributing aid in the outskirts of a nearby village with a bunch of soliders on patrol, LOM soldiers not carrying their weapons, completely unaware. MC takes the opportunity to fight them or to leave them alone. if fight, LOM officer will survive (protected by civilian), approached by MC and will try to convince him of LOM cause. If leave alone, LOM officer will thank MC, attempt to talk to him to convince him. Then choice of defect or kill LOM soldier. 
+"Alright, you ready for our patrol, commander?" A doe-eyed rookie soldier blurts out enthusiastically. It's once again time for your weekly patrols, but since you're taking the morning shift, there will be two more privates tagging along. You sling your usual gear over your shoulders, giving the recruits a short grunt before taking off on your own, the two quickly shuffling behind you.
+*line_break
+*line_break
+A while later, the three of you trek through a familiar stretch of road near the village lying northeast of the barracks, separated by a large area of vegetation. Turning to your right, you spot a large group of villagers in the clearing a short distance from here through the gaps in the trees. You continue to saunter down your patrol route before grinding to a sudden stop, doing a double-take back at the clearing. Wait a dang minute, you find the uniform sported by a couple of the figures oddly familiar. Halting your men, you signal for them to remain quiet and stay close to you. The two privates exchange a perplexed stare, before following you as you crouch down and weave your way through the trees.
+*line_break
+*line_break
+As you and the two privates inch closer towards the clearing, you gain a clearer sight of the villagers. Sure enough, the distinct pattern of the old military uniform, coupled with that unmistakable logo on their sleeves, dispels any doubt that you have. What are these LOM bastards doing here? Terrorizing the villagers?
+*line_break
+*line_break
+"On my command, we go out there and take those LOM fuckers down. But careful with that gun, there're tons of civilians around, so don't go trigger happy, you hear me?" You whisper to the two privates as your group continue to move towards the villagers. The two nod furiously, their furrowed brows and cold sweat a clear sign of nerves. Poor bastards, they probably don't have a lot of practical experience out in the field.
+*line_break
+*line_break
+Deep breaths. One. Two. Three
+*line_break
+*line_break
+"Okay, go go go!"
+*line_break
+*line_break
+You take the initiative and charge out headfirst into the clearing, rifle at the ready. At the sight of a fully armed soldier bursting out of the forest, the villagers break out in chaos, screaming and attempting to take cover, but you pay no heed to them, your sights focused on those wearing the LOM uniform. Before you can take aim and open fire, you hear one of them yelling out, "Stop! Don't shoot! We're here in peace, I swear!"
+*fake_choice
+	#Shoot them fuckers!
+		You're not letting your guard down, even for a second. You take careful aim at the nearest soldier and wait for a clear shot. [b]BANG![/b] The bullet burrows through his abdomen, blood spurting out the hole as he collapse face-first onto the ground. You hear gun shots coming from behind you as you see yet another LOM soldier hitting the ground from the corner of your eyes.
+		*line_break
+		*line_break
+		You quickly scan the frenzied crowd for more of the uniformed personnel, when you catch one of them dashing across the clearing, desperate to make his escape. You peer through your scope and squeeze the trigger. 
+		*line_break
+		*line_break
+		[b]BLAM![/b]
+		*line_break
+		*line_break
+		To your immense shock, one of the villagers throws his body in front of the LOM soldier, shielding him. The oncoming bullet hits him squarely in the middle of his chest and throws him backwards, before slamming onto the LOM soldier.
+		*line_break
+		*line_break
+		
+	#Hear them out.
+		
