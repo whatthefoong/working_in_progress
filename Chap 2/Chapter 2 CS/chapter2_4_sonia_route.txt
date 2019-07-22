@@ -3,7 +3,13 @@
 *temp shadyguy 0
 *if sonia = 1
 
-Another mundane day. You lie in your pristine white hospital bed, in the same position as you were for the entire week. In your time here, you've tried to make small talk with your fellow patients, but they're usually sedated or too exhausted to talk. The staff don't entertain your attempts at casual conversation either. They come in, change your bandages, scribble things on a clipboard, then leave. How diligent.
+Another mundane day. You lie in your pristine white hospital bed, in the same position as you were for the entire week. 
+*line_break
+*line_break
+After regaining consciousness, the first thing you did was call back to HQ. You updated them on your situation during the fight (though Sergeant ${sergeant} seemed to have already given them that information) as well as the current status of your injured members. Higher-ups assured you that the situation at Orlotek is being handled, and assure you that you can rest easy, and report again when all soldiers have recovered and are ready to return to the barracks.
+*line_break
+*line_break
+In your time here, you've tried to make small talk with your fellow patients, but they're usually sedated or too exhausted to talk. The staff don't entertain your attempts at casual conversation either. They come in, change your bandages, scribble things on a clipboard, then leave. How diligent.
 *line_break
 *line_break
 The only person who has even tried conversing with you is ${doctor}. If only she were here, you think to yourself.
@@ -414,6 +420,9 @@ You decide to…
 Another week has passed. Thankfully, your body has recovered just enough for you to walk around with a crutch under you arm. The doctors assure you that in just another week you'll be fit enough to return to the barracks.
 *line_break
 *line_break
+The rest of your men seem to be recovering slower. When you went to visit them, most were still bedridden, but on the path to recovery. Probably 2 weeks before they're fit to return to the barracks. You decide to wait for everyone to heal up before getting everyone back as a unit. 
+*line_break
+*line_break
 No longer confined to your white sheets, you spend most of the last week exploring more of the Haris James Hospital. The doctors were kind enough to let you wander, so long as you returned at the right times for appointments and check-ups. Perhaps they thought following schedules was something a military commander would be disciplined enough to do, and they weren't wrong.
 *line_break
 *line_break
@@ -709,8 +718,7 @@ Is he… stealing the medicine?
 				*line_break
 				*line_break
 				She cocks an eyebrow at your enthusiasm, but decides to play along, a mirthful smile lingering on her lips. "Alright, but you're paying."
-				*set shadyguy 3
-				*goto 2_4_2_doctor_meets_shady_guy
+				*goto 2_4_2_tell_sonia
 	#Leave the doctor, but tail him in secret.
 		*set finesse %+5
 		You have your suspicions, but you choose not to pursue them head on. You allow yourself to be ushered out of the room by the doctor, who tries to explain himself further, going on about a bad knee injury that made him fall over in the first place.
@@ -752,13 +760,166 @@ Is he… stealing the medicine?
 		*goto 2_4_2_doctor_meets_shady_guy
 	
 *label 2_4_2_doctor_meets_shady_guy
-As the lift doors open, you enter… the cafeteria? The delicious aroma of freshly toasted bread, savory fried chicken and perhaps a creamy mushroom soup hits you in the face.Given that its lunch time, the place is packed with doctors, nurses, vistitors and patients.
+As the lift doors open, you enter
+*if shadyguy =1
+	the cafeteria. 
+*if shadyguy = 2
+	… the cafeteria? 
+The delicious aroma of freshly toasted bread, savory fried chicken and perhaps a creamy mushroom soup hits you in the face.Given that its lunch time, the place is packed with doctors, nurses, vistitors and patients.
 *line_break
 *line_break
 *if shadyguy = 1
-	You ignore the growling coming from your stomach as you join the human traffic, trying to keep a low profile as you skulk around, looking for the doctor. 
+	Having eaten a few days worth of meals here, you have to admit; Torian money makes some impeccable food. Ever since you could walk again you've been coming down here to try every item on the menu, and none have disappointed thus far! Its certainly a lot better than the cold food delivered to you when you were bedridden.
 	*line_break
 	*line_break
-	
+	You join the fast-moving queue, and before long you are walking back to the sitting area with a plastic red tray of delicious fish and chips, right out the fryer.
+	*line_break
+	*line_break
+	You survey your surroundings, looking for a suitable place to sit, when you suddenly freeze up. Your eyes come to rest on the doctor you just met, seated at a table across the room. 
+	*line_break
+	*line_break
+	He looks shifty, nervous. He hunches over, holding his lab coat closed with his arms, while constantly looking behind his back as if worried someone is going to come for his life. Even from this distance you can tell something serious is about to happen.
+	*line_break
+	*line_break
+	How do you constantly find yourself in the thick of some shady underlying plot despite making deliberate decisions to avoid it? It's almost like this is a video game!
+	*line_break
+	*line_break
+	You find a table for yourself, and as you begin eating your curiosity wins over you as you steal glances at the doctor.
+	*line_break
+	*line_break
+	Halfway into your meal, you notice a man join the doctor at the table. 
 *if shadyguy = 2
-*if shadyguy = 3
+	You ignore the growling coming from your stomach as you join the human traffic, trying to keep a low profile as you skulk around, looking for the doctor.  
+	*line_break
+	*line_break
+	Though the crowd of people makes it easy for you to blend in, it makes it equally harder to find your target. 
+	*if scouting >= 1
+		Thankfully, with your scouting training, you easily find the doctor seated at a table across the room. He looks shifty, nervous. He hunches over, holding his lab coat closed with his arms, while constantly looking behind his back as if worried someone is going to come for his life. Even from this distance you can tell something serious is about to happen.
+		*line_break
+		*line_break
+		You quickly find a vacant table to keep watch. While your choices are limited, you manage to find a place where you are obscured enough while still maintaining a good visual.
+		*line_break
+		*line_break
+		10 minutes go by with nothing happening. You begin to feel like this might have been a wild goose chase, and just as you're about to go get some food, you see a man walk up to the doctor, joining him at the table.
+	*if scouting = 0
+		You spend a good 10 minutes wandering around the crowded room, looking for the doctor. As you begin to doubt yourself whether this is even the right floor, you finally see the doctor, seated across a stranger. 
+		*line_break
+		*line_break
+		Quickly, you find yourself a seat to observe from.
+*page_break
+The man dresses like a typical visitor: white shirt with a gray cardigan over, and some black slacks. His black, tousled hair hides some of his features without looking overly suspicious. He carries a navy blue haversack slung over one shoulder. He looks like a person who deliberately prepared themselves to be as inconspicuous as possible - and you probably wouldn't have thought twice about him had you not had that encounter with the doctor earlier.
+*line_break
+*line_break
+The man begins conversing with the doctor for a while. Nothing special, he seems pretty nonchalant, On the other hand, the doctor seems incredibly uncomfortable, his posture small in his seat.
+*line_break
+*line_break
+A few more minutes go by, and their conversation seems to slow. The stranger sets his haversack down onto the ground, getting comfortable, then slides it under the table, over to the doctor. The doctor checks his back one last time, then releases his death grip on his coat.
+*line_break
+*line_break
+*if shadyguy = 1
+	At this point any interest in eating your food is out the window, and you are openly watching the events unfold in front of you. 
+	*line_break
+	*line_break
+The doctor leans over, reaching into the haversack under him. From your position you can't make out exactly what he's doing - but you swear you saw a small orange glint. The same orange as the pill bottles.
+*line_break
+*line_break
+The doctor spends about a minute with his head under the table before resurfacing, his face now a light pink. The man across him stretches under the table to pull the haversack back to his side. He then reaches forward, shakes the shivering doctors hands firmly with both hands, mutters a few more words before getting up, haversack zipped up and slung back over his shoulder.
+*line_break
+*line_break
+The inconspicuously conspicuous man begins moving towards the exit - which happens to be past you! You quickly turn away, looking down at 
+*if shadyguy = 1 
+	your food,
+*if shadyguy = 2
+	an empty table,
+trying to hide the fact that you had been observing them for the last 10 minutes.
+*line_break
+*line_break
+*if scouting >= 1
+	You avert your gaze, keeping a calm outer image despite the bustling thoughts and emotions within you. You eye the floor in your peripherals, watching just people's legs. 
+	*line_break
+	*line_break
+	You see the man's black slacks and loafers stride past you, uninterrupted. Even after he walks out of your range of view, you wait a few moments before looking up. Sure enough, the man left.
+*if scouting = 0
+	For a moment you look up, just a little peek. And for that split-second you meet his gaze. His dark pupils seem to hold such power and intimidation - as if they're looking straight into you, peering into your inner thoughts, whispering "I know."
+	*line_break
+	*line_break
+	And then the moment passes, and the man keeps walking, uninterrupted, all the way to the exit. 
+	*line_break
+	*line_break
+	You shake off the effect of the man's unnaturally frightening charisma. Who [i]was[/i] that?
+*line_break
+*line_break
+You turn your attention to the doctor, still seated, looking relieved.
+*page_break
+You decide to confront the doctor yourself. Clearly something incredibly shady is going on. Besides, in public the doctor's options become more limited. Should he try to run or attack you, there would be many avenues for help.
+*line_break
+*line_break
+You stride up to the doctor, plopping into the now vacant seat across him before he can even refuse.
+*line_break
+*line_break
+The brief relief on the doctor's face is immediately erased, replaced once again with fear and trepidation. 
+*line_break
+*line_break
+You remain silent for a good while, letting him over-think, seeding fear.
+*line_break
+*line_break
+Finally, you break the silence. "So Doc, who was that man?" you ask, trying to sound as nonchalant as possible.
+*line_break
+*line_break
+He's sweating bullets, despite the air conditioning. "M-man? What man, I don't know what you're talking about-"
+*line_break
+*line_break
+"Your coat's looking a lot lighter now… where did those pills go?"
+*line_break
+*line_break
+The doctor turns ghostly pale. He might just fade into nothing if you keep prodding him.
+*line_break
+*line_break
+You lean forward, your voice a menacing whisper. "Don't try anything funny. I can shout for help right now and out you where you sit, but I'm going to give you one chance to explain yourself. You even [i]think[/i] about lying, and its curtains for you, you understand me Doc?"
+*line_break
+*line_break
+The doctor gulps audibly. "A-alright, the jig is up, I understand, I'll tell you everything. J-just promise you won't tell anyone else what I'm about to tell you alright? Th-th-they'll kill me if they find out!" 
+*line_break
+*line_break
+You don't show any signs of agreement, and instead use your gaze to press him on. He takes a deep breath before continuing. 
+*line_break
+*line_break
+"My name is Doctor Karll. I'm a member of the Liberators of Morovia (LOM). I'm sure you've heard of them?"
+*line_break
+*line_break
+Of course you've heard of them, you think to yourself. Just a few weeks ago you were being shot up by them.
+*line_break
+*line_break
+"W-well I know it [i]sounds[/i] bad - the media here certainly makes us sound like some crazy terrorists. But we're just fighting for our rights! We don't want to kill, but these corrupted Torians give us no choice! You know how they are - stealing our jobs, getting preferential treatment, puppeting our  government - What happened to Morovia for Morovians!"
+*line_break
+*line_break
+Doctor Karll seems to be getting fired up mid-speech, a true patriot deep within his scaredy-cat persona. Your glowering gaze from across the table tempers his flame, however.
+*line_break
+*line_break
+"…my son is in prison because of those damn Torians. He saw a man sexually harassing a lady in a bar. He stopped the man, pushing him aside. He's a gentleman, my boy, as I had raised him to be - though if I had known things would play I like this I nearly wish I hadn't! Turns out that pervert was a Torian, and somehow, with his wealth of connections, he framed my boy for assault! That crooked Torian got away scot-free while my boy sits in jail for being chivalrous! What unjust is this? My honey and I are doing every thing we can to bail him out, but the exorbitant amount they expect from us is impossible for us normal folk! Perhaps those filthy Torians just want to watch us squirm, or maybe they're trying to teach us a lesson."
+*line_break
+*line_break
+"Every single day I come into work to treat these Torians. The same dirty Torians who threw my son in jail on a whim. I can't do anything about it! Meanwhile Morovian patients who desperately need our help are being rejected because these freeloading Torians are taking up all the wards! For the most insignificant of illnesses!"
+*line_break
+*line_break
+"I began questioning God, why oh why would he make me suffer like this? What had I done to deserve such a fate… but then I received an answer. The LOM approached me, and offered to help my family. In exchange for medicine, they would pay me money to bail my son out-" he opens his hand to show a fistful of green bills that had been palmed to him by the man. "Plus, this medicine will be helping Morovians, so they can recover and fight back the Torian menace! Its a win-win!"
+*line_break
+*line_break
+"C-commander… surely you must recognize the problem within our society? These Torians that you work for… they don't care about you. You're just a pawn to them, expendable. If you wish… I can put in a good word with the LOM, I'm sure a commander like you would be most appreciated. If you're not interested in joining, that's fine. Just please… please don't reveal this to anyone… this is my only chance at justice…"
+*line_break
+*line_break
+Having finished his monologue, Doctor Karll seems deeply satisfied, like he finally had the chance to get that off his chest. You're unsure what to feel. You don't get the sense that the doctor is lying, and his depiction of Torians certainly lines up with what you've witnessed over the last few weeks. 
+*line_break
+*line_break
+What will you do?
+	#Agree to join the LOM (verbal agreement only)
+	#Refuse to join, but will not expose Doctor Karll
+	#Threaten the doctor.
+	#Expose Doctor Karll to Doctor ${doctor}
+	#Blackmail Doctor Karll for some of his profits.
+		
+*label 2_4_2_tell_sonia
+As the lift doors open, you enter the cafeteria? The delicious aroma of freshly toasted bread, savory fried chicken and perhaps a creamy mushroom soup hits you in the face.Given that its lunch time, the place is packed with doctors, nurses, vistitors and patients.
+*line_break
+*line_break
+Miraculously, ${doctor} and you find a secluded table for two. 
