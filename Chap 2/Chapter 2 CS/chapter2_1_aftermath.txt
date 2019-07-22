@@ -1,0 +1,304 @@
+[b]Chapter 2: Aftermath[/b]
+*line_break
+*line_break
+*if chap1_kosnik_or_sonia = 0
+	*set location "Vanka"
+	*goto kosnik_route
+*if chap1_kosnik_or_sonia = 1
+	*set location "Giralmore"
+	*goto sonia_route
+
+*label kosnik_route
+Having beaten back the counter-attack, you radio in the good news back to high command. With a few words of brusque congratulations, they inform you that reinforcements would arrive shortly to relief your position.
+*line_break
+*line_break
+With that settled, you take a moment to survey the area. Orlotek was a mining town nestled into the Slavic mountain range. It wasn't a very fancy place, but that was still a lot better than the piles of crumbling ruins that you see in front of you.
+*line_break
+*line_break
+It was a hard fight. You order your men to round up the wounded and salvage the weapons and ammunitions from the dead. You're almost relieved when the reinforcements arrive.
+*line_break
+*line_break
+A short, well-built officer makes the customary greetings as you give him tips on where to deploy, before clambering on board the transport trucks with your men.
+*page_break
+Dust billows around you. At times it stings your eyes, but you continue to stare into the plumes of yellow cloud trailing behind your truck, the silhouettes of other similar trucks trailing behind.
+*line_break
+*line_break
+Having won the fight at the mining town of Orlotek, you wonder if the reinforcements sent in by higher command to defend the town against potential LOM rebel counter-attacks would be enough. The self-styled Liberators of Morovia, led by the coup plotter General Kontessa. Word's out that he wasn't too happy about the way the elections went. Not that you know too much about it.
+*line_break
+*line_break
+Just a few weeks ago, they had been fellow comrades. But the civil war has forced everyone to pick a side. There was not much you could have done but to follow orders. At least you're heading away from the fighting - HQ had issued orders for your platoon, or what's left of it, to regroup back in camp.
+*line_break
+*line_break
+Looking out at the dusty dirt tracks stretching out endlessly behind you, with the grandiose slavic mountains towering over the entire landscape, it seems almost peaceful. Like any other cross-country drive across this beautiful land you've called home your entire life. Morovia. Well, ever since the independence it has been called the People's Republic of Morovia. Not that it really matters. After all, the mountains don't give a fuck what you call them.
+*line_break
+*line_break
+Most of your men have retreat into the truck to escape the heat, the occasional grumbled comment about the weather punctuating the snores of weary men. The fine sand coats your skin, but apart from the rugged jitters of the truck and the potholes every few minutes, you feel calm.
+*line_break
+*line_break
+"Commander…"
+*fake_choice
+	# Alexandra
+		*set name "Alexandra"
+	# Igor
+		*set name "Igor"
+	# Pavlov
+		*set name "Pavlov"
+	# My name is...
+		*input_text name
+"Commander ${name}
+*line_break
+*line_break
+A voice snaps you out of your thoughts. It's Sergeant ${sergeant}, his well-worn Morovian Republic People’s Army uniform stained with dark brown patches of blood and sweat. The prominent MRPA insignia on his shoulder indicating his rank as a first sergeant, assigned to assist you with your platoon.
+*line_break
+*line_break
+He sits beside you. With his helmet off, you can now clearly see his features. His bald, dark-skinned head is also being coated with the dust, but the soldier doesn't seem to care. An old scar stretches across his masculine features, starting from the top-left of his forehead down to his upper lip. The salmon colored blemish mars the left side of an otherwise handsome face.
+*line_break
+*line_break
+A hand-rolled cigarette smolders as it hangs loosely from his lips. He offers you a similarly fashioned cigarette.
+*fake_choice
+	# Accept the cigarette and take a puff.
+		*set sergeant_rs %+10
+		You graciously accept the offer and place it between your lips, giving the wheel a strong flick of the thumb to produce a meek fire that shivers in the wind. Shielding it in your other hand, you watch the brown paper tip curls into a bright ember.
+		*line_break
+		*line_break
+		A long drag.
+		*line_break
+		*line_break
+		You exhale deeply.
+		*line_break
+		*line_break
+		It feels good to drift, to allow the mind to wander away from the death and loss of the morning. 		You toss the lighter back to Sergeant ${sergeant} with gratuitous thanks. That really hit the spot.
+	# Don't smoke in the vehicle.
+		*set sergeant_rs %-10
+		Kosnik gives you an incredulous look.
+		*line_break
+		*line_break
+		"I don't want to be breathing in that second-hand smoke, and frankly, it's a fire hazard." you explain.
+		*line_break
+		*line_break
+		[i]Seriously?[/i] Kosnik mutters under his breath. He grumbles but knows better than to disobey your orders, taking one final pull, he chucks the rest of it out onto the road. "What a fucking waste."
+		*goto kosnik_intro
+	# Refuse politely.
+		You raise your hand to indicate that you're good, but smile and nod to show that you appreciate the offer.
+		*line_break
+		*line_break
+		"Well, it's your loss Commander." Sergeant ${sergeant} shrugs, pocketing the goods.
+*line_break
+*line_break
+Kosnik takes a long drag from his own cigarette.  You watch the glowing end inch ever so closely to his fingers, before he removes the stick from his mouth to exhale a thick cloud of smoke.
+*label kosnik_intro
+*line_break
+*line_break
+"Got to hand it to you, Commander, I thought we were fucked back there." He chuckles. "Somehow, with your help, we made it out of there. I don't believe in miracles but that was something else." Sergeant ${sergeant} trails off, his expression hardening, not meeting your gaze.
+*line_break
+*line_break
+"You ever think that we… we shouldn't have survived?"
+*line_break
+*line_break
+His words are barely audible over the roar of the engine and the howls of the wind, but they reach you. Sergeant ${sergeant} unconsciously touches the scar on his face.
+*fake_choice
+	# We fight to protect our loved ones. Gotta live to keep doing that.
+		"Well. We survived didn't we? But hey, I'm just fighting to protect my family back home."
+		*line_break
+		*line_break
+		"I tell myself that I have to survive to protect them. And I guess that keeps me going."
+		*line_break
+		*line_break
+		*if chap1_kill_civilian = 0
+			*set sergeant_rs %+10
+			"I'm just glad that we spared those civilians back there. Wouldn't know how I would be able to face myself if we didn't."
+			*line_break
+			*line_break
+			Sergeant ${sergeant} smiles, watching the dust clouds dance and spirit away from the truck.
+		*if chap1_kill_civilian > 0
+			"And what about the civilian back there? With all due respect Commander…"
+			*line_break
+			*line_break
+			"We didn't have a choice." You interject.
+			*line_break
+			*line_break
+			Sergeant ${sergeant} sighs. 			"We always have a choice, Commander. Always."
+			*line_break
+			*line_break
+			"It was us or them. And I'd rather not have to talk about what we did back there."
+	# I'd rather be alive than dead. Who's to say we should or shouldn't have?
+		Sergeant ${sergeant} laughs. "You're right."
+		*line_break
+		*line_break
+		*if chap1_kill_civilian = 0
+			*set sergeant_rs %+10
+			"I'm just glad we spared the civilians back there."
+		*if chap1_kill_civilian > 0
+			*set sergeant_rs %+5
+			"I guess with the civilians back there, it was either us or them huh."
+		*line_break
+		*line_break
+		Sergeant ${sergeant} ponders about it for a moment, scratching the light stubble on his chin before giving up with a shrug. "Such is the cycle of life."
+		*line_break
+		*line_break
+		You nod. "Life is life."
+	# Something about that scar bothering you?
+		*set sergeant_rs %-5
+		He jolts upright, his hand quickly returning to his side.
+		*line_break
+		*line_break
+		"N-nah! Just itchy, that's all." he jokes.
+		*line_break
+		*line_break
+		The awkwardness in the air is almost palpable. 		Sergeant ${sergeant} scratches the back of his bald head.
+*line_break
+*line_break
+"Well, I'm glad we made it out of there alive. First battle?"
+*line_break
+*line_break
+You nod.
+*line_break
+*line_break
+"Well, that makes your winning rate 100% doesn't it?" Sergeant ${sergeant} chuckles. "So what brings you to this war?"
+*goto_scene chapter2_2_backstory
+
+*label sonia_route
+*set met_doctor 1
+Nothingness envelops you. You can’t feel your arms, your legs, your body… only a light, ethereal floating sensation in an endless void of darkness. It’s almost… calming.
+*line_break
+*line_break
+With no indication of the passage of time, you don’t feel anything. Days have passed… or is it weeks? Years? You’re not sure, but somehow you feel at peace. Maybe this is fine, staying here like this…
+*line_break
+*line_break
+"Hey."
+*line_break
+*line_break
+There is a voice in the darkness, disrupting the tranquility. You feel your brow furrow in response to the sudden sound. Oh, you can feel your brow. And your face. Slowly, you feel the rest of your body come back to you, as if your consciousness had drifted back into it.
+*line_break
+*line_break
+"You’re awake, aren’t you?"
+*line_break
+*line_break
+Your eyes flutter open.
+*line_break
+*line_break
+White. With light grey specks. The first thing you see is the ceiling of a hospital ward. You squint as your eyes adjust to the white light shining directly down on you. You slowly realize you are lying down in a hospital bed.
+*line_break
+*line_break
+In your peripherals you see a figure, standing by your side. From your perspective, its features are cast in shadow.
+*line_break
+*line_break
+"It looks like the commander is waking up." The voice is feminine, with a… foreign accent, you think. The figure scribbles something on a clipboard, the papers rustling faintly.
+*line_break
+*line_break
+"It says here that you're…"
+*fake_choice
+	# Alexandra
+		*set name "Alexandra"
+	# Igor
+		*set name "Igor"
+	# Pavlov
+		*set name "Pavlov"
+	# My name is...
+		*input_text name
+"Officer ${name}, yes?"
+*line_break
+*line_break
+You begin to try and sit upright, but only get a third of the way there before a sharp pain jolts you. It’s almost as if pure lightning was passing through your guts, making its way up to your brain. You grimace at the pain, collapsing back into the bed.
+*line_break
+*line_break
+“Whoa there. Easy now.” A pair of gentle arms catch you, and gently positions you in an upright sitting position. A light aroma of cinnamon wafts across your senses.
+*line_break
+*line_break
+Blinking to adjust to the brightness, you start to make out the features of the mysterious individual.
+*line_break
+*line_break
+The lady that stands by your bedside has smooth, dark brown hair, almost maroon, flowing down to her lower back. A few strands help to frame her peach-toned face. Her sea-foam irises are aimed downwards at her clipboard, which she has returned to writing on.
+*line_break
+*line_break
+She has a slender build, with obvious curves in spite of the long white doctor's coat that hangs loosely over her shoulders. Underneath her coat she wears a simple olive tank top and black leggings.
+*line_break
+*line_break
+The rapping on her clipboard pauses as she gazes at you, the creases on her face smoothing out as she smiles.
+*line_break
+*line_break
+"Good day Commander, I'm Doctor Sonia, you can thank me for nursing you back to life." She winks.
+*fake_choice
+	# Thank you so much.
+		*set doctor_rs %+10
+		"No worries. To be honest, your body did most of the heavy lifting. You’re rather lucky to have survived from a wound like that."
+	# Where am I?
+		She laughs. "Must have hit your head pretty hard huh."
+	# ...
+		"The silent type huh. You must have been through a lot"
+
+*label hospital_where_am_i
+*line_break
+*line_break
+"Anyway, you're now in the Haris James Hospital, in Giralmore. We are under the protection of your comrades, the Morovian Republic People’s Army. Your sergeant… ${sergeant} was his name I think. He brought you and a handful of men back from Orlotek 4 days ago after MRPA's failed push to seize the mining town. "
+*line_break
+*line_break
+"From what I've heard, the Liberators of Morovia are dug in pretty deep, with the coup leader General Kontessa leading the efforts personally. The MRPA casualties mount everyday, and we try to save everyone we can."
+*line_break
+*line_break
+You remember the battle against the LOM.
+*line_break
+*line_break
+You remember the acrid smells of gunpowder and discharge.
+*line_break
+*line_break
+You remember the bloodied MRPA uniforms of your men as they collapsed to the ground.
+*page_break
+"Hey now-"
+*line_break
+*line_break
+Sonia places her hand on your shoulder, but you can't hear what she's saying. Everything is so… muffled.
+*line_break
+*line_break
+Your mind is flooded with dark visions of bloodshed and gore. The blood flooding over you, choking you… your chest hurts, you want to scream-
+*line_break
+*line_break
+Suddenly a wave of spice hits your nose. The powerful aroma of cinnamon envelops you, pushing away those dark thoughts and embracing you in its comforting presence.
+*line_break
+*line_break
+You snap back to reality to see Sonia leaning forward, waving a stick of cinnamon in front of your face. Her expression is calm and gentle, encouraging you with a small smile.
+*line_break
+*line_break
+"Smells good doesn’t it? It’s my favorite. I like giving them out to my patients, helps them calm down."
+*line_break
+*line_break
+Seeing you return to your senses, she places the spice into your palm. She then pulls a wooden stool over and sits by your side, as your breathing slows and returns to its regular pace.
+*line_break
+*line_break
+"It’s the middle of the night right now, unfortunately for you. Having been out of it for 4 days straight you’re probably not ready to go back to bed anytime soon. I guess [i]little ol’ me[/i] will have to keep you company." A mirthful smile spreads across her face. 
+*label smalltalk_sonia
+*fake_choice
+	#W-wait it’s nighttime?!
+		There are no windows, but the ward was dimly lit.
+		*line_break
+		*line_break
+		The doctor chuckles lightly and gestures at you to lower your volume. “Yes, all the other patients are asleep so please keep it down. These walls are anything but soundproof.”
+		*line_break
+		*line_break
+		Other patients… it dawns on you that you don’t know the whereabouts of your men. Or if they even survived.
+		*line_break
+		*line_break
+		Doctor ${doctor} seemingly reads your mind. “If you’re worried about your guys, don’t. The injured ones are downstairs recovering steadily. I think the rest have been sent back to your camp.”
+	#I’ll [i]gladly[/i] spend the night with your Dr Sonia~
+		*set doctor_rs %-10
+		Her smile vanishes, replaces pursed lips forming a straight line.
+		“Don’t push it, bub.”
+	#Cinnamon huh… it smells really good. 
+		*set doctor_rs %+10
+		“Glad you like it. It’s a trick my mum taught me. I’ve had anxiety since I was a little kid, and every time I had a bad day, she would make a cup of cinnamon tea for me. The smell helps me re-centre myself, I guess. I keep a whole bundle with me at all times.”
+		*line_break
+		*line_break
+		Sonia reveals the underside of her doctor's coat, showing off an inner pocket full of cinnamon sticks.
+		*line_break
+		*line_break
+		“Feel free to ask if you want more. I have a whole stash of them in my office. It’s kind of become an obsession at this point.” The doctor chuckles quietly to herself, recalling better times.
+*line_break
+*line_break
+Sonia crosses her legs. She picks up a cup of tea that was waiting atop the bedside table – cinnamon tea, no doubt.
+*line_break
+*line_break
+She takes a sip, sighing as she sits onto a plastic chair beside your bed.
+*line_break
+*line_break
+“Anyhow, we’ve got some time to kill before the sun comes up. So how did you end up shot up and in my hospital?”
+*goto_scene chapter2_2_backstory

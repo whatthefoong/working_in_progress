@@ -1,0 +1,64 @@
+*temp travel_event_chance 0
+*rand travel_event_chance 0 25
+*temp travel_event 0
+*rand travel_event 1 12
+*set travel_event "travel_event_"&travel_event
+
+*if travel_hours > travel_event_chance
+	*gosub {travel_event}
+	*page_break
+	*return
+*if travel_hours < travel_event_chance
+	*comment conversation_possibilities
+	Your travels to ${location_choice_name} were uneventful.
+	*page_break
+	*return
+*return
+
+*label travel_event_1
+event_1
+*return
+
+*label travel_event_2
+event_2
+*return
+
+*label travel_event_3
+event_3
+*return
+
+*label travel_event_4
+event_4
+*return
+
+*label travel_event_5
+event_5
+*return
+
+*label travel_event_6
+event_6
+*return
+
+*label travel_event_7
+event_7
+*return
+
+*label travel_event_8
+event_8
+*return
+
+*label travel_event_9
+event_9
+*return
+
+*label travel_event_10
+event_10
+*return
+
+*label travel_event_11
+event_11
+*return
+
+*label travel_event_12
+event_12
+*return

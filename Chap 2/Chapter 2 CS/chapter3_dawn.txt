@@ -1,0 +1,4 @@
+[b]Chapter 3: Dawn[/b]
+*line_break
+*line_break
+*goto_scene world_map

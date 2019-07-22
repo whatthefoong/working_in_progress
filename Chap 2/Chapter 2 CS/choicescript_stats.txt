@@ -1,13 +1,14 @@
 *temp choice 1
 *label screen
+*temp dollar_stat "$${dollars}"
 [b]Character Details[/b]
 *stat_chart
 	text Rank
 	text Name
-	text Age
-	text Race
+	text location_name Location
+	text Allegiance
 	text Background
-	text Dollars
+	text dollar_stat Dollars
 *if choice = 1
 	*goto charstats
 *if choice = 2
@@ -154,11 +155,11 @@ Factions:
 	percent DFFM
 	percent USS
 *line_break
-Allies:
+People:
 *stat_chart
-	percent sergeant
-	percent doctor
-	percent mrpa_official
+	percent sergeant_rs Sergeant ${sergeant}
+	percent doctor_rs Doctor ${doctor}
+	percent mrpa_official_rs Mr ${mrpa_official}
 *line_break
 *goto menu3
 

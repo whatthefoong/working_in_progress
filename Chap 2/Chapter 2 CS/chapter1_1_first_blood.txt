@@ -1,20 +1,23 @@
-*comment Define all temp variables here
+*set location "Orlotek"
 [b]Chapter 1: First Blood[/b]
 *line_break
 *line_break
 [b]Rat-tat-tat-tat!!![/b]
 *line_break
 *line_break
-Bullets whiz over your head, sending you diving for cover behind a bullet ridden wall. Puffs of smoke explode out of the concrete as 7.62mm slugs slam into the walls of the street. You're breathing hard, drenched in sweat as you look at the scraggly squad before you — the last that's left of your platoon. They look to you, eyes peering out from dirty, blackened faces. These are desperate men, in desperate times.
+Bullets whiz over your head, sending you diving for cover behind a bullet ridden wall. Puffs of smoke explode out of the concrete as 7.62mm slugs slam into the street. You're breathing hard, drenched in sweat as you look at the scraggly squad before you — the last that's left of your platoon. They look to you, eyes peering out from dirty, blackened faces. These are desperate men, in desperate times.
 *line_break
 *line_break
 "Sit-rep!" You bark out.
 *line_break
 *line_break
-"Mike high!" You roll your eyes, morale always had to be high, even in a shit show like this. "Whiskey low! Alpha low!" Your platoon sergeant barks out in a gruff voice. Whiskey… water. Alpha… ammunitions. He looks around, "Fuck me. Total strength 32, current strength 12. 16 dead. 4 missing. 2 wounded."
+"Mike high!" Your platoon sergeant barks out in a gruff voice. You roll your eyes, morale always has to be high, even in a shit show like this. He looks around, signaling to the men, who check their equipment and signal back.
 *line_break
 *line_break
-Great. Running out of water and ammo, just what you needed. The men aren't enthused either, cowering as another hail of bullets send fragments of brick and mortar flying. ${sergeant}, a tough veteran who had seen more than his fair share of combat, turns to address you.
+"Whiskey low! Alpha low!"  Whiskey… water. Alpha… ammunitions. He looks around, "Fuck me. Total strength 32, current strength 12. 16 dead. 4 missing. 2 wounded."
+*line_break
+*line_break
+Great. Running out of water and ammo, just what you needed. The men aren't enthused either, cowering as another hail of bullets sends fragments of brick and mortar flying. ${sergeant}, a tough veteran who had seen more than his fair share of combat, turns to address you.
 *line_break
 *line_break
 "Commander! Enemy across the street, light machine gun spotted! No go! We should retreat!"
