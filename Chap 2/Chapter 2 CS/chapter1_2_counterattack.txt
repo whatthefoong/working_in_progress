@@ -1,7 +1,10 @@
 As the men go about securing the building, you breathe a sigh of relief. The day had begun like most others - with the higher ups calling for a "grand push". Most days all it meant was firing a few shots in the general direction of the enemy, not that anyone knew where they were, given the ever changing battle lines.
 *line_break
 *line_break
-But today's assault was far more determined, and the high command had ordered for a push into the town, whatever the costs. Many good men and women had died in the fighting on both sides. Even now, the sickening smell of death lingers about the air, brusquely burning your nostrils. At least the fighting is all over for now.
+But today's assault was far more determined, and the high command had ordered for a push into the mining town of Orlotek, whatever the costs. The higher command had said that this town was vital to the economy of the region, and had issued orders to secure the town.
+*line_break
+*line_break
+Many good men and women had died in the fighting on both sides. Even now, the sickening smell of death lingers about the air, brusquely burning your nostrils. At least the fighting is all over for now.
 *line_break
 *line_break
 You lean against the window, peering out at the smoldering burnt out husks of abandoned schools and destroyed homes. Even amongst the wreckage, a few civilians mill about, scavenging bits and pieces of whatever that has not already been looted.
@@ -1068,13 +1071,11 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 *goto 4_stat_check
 
 *label 4_stat_check
-*comment remove this
-*page_break
-*goto_scene ending
+*page_break End of Chapter 1: First Blood
 *if counter_attack_score >= 1
-	*goto_scene chapter2_1_backstory kosnik_route
-	*if truck_explode = 1
-		*comment progress
+	*set chap1_kosnik_or_sonia 0
+	*goto_scene chapter2_pre_backstory
 
 *if counter_attack_score < 1
-	*goto_scene chapter2_1_backstory sonia_route
+	*set chap1_kosnik_or_sonia 1
+	*goto_scene chapter2_pre_backstory

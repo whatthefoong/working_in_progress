@@ -3,16 +3,21 @@
 
 *scene_list
 	startup
+	world_map
 	chapter1_1_first_blood
 	chapter1_2_counterattack
-	death
+	chapter2_1_aftermath
+	chapter2_2_backstory
+	chapter2_3_kosnik_route
+	chapter2_4_sonia_route
+	chapter3_dawn
 	ending
+	death
 
 *comment character
 *create name "nobody"
-*create rank "2nd Lieutenant"
-*create age 18
-*create race ""
+*create rank "Commander"
+*create allegiance "MRPA"
 *create background ""
 *create dollars 100
 
@@ -32,18 +37,6 @@
 *create strategy 0
 *create swimming 0
 
-*comment renown & relationships
-*create renown 0
-
-*comment faction R/S
-*create MPRA 0
-*create LOM 0
-*create DFFM 0
-*create USS 0
-
-*comment game mechanics
-*create ending 0
-
 *comment logistics
 *comment infantry level
 *create men 0
@@ -57,17 +50,53 @@
 *create rpg_ammo 1
 *create demolition_charge 0
 
+*comment renown & relationships
+*create renown 0
+
+*comment faction R/S
+*create MPRA 0
+*create LOM 0
+*create DFFM 0
+*create USS 0
+
+*comment game mechanics
+*create ending 0
+*comment world map
+*create location_name "Giralmore"
+*create location "giralmore"
+*create location_choice_name ""
+*create location_choice ""
+*create travel_hours 0
+*create travel_hours_check 12
+*create travel_disrupt 0
+
+*comment time
+*comment change this only
+*create game_hour 168
+*comment don't touch these
+*create hour 0
+*create day 0
+*create month 0
+*create year 0
+
 *comment NPCs
 *create sergeant "Kosnik"
 *create doctor "Sonia"
 *create mrpa_official "Egor"
 
+*comment NPCs met
+*create met_doctor 0
+*create met_mrpa 0
+
 *comment NPCs R/S
-*create sergeant_rs 0
+*create sergeant_rs 30
 *create doctor_rs 0
-*create mroa_official_rs 0
+*create mrpa_official_rs 0
 
 *comment events
+*comment 0 for kosnik 1 for sonia
+*create chap1_kosnik_or_sonia 0
+*comment 0 for no civ killed, 1 for man killed, 2 for man and wife killed
 *create chap1_kill_civilian 0
 
 *comment achievements
