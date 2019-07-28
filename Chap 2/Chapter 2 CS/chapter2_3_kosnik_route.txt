@@ -112,7 +112,7 @@ The boredom sets in sooner than you expect. You feel a yawn emerging, and make n
 				The driver clear his throat. "Well, we can offer you a little something for you if you are willing to turn a blind eye regarding this little incident. Something to line your pockets a little with, hmm? Then we can both pretend that this meeting never happened and be on our merry way."
 				*line_break
 				*line_break
-				"Besides," he adds, "most of the villagers have fled to other towns, as you know, being near a military base could potentially mean trouble, should the LOM forces come knocking. As such, the supplies in this warehouse have been left here for quite some time. Since they're just sitting there going to waste, we figured that there's no harm in us using them for our own benefit. Now we're paying you to simply look the other way, everyone gains something eh? How does three hundred bucks sound?"
+				"Besides," he adds, "most of the villagers have fled to other towns, as you know, being near a military base could potentially mean trouble, should the LOM forces come knocking. As such, the supplies in this warehouse have been left here for quite some time. Since they're just sitting there going to waste, we figured that there's no harm in using them for our own benefit. Now we're paying you to simply look the other way, everyone gains something eh? How does three hundred bucks sound?"
 				*fake_choice
 					#Refuse his proposition.
 						*set stop_looters = 1
@@ -368,20 +368,68 @@ You pick up the envelope as your vision starts to blur back into focus. On the m
 			*goto 2_4_5_LOM_aid
   
 *label 2_4_4_ambush
-*comment kena ambushed by LOM, fight LOM with patrol soldiers. Epic fight scene?
+The days fly by, and once again it's your team's turn for the daily patrol around the barracks. After getting ready, you brief ${sergeant} and two other privates on the route that you are going to take. Upon mentioning the route, you can't help but think of the patrol route being in someone else's hands. Trying to push that thought to the back of your mind, you yell out, "Okay, let's move out!"
+*line_break
+*line_break
+You and your team make your way down the preallocated route, the rest of them breaking into a chatter minutes after you walk out of the barracks gate. You look around nervously, half-expecting something to happen along the way.
+*line_break
+*line_break
+A hand comes clamping down onto your shoulder, and you almost jump out of your skin. Whipping your head around, you find yourself looking at the rugged face of ${sergeant}. "Commander, is everything alright? You seem a little… on edge."
+*line_break
+*line_break
+You take a deep breath to calm your nerves. "It's nothing, ${sergeant}, probably just not enough sleep." You give ${sergeant} a feeble smile, hoping it'll ease his worry slightly. ${sergeant} frowns at you with slight suspicion, but decides to drop the matter.
+*line_break
+*line_break
+All of a sudden, you hear a faint rustling in the bushes. You turn around, clutching your gun, aiming it at the source of the noise. "Get back!" You whisper sharply at your men, when out of the bushes pops an ape. "Uh, sir? It's just a wild monkey, there're tons of them all around." One of the men pipes up. The rest of the group sniggers, trying to suppress their laughter.
+*line_break
+*line_break
+The happiness turns out to be short lived, as a short burst of gunshot resounds through the air. A bullet catches one of your privates in his thigh, causing him to lose balance and fall over to the floor, wailing and clutching his leg. "Ambush!!" yelled Kosnik. You scream at the other two to head for cover before rushing to the fallen private, dragging him behind the nearest tree you can find. Acting quickly, you tear off a strip of cloth from his uniform and tie it securely around the bullet wound, stopping the blood, all the while you hear the smattering of guns firing all around you.
+*line_break
+*line_break
+Bloody hell. The enemy really took advantage of the patrol routes. Of all days they have to target your patrol. Fuck it, taking down this ambush will redeem yourself for your mistake.
+*fake_choice
+	#Continue to fire from behind the tree.
+		You don't have much of a choice, The enemy is well hidden behind the thick vegetation. To expose yourself and your men would be suicidal.
+		*line_break
+		*line_break
+		"Hold your ground and continue to open fire!" You yell at the top of your lungs, trying to make yourself heard amidst the gunfire.
+		*goto 2_4_4_1_stat_check
+	#Go the long way and surround the enemy
+		The distance between you and the enemy puts them with the upper hand. Plus, they have the added advantage of knowing your location, while you only have an inkling of their general hiding place. No, it'll be better for your guys to close up the distance.
+		*line_break
+		*line_break
+		"Cover me! I'm moving in!" You quickly drop to your belly, crawling across the ground to the next tree. Upon reaching the next cover, you continue to shoot at the enemy, allowing your team to advance forward.
+		*line_break
+		*line_break
+		After a few of such maneuvers, you and your team reach a favorable position. You can feel the enemy's unease as their gunfire becomes more erratic.
+		*goto 2_4_4_1_stat_check
+
+*label 2_4_4_1_stat_check
+*if physical + finesse > 19
+	*goto 2_4_4_2_win_ambush
+*if physical + finesse < 20
+	*goto 2_4_4_2_lose_ambush
+		
+*label 2_4_4_2_win_ambush
+Unexpectedly, you feel the enemy's gunfire come to a abrupt halt. Making the best use of this unprecedented opportunity, you dash forward and dive for cover behind a nearby tree. From your new position, you can see the enemy fumbling about where they lie, struggling to reload their ammunition.
+*line_break
+*line_break
+Taking advantage of this perfect opportunity, you take careful aim. With two deadly, precise shots, you quickly eliminate half the enemy's forces. You can sense the obvious panic from your opponents as the other two members of their teams fumble more and more in their position, exposing themselves more by the minute. Within a few quick moments, the rest of your squad hastily eliminate the opposing threat.	*goto MRPA_route
+
+*label 2_4_4_3_lose_ambush
+
 
 *label 2_4_5_LOM_aid
-*comment chance upon LOM distributing aid in the outskirts of a nearby village with a bunch of soliders on patrol, LOM soldiers not carrying their weapons, completely unaware. MC takes the opportunity to fight them or to leave them alone. if fight, LOM officer will survive (protected by civilian), approached by MC and will try to convince him of LOM cause. If leave alone, LOM officer will thank MC, attempt to talk to him to convince him. Then choice of defect or kill LOM soldier. 
 "Alright, you ready for our patrol, commander?" A doe-eyed rookie soldier blurts out enthusiastically. It's once again time for your weekly patrols, but since you're taking the morning shift, there will be two more privates tagging along. You sling your usual gear over your shoulders, giving the recruits a short grunt before taking off on your own, the two quickly shuffling behind you.
 *line_break
 *line_break
 A while later, the three of you trek through a familiar stretch of road near the village lying northeast of the barracks, separated by a large area of vegetation. Turning to your right, you spot a large group of villagers in the clearing a short distance from here through the gaps in the trees. You continue to saunter down your patrol route before grinding to a sudden stop, doing a double-take back at the clearing. Wait a dang minute, you find the uniform sported by a couple of the figures oddly familiar. Halting your men, you signal for them to remain quiet and stay close to you. The two privates exchange a perplexed stare, before following you as you crouch down and weave your way through the trees.
 *line_break
 *line_break
-As you and the two privates inch closer towards the clearing, you gain a clearer sight of the villagers. Sure enough, the distinct pattern of the old military uniform, coupled with that unmistakable logo on their sleeves, dispels any doubt that you have. What are these LOM bastards doing here? Terrorizing the villagers?
+As you and the two privates inch closer towards the clearing, you gain a clearer sight of the villagers. Sure enough, the distinct pattern of the old military uniform, coupled with that unmistakable logo on their sleeves, dispels any doubt that you have. What are these LOM bastards doing here? Terrorizing the villagers? You grit your teeth. How dare they pull that shit right here? You make up your mind to take them out here and now.
 *line_break
 *line_break
-"On my command, we go out there and take those LOM fuckers down. But careful with that gun, there're tons of civilians around, so don't go trigger happy, you hear me?" You whisper to the two privates as your group continue to move towards the villagers. The two nod furiously, their furrowed brows and cold sweat a clear sign of nerves. Poor bastards, they probably don't have a lot of practical experience out in the field.
+"On my command, I'll go out there and take those LOM fuckers down, you two'll stay behind and cover me. But careful with that gun, there're tons of civilians around, so don't go trigger happy, you hear me?" You whisper to the two privates as your group continue to move towards the villagers. The two nod furiously, their furrowed brows and cold sweat a clear sign of nerves. Poor bastards, they probably don't have a lot of practical experience out in the field.
 *line_break
 *line_break
 Deep breaths. One. Two. Three
@@ -393,7 +441,7 @@ Deep breaths. One. Two. Three
 You take the initiative and charge out headfirst into the clearing, rifle at the ready. At the sight of a fully armed soldier bursting out of the forest, the villagers break out in chaos, screaming and attempting to take cover, but you pay no heed to them, your sights focused on those wearing the LOM uniform. Before you can take aim and open fire, you hear one of them yelling out, "Stop! Don't shoot! We're here in peace, I swear!"
 *fake_choice
 	#Shoot them fuckers!
-		You're not letting your guard down, even for a second. You take careful aim at the nearest soldier and wait for a clear shot. [b]BANG![/b] The bullet burrows through his abdomen, blood spurting out the hole as he collapse face-first onto the ground. You hear gun shots coming from behind you as you see yet another LOM soldier hitting the ground from the corner of your eyes.
+		You're not letting your guard down, even for a second. You take careful aim at the nearest soldier and wait for a clear shot. [b]BANG![/b] The bullet burrows through his abdomen, blood spurting out the hole as he collapse face-first onto the ground. You hear gun shots coming from behind you as you see more bodies hitting the ground from the corner of your eyes.
 		*line_break
 		*line_break
 		You quickly scan the frenzied crowd for more of the uniformed personnel, when you catch one of them dashing across the clearing, desperate to make his escape. You peer through your scope and squeeze the trigger. 
@@ -402,9 +450,144 @@ You take the initiative and charge out headfirst into the clearing, rifle at the
 		[b]BLAM![/b]
 		*line_break
 		*line_break
-		To your immense shock, one of the villagers throws his body in front of the LOM soldier, shielding him. The oncoming bullet hits him squarely in the middle of his chest and throws him backwards, before slamming onto the LOM soldier.
+		To your immense shock, one of the villagers throws his body in front of the LOM soldier, shielding him. The oncoming bullet hits him squarely in the middle of his chest and throws him backwards, before slamming onto the LOM soldier, pinning him onto the floor.
 		*line_break
 		*line_break
-		
+		You stare at the man in disbelief. What the fuck is he thinking? Is he in cahoots with the LOM as well? More importantly, did you just kill an innocent villager? The confusion and shock paralyzes your muscles, rooting you to the ground as you watch the LOM soldier pushing the corpse off of himself. He then proceeds to shake the villager furiously, screaming at him to open his eyes. After a few moments, he finally realizes that it is futile, his hands slowly slipping away as the villager collapses back onto the cold hard floor. The soldier slowly turns towards you, his face a portrait of dejection and despair, as he makes his way towards you, his hands raising into the air. You immediately raise your rifle and thrust it towards his direction.
+		*line_break
+		*line_break
+		"I don't want to fight, my men aren't even armed. Please, just hear me out." You hear the fear and desperation in his quivering voice. You hold one hand up, signaling to the two privates to hold their fire.
+		*line_break
+		*line_break
+		"Yes, I am an officer of the LOM, but we're not even here to create trouble. We've been distributing aid and supplies to the nearby villagers ever since the war started. Ask them for yourselves. Why do you think that guy was so willing to sacrifice his own life? Without us, his whole family would have died of starvation. Now ask yourself this, what have the MRPA done for the people of the country? Most of the money and supplies go straight to the Torians and their lackeys, when they aren't the ones who need them the most."
+		*line_break
+		*line_break
+		You look around you. The villagers cowering on the ground, their sunken cheeks and weary eyes a reflection of the harsh living conditions. The LOM officer continues. "Yes, we do engage in armed conflict with the MRPA, but that's because the MRPA has been hunting us like dogs. We have been calling for potential negotiations with the MRPA, but we have been ignored at every turn. Open your eyes, the MRPA doesn't care about Morovia. They only care about pleasing the Torians and the upper class. What about the people that makes up the majority of Morovia? Join us, and you'll find out the truth"
+		*fake_choice
+			#Shut him up, you've heard enough.
+				"Enough! You've got another thing coming if you think I'm going to believe in your lies." You snarl, cocking your rifle.
+				*line_break
+				*line_break
+				The LOM officer's eyes widen. He turns around and begins to flee, but he barely makes it to a few paces before you fire a bullet straight through his head.
+				*goto MRPA_route
+			#Spare his life, but threaten him
+				"Enough! How dare you malign the MRPA. You LOM scums aren't any better. For all I know, this entire 'village' could be LOM spies and collaborators." Despite that, you lower your rifle slightly.
+				*line_break
+				*line_break
+				"I don't want to kill more unarmed personnel, so I'll let you off this once. But if I see you ever again, don't expect the same kind of mercy I'm offering you."
+				*goto MRPA_route
+			#Yeah, fuck the MRPA! Defect to the LOM.
+				You consider his words. They seem to have a semblance of truth. You think about your own family, starving and desperately requiring help, and yet the "government" has always been so preoccupied with funding the war that the citizen's basic needs are always ignored.
+				*line_break
+				*line_break
+				"You know what, I'll tag along with you to see how things are for a little while."
+				*goto LOM_route
 	#Hear them out.
-		
+		You lower your gun. "Fine, I'll hear you out". You round up the LOM soldiers and force them into a small circle, towering over them with your guns to their heads.
+		*line_break
+		*line_break
+		"Yes, I am an officer of the LOM, but we're not even here to create trouble. We've been distributing aid and supplies to the nearby villagers ever since the war started. Ask them for yourselves. Why do you think that guy was so willing to sacrifice his own life? Without us, his whole family would have died of starvation. Now ask yourself this, what have the MRPA done for the people of the country? Most of the money and supplies go straight to the Torians and their lackeys, when they aren't the ones who need them the most."
+		*line_break
+		*line_break
+		You look around you. The villagers cowering on the ground, their sunken cheeks and weary eyes a reflection of the harsh living conditions. The LOM officer continues. "Yes, we do engage in armed conflict with the MRPA, but that's because the MRPA has been hunting us like dogs. We have been calling for potential negotiations with the MRPA, but we have been ignored at every turn. Open your eyes, the MRPA doesn't care about Morovia. They only care about pleasing the Torians and the upper class. What about the people that makes up the majority of Morovia? Join us, and you'll find out the truth"
+		*line_break
+		*line_break
+		"Don't trust them, commander! The words of LOM snakes can never be trusted. Their motives are transparent as fuck, they're simply fumbling for an excuse to get away with their pathetic lives." ${sergeant} spits.
+		*fake_choice
+			#A likely story! Kill the LOM fuckers!
+				You sigh. "You got to try harder if you think you can pull a fast one on us. Like we'll ever trust you LOM snakes." ${sergeant} is right, how can you believe the words of the enemy? 
+				*line_break
+				*line_break
+				The understanding of your words dawn on the LOM officer first. "No, no please! I swear! Ask the villagers, they'll testify for us!"
+				*line_break
+				*line_break
+				Nonetheless, LOM soldiers are LOM soldiers. You look at him with cold disdain, before cocking your rifle and shooting him in the face. The other soldiers burst into a cacophony of tears and screams as they start begging for their lives, before your team pumps them full with lead, silencing them forever.
+				*line_break
+				*line_break
+				As the viscous pool of blood slowly oozes past your boots, ${sergeant} nudges you with his elbow. "Now, commander, what do we do about them?" ${sergeant} nods towards the trembling villagers.
+				*fake_choice
+					#Leave no survivors
+						"They're probably all LOM conspirators as well. Show them no mercy."
+						*line_break
+						*line_break
+						"Yes commander!" came the chorus of replies. Your eyes focus in the distance as the rest of your team ruthlessly massacres the screaming villagers.
+						*goto MRPA_route
+					#Leave them
+						"They're villagers, sarge! For god's sake, what are you planning to do?" ${sergeant} looks at you. "Hell if I know, they're in cahoots with these LOM bastards anyway."
+						*line_break
+						*line_break
+						"Come on, they've suffered enough. Let's just head back to the barracks. I need to get all these blood off my clothes." You take a step back to the forest, your boots squelching noisily against the soil.
+						*goto MRPA_route
+			#Spare the soldiers with a warning	.
+				You look at the bunch of LOM soldiers. They don't seem to be lying, at least. You glance around the clearing, spotting bags and several crates lying around the feet of the villagers. You can't be sure of the officer's words, but at least they don't seem to mean any harm, to you or the villagers.
+				*line_break
+				*line_break
+				"Alright. We'll leave, but don't expect the same mercy if I see you around these parts again."
+				*line_break
+				*line_break
+				"But we're just helping the villagers! You can't possibly have a problem with that." The officer protests, getting on his feet.
+				*line_break
+				*line_break
+				"Shut it! Be thankful that we're letting you off with your lives. Or you would want us to stay around and reconsider that decision?" You take a step forward, holding your gun menacingly. The officer hesitates for a moment, before sitting back down. "Fine, we'll pack our stuff and leave, never to return"
+				*line_break
+				*line_break
+				Turning around to address the other LOM soldiers, the officer barks, "You heard them, let's get our asses out of here." Upon the command, the rest of the LOM soldiers scatter and start to gather their equipment as the officer heads to one of the villagers and breaking into a low whisper.
+				*line_break
+				*line_break
+				"Alright boys, let's head back to our usual patrol." As you turn towards the forest, ${sergeant} moves swiftly to block your way. "Commander, not to be rude, but are you sure about this? I mean, they're from the enemy faction, for god's sake!" ${sergeant} hisses.
+				*line_break
+				*line_break
+				"Sergeant ${sergeant}, look at them. They're not even prepared for a conflict. Let's just give them the benefit of the doubt, okay? Plus, what they said about providing aid to the villagers, I can't help but think about…"
+				*line_break
+				*line_break
+				Before you can finish your sentence, ${sergeant} cuts in abruptly. "Of course they'll say anything to save their own asses! You can't really be so naive as to believe them, can you?!" 
+				*line_break
+				*line_break
+				You sigh. "Sergeant, let's just leave. There's no benefit to either side if we are to start a gunfight here now. Moreover, they're too many villagers about. Do you really want to risk the safety of all these civilians?"
+				*line_break
+				*line_break
+				You spin away, addressing your men before giving ${sergeant} a chance to reply. "Alright, move out. We still have a patrol route to complete." With that, you make your way into the forest where you emerge from, the rest trailing behind you.
+				*goto MRPA_route
+			#Defect to the LOM.
+				Hmm, he makes a lot of sense. Thinking back, the MRPA sucks. You decide to defect. "You know what, I think you're right. I've had enough of the stupidity of the MRPA, they can go fuck themselves."
+				*line_break
+				*line_break
+				A moment of silence follows as everyone stares at you in disbelief; even the LOM officer seems to be at a loss of words. You yourself don't even understand how these words can come out of your mouth.
+				*line_break
+				*line_break
+				Sergeant ${sergeant} is the first to break that silence. "What in fucks name are you saying, commander?! Do you even know what you are suggesting? You know how important you are to the MRPA? You can't just up and leave like that!"
+				*line_break
+				*line_break
+				"${sergeant}, open your eyes. These guys…" you gesture to the LOM soldiers on the ground "are right, you know. The MRPA doesn't care about the Morovian people at all. They're merely desperate to hold on to a dying legacy, one that benefits themselves the most. What crosses your mind when you look at these villagers, hmm? At least the LOM are doing something to alleviate the situation. I'm sure you can see what's better for the Morovian people here."
+				*line_break
+				*line_break
+				Addressing the LOM officer, you utter out words that you never had expect to come out of your mouth. "I'm joining you guys, let me know when you all are leaving." Turning around, you start to walk away from your team.
+				*line_break
+				*line_break
+				Unexpectedly, you hear the familiar sound of the rifle cocking. "You know I can't let you do that, commander"
+				*line_break
+				*line_break
+				Turning back, you look at the sergeant, his rifle pointing straight at you, though his body tense and his expression inscrutable. With a dejected sigh and a heavy heart, you tell ${kosnik}, "I know you won't shoot me, ${sergeant}."
+				*line_break
+				*line_break
+				*if sergeant_rs >= 40
+					${sergeant}'s expression tense up, and you can see his finger tightening around the trigger. A few moments of tense silence fill the air. Finally, ${sergeant} drops his rifle, his shoulders slump forward in dejection. "Fine, just… just go. I hope this is really what you want. Goodbye, commander."
+					*line_break
+					*line_break
+					Turning back to the rest of your dumbstruck squad, sergeant ${sergeant} shouts out. "Let's move! It's time to head back." Turning around to give you one last longing look, ${sergeant} turns around and heads back into the forest, the two other soldiers trailing behind.
+					*goto LOM_route
+				*if sergeant_rs < 40
+					A flash of anger washes over ${sergeant}'s face. With a quick pull of the trigger, he lets loose a bullet.
+					*line_break
+					*line_break
+					[b]BLAM!![/b]
+					*line_break
+					*line_break
+					You stare at your left arm in shock as you feel the bullet graze past your bicep, as the blood starts to ooze out, soaking your uniform bright red. Instinctively, you push your right palm over the wound, applying as much pressure as you can in an attempt to stop the bleeding. A fresh wave of pain shoots up your arm, forcing a feral cry out of your throat. You look back up, and immediately the first thing that you notice is the ${sergeant}'s anguish deep within his eyes.
+					*line_break
+					*line_break
+					"Just go. The next time we meet again, don't expect me to show any mercy like I did today." The sergeant spits out, his voice carrying a tone of antagonism that you have never heard him use against anyone before.
+					*line_break
+					*line_break
+					Turning back to the rest of your dumbstruck squad, sergeant ${sergeant} shouts out. "Let's move! It's time to head back." Without turning back for one last look, ${sergeant} heads directly back into the forest, the two other soldiers trailing behind.
+					*goto LOM_route

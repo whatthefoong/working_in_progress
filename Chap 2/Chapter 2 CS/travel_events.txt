@@ -32,24 +32,124 @@
 *comment 12 - Bandits!
 
 *label travel_event_1
-*set travel_hours +5
-While traveling to ${location_choice_name}, the engine breaks down. By the time you manage to fix the blasted vehicle, not only is everyone covered in engine oil and soot, but you've also wasted five hours.
+*comment MRPA security check
+In the distance, you spot a few soldiers around an impromptu blockade - two neat rows of sandbags stack in a linear fashion, covering most of the road except for a narrow opening barely wide enough for a vehicle to squeeze through.
+*line_break
+*line_break
+As you approach the barricade, your car stops in front of the opening as a couple of soldiers rushes out to block your path. You wind down the window lazily, staring at the lanky soldier slowly approaching. His over-sized uniform hangs loosely over his shoulders as he hugs his rifle close to his chest with both hands, a recognizable look of inexperience.
+*line_break
+*line_break
+"Halt! I'm sorry, but this road is hereby closed under the orders of the MRPA! We can't let you through without a short security check. Your papers, please."
+*page_break
+*if MRPA = 1, renown > 50
+	*line_break
+	*line_break
+	Upon reaching the side of the vehicle, he glances at you, and immediately his jaw hits the floor.
+	*line_break
+	*line_break
+	"Oh my! I… I'm terribly sorry commander! I apologize for not realizing who you are sooner! You… you can pass."
+	*line_break
+	*line_break
+	The soldier hurries back to his post, and you see him speaking frantically to his companions, before the whole lot of them scurry to one side, standing in a file, raising their hands in a salute.
+	*line_break
+	*line_break
+	You sigh, starting up the vehicle once again, and cruise past the opening, once again continuing your journey.
+*if MRPA = 1
+	You grumble in annoyance. Damn the MRPA, employing such unnecessary and inconvenient security measures. You pull out your identification and thrust it towards the meek soldier, who scans through the papers, before passing them back to you.
+	*line_break
+	*line_break
+	"Terribly sorry, commander. I did not realize that you're one of us. Well, everything seems to be in order. Off you go, then." The soldier gives a quick salute before jogging back to his post, yelling at his companions to clear the way.
+	*line_break
+	*line_break
+	You sigh, starting up the vehicle once again, and cruise past the opening, once again continuing your journey.
+*if LOM = 1
+	Damn it! You can't show them your documents, they'll realize that you're part of the LOM now. You have to find a way out of this, fast!
+	*line_break
+	*line_break
+	You gesture for the soldier to come closer, addressing him in a low whisper. "Hey, I just want to pass through without any problems. How about you get your friends to let me through, and I'll give you a little… something for your troubles, hmm? It's a hot day, and I'm sure you all would like a nice round of beers after work, yeah?" You pull out a couple of bills and start to fan yourself with them.
+	*line_break
+	*line_break
+	The soldier strokes his chin as he contemplates your offer. After a moment, he snatches the bills from your hands and stuffs them into his pocket. "Sure, why not! Thanks for your generous 'donation', good sir"
+	*line_break
+	*line_break
+	Grinning widely, he shouts at his companions to let you through, claiming that everything is in order. As the other soldiers move away from the road, you grumble to yourself. $100 is a pretty steep price, but you much rather pay up than risk the potential troubles of that little security check. Sighing, you continue your journey down the road.
 *return
 
 *label travel_event_2
-event_2
+*comment LOM security check
+In the distance, you spot a few soldiers around an impromptu blockade - two neat rows of sandbags stack in a linear fashion, covering most of the road except for a narrow opening barely wide enough for a vehicle to squeeze through.
+*line_break
+*line_break
+As you approach the barricade, your car stops in front of the opening as a couple of soldiers rushes out to block your path. You wind down the window lazily, staring at the lanky soldier slowly approaching. His over-sized uniform hangs loosely over his shoulders as he hugs his rifle close to his chest with both hands, a recognizable look of inexperience.
+*line_break
+*line_break
+"Halt! I'm sorry, but this road is hereby closed under the orders of the LOM! We can't let you through without a short security check. Your papers, please."
+*page_break
+*if LOM = 1, renown > 50
+	*line_break
+	*line_break
+	Upon reaching the side of the vehicle, he glances at you, and immediately his jaw hits the floor.
+	*line_break
+	*line_break
+	"Oh my! I… I'm terribly sorry commander! I apologize for not realizing who you are sooner! You… you can pass."
+	*line_break
+	*line_break
+	The soldier hurries back to his post, and you see him speaking frantically to his companions, before the whole lot of them scurry to one side, standing in a file, raising their hands in a salute.
+	*line_break
+	*line_break
+	You sigh, starting up the vehicle once again, and cruise past the opening, once again continuing your journey.
+*if LOM = 1
+	You grumble in annoyance. Damn the MRPA, employing such unnecessary and inconvenient security measures. You pull out your identification and thrust it towards the meek soldier, who scans through the papers, before passing them back to you.
+	*line_break
+	*line_break
+	"Terribly sorry, commander. I did not realize that you're one of us. Well, everything seems to be in order. Off you go, then." The soldier gives a quick salute before jogging back to his post, yelling at his companions to clear the way.
+	*line_break
+	*line_break
+	You sigh, starting up the vehicle once again, and cruise past the opening, once again continuing your journey.
+*if MRPA = 1
+	Damn it! You can't show them your documents, they'll see that you're part of the MRPA. You have to find a way out of this, fast!
+	*line_break
+	*line_break
+	You gesture for the soldier to come closer, addressing him in a low whisper. "Hey, I just want to pass through without any problems. How about you get your friends to let me through, and I'll give you a little… something for your troubles, hmm? It's a hot day, and I'm sure you all would like a nice round of beers after work, yeah?" You pull out a couple of bills and start to fan yourself with them.
+	*line_break
+	*line_break
+	The soldier strokes his chin as he contemplates your offer. After a moment, he snatches the bills from your hands and stuffs them into his pocket. "Sure, why not! Thanks for your generous 'donation', good sir"
+	*line_break
+	*line_break
+	Grinning widely, he shouts at his companions to let you through, claiming that everything is in order. As the other soldiers move away from the road, you grumble to yourself. $100 is a pretty steep price, but you much rather pay up than risk the potential troubles of that little security check. Sighing, you continue your journey down the road.
 *return
 
 *label travel_event_3
-event_3
+*comment rescue couple stuck on road (need repair kit), and they'll reward you.
+As you cruise down the road, you notice a battered SUV further down along the road shoulder. A young couple blocks your way ahead, waving frantically at you as they spot your vehicle approaching them.
+*line_break
+*line_break
+You lightly tap the brakes and steer your vehicle behind the stationery car, having no choice but to stop. "What seems to be the problem here?"
+*line_break
+*line_break
+"Oh thank god, we were thinking that there'll be no other people coming down this godforsaken road. As you can see, we encountered some car problems, and our phones ran out of juice so we can't call for help. Is there any way you can help us?" The man pleads, looking at you with pitiable eyes.
+*fake_choice
+	*selectable_if (repair kit > 0) #Help them with their vehicle troubles
+		"I guess you're in luck. I have a spare repair kit here. Come on, let's see if we can fix the problem.
+		*if engineering > 14
+			Heading to the broken down vehicle, you pop the hood open. Hmm, it seems like a simple overheating problem resulting in a blown wire. Given your skills however, the problem is nothing you can't handle. In a jiffy, the car is up and running again, the engine purring smoothly. 
+			*line_break
+			*line_break
+			"Thank you so much! Honestly, we were in such a bind. If not for your help, we could have been stuck out here forever. We must give you a small reward to express our gratitude." The couple grasp your hand and shake it profusely. The man takes out his wallet, grabs a few notes and presses them into your hand firmly. With a final wave, the couple hop into the car and speed off. You smile as you saunter back to your car and continue along your way.
+		*if engineering < 15
+	#Drive away.
+		"I'm sorry, I can't help you there. I hope someone else comes by soon." With a nonchalant shrug, you head back into your vehicle and slam the door shut.
+		*line_break
+		*line_break
+		"Please wait! Could you at least…." You turn the key in the ignition and drive off before the man can finish his sentence.
 *return
 
 *label travel_event_4
-event_4
+*comment similar event, but the couple are highway robbers and they take some of your supplies at random
 *return
 
 *label travel_event_5
-event_5
+*comment YOUR car broke down, either call a tow truck or need a repair kit.
 *return
 
 *label travel_event_6
