@@ -2,6 +2,8 @@
 *rand travel_event_chance 0 25
 *temp travel_event 0
 *rand travel_event 1 12
+*temp travel_delay 0
+*rand travel_delay 3 10
 *set travel_event "travel_event_"&travel_event
 
 *if travel_hours > travel_event_chance
@@ -14,6 +16,20 @@
 	*page_break
 	*return
 *return
+
+*comment travel_event index
+*comment 1 - Vehicle Breakdown
+*comment 2 - Accident (ambush)
+*comment 3 - Accident (actual)
+*comment 4 - Village in need of help
+*comment 5 - Chance to scavenge a battle field
+*comment 6 - Merchant looking for escort
+*comment 7 - Road checkpoint (LOM / MRPA dep on territory)?
+*comment 8 - Got lost (travel delay)
+*comment 9 - IED
+*comment 10 - Village with cheap wares
+*comment 11 - Village for recruitment
+*comment 12 - Bandits!
 
 *label travel_event_1
 *comment MRPA security check
@@ -145,7 +161,8 @@ event_7
 *return
 
 *label travel_event_8
-event_8
+*set travel_hours +travel_delay
+You swear the map showed a left turn. But at the 5th left turn (or so you thought), you're not so sure anymore. By the time you drag yourselves to ${location_choice_name}, you've wasted another ${travel_delay} hours.
 *return
 
 *label travel_event_9
