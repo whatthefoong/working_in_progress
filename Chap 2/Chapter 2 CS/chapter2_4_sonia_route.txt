@@ -3,7 +3,6 @@
 *temp shadyguy 0
 *temp soniaconfront 0
 *if sonia = 1
-
 Another mundane day. You lie in your pristine white hospital bed, in the same position as you were for the entire week. 
 *line_break
 *line_break
