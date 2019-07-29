@@ -115,7 +115,7 @@ Where would you like to travel to?
 *if location = "strazova"
 	*fake_choice
 		# Cancove (1.5 Hours)
-			*set location_choice "strazova"
+			*set location_choice "cancove"
 			*set travel_hours 1.5
 		# Jazin (2 Hours)
 			*set location_choice "jazin"
@@ -633,7 +633,7 @@ Where would you like to travel to?
 	*set location_scene "location_"&location
 *gosub location_naming_func
 *comment delete this line - for map / travel test
-*goto_scene world_map
+*comment *goto_scene world_map
 *comment delete this line - for map / travel test
 *goto_scene {location_scene}
 

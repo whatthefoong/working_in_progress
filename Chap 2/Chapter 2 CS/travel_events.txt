@@ -1,5 +1,5 @@
 *temp travel_event_chance 0
-*rand travel_event_chance 0 25
+*rand travel_event_chance 0 50
 *temp travel_event 0
 *rand travel_event 1 12
 *temp travel_delay 0
@@ -162,7 +162,7 @@ event_7
 
 *label travel_event_8
 *set travel_hours +travel_delay
-You swear the map showed a left turn. But at the 5th left turn (or so you thought), you're not so sure anymore. By the time you drag yourselves to ${location_choice_name}, you've wasted another ${travel_delay} hours.
+You swear the map showed a left turn. But after making ${travel_event_chance} left turns (or so you think), you're not so sure anymore. By the time you drag yourselves to ${location_choice_name}, you've wasted another ${travel_delay} hours.
 *return
 
 *label travel_event_9

@@ -70,17 +70,11 @@
 *label locale_state_update
 *comment death and birth rate
 *temp rate 0.05
-
 *comment check
-*temp supplies ""
-*temp economy ""
-*temp infrastructure ""
-*temp population ""
-
-*set supplies "supplies_"&economy_locale
-*set economy "economy_"&economy_locale
-*set infrastructure "infrastructure_"&economy_locale
-*set population "population_"&economy_locale
+*temp supplies "supplies_"&economy_locale
+*temp economy "economy_"&economy_locale
+*temp infrastructure "infrastructure_"&economy_locale
+*temp population "population_"&economy_locale
 *comment prevent 0 errors
 *if {population} = 0
 	*set {population} -0.0001
