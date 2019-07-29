@@ -13,6 +13,7 @@
 	chapter3_dawn
 	ending
 	death
+	world_map
 
 *comment character
 *create name "nobody"
@@ -78,6 +79,7 @@
 *create day 0
 *create month 0
 *create year 0
+*create economy_latest_refresh 0
 
 *comment NPCs
 *create sergeant "Kosnik"
@@ -101,8 +103,113 @@
 
 *comment achievements
 
-*comment save/load system
+*comment World Init
+*comment Cities
+*create economy_dovica 9
+*create infrastructure_dovica 45387
+*create population_dovica 47109
+*create supplies_dovica 46189
 
-*comment *sm_init sir_yes_sir | 3
+*create economy_strazova 10
+*create infrastructure_strazova 48260
+*create population_strazova 45732
+*create supplies_strazova 45853
+
+*create economy_giralmore 6
+*create infrastructure_giralmore 34259
+*create population_giralmore 33584
+*create supplies_giralmore 26030
+
+*create economy_kobelin 6
+*create infrastructure_kobelin 36367
+*create population_kobelin 29475
+*create supplies_kobelin 32310
+
+*create economy_lutengrad 7
+*create infrastructure_lutengrad 35462
+*create population_lutengrad 32976
+*create supplies_lutengrad 37679
+
+*comment
+*create economy_cancove 2
+*create infrastructure_cancove 4395
+*create population_cancove 1037
+*create supplies_cancove 4260
+
+*create economy_fraven 3
+*create infrastructure_fraven 4124
+*create population_fraven 2947
+*create supplies_fraven 1232
+
+*create economy_jazin 1
+*create infrastructure_jazin 4439
+*create population_jazin 2419
+*create supplies_jazin 2501
+
+*create economy_poppany 1
+*create infrastructure_poppany 4304
+*create population_poppany 3893
+*create supplies_poppany 3553
+
+*create economy_trev 3
+*create infrastructure_trev 3478
+*create population_trev 3183
+*create supplies_trev 4547
+
+*create economy_madre 3
+*create infrastructure_madre 4705
+*create population_madre 3212
+*create supplies_madre 1298
+
+*create economy_orlotek 1
+*create infrastructure_orlotek 3007
+*create population_orlotek 2614
+*create supplies_orlotek 1422
+
+*create economy_ruzno 3
+*create infrastructure_ruzno 4158
+*create population_ruzno 3727
+*create supplies_ruzno 3750
+
+*create economy_vanka 3
+*create infrastructure_vanka 4437
+*create population_vanka 3392
+*create supplies_vanka 1191
+
+*create economy_inkaz 1
+*create infrastructure_inkaz 3806
+*create population_inkaz 1465
+*create supplies_inkaz 4414
+
+*create economy_sutin 2
+*create infrastructure_sutin 2075
+*create population_sutin 1438
+*create supplies_sutin 2592
+
+*create economy_boledov 1
+*create infrastructure_boledov 1909
+*create population_boledov 2206
+*create supplies_boledov 4666
+
+*create economy_horiad 2
+*create infrastructure_horiad 4248
+*create population_horiad 2988
+*create supplies_horiad 1643
+
+*create economy_ivonan 2
+*create infrastructure_ivonan 4707
+*create population_ivonan 1163
+*create supplies_ivonan 1932
+
+*create economy_novina 3
+*create infrastructure_novina 1655
+*create population_novina 3827
+*create supplies_novina 2846
+
+
+*comment save/load system
+*comment *sm_init blood_on_my_hands | 3
 *comment *sm_save 0 | false | Autosave - Startup
+
+
 *finish
