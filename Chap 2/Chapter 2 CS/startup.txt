@@ -99,6 +99,8 @@
 *comment 0 for no civ killed, 1 for man killed, 2 for man and wife killed
 *create chap1_kill_civilian 0
 
+*comment chapter 2_4_sonia: 0 for sonia never confront dr karll, 1 for sonia did
+*create soniaconfront 0
 *comment achievements
 
 *comment save/load system

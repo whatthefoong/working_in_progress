@@ -1,7 +1,6 @@
 *comment Sonia's route
 *temp violence 0
 *temp shadyguy 0
-*temp soniaconfront 0
 *if sonia = 1
 
 Another mundane day. You lie in your pristine white hospital bed, in the same position as you were for the entire week. 
@@ -560,7 +559,7 @@ Is he… stealing the medicine?
 					*line_break
 					Life resumed, though the staff seemed more watchful of you, making sure this crazy commander didn't go wandering into random rooms anymore. You didn't hear about any news of what happened with the doctor - you didn't even know his name, now that you think about it. The hospital likely wanted to keep this incident private. Everyone pretended like nothing had happened, and slowly but surely, the whole debacle faded into a memory.
 					*page_break
-					*goto 2_4_4_sonia_romance
+					*goto_scene chapter2_4_sonia_hospital_raid
 				*if physical < 15
 					*set relationship_sonia %+5
 					You had anticipated the doctor's movements, and just as you were in the process of out-maneuvering him, a sudden jolt of pain flared up through your body. Fuck, you overexerted yourself.
@@ -638,7 +637,7 @@ Is he… stealing the medicine?
 					*line_break
 					*line_break
 					With a wink, she exits, leaving you to groan internally at the thought of staying stationary for a week. Again.
-					*goto 2_4_4_sonia_romance
+					*goto_scene chapter2_4_sonia_hospital_raid
 				#Let the doctor go.
 				You sigh. Maybe your time here in the hospital has made you soft, but seeing numerous cases of Morovian injustice… perhaps this theft can be forgiven. He's like a Robin Hood, surely that's a noble act?
 				*line_break
@@ -954,6 +953,7 @@ Having finished his monologue, Doctor Karll seems deeply satisfied, like he fina
 	*line_break
 	*line_break
 What will you do?
+*fake_choice
 	#Agree to join the LOM (verbal agreement only)
 		The past few weeks, you've been seriously thinking about the Torian vs Morovian conflict in earnest. Somehow, for a majority of your life you had been avoiding the subject, simply taking things as they were. But perhaps… perhaps your skirmish in Orlotek awoke something within you. The near-death experience brought your loyalty into question. Are you fighting for something you believe in?
 		*line_break
@@ -1026,7 +1026,7 @@ What will you do?
 		*line_break
 		*line_break
 		You get up from your seat, walking away from the cafeteria, walking away from everything. You've lost your appetite, and you just want to be alone for now.
-		*goto 2_4_4_sonia_romance
+		*goto_scene chapter2_4_sonia_hospital_raid
 	#Refuse to join, but will not expose Doctor Karll
 		You mind is abuzz with conflicting thoughts. Stealing medicine is wrong… but so is the unjust treatment of Torians against Morovians… do two wrongs make a right? It shouldn't, clearly you know this, but… who are you to stop this poor man from saving his son?
 		*line_break
@@ -1093,7 +1093,7 @@ What will you do?
 			*line_break
 			*line_break
 			Despite your best efforts to sound encouraging, you're unsure whether you believe your own words. Regardless, the two of you let reality sink in for a moment before parting to return to your daily duties.
-		*goto 2_4_4_sonia_romance
+		*goto_scene chapter2_4_sonia_hospital_raid
 	#Expose the doctor.
 		You spend a good while considering your options. You sympathize with the doctor, really, you do. Family is important, you would do anything to protect your own family too. But two wrongs don't make a right. Despite the corruption of the Torians… stealing medicine is unacceptable. You don't want another case like Anastasia, another case of a patient having to die because medication specifically prescribed for them isn't there when they need it the most.
 		*line_break
@@ -1148,7 +1148,7 @@ What will you do?
 		*line_break
 		*line_break
 		Is there?
-		*goto 2_4_4_sonia_romance
+		*goto_scene chapter2_4_sonia_hospital_raid
 	*selectable_if (soniaconfront = 0) #Blackmail Doctor Karll for some of his profits.
 		*set dollars +300
 		You spend a long time deep in your thoughts. Doctor Karll sits in front of you, waiting patiently, his fate still resting in your hands.
@@ -1206,7 +1206,7 @@ What will you do?
 		*line_break
 		*line_break
 		You get up from the table to get some good food. You might even splurge a little. You can certainly afford to, anyways.
-		*goto 2_4_4_sonia_romance
+		*goto_scene chapter2_4_sonia_hospital_raid
 		
 *label 2_4_2_tell_sonia
 *set relationship_sonia %+5
