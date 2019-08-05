@@ -1,0 +1,575 @@
+*comment Second half of Sonia's route, romance scene and hospital raid
+*temp conversations_with_sonia = 0
+*temp banged_dude = 0
+
+Another 5 days pass. You are mostly recovered now, able to walk on your own two feet without a crutch. Sergeant ${sergeant} and the rest of your men back at the barracks were merciful enough to send some civilian clothes to the hospital for you and the other injured soldiers, so you wouldn't have to continue wearing those baby blue hospital gowns. 
+*line_break
+*line_break
+Curiously, no army personnel have come to pay you a visit. Not that you feel neglected, but you do wonder what the situation is like back at base.  
+*line_break
+*line_break
+It is 10pm at night. You sit patiently on your bed as Doctor ${doctor} does a final check-up on your body. She apologizes for having this check-up at such a late hour; Torian patients are always given preferential treatment. 
+*line_break
+*line_break
+After a final beep from a blood pressure monitor, ${doctor} tears the velcro off the sleeve around your bicep, loosening it and sliding it off your arm. She scribbles something quick on her clipboard -  as usual. 
+*line_break
+*line_break
+"Well Commander, you've made a full recovery, and in a surprisingly short amount of time too given the state in which you were brought in." ${doctor} says, tapping her chin with the end of her pen.
+*line_break
+*line_break
+"So, what's the plan?" she inquires, placing the clipboard aside. She stretches, loosening up and switching from her serious work mode to her more personable side. "The hospital can't let you stay in this ward anymore if you're fully recovered, we have many other patients waiting. You thinking of returning to base?"
+*line_break
+*line_break
+You scratch the back of your head. "No… I'm going to wait for the rest of my soldiers to recover. Leave no man behind, all that. Then we'll probably head back as a group." You recall having been informed that your injured allies needing another 3 or 4 days before they can be discharged.
+*line_break
+*line_break
+"But do you have a place to stay until then?"
+*line_break
+*line_break
+Shoot, you hadn't thought that far ahead. "I suppose I'll have to check into a motel or something." you reply, slightly deflated at the thought of forking out your own money. ${doctor} nods quietly.
+*line_break
+*line_break
+Suddenly she perks up. "Do you want to get a drink?" 
+*line_break
+*line_break
+You take a second to register what she said. From observing the hardworking woman with incredible work ethic for the last 2 weeks, you somehow never thought about what she did off-hours.
+*line_break
+*line_break
+She sees the incredulous expression on your face, and deadpans, "You don't have to be that surprised. I'm not a robot. I still need to take a breather once in a while." 
+*line_break
+*line_break
+She rises from her seat, and begins walking out of the ward, gesturing for you to follow, which you do.
+*page_break
+As the two of you descend down the elevator, your mind runs rampant with thoughts. What kind of place is she bringing me, you ponder. A night club? No, that doesn't seem to be her thing. Maybe some hipster corner bar with complicated foreign names for drinks. That sounds about right. Or maybe-
+*line_break
+*line_break
+The doors open to… the 8th floor? You figured you would have gone all the way down to the lobby, maybe hit the streets.
+*line_break
+*line_break
+You wordlessly follow ${doctor} as she navigates the network of hallways. From the past few days of exploring you are rather confident in navigating the interior of the hospital, but you can't read ${doctor}'s intentions on bringing you here.
+*line_break
+*line_break
+Finally, the two of you arrive in front of a door simply labeled [i]Staff Lounge[/i]. You raise an eyebrow, but ${doctor} ignores you, pushing open the door.
+*line_break
+*line_break
+Whatever expectations you had are blown away. The lounge is large, possibly the size of three wards stacked together, with maple wood walls not seen in any other part of the hospital. In one corner there's a pristine white pantry with a wide assortment of snack and candy dispensers awaiting you, and to the side of it is a bar counter with several bottles of drinks and glasses hanging on a rack. On the other end of the room there's 2 loveseat sofas upholstered in exquisite red velvet, one facing the pantry, the other facing a wide-screen wall-mounted television screen, currently playing a basketball match. In between that there are several wooden chairs and tables of incredible craftsmanship for dining or other work. In a corner of the room there's even an additional grey pull out couch that is currently in its bed form. There's a piece of modern art hung on the back wall; a large white canvas with splatters of red gold and black paint across. Overhead there are [i]chandeliers[/i] lighting up the room.
+*line_break
+*line_break
+Overall: slightly gaudy for your tastes, but still breathtaking as far as staff lounges go.
+*line_break
+*line_break
+You and ${doctor} are not alone in the room. You spy a male doctor relaxing on the couch, watching the game on the television. He turns to the two of you as you enter. He has dark brown hair - not dissimilar to ${doctor}'s, combed back in a loose pompadour with the sides shaved. He has sharp features, a chiseled chin. He waves lazily at ${doctor} before returning his attention to the TV.
+*line_break
+*line_break
+Doctor ${doctor} removes her doctor's coat and hangs it on a coat rack. She wears a simple white fitting t-shirt and black jorts underneath. Seeing her for the first time without her coat, you notice her arms and legs are slightly paler than her face and hands. You also can't help but notice her slender figure; curvy, but not provocatively so. There is an aura of poise and elegance about her that enraptures you, almost like a ballerina.
+*line_break
+*line_break
+She leads you by the hand over to the bar counter. She places two whiskey glasses onto the counter, then pulls a brown bottle off the rack.
+*line_break
+*line_break
+"Scotch, on the rocks?" she asks. You nod, just glad to have [i]any[/i] form of alcohol after 2 weeks of abstaining. She reaches under the bar, opening a freezer and placing an ice ball into each glass. She then uncaps the bottle, pouring the golden liquid over the ice, letting it cascade down into the glass.
+*line_break
+*line_break
+Sliding a glass to you, she raises hers towards you. "To your speedy recovery." she toasts with a pleasant smile. You return the smile, clinking your glass against hers before taking a sip.
+*line_break
+*line_break
+You place your lips on the cool glass, tipping the contents. The cool liquid makes your mouth tingle as it trickles down your throat, leaving a warm burning sensation across your tongue. As you swallow, you can't help but let out a sigh of satisfaction. That really hit the spot.
+*line_break
+*line_break
+${doctor} laughs quietly. "Say what you will about Torians, but there are definitely perks for working with them." She says jokingly, while she gestures at the expensive furnishings around the room with her glass, watching the liquid sway giddily in its transparent container.
+*line_break
+*line_break
+She sets the glass down. "Sometimes doctors spend the night here. I suppose if you need to, you can stay here until your men are discharged. I'll tell the other doctors to leave you be."
+*line_break
+*line_break
+You thank her profusely for the free lodging. "Just promise to treat me to a nice dinner sometime" she replies mirthfully, taking another sip of whiskey.
+*line_break
+*line_break
+There's silence between the two of you now. ${doctor} gently plays with her drink, klinking the ice ball against the glass. The sound of cheering and commentating from the television isn't obnoxiously loud, but present.
+*line_break
+*line_break
+You decide to start a conversation…
+*label 2_4_4_conversations_with_sonia
+*fake_choice 
+	*disable_reuse #Ask about ${doctor}'s family.
+		*set relationship_sonia %+5
+		*set conversations_with_sonia +1
+		"So… do you have any siblings?" you ask lamely, breaking the pause in conversation. ${doctor} looks up at you with a smile.
+		*line_break
+		*line_break
+		"Yes I do. I have two younger brothers - ones 12, the other is 8. They're back in my home country. I send money back for them to continue schooling."
+		*line_break
+		*line_break
+		"My family lives on a farm, you see. It was a relaxed lifestyle, away from the hustle and bustle of the city. We sell potatoes and peaches and other produce. I do miss it sometimes…"
+		*line_break
+		*line_break
+		She trails off, as if reminiscing of treasured memories. She snaps out of it for a moment. "I-I'm sorry, I didn't mean to prattle on about my history."
+		*line_break
+		*line_break
+		You wave your hands to dismiss her inhibitions. "No, I'm actually rather curious about your life. After all, you already know mine."
+		*line_break
+		*line_break
+		She sighs, before taking another sip. "Alright, just cut me off if you get tired of my rambling."
+		*line_break
+		*line_break
+		"I love my parents, they are very sweet and raised me and my brothers well. They used their savings to put me through school, and even when I said I wanted to go to medical school they never said no. They borrowed money from extended family members to help me get through, never once telling me that I should stop or return to the farm. I owe them a ton."
+		*line_break
+		*line_break
+		"My brothers are a lot younger than me, sometimes I worry that I used up too much of my parents savings, so I try to send as much money back as I can. Just paying it forward, you know?" 
+		*line_break
+		*line_break
+		"I accepted this job and moved over here 3 years ago. When news of war broke out, you can imagine that my parents got concerned. For the first time they called me back, told me to come home. I understand that they were worried about me, but I saw so many patients needing my help… I couldn't leave them alone. I refused my parents, and stayed here to help the war victims."
+		*line_break
+		*line_break
+		"I still keep in touch with them through mail, and I continue to send them part of my earnings. Its just… oh, I'm a lousy daughter.." she laughs sadly, taking yet another swig, emptying her glass.
+		*line_break
+		*line_break
+		You frown. "No you're not. You love them enough to send them letters and money, how does that make you lousy? I'm sure your parents must be proud of you."
+		*line_break
+		*line_break
+		She looks into your eyes as you reassure her. Those emerald eyes reflect such depth, you feel like you could drown in them. She nods gently, but doesn't reply. She begins pouring herself another glass, and then refills yours.
+		*if conversations_with_sonia = 1
+			*goto 2_4_4_conversations_with_sonia
+		*if conversations_with_sonia = 2
+			*goto 2_4_5_romance
+	*disable_reuse #Ask why ${doctor} chose to be a doctor.
+		*set relationship_sonia %+5
+		*set conversations_with_sonia +1
+		"So… how'd you decide you wanted to be a doctor?" you ask, making conversation. ${doctor} looks at you with interest.
+		*line_break
+		*line_break
+		"Oh that… there's a funny story for that actually." she closes her eyes, as if to reenter the memory. Her smile widens gradually.
+		*line_break
+		*line_break
+		"I think I was in 5th grade, when I fell over and gave myself a nasty cut. It was bleeding pretty badly, and the friend I was walking with ran off to get a teacher. 10 year old me saw some leafy plants nearby, and remembered reading that certain herbs could heal wounds. So I grabbed a bunch and tried to staunch the bleeding."
+		*line_break
+		*line_break
+		A smile forms on your lips, sensing where this story was going. "Did it work?"
+		*line_break
+		*line_break
+		"Nope. It was poison ivy."
+		*line_break
+		*line_break
+		Both of you burst into laughter simultaneously. In between laughs, she squeaks out "The wound got so infected, I had to go to the hospital for, like, 3 days."
+		*line_break
+		*line_break
+		"But it was there that I think I found out I wanted to be a doctor. The doctors treated me very well, spent time making me feel better, told me stories, complimented my, uh, [i]enthusiasm[/i]. I wanted to be like them, helping the sick and injured."
+		*line_break
+		*line_break
+		You nod approvingly, taking a sip of beverage. "That's a really good story actually. Its honestly rare to find you humanitarian types nowadays."
+		*line_break
+		*line_break
+		She nods, accepting the compliment quietly. The atmosphere calms, and she continues "Well, I'm not sure if I like the term 'humanitarian'. I don't know, I guess I just like helping people. Maybe that says something about me, like I'm just…. a sucker for a good sob story." She laughs sadly to herself, taking one more swig of scotch, emptying the glass.
+		*line_break
+		*line_break
+		You shake your head at the self-criticism. "I assure you, everyone here is very appreciative of what you do. You're the only doctor even trying to fight the Torian bias." you encourage.
+		*line_break
+		*line_break
+		She looks back at you, those deep emerald irises peering into you, like they could just swallow you whole. She sighs, choosing not to add to that, and begins to pour herself a new glass, as well as refilling yours.
+		*if conversations_with_sonia = 1
+			*goto 2_4_4_conversations_with_sonia
+		*if conversations_with_sonia = 2
+			*goto 2_4_5_romance
+	*disable_reuse #		Ask about Anastasia.
+		*set relationship_sonia %-5
+		*set conversations_with_sonia +1
+		"…so how did things go with Anastasia and her parents?" the words came out naturally, before you could even think of stopping yourself. You had been so eager to know about that whole situation that you hadn't considered ${doctor}'s feelings. 
+		*line_break
+		*line_break
+		${doctor}'s expression turns somber. "Ah yes, Anastasia…" she mutters quietly, looking down at her own reflection in her glass.
+		*line_break
+		*line_break
+		"I met with her parents a few days ago… but I chose not to tell them about the situation with the Torian patient taking the medicine. I just told them that, despite our best efforts, Anastasia's outbreak was too severe to treat."
+		*line_break
+		*line_break
+		You jerk upon hearing this. Lying to the parents about the cause of death… is that okay?
+		*line_break
+		*line_break
+		${doctor} tries to justify herself. "I know, I know its a pretty scummy move. Trust me, I've been thinking about it since. But what would have been the alternative? 'Yeah, your daughter died because some rich fucks threw money at the bosses and practically stole the only available cure that could have saved her, so sorry.'?"
+		*line_break
+		*line_break
+		Her voice is strained with exasperation and emotion, so fragile it might snap under the pressure. You begin to notice, as she looks at you with a pained expression, the red in her eyes from days of crying, and the loose strands of unkempt hair that stick to her shirt, fallen off from stress. 
+		*line_break
+		*line_break
+		Any thought of trying to accuse her of lying disappears. Who are [i]you[/i] to say what's right or wrong? You spent the last week lying in bed while she had to bear this burden of breaking the news, lying through her teeth to avoid any more grief and hatred from being spread. Whether what she did was right or wrong… you have your reservations, but you decide now is not the best time to chastise someone on ethics.
+		*line_break
+		*line_break
+		${doctor} rests her head on the smooth bar counter. "Anastasia's parents… they were as sweet as their daughter. They thanked me - [i]thanked. me.[/i] For doing my best. They hugged me and comforted me, and said that Anastasia always spoke fondly of me, and would continue to watch me from above…"
+		*line_break
+		*line_break
+		${doctor} lifts her head up and downs the rest of her glass. Letting out a sigh, ${doctor} stares at the ice ball in the glass for a long while, before refilling it with more whiskey.		
+		*if conversations_with_sonia = 1
+			*goto 2_4_4_conversations_with_sonia
+		*if conversations_with_sonia = 2
+			*goto 2_4_5_romance
+	*disable_reuse #Thoughts on Torian-Morovian Conflict.
+		*set conversations_with_sonia +1
+		"So… do you have any thoughts on the war?" you ask, before groaning internally. Why do your topics always end up being about war? 
+		*line_break
+		*line_break
+		${doctor} ponders for a moment. "Well I believe I've told you this already, but I don't really have much of an opinion. While many of the Torians here are assholes, I can't label them all as evil. Same goes for Morovians. Personally I think all this infighting is ridiculous, but that's just me I suppose." she says, sipping her drink. 
+		*line_break
+		*line_break
+		"I apologize if that was offensive to you, I don't mean to belittle your cause," ${doctor} says, realizing she might have unintentionally come off as rude. "I just… don't believe there are any true winners in war. I'll treat anyone in need if I have the ability to do so. I don't discriminate when I'm saving lives."
+		*line_break
+		*line_break
+		You feel like bringing up your own opinions, but her apparent disinterest in the topic and the mood in the room holds you back. 
+		*line_break
+		*line_break
+		Both of you sip your drinks in silence for a moment, enjoying the ambiance until your glasses are empty, at which you pour a new glass for both of you.		
+		*if conversations_with_sonia = 1
+			*goto 2_4_4_conversations_with_sonia
+		*if conversations_with_sonia = 2
+			*goto 2_4_5_romance
+		
+*label 2_4_5_romance
+By this point, you notice that ${doctor}'s peachy face has turned a darker red. Her emerald eyes are glazed over, as if she might fall asleep soon.
+*line_break
+*line_break
+You begin to feel the effects of the whiskey on yourself as well, as you begin to feel your senses dull.
+*line_break
+*line_break
+What else would you like to do tonight?
+*fake_choice
+	#Romance ${doctor}
+		You're unsure if its the whiskey talking but… ${doctor} looks like an angel right now.
+		*line_break
+		*line_break
+		"Doc… you aren't attached to anyone at the moment right now, are you?" you casually suggest. She looks up to meet your gaze, but you resist the urge to retreat.
+		*if relationship_sonia >= 20
+			*set relationship_sonia %+15
+			*line_break
+			*line_break
+			She smirks coyly. "[i]Oh,[/i] are you interested?"
+			*line_break
+			*line_break
+			*if charm >= 15
+				You swivel the contents of your glass, as nonchalantly as you can. "Perhaps. But you haven't answered my question yet."
+			*else
+				You are suddenly overwhelmed by a sense of embarrassment. "U-u-uh… well-"
+				*line_break
+				*line_break
+				${doctor} laughs as you fumble over your words. "Relax, I'm only teasing." she jokes. 
+				*line_break
+				*line_break
+				You feel annoyed, as if you weren't being treated as an adult. However, the bubbling frustration fades when you notice the blush on her cheeks as she brings her glass up to her lips to take a sip. "But if you are… I'm very flattered."
+			*line_break
+			*line_break
+			She looks away, towards a corner of the room, as if debating whether she should tell the truth or lie.
+			*line_break
+			*line_break
+			After a brief pause, she chuckles, turning back to you. "In this line of work? Please, I don't have enough time for myself, let alone a significant other."
+			*line_break
+			*line_break
+			"Well, we have some time right now, don't we?" you reply, your intentions clearly laid out in your tone. ${doctor}'s eyebrows raise fully, the playful smile still present, as if impressed by your confidence.
+			*line_break
+			*line_break
+			"Fufufu… I suppose we do. What do you suggest we do then?" ${doctor} says, feigning ignorance. With a delicate index finger, she begins to trace the rim of her glass. You resist the urge to pounce on her.
+			*line_break
+			*line_break
+			Tearing your eyes away from the alluring visage of the lovely brunette, you notice the male doctor getting up from the sofa, exiting the lounge. Perhaps he needed to go home, or perhaps he overheard the two of you and decided he wanted no part in what was about to happen. Regardless, you silently thank him for the gift of privacy.
+			*line_break
+			*line_break
+			You rise from the bar, walking around the counter over to ${doctor}'s side. Her deep emerald eyes trace you as you move. "Perhaps showing would be easier than telling." you say, brushing a strand of her hair out of her face. Its subtle, but as your fingers brush past her skin, she shudders. 
+			*line_break
+			*line_break
+			In a husky voice, barely a whisper, she says 				"Well then… [i]show me the way, Commander.[/i]"
+			*line_break
+			*line_break
+			Given the green light, you extend you palm towards her, an invitation she accepts as she places her hand in yours. It feels small, delicate, almost fragile. Yet you know these hands are anything but unseasoned - these hands have saved countless lives. You wrap your fingers around hers, feeling the cold sensation of her skin in your palm.
+			*line_break
+			*line_break
+			She gets up from her seat, and allow you to guide her towards the sofa-bed. As you fall into the plush, you feel your body sink into the cushion a good inch or two, hugging you.
+			*line_break
+			*line_break
+			${doctor} collapses into the seat by your side, laughing lightly. You feel her body press up against you, her chest rubbing against your arm. Her white, cotton T-shirt leaves nothing to the imagination - the smooth texture of her bra against your skin sends chills through your body.
+			*line_break
+			*line_break
+			The lady takes a moment to compose herself, but doesn't retreat. Still leaning on you, she turns to look into your eyes. You faces are so close, you can feel her breath on your skin - heavier with each passing second.
+			*line_break
+			*line_break
+			Her face is flushed - a combination of the drinks and the mood. Her lips quiver in anticipation, just slightly parted. Her eyes, pools of verdant green, call to you, inviting you to dive in. Being this close, the aromatic scent of cinnamon and whiskey enters your nose; a heavenly combination. 
+			*line_break
+			*line_break
+			Presented with such a sight, you can't help but mutter, "Doc-"
+			*line_break
+			*line_break
+			Much to your surprise, ${doctor} makes the first move. In one swift movement she closes the distance between the two of you, pressing her lips against yours. They are as soft as pillows. At first, she merely makes innocent, light contact, but then she dives deeper, increasing the pressure. For a moment, her tongue brushes over your lower lips, getting a quick taste.
+			*line_break
+			*line_break
+			After what feels like an eternity, she releases you from her spell, pulling away. Still in shock, you find yourself at a lost for words. A seductive smile lingering on her lips, cocky from taking you by surprise, she utters, "We're off hours now, ${name}. Call me ${doctor}."
+			*line_break
+			*line_break
+			Unable to hold back any longer, you dive towards the brunette, pushing her against the arm of the sofa. She giggles at your eagerness, but you shut her up by closing her lips with your own. A moan escapes her as you push your tongue into her mouth, intertwining with hers. 
+			*line_break
+			*line_break
+			As you break away from her once more, allowing both of you to catch your breaths, you correct yourself. "${doctor}…" your voice barely a whisper. She doesn't reply, but her eyes signal her approval, urging you to be bolder.
+			*line_break
+			*line_break
+			You slide your arm under her shirt. Her eyes widen, taken by surprise as she bites her lower lip to keep her voice down. You feel her whole body shiver in ecstasy from your fingers crawling up her smooth belly, making their way further up. 
+			*line_break
+			*line_break
+			She looks deep into your eyes, leaning into you. She places her forehead against yours, and whispers "I'm glad I met you…" With that, you two kiss once more, a prelude to an [i]eventful[/i] night.
+			*page_break
+			*goto 2_4_7_banged_sonia
+		*else
+			*line_break
+			*line_break
+			She looks at you for a moment. "Oh…"
+			*line_break
+			*line_break
+			She remains silent for a little while, sipping her drink. A little too-long-than-a-little while.
+			*line_break
+			*line_break
+			She finally puts down her glass with a sigh. "No, I'm not. But I'm not interested in having a relationship anytime soon."
+			*line_break
+			*line_break
+			"Oh…" Perhaps its the alcohol influencing you, but you're unable to guise the disappointment in your voice. 
+			*line_break
+			*line_break
+			${doctor} smiles sympathetically. "Sorry, Commander. You're wonderful, and my time with you has been very enjoyable, but I've dedicated myself to my work. I don't have time for a relationship right now."
+			*line_break
+			*line_break
+			You smile and nod, appreciating her attempts at comforting you. While her bluntness stings, you appreciate her honesty as opposed to coming up with vague excuses.
+			*line_break
+			*line_break
+			${doctor} looks away, taking another swig from her glass. There's a palpable awkwardness in the air. Shit.
+			*line_break
+			*line_break
+			Finishing off her glass, she sets it down on the counter, then gets off her seat. 
+			*line_break
+			*line_break
+			"If you don't mind, Commander, I'm going to make a move first. I really need to be getting more sleep, jeez…" she yawns, stretching her back.
+			*line_break
+			*line_break
+			You wave at each other, before she begins walking towards the door. You pretend to watch the game being played on the television, but through your peripherals you fixate on the doctor as she dons her white coat, until she finally opens the door and leaves.
+			*line_break
+			*line_break
+			Shoot, that could have gone better, you think to yourself as you take a big swig of whiskey. Well, on the bright side, she let you down gently. Plus, she didn't reject you because of [i]you[/i], but because of work! Yeah… the window's still there. Maybe in the future, when this war is over and she's more available. Yeah…
+			*line_break
+			*line_break
+			Those thoughts continue to swirl about in your mind, as you down the rest of your glass and stumble over to the sofa-bed, more than ready for sleep to take you.
+			*page_break
+			*goto 2_4_6_uneventful_morning
+	#Flirt with the male doctor at the couch.
+		For some reason, your eyes can't seem to focus on the doctor in front of you. Instead, they wander over to the stud on the couch.
+		*line_break
+		*line_break
+		From your angle you get a better view of his features. His body is muscular, with well developed shoulders and chest muscles - a stark contrast to ${doctor}'s slender build. He has a sandy skin tone, giving off the impression of an ex-surfer whose tan has lightened from being cooped up in a hospital for too long. A dark blue tight-fitting shirt wraps around his torso, emphasizing his biceps, as well as a pair of blacks slacks you [i]know[/i] are hiding something special.
+		*line_break
+		*line_break
+		You might have been staring a little too intently, as you are snapped out of your daydreams by the sound of ${doctor} snapping her fingers.
+		*line_break
+		*line_break
+		"Earth to ${name}, did you hear what I said?" ${doctor} says with a lopsided smile.
+		*line_break
+		*line_break
+		"Yup, totally." you lie to her face.
+		*line_break
+		*line_break
+		"Well you must be hearing things because I didn't say anything." she triumphantly takes a swig of whiskey, having successfully trapped you. You turn away, willing the blush that's creeping up your face to stop.  
+		*line_break
+		*line_break
+		She chuckles at your discomfort. "You can be honest with me. You think he's handsome?"
+		*line_break
+		*line_break
+		You consider lying, but having been exposed you decide to keep it real. "Yeah. I mean, just look at him! Don't you think so?" you say in a volume just low enough that the man across the room wouldn't hear.
+		*line_break
+		*line_break
+		${doctor} takes a moment to think, looking towards the top left. "Well… I guess? Maybe its because he was my student that I'm not particularly impressed. I have a rule against dating coworkers, and even then he's not really my type."
+		*line_break
+		*line_break
+		If having the body of Adonis isn't ${doctor}'s type, she's probably going to be single for a loooong time, you think to yourself.
+		*line_break
+		*line_break
+		She smirks as you steal another glance at the man. "If you want, I can introduce him to you."
+		*fake_choice
+			#Let her introduce you.
+				*set banged_dude = 1
+				"Hey Mikey!" ${doctor} turns around, placing a hand to the side of her mouth to holler at the man. "Let me introduce you to my friend!"
+				*line_break
+				*line_break
+				You hear a burly voice call back, "Alright one sec!"
+				*line_break
+				*line_break
+				The man takes a moment to peel himself off the couch, stretching as he does so. Standing up, he's 6'4'', towering over both of you. In just a few strides he joins the two of you by the bar.
+				*line_break
+				*line_break
+				${doctor} gestures towards you. "Mikey, this is Commander ${name}. Commander, this is Doctor Michael."
+				*line_break
+				*line_break
+				There's a glint in his eye of sudden interest upon hearing the title of 'commander'. "Ah, good evening Commander. You can call me Mikey." he greets in a deep bassy voice.
+				*line_break
+				*line_break
+				The two of you shake hands. You feel his large hands envelop yours.
+				*line_break
+				*line_break
+				${doctor}'s eyes dart between the both of you. "Welp, you two feel free to stay and chat, I'm going to head home first." 
+				*line_break
+				*line_break
+				${doctor} leaves the bar, walking over to the door to grab her coat. Before she exits, she flashes you a quick thumbs-up before escaping.
+				*line_break
+				*line_break
+				Now being the only two people in the room, your attention is undivided. 
+				*line_break
+				*line_break
+				"Sorry about interrupting your game." you apologize, but he waves your concern away. "Nah, it was pretty much over at that point, don't worry about it."
+				*line_break
+				*line_break
+				He takes a seat where Sonia had been. As he begins pouring a new glass for himself, he asks, "So anyways, tell me about yourself. Doctor ${doctor} isn't usually the type to socialize, so you must be pretty special if you're her 'friend'."
+				*line_break
+				*line_break
+				He winks, but you try to remain as nonchalant as possible. "Well, maybe you'll find out tonight…" you reply.
+				*line_break
+				*line_break
+				As the night continues, Doctor Michael and you chat for a while before moving on to [i]other things[/i]…
+				*line_break
+				*line_break
+				You have a good time.
+				*page_break
+				*goto 2_4_6_uneventful_morning
+			#Nah, you're good with just eye-candy.
+				Doctor ${doctor} shrugs. "Suit yourself. But if you're just going to keep oogling with heart-eyes, I'm going to head home first."
+				*line_break
+				*line_break
+				You try to apologize, but ${doctor} cuts you off with a smile. "Hey, don't worry about it. Thanks for the drinks and company, I'm just going to try and get a little more sleep."
+				*line_break
+				*line_break
+				She waves goodbye and leaves you to continue admiring the hunk. You're unsure how much time passed before the male doctor finally turned off the television and got off the couch, at which you promptly averted your gaze towards your glass until you were sure he left the room.
+				*line_break
+				*line_break
+				Having enjoyed your [i]food[/i] you decide to turn in for the night, placing the glasses in the sink before crashing into the pull-out couch for the night.
+				*page_break
+				*goto 2_4_6_uneventful_morning
+	#Talk a little more, then head to bed.
+		*set relationship_sonia %+5
+		You spend the rest of the night sipping drinks and making small talk with Doctor ${doctor}. She seems much more relaxed now as compared to during the day, as she shares some stories of past patients and shenanigans in the hospital. 
+		*line_break
+		*line_break
+		You feel a sense of pride in being this close with the doctor, who can sometimes appear stand-offish or cold to those unfamiliar with her. Seeing her laughing and acting casual leaves a warm feeling in your heart.
+		*line_break
+		*line_break
+		Its a pleasant time, but eventually, ${doctor} finally checks the time on the clock hung on the wall.
+		*line_break
+		*line_break
+		"Jeez its late." she mutters under her breath. You look at the clock and see that its almost 2:30am. 
+		*line_break
+		*line_break
+		${doctor} gets up from her seat. "Well, I had a great time talking with you, Commander. I'm going to head home and try to get some sleep. You should probably turn in soon, too."
+		*line_break
+		*line_break
+		With a yawn and a wave goodbye, ${doctor} leaves. You take her advice and collapses into the pull-out couch, falling asleep almost instantly.
+		*page_break
+		*goto 2_4_6_uneventful_morning
+		
+*label 2_4_6_uneventful_morning
+[b]bzzzzzzzt…bzzzzzzzt bzzzzzzzt…[/b]
+*line_break
+*line_break
+You wake up to vibrations coming from your right pocket.
+*line_break
+*line_break
+You groan groggily, patting your pockets to see what the source of the annoying buzzing is. Ah, your cellphone was in your pocket.
+*line_break
+*line_break
+You pick up the phone. "H-hello?" you say, still half awake.
+*line_break
+*line_break
+"Morning, sleepy head." a familiar female voice answers back. Its ${doctor}.
+*line_break
+*line_break
+*if banged_dude = 1
+	"Is Mikey still there?"
+	*line_break
+	*line_break
+	Mikey… That's right. You jolt upright, looking around. You remember spending the night with him, yet he's nowhere to be seen now. 
+	*line_break
+	*line_break
+	"I think he might've ditched me a while ago." you say, somewhat discouraged that he left without a word.
+	*line_break
+	*line_break
+	You hear ${doctor} click her tongue over the phone. "I was worried this would happen. He's a fun guy, but he's not one for serious relationships. Sorry, I should have warned you. I'll make sure to give him a good scolding later."
+	*line_break
+	*line_break
+	You chuckle lightly as ${doctor} automatically takes on a motherly role. "Don't worry, I'm fine. I can take care of myself."
+	*line_break
+	*line_break
+	Doctor ${doctor} doesn't reply, yet you can imagine her pouting.
+	*line_break
+	*line_break
+	"Anyways, I just
+*else
+	"Just
+wanted to call and let you know that people tend to go into the lounge at 7am to have their breakfast, so you should probably start getting ready."
+*line_break
+*line_break
+With your phone still pressed against your ear, you look at the clock. Its 6:50.
+*line_break
+*line_break
+"Well, this has been your morning call. This is a one-time deal, by the way, wake yourself up from now on. See you!"
+*line_break
+*line_break
+With that, the line cuts, leaving a continuous tone blaring in your ear. 
+*line_break
+*line_break
+You put your phone back into your pocket, groaning as you peel yourself off the sofa-bed. You better get ready.
+*page_break
+*goto 2_4_8_dffm_message
+
+*label 2_4_7_banged_sonia
+You are stirred from your slumber as you feel rustling by your side.
+*line_break
+*line_break
+Your eyelids feel like they're glued together. You head is throbbing. What happened last night?
+*line_break
+*line_break
+You and ${doctor} went out for drinks, talked for a little while, and then… and then…
+*line_break
+*line_break
+[i]Oh, right.[/i]
+*line_break
+*line_break
+Your eyes snap open. The room is dark but your make out the silhouette of ${doctor}'s slender figure, standing off to the side, putting on her bra. She turns to acknowledge you. "Morning, sleeping beauty. I didn't mean to wake you up."
+*line_break
+*line_break
+You wrap your arms around her thighs, attempting to pull her back into the sheets for another round, but she pushes you away. 
+*line_break
+*line_break
+"Sorry ${name}, the other doctors should be coming in soon, I've got to get ready." she says in a monotone, pulling her shorts up. 
+*line_break
+*line_break
+"Ugh, these clothes probably reek of alcohol… I wonder if I have enough time to get a change of clothes." she thinks aloud to herself.
+*line_break
+*line_break
+Your pride is hurt, having been pushed away like that. Fuck, you really thought you hit it off with the doc last night. Was this all just a casual fling to her?
+*line_break
+*line_break
+"Hey, ${name}."
+*line_break
+*line_break
+You look up to look at ${doctor} as she gently cups your face in her hand and plants a kiss on your cheek.
+*line_break
+*line_break
+Pulling away slightly, she whispers "Listen… I just wanted to say thank you for last night. It really was magical, and I really needed it. I don't know if this means we're… [b]together[/b]-together, but… give me some time to think about it alright?"
+*line_break
+*line_break
+You don't need to see her to know that she's blushing deeply. Before you get a chance to reply, she kisses you passionately on the lips, stealing your words.
+*line_break
+*line_break
+After a solid 5 seconds she finally lets you go, promptly slipping her T-shirt over herself. You watch wordless as she walks towards the coatrack to grab her coat.
+*line_break
+*line_break
+"Oh, one more thing," she adds. "People usually come in here for breakfast around 7, so if you could do me a favor and clean up this place up before then, that'd be great."
+*line_break
+*line_break
+With those parting words, ${doctor} blows a kiss towards you, then leaves.
+*line_break
+*line_break
+Only now does it occur to you that you're still in your birthday suit, and you have - looking at the clock - 10 minutes to get ready.
+*line_break
+*line_break
+You spring to your feet to start looking for your underwear.
+*page_break
+*goto 2_4_8_dffm_message
+
+*label 2_4_8_dffm_message

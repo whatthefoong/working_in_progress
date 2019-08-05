@@ -220,7 +220,6 @@ The rapping on her clipboard pauses as she gazes at you, the creases on her face
 "Good day Commander, I'm Doctor Sonia, you can thank me for nursing you back to life." She winks.
 *fake_choice
 	# Thank you so much.
-		*set doctor_rs %+10
 		"No worries. To be honest, your body did most of the heavy lifting. You’re rather lucky to have survived from a wound like that."
 	# Where am I?
 		She laughs. "Must have hit your head pretty hard huh."
