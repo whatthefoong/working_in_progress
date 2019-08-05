@@ -70,6 +70,11 @@
 *create travel_hours 0
 *create travel_hours_check 12
 *create travel_disrupt 0
+*comment location stats
+*create supplies ""
+*create economy ""
+*create infrastructure ""
+*create population ""
 
 *comment time
 *comment change this only
@@ -130,81 +135,82 @@
 *create population_lutengrad 32976
 *create supplies_lutengrad 37679
 
-*comment
-*create economy_cancove 2
-*create infrastructure_cancove 4395
-*create population_cancove 1037
-*create supplies_cancove 4260
-
+*comment town
 *create economy_fraven 3
-*create infrastructure_fraven 4124
-*create population_fraven 2947
-*create supplies_fraven 1232
+*create infrastructure_fraven 8830
+*create population_fraven 6742
+*create supplies_fraven 6564
 
-*create economy_jazin 1
-*create infrastructure_jazin 4439
-*create population_jazin 2419
-*create supplies_jazin 2501
+*create economy_poppany 3
+*create infrastructure_poppany 6058
+*create population_poppany 9536
+*create supplies_poppany 6131
 
-*create economy_poppany 1
-*create infrastructure_poppany 4304
-*create population_poppany 3893
-*create supplies_poppany 3553
+*create economy_orlotek 4
+*create infrastructure_orlotek 7164
+*create population_orlotek 7287
+*create supplies_orlotek 7026
 
-*create economy_trev 3
-*create infrastructure_trev 3478
-*create population_trev 3183
-*create supplies_trev 4547
-
-*create economy_madre 3
-*create infrastructure_madre 4705
-*create population_madre 3212
-*create supplies_madre 1298
-
-*create economy_orlotek 1
-*create infrastructure_orlotek 3007
-*create population_orlotek 2614
-*create supplies_orlotek 1422
-
-*create economy_ruzno 3
-*create infrastructure_ruzno 4158
-*create population_ruzno 3727
-*create supplies_ruzno 3750
-
-*create economy_vanka 3
-*create infrastructure_vanka 4437
-*create population_vanka 3392
-*create supplies_vanka 1191
-
-*create economy_inkaz 1
-*create infrastructure_inkaz 3806
-*create population_inkaz 1465
-*create supplies_inkaz 4414
-
-*create economy_sutin 2
-*create infrastructure_sutin 2075
-*create population_sutin 1438
-*create supplies_sutin 2592
-
-*create economy_boledov 1
-*create infrastructure_boledov 1909
-*create population_boledov 2206
-*create supplies_boledov 4666
-
-*create economy_horiad 2
-*create infrastructure_horiad 4248
-*create population_horiad 2988
-*create supplies_horiad 1643
-
-*create economy_ivonan 2
-*create infrastructure_ivonan 4707
-*create population_ivonan 1163
-*create supplies_ivonan 1932
+*create economy_sutin 4
+*create infrastructure_sutin 6861
+*create population_sutin 8510
+*create supplies_sutin 8155
 
 *create economy_novina 3
-*create infrastructure_novina 1655
-*create population_novina 3827
-*create supplies_novina 2846
+*create infrastructure_novina 5922
+*create population_novina 6545
+*create supplies_novina 9635
+
+
+*create economy_cancove 2
+*create infrastructure_cancove 2269
+*create population_cancove 4555
+*create supplies_cancove 4879
+
+*create economy_jazin 2
+*create infrastructure_jazin 3470
+*create population_jazin 2615
+*create supplies_jazin 3878
+
+*create economy_trev 1
+*create infrastructure_trev 4799
+*create population_trev 2532
+*create supplies_trev 4276
+
+*create economy_madre 1
+*create infrastructure_madre 3300
+*create population_madre 4430
+*create supplies_madre 4868
+
+*create economy_ruzno 1
+*create infrastructure_ruzno 2481
+*create population_ruzno 3938
+*create supplies_ruzno 4500
+
+*create economy_vanka 2
+*create infrastructure_vanka 4337
+*create population_vanka 2817
+*create supplies_vanka 2461
+
+*create economy_inkaz 1
+*create infrastructure_inkaz 1472
+*create population_inkaz 2113
+*create supplies_inkaz 1173
+
+*create economy_boledov 2
+*create infrastructure_boledov 4527
+*create population_boledov 3036
+*create supplies_boledov 2042
+
+*create economy_horiad 1
+*create infrastructure_horiad 2503
+*create population_horiad 2644
+*create supplies_horiad 1946
+
+*create economy_ivonan 2
+*create infrastructure_ivonan 1737
+*create population_ivonan 1566
+*create supplies_ivonan 3073
 
 
 *comment save/load system

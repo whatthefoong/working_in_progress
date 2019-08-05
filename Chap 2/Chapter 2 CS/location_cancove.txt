@@ -1,0 +1,1 @@
+*gosub_scene location_description
