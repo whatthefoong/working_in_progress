@@ -1,6 +1,14 @@
 *comment Second half of Sonia's route, romance scene and hospital raid
 *temp conversations_with_sonia = 0
 *temp banged_dude = 0
+*temp password_clue = 0
+*temp password_attempt = 0
+*temp search_time = 0
+*temp list_stolen = 0
+*comment list_stolen = 0 means failed to get it, 1 means success, 2 means made fake list
+*temp fake_letter = 0
+*temp stairs_fight = 0
+*comment stairs_fight 0 means solo, 1 means in crowd
 
 Another 5 days pass. You are mostly recovered now, able to walk on your own two feet without a crutch. Sergeant ${sergeant} and the rest of your men back at the barracks were merciful enough to send some civilian clothes to the hospital for you and the other injured soldiers, so you wouldn't have to continue wearing those baby blue hospital gowns. 
 *line_break
@@ -43,7 +51,7 @@ She rises from her seat, and begins walking out of the ward, gesturing for you t
 As the two of you descend down the elevator, your mind runs rampant with thoughts. What kind of place is she bringing me, you ponder. A night club? No, that doesn't seem to be her thing. Maybe some hipster corner bar with complicated foreign names for drinks. That sounds about right. Or maybe-
 *line_break
 *line_break
-The doors open to… the 8th floor? You figured you would have gone all the way down to the lobby, maybe hit the streets.
+The doors open to… the 10th floor? You figured you would have gone all the way down to the lobby, maybe hit the streets.
 *line_break
 *line_break
 You wordlessly follow ${doctor} as she navigates the network of hallways. From the past few days of exploring you are rather confident in navigating the interior of the hospital, but you can't read ${doctor}'s intentions on bringing you here.
@@ -556,7 +564,7 @@ Pulling away slightly, she whispers "Listen… I just wanted to say thank you fo
 You don't need to see her to know that she's blushing deeply. Before you get a chance to reply, she kisses you passionately on the lips, stealing your words.
 *line_break
 *line_break
-After a solid 5 seconds she finally lets you go, promptly slipping her T-shirt over herself. You watch wordless as she walks towards the coatrack to grab her coat.
+After a solid 5 seconds she finally lets you go, promptly slipping her T-shirt over herself. You watch wordless as she walks towards the coat rack to grab her coat.
 *line_break
 *line_break
 "Oh, one more thing," she adds. "People usually come in here for breakfast around 7, so if you could do me a favor and clean up this place up before then, that'd be great."
@@ -573,3 +581,673 @@ You spring to your feet to start looking for your underwear.
 *goto 2_4_8_dffm_message
 
 *label 2_4_8_dffm_message
+[i]2 days later…[/i]
+*line_break
+*line_break
+You're relaxing in the lounge, watching some drama series you have zero investment in. Dressed in a simple gray hoodie and blue jeans, a set of clothes ${doctor} was gracious enough to produce for you so you wouldn't have to run around reeking of booze and bad decisions, you sink into the cushions. 
+*line_break
+*line_break
+Oh how far you've fallen. Just 2 weeks ago you were in the heat of the battlefield, fighting for your life, protecting the soil you stand on. 
+*line_break
+*line_break
+And here you are, watching a 2-episode special of [i]Sultry Housewives[/i] with a heaping bowl of dry cereal in your lap. 
+*line_break
+*line_break
+You had checked in on the rest of your men earlier today. They were recovering steadily: all able to walk without assistance. The doctors want to keep them for one more day to run some final tests before they get properly discharged.
+*line_break
+*line_break
+You spent an hour or two chatting with them, but after a while it became apparent that you aren't as chummy with them as you think you are. There's an air of awkwardness between you and them, as if they weren't able to speak their minds with you around. That's pretty fair, you think. There should be a level of respect between a manager and their staff. But regardless, after lunch you made to decision to have some time away from them, opting to use your access to the lounge to its fullest.
+*line_break
+*line_break
+You haven't had many opportunities to speak with ${doctor} since that night. No longer being her patient, you only got to see her once or twice briskly walking down the hallways, exchanging a 'hi' and 'hello' before she was off once more. 
+*line_break
+*line_break
+You're leaving tomorrow, returning to the military lifestyle. Who knows when you'll be back here, if ever. Perhaps you should arrange for that dinner you promised ${doctor}.
+*line_break
+*line_break
+[b]bzzzzt bzzzzt… [/b]
+*line_break
+*line_break
+You feel vibrations coming from your flip-phone in your pocket. You pull it out and flip it open to see what the notification is.
+*line_break
+*line_break
+A new message from an unknown number.
+*line_break
+*line_break
+[i]Hello Commander ${name}. How has your morning been?[/i]
+*line_break
+[i]Was wondering if you could do us a favor. Rest assured, you will be paid handsomely for it.[/i]
+*line_break
+[i]You are good friends with Doctor ${doctor} yes? Then you should be able to access some of her documents.[/i]
+*line_break
+[i]I need you to find the patient list, the list of names of every patient in the hospital right now.[/i]
+*line_break
+[i]Once you find it, let me know. I will give you more instructions.
+*line_break
+[i]Can you do this by today? I promise it will be worth your while.[/i]
+*line_break
+*line_break
+You take the bowl of snacks off your lap, placing them onto the coffee table. You squint at your phone, re-reading the text over and over again.
+*line_break
+*line_break
+Surely this must be some kind of joke, right? 
+*line_break
+*line_break
+[b]bzzzzt bzzzzt… [/b]
+*line_break
+*line_break
+Another text, from the same number.
+*line_break
+*line_break
+[i]You must be so bored, lying in the staff lounge watching TV. A soldier like you must be itching for some excitement, yes? Just one snap of your camera, and $1000 is yours. [/i]
+*line_break
+*line_break
+You immediately whirl around, surveying every corner of the lounge. There are a few doctors in here with you. 2 female doctors talking by the bar, a male nurse making coffee at the pantry, and a male doctor slurping a take-out box of noodles. None of them are using their phones.
+*line_break
+*line_break
+You turn your attention back to your phone again, trepidation growing within yourself. How does this person know your name, your friends, and [i]your exact location?[/i]
+*line_break
+*line_break
+You feel your palms begin to clam up. Your danger sense is on full alert. The calm atmosphere in the room has turned a full 180. Anyone and everyone is a potential spy. 
+*line_break
+*line_break
+What do you do?
+*fake_choice
+	#Agree to take a photo of the patient list.
+		$1000… is a lot. Surely one measly list couldn't hurt anyone, could it?
+		*line_break
+		*line_break
+		"Alright, I'll do it" you reply.
+		*line_break
+		*line_break
+		Peeling yourself off the couch, you exit the lounge, phone still in hand. This better not be some sick prank, you think to yourself, a mixture of annoyance, worry and hopefulness bubbling in you.
+		*line_break
+		*line_break
+		Knowing the layout of the hospital like the back of your hand at this point, you make your way over to the records room.
+		*line_break
+		*line_break
+		Standing in front of the door, you cautiously turn the handle - to find it unlocked. As you gently push the door open, you find the room vacant. You heave a sigh of relief and close the door behind you, glad that this operation is going as smoothly as it is.
+		*line_break
+		*line_break
+		The room is tidy - almost untouched. The walls are a sterile white, just like the rest of the wards. There are 2 stations of computers on desks, with printers wired up next to them. Two oak wood cabinets line the opposite end of the room.Finally there is a window, curtains currently tied up neatly by the sides, that allows some natural light in.
+		*line_break
+		*line_break
+		Opening the door just a crack to peer into the hallways, you don't see anyone. It seems you're in the clear for now, but you shouldn't take your sweet time. 
+		*line_break
+		*line_break
+		*goto search_options
+	#Agree to take a photo o the patient list, but find a way to fake it.
+		*set fake_letter = 1
+		$1000 is a lot. But you wouldn't just follow the instructions of some mysterious individual without knowing their intentions. What do they want with the patient list? Surely something malicious. 
+		*line_break
+		*line_break
+		Perhaps there is some way of having your cake and eating it. The thought of faking the list enters your mind. Would that work? Being able to claim the $1000 without endangering the safety of others…
+		*line_break
+		*line_break
+		The idea seems more and more enticing as you ruminate over it. You reply the sender: "Alright, I'll do it."
+		*line_break
+		*line_break
+		You leave the lounge, making your way towards the records room that you've come across several times in your past 2 weeks of exploring, but never actually entered.
+		*line_break
+		*line_break
+		If you could print out a fake version of the patient list, and make it look convincing enough, you just might be able to outsmart this mysterious sender -  and make a quick buck while doing so.
+		*line_break
+		*line_break
+		Arriving in front of the records room, you cautiously turn the handle - to find it unlocked. As you gently push the door open, you find the room vacant. You heave a sigh of relief and close the door behind you, glad that this operation is going as smoothly as it is.
+		*line_break
+		*line_break
+		The room is tidy - almost untouched. The walls are a sterile white, just like the rest of the wards. There are 2 stations of computers on desks, with printers wired up next to them. Two oak wood cabinets line the opposite end of the room.Finally there is a window, curtains currently tied up neatly by the sides, that allows some natural light in.
+		*line_break
+		*line_break
+		Opening the door just a crack to peer into the hallways, you don't see anyone. It seems you're in the clear for now, but you shouldn't take your sweet time. 
+		*goto search_options
+	#Refuse to take a photo of the patient list.
+		You decide to not even entertain the mysterious sender with a reply. Cautiously, you pick yourself up from the seat. Still keeping an eye on the people left in the room, you act as casually as you can, exiting the room. They don't seem to pay any attention towards you, but you keep your guard up nonetheless.
+		*line_break
+		*line_break
+		As you leave the lounge, you receive yet another message.
+		*line_break
+		*line_break
+		[i]Where are you going? Are you agreeing?[/i]
+		*line_break
+		*line_break
+		You resist the urge to reply, continuing your brisk pace moving as far away from the lounge as possible. Your mind is running at a million miles an hour, trying to come up with a solution. Who is this, and why have they targeted you? Is there anyone who could help with this? The police?
+		*line_break
+		*line_break
+		Vibrations erupt from your pockets once more, just as you enter an empty elevator. Upon reading the new text, your blood turns cold.
+		*line_break
+		*line_break
+		[i]Perhaps we thought too highly of you, commander. Rejecting our offer like that… such a shame, but we will let it slide. We will be in touch, though don't tell anybody of our little deal. Your family in[/i]
+		*if background = 1
+			[i]	Lutengrad [/i]
+		*if background = 2
+			[i]Madre [/i]
+		*if background = 3
+			[i]Rusno [/i]
+		[i]		would be so disappointed, let's try and avoid that shall we?[/i]
+		*line_break
+		*line_break
+		The mentioning of your hometown scares you. Not only can they pinpoint your location, but also that of your family's?
+		*line_break
+		*line_break
+		After that, you don't receive further messages from the unknown sender. The uneasiness hangs in the air, as you're uncertain who to turn to. The number is unrecognizable, you imagine the contact is reaching out to you through some 'disposable' number, which provides little leads to follow even if you had the police look into it. Even if you wanted to ask for help, would anybody be able to get to the bottom of it?
+		*line_break
+		*line_break
+		Seeing as you are leaving this damned hospital tomorrow morning, you decide to try and shrug the matter off. and just carry on with your day as though you had seen nothing. But threat of some invisible threat who seems to know so much about you continue to gnaw at the back of your mind.
+		*page_break
+		*goto 2_4_9_hospital_raid
+		
+*label search_options
+*if search_time >= 10
+	*goto times_up
+*if search_time >= 5
+	*disable_reuse
+	You freeze up as you hear the sound of footsteps from the hallway. Your eyes are glued on the door as you pray for nobody to come bursting through the door. After a minute of holding your breath, the sound footsteps passes the door, and fades away.
+	*line_break
+	*line_break
+	You turn your attention back to searching. You should probably hurry it up. 
+Where do you search?
+*fake_choice
+	#Search computer
+		*set search_time +1
+		You take a seat in front of the computer. Perhaps the list is stored digitally?
+		*line_break
+		*line_break
+		You turn on the power, and the display boots up, making a loud, rising tone in the process. You wince, hoping nobody heard that.
+		*line_break
+		*line_break
+		As the start-up screen fades to a dark screen, a white bar appears in the middle, prompting for a password to be inputted.
+		*label password_options
+		*if password attempt >= 3
+			The password seems unlikely to be something you could randomly guess… perhaps a clue lies elsewhere.
+		*fake_choice
+			#Type in 'sonia'
+				*set search_time +1
+				*set password_attempt +1
+				[b]				[i]Incorrect password[/i][/b]
+				*goto password_options
+			#Type in 'cinnamon'
+				*set search_time +1
+				*set password_attempt +1
+				[b]				[i]Incorrect password[/i][/b]
+				*goto password_options
+			#Type in 'harisjameshospital'
+				*set search_time +1
+				*set password_attempt +1
+				[b]				[i]Incorrect password[/i][/b]
+				*goto password_options
+			#Type in 'anastasia' 
+				*set search_time +1
+				*set password_attempt +1
+				[b]				[i]Incorrect password[/i][/b]
+				*goto password_options
+			#Type in 'ilovetorians'
+				*set search_time +1
+				*set password_attempt +1
+				[b]				[i]Incorrect password[/i][/b]
+				*line_break
+				*line_break
+				Guess it was worth a shot.
+				*goto password_options
+			*selectable_if (password_clue = 1) #Type in 'harisjames29'
+				*set search_time +1
+				[b]				[i]Welcome~[/i][/b]
+				*line_break
+				*line_break
+				You heave a sigh of relieve as the password is accepted. The screen fades to a solid electric blue wallpaper, mostly empty for your white cursor to navigate. The desktop only has a few icons on it: an Internet browser, a recycle bin, and 6 folders.
+				*goto folder_options
+			#Leave the computer.
+				You decide to step away from the computer for a moment to search other places.
+				*goto search_options
+	#Search cabinets
+		*set search_time +1
+		You open the wooden cabinets to find several black plastic binders arranged neatly in rows. On the spines of the folders there are white cards with black labels written in marker.
+		*line_break
+		*line_break
+		Nicole Woodsburn, Daniel Barthold, Mira Noktone… there is a name labelling each binder. There are some names you recognize as well. Anastasia Rubia, the little girl who was ${doctor}'s patient, and Garcia Bakall, the Torian man who demanded for treatment. 
+		*line_break
+		*line_break
+		It appears that these cabinets hold the personal files of every patient in the hospital. If you wrote all of these names down, you would have your list of patients - but it would be incredibly tedious, plus you'd be lacking any important information beyond their names. There has to be a list of all these names printed out somewhere, right?
+		*line_break
+		*line_break
+		What do you do?
+		*fake_choice
+			#Rifle through the cabinets for a physical list of names.
+				*set search_time +10
+				*set list_stolen = 1
+				You thumb through a few binders, keeping your eyes peeled for any summarized list of names. Each of these binders hold detailed information on their respective patients, containing pictures, medical history, allergies, blood type, height and weight, so on so forth. 
+				*line_break
+				*line_break
+				After looking through your seventh binder and deciding it was leading you nowhere, you switch tactics, beginning to finger the spaces between the binders, hoping to find some loose papers but to no avail.
+				*line_break
+				*line_break
+				You take a step back from the cabinet, scratching the back of your head in frustration.
+				*line_break
+				*line_break
+				And then you see it.
+				*line_break
+				*line_break
+				Hanging on the inner side of the door to the cabinet, is a clear plastic folder, with a register of every patients name, their ID number, their gender, the ward they are in, and their date of admission all arranged neatly in rows and columns.
+				*line_break
+				*line_break
+				You had developed such tunnel vision over the list of names that you neglected to look elsewhere. Feeling sheepish, you gently remove the list from its transparent pocket.
+				*page_break
+				*goto times_up
+			#Leave the cabinets.
+				You decide to close the cabinets and search elsewhere for a moment.
+				*goto search_options
+	#Search drawer under desk.
+		*set search_time +1
+		*set password_clue = 1
+		Your eyes look at the drawer built into the desk. Maybe some documents are kept here?
+		*line_break
+		*line_break
+		Pulling the compartment open, a few pens roll forward from the momentum. There are a few loose pieces of paper. You flip through them, but none seem pertinent to what you're looking for. 
+		*line_break
+		*line_break
+		Just before you put the papers back, you notice a single sticky-note attached to the base of the drawer, underneath the papers.
+		*line_break
+		*line_break
+		It reads: [i]password for computer is 'harisjames29'[/i]
+		*line_break
+		*line_break
+		With this information, you place the papers back into the drawer as you had found them, and close it shut.
+		*goto search_options
+
+*label folder_options
+What do you do?
+	*disable_reuse #Open the folder: Pictures
+		*set search_time +1
+		Double-clicking on this folder, a bunch of pictures pop up. Group pictures of the staff at a Christmas party, at a Halloween party, at Thanksgiving… There's a picture of ${doctor} with bunny ears on that's cute - but not what you're looking for. 
+		*line_break
+		*line_break
+		You take a minute to scour through he folder, but ultimately decide you won't find the list here.
+		*goto folder_options
+	*disable_reuse #Open the folder: Medical Records
+		*set search_time +2
+		Within this folder, there are several other folders, all labeled various names. Dolan Marshall, Milo Orelik, Linda Cole. Two names catch your attention. Anastasia Rubia, the little girl who was ${doctor}'s patient, and Garcia Bakall, the Torian man who demanded for treatment.
+		*line_break
+		*line_break
+		Opening a few of these sub-folders, you come to the conclusion that these folders contain the personal records of each patient, detailing their medical history, blood type, reason for being admitted to the hospital. 
+		*line_break
+		*line_break
+		However, while these are all the names you require, you need them in the form of a list. Surely a register of all names should be available somewhere?
+		*line_break
+		*line_break
+		You decide to exit the folder to search elsewhere.
+		*goto folder_options
+	*disable_reuse #Open the folder: Admin
+		*set search_time +10
+		*set list_stolen = 1
+		Inside this folder are a ton of documents containing a wide variety of information. There's one with the history of admissions into each ward, past and present. Another one contains a list of the food allergies of every patient on each floor.
+		*line_break
+		*line_break
+		Jackpot. It seems you've stumbled into the right place. You begin to scour the unorganized folder for what you're looking for. 
+		*line_break
+		*line_break
+		It takes you a while, but eventually you find what you're looking for: a compiled list of every patient presently residing in the hospital, along with their respective ID numbers, and the wards they reside in. You hit the print button and get ready to grab your list and bolt.
+		*line_break
+		*line_break
+		The old machine whirs to life, causing a huge ruckus in the process as internal pieces click and chunk and thunk into place. You keep an eye on the door, worried that at any moment someone would barge in, but thankfully, after a solid 5 minutes of waiting in fear, your list is churned out of the device without interruption.
+		*page_break
+		*goto times_up
+	*disable_reuse #Open the folder: Staff
+		*set search_time +2
+		There are several documents in this folder, each labeled a different person's name. Michael Luka, Karll Dimitri, Philip Jones, Sonia Stone…
+		*line_break
+		*line_break
+		It appears this folder contains records of the staff members. 
+		*line_break
+		*line_break
+		You quickly sweep through the folder, but find nothing more than folder over folder of each staff member in this building.
+		*line_break
+		*line_break
+		After confirming there is nothing of use to you here, you exit the folder.
+		*goto folder_options
+	*disable_reuse #Open the folder: Inventory
+		*set search_time +2
+		You find several documents listed labeled with dates, going back as far as several years. Opening one, you see a carefully tabulated list of complicated medicine names, and the respective quantity next to them. 
+		*line_break
+		*line_break
+		This is likely just a list of the hospital's inventory of medicine, nothing relevant to you right now.
+		*line_break
+		*line_break
+		You exit the folder.
+		*goto folder_options
+	*disable_reuse #Open the folder: WIP
+		*set search_time +1
+		This folder feels… out of place. 
+		*line_break
+		*line_break
+		Double-clicking on it, you pull up a text document. Its a story of gladiators fighting for glory in the Colosseum, half-written.
+		*line_break
+		*line_break
+		It appears that someone in here has been using the computers for personal work. You shrug and close the document.
+		*goto folder_options
+	*selectable_if (fake_letter = 1) #Begin fabricating a fake patient list.
+		*set search time +10
+		*set list_stolen = 2
+		Having gained access to the computer, you open up a new text file. Pulling up a few official documents from some of the folders on the desktop as reference material, you begin fabricating a fake patient list.
+		*line_break
+		*line_break
+		You find a list of random names online which you copy over, and slap your hands over the keyboard to create some ID numbers. You key in random numbers for the wards, and randomly key in some fake ward numbers - being sure to remain within the realm of what seems realistic.
+		*line_break
+		*line_break
+		After a good 10 minutes, you finish your masterpiece. Unless you really scrutinized it, it could certainly fool someone into thinking it to be the real deal. Satisfied, you hit the print button.
+		*line_break
+		*line_break
+		The old machine whirs to life, causing a huge ruckus in the process as internal pieces click and chunk and thunk into place. You keep an eye on the door, worried that at any moment someone would barge in, but thankfully, after a solid 5 minutes of waiting in fear, your list is churned out of the device without interruption.
+		*page_break
+		*goto times_up
+	#Turn off the computer, search elsewhere. 
+		You turn off the computer, deciding to search elsewhere. There's probably no point in searching both computers, there's a pretty high chance for both stations to be synced up with the same documents.
+		*goto search_options
+	
+*label times_up
+Just as you're about to congratulate yourself on a job well done, you hear the sound of footsteps approach the door. 
+*line_break
+*line_break
+In a hurry, you fold the list you just procured and shove it in your back pocket and clean up any evidence of your tampering, just as you hear the door handle turn.
+*line_break
+*line_break
+You try to stand as nonchalantly as you can, leaning against the desk, looking out the window. 
+*line_break
+*line_break
+Through your peripherals, you see a old lady, with curly brown hair, dressed in the pine green cleaning staff uniform. She clutches a mop in her left hand and a bucket in her right. 
+*line_break
+*line_break
+"Excuse me," she croaks in a deep voice.
+*line_break
+*line_break
+You turn to face her, as if having just noticed her arrival.
+*line_break
+*line_break
+"I'm going to mop this room now, so I'm going to need you to leave for a while."
+*line_break
+*line_break
+Her face is covered in wrinkles, making the lady have a permanent expression of annoyance. You decide not to test whether she truly is annoyed or not, and obey her instructions.
+*line_break
+*line_break
+You exit the room quickly, pulling out your phone to update the unknown sender of your progress.
+*line_break
+*line_break
+You begin typing into the keypad.
+*line_break
+*line_break
+*if list_stolen = 0
+	"I couldn't get the list, couldn't find it in the office." you type before sending.
+	*line_break
+	*line_break
+	Not 3 seconds pass before you receive a new message from the mysterious sender.
+	*line_break
+	*line_break
+	[i]I see… It appears you are not as capable as we had originally thought. Punishment for failure is necessary.[/i]
+	*line_break
+	*line_break
+	Another text follows shortly after, that sends chills down your spine.
+	*line_break
+	*line_break
+	[i]How is your family, Commander? Still in 		[/i]
+	*if background = 1
+		[i]	Lutengrad?[/i]
+	*if background = 2
+		[i]Madre?[/i]
+	*if background = 3
+		[i]Rusno?[/i]
+	[i]You have not checked in with them for a while. Maybe you should soon.[/i]
+	*line_break
+	*line_break
+	You try sending more messages to interrogate the sender, force more information out of them, but you don't receive a reply. Frustrated, you stuff your phone back into your pockets.
+	*line_break
+	*line_break
+	Surely this was just some sick prank you got duped in to. Shaking off the worry and fear building up inside of you, you make your way back to your soldiers' wards. You'd very much appreciate some company right now.
+	*page_break
+	*goto 2_4_9_hospital_raid
+*if list_stolen = 1
+	*set money + 1000
+	"got the list, what now?"
+	*line_break
+	*line_break
+	Not 3 seconds pass before you receive a new message from the mysterious sender.
+	*line_break
+	*line_break
+	[i]Very good! you certainly do not disappoint. I promise you the reward will be worth your troubles. Go to toilet on 4th floor, we will exchange there.[/i]
+	*line_break
+	*line_break
+	With no turning back at this point, you head to the 4th floor. 
+	*line_break
+	*line_break
+	You find the washroom to be empty. As you carefully enter, checking the stalls for occupants, you receive another text.
+	*line_break
+	*line_break
+	[i]Put list in supply cabinet, then go outside and wait until I tell you to come back in.[/i]
+	*line_break
+	*line_break
+	You squint at your phone, unsure of what to make of these bizarre instructions. Nonetheless, you do as you're told, placing the folded piece of paper in a dry corner of the supply cabinet, then exiting the washroom.
+	*line_break
+	*line_break
+	You lean against the wall outside, waiting patiently. You pay close attention to the halls, watching the occasional patient or doctor walk past. No one enters or exits the washroom.
+	*line_break
+	*line_break
+	[b]bzzzzt bzzzzt… [/b]
+	*line_break
+	*line_break
+	[i[You can come in now. Look in the supply cabinet for your reward. We look forward to working with you again :)[/i]
+	*line_break
+	*line_break
+	But… nobody went in and nobody left. Nobody was in the washroom - you're sure of that. So how-
+	*line_break
+	*line_break
+	Perplexed, you hurriedly return to the washroom and - lo and behold, and stack of ten 100 dollar bills sit where you had left the list.
+	*line_break
+	*line_break
+	You spin around, searching for any sign of life, any way for someone to have avoided your vigilant watch and snuck in here, but find no leads. Utterly perplexed, you decide not to question the methods of this mysterious sender, and simply be satisfied with the payout. You pocket the bills and return to the staff lounge.
+	*page_break
+	*goto 2_4_9_hospital_raid
+*if list_stolen = 2
+	"got the list, what now?"
+	*line_break
+	*line_break
+	Not 3 seconds pass before you receive a new message from the mysterious sender.
+	*line_break
+	*line_break
+	[i]Very good! you certainly do not disappoint. I promise you the reward will be worth your troubles. Go to toilet on 4th floor, we will exchange there.[/i]
+	*line_break
+	*line_break
+	You decide not to question the bizarre hand-off point, and head to the 4th floor. 
+	*line_break
+	*line_break
+	You find the washroom to be empty. As you carefully enter, checking the stalls for occupants, you receive another text.
+	*line_break
+	*line_break
+	[i]Put list in supply cabinet, then go outside and wait until I tell you to come back in.[/i]
+	*line_break
+	*line_break
+	You squint at your phone, unsure of what to make of these bizarre instructions. Nonetheless, you do as you're told, placing the folded piece of paper in a dry corner of the supply cabinet, then exiting the washroom.
+	*line_break
+	*line_break
+	You lean against the wall outside, waiting patiently. You pay close attention to the halls, watching the occasional patient or doctor walk past. No one enters or exits the washroom.
+	*line_break
+	*line_break
+	[b]bzzzzt bzzzzt… [/b]
+	*line_break
+	*line_break
+	[i]You think you are funny commander? Think you can trick us?[/i]
+	*line_break
+	[i]Very cute. But unfortunately we are smarter than that.[/i]
+	*line_break
+	*line_break
+	You look around. Nobody entered or left the washroom… how'd they even find out?  
+	*line_break
+	*line_break
+	[b]bzzzzt bzzzzt… [/b]
+	*line_break
+	*line_break
+	[i]Your parents would be so disappointed in you, trying to trick people like that. Don't worry, we promise to pay them a visit someday. They're in [/i]
+	*if background = 1
+		[i]	Lutengrad [/i]
+	*if background = 2
+		[i]Madre [/i]
+	*if background = 3
+		[i]Rusno [/i]
+	[i]yes? Best to check in with them sometime. [/i]
+	*line_break
+	*line_break
+	You burst back into the washroom. "Alright you sick fucks! Enough of this game!"
+	*line_break
+	*line_break
+	There's nobody in the room, as your threats bounce off the walls harmlessly. You pull open the supply cabinet - but your fake list is no longer where you left it.
+	*line_break
+	*line_break
+	You try sending more messages to interrogate the sender, force more information out of them, but you don't receive a reply. Frustrated, you stuff your phone back into your pockets.
+	*line_break
+	*line_break
+	Surely this was just some sick prank you got duped in to. Shaking off the worry and fear building up inside of you, you make your way back to your soldiers' wards. You'd very much appreciate some company right now.
+	*page_break
+	*goto 2_4_9_hospital_raid
+	
+*label 2_4_9_hospital_raid
+The last of the light from the sun is snuffed out, as the orange ball of light descends past the horizon line of the city scape, painting the skies a gradient of oranges, reds and magentas, before eventually being swallowed up in midnight blue. Though the sun has set, the city of Giralmore continues to thrive. Streetlights illuminate the roads where cars, motorcycles and trucks speed up and down. Windows in the multitude of towering buildings remain lit, with workers pressing on to complete their last hour of work before calling it a day. Humanity defies Mother Nature's decree of the day being over, as life continues despite the moon now rising high into the sky, looking down on the world below.
+*line_break
+*line_break
+You lean against the window, alone in the lounge, peering out into the nightlife. A glass of gin and tonic in your hand, an attempt at calming your nerves from your little [i]encounter[/i] earlier this day. You stare out into the night, sipping your beverage absent-minded, letting the thoughts flow uninhibited.
+*line_break
+*line_break
+You had tried to reach out to ${doctor} but was unable to find her. Asking around, you found out that she had left work early today to pursue some personal matters. Alas, it seems you'll have to treat her to the promised dinner the next time you're in town.
+*line_break
+*line_break
+Your thoughts return to the mysterious messages you received. They still remain in your phone, though there has been no follow up since. Who could it have been? Doctor Karll? You hadn't heard much about the shrewd doctor, though the mannerisms from the text don't match. Was this the LOM trying to reach out to you? 
+*line_break
+*line_break
+You sigh, shaking your head. No use over-thinking about it now. In a couple of hours, you and the rest of the soldiers will be out of here, on a truck heading for the camp along the outskirts of the city. There, you'll likely resume your soldier life. What other battles await you?
+*line_break
+*line_break
+"Whatever comes next, I'm ready for it." you mutter to yourself, finishing off the last bit of your drink, steeling yourself.
+*line_break
+*line_break
+As if the universe itself wished to spite you, the sound of gunfire echoes reaches your ears. Your body tenses.
+*line_break
+*line_break
+From outside the hospital, you hear screams, the barking of commands in the Morovian dialect, and more gunfire. You try look down to get a better view, but you're unable to make out what is happening from your angle.
+*line_break
+*line_break
+Are we being raided? Why now? Who's responsible? The LOM? What would they gain from raiding a hospital? 
+*line_break
+*line_break
+The image of the wealthy Torians, laughing heartily, enjoying their riches, all gathered under a single roof enters your mind. [i]Oh.[/i]
+*line_break
+*line_break
+You slap your cheeks, getting yourself together. Now's not the time for thinking, its time for action.
+*line_break
+*line_break
+You exit the lounge, and as you do, a swarm of people in coats and hospital gowns bolt past you. Doctors, nurses and patients well enough to move are fleeing towards the stairs.
+*line_break
+*line_break
+What do you do?
+*fake_choice
+	#Join the crowd and run for the stairs!
+		*set stairs_fight = 1
+		You sidle up with the panicking crowd of fleeing people, trying to blend in. Perhaps with the cover of numbers your odds of survival will increase.
+		*line_break
+		*line_break
+		*goto 2_4_10_stair_fight
+	#Go by yourself towards the lift.
+		You let the crowd run past you, too overwhelmed by fear to even notice your presence. When the coast is clear, you begin jogging in the opposite direction, towards the lift.
+		*line_break
+		*line_break
+		Sure, everyone knows the lift is a bad idea in such situations: a route with only one exit is easily blocked off. But that's what makes it so unexpected. You decide to take the gamble and head for the lift lobby.
+		*line_break
+		*line_break
+		You press the button for the lift and wait. It almost feels comical, the entire building in a frenzy while you're waiting with your hands in your pockets.
+		*line_break
+		*line_break
+		[b]Ding![/b]
+		*line_break
+		*line_break
+		The lift arrives at your floor. The metal doors part to reveal 4 armed soldiers, young men maybe 16-19, wearing simple makeshift armors. 
+		*line_break
+		*line_break
+		For a second, you stare at them, and they stare back at you.
+		*line_break
+		*line_break
+		Well, so much for that gamble.
+		*line_break
+		*line_break
+		The soldiers point their rifles at you, ordering for you to get on the ground, with your hands in the air. Armed with just an empty whiskey glass you had forgotten about, you do as you're told.
+		*line_break
+		*line_break
+		*goto 2_4_11_torture
+	#Go by yourself towards another flight of stairs.
+		You let the crowd run past you, too overwhelmed by fear to even notice your presence. When the coast is clear, you begin jogging in the opposite direction, towards the other flight of stairs further away.
+		*line_break
+		*line_break
+		Being surrounded by civilians and having to worry about their well-being will only slow you down. You silently hope they'll be able to take care of themselves as you prioritize getting yourself out of here and better armed to be of more help.
+		*line_break
+		*line_break
+		*goto 2_4_10_stair_fight
+	
+*label 2_4_10_stair_fight
+As you scamper down the stairs, you hear the sounds of heavy footsteps coming up the stairs to meet you. 
+*line_break
+*line_break
+*if stairs_fight = 1
+	Before you can even consider stopping and turn back, the swarm of people push you forward and down the stairs.
+	*line_break
+	*line_break
+*else
+	You slow down, and dive into the nearest floor. You could potentially ambush them, using the element of surprise, though you don't know how many of them there are. You could also just hide out, wait for them to pass and continue heading down.
+	*line_break
+	*line_break
+	You decide to…
+	*fake_choice
+		#ambush them.
+			You stand just behind the door frame, readying yourself to pounce on anyone who comes through. You realize the whiskey glass from earlier still remains in your hand. It could serve as an effective weapon, you think to yourself.
+			*line_break
+			*line_break
+			The sound of footsteps from the stairwell grow louder and louder, closer and closer. You raise the whiskey glass above your head, ready to bring it down on the first motherfucker who dares stick his head through this door.
+			*line_break
+			*line_break
+			The footsteps have reached your floor, you're certain of it.
+			*line_break
+			*line_break
+			The door yanks open, and a man - no, a teenage boy, maybe 16 or 17, comes through the doorway. Dark skin, a black buzzcut, wearing a bright orange T-shirt with an olive combat vest strapped over. Time seems to slow down as he turns notices you by the doorway, his eyes bugging out.
+			*if physical > 20
+				You don't hesitate as you bring your arm down with all your might, slamming the glass against the boy's temple. The glass shatters into a million pieces, with the sheer impact alone knocking the soldier out.
+				*line_break
+				*line_break
+				Adrenaline supercharging you like electricity, you side step into the door frame, holding up the soldier you just knocked unconscious. You see 3 more boys, similarly dressed in civilian clothes and whatever makeshift armor they could find, come grinding to a halt as the front runner is now out cold.
+				*line_break
+				*line_break
+				Grabbing the rifle, still slung around the unconscious boy, you spray lead into the 3 aggressors before they can react.  In seconds, they drop to the floor dead. You somehow managed to pull out victorious, against all odds.
+				*line_break
+				*line_break
+				You unsling the weapon and armor from the unconscious soldier in your arms, equipping yourself with them. You then loot the 3 soldiers for whatever else they had that might be of use: a helmet, some extra ammo, and a knife.  
+				*line_break
+				*line_break
+				Now fully equipped for a proper fight, you continue making your way down the stairs.
+				*goto 2_4_12_win
+			*if physical <= 20
+				You don't hesitate as you bring your arm down with all your might, slamming the glass against the boy's temple. The glass shatters into a million pieces. The boy stumbles backwards, sliding down the wall - dazed, but conscious. It seems you didn't hit him hard enough.
+				*line_break
+				*line_break
+				The boy, rifle still in his hands, sprays bullets in this narrow corridor. You duck to avoid the fire, but in such an enclosed space, your left shoulder gets clipped by the ricochet. You grimace and grip your injured shoulder, slumped on the ground. 
+				*line_break
+				*line_break
+				3 more soldiers enter the corridor, pointing their weapons at you, barking at you to stand down. They look only slightly older than the boy you hammered, dressed similarly in civilian clothes with whatever protective armor they could find strapped over.
+				*line_break
+				*line_break
+				The boy you hit picks himself up, recovering from the shock. He drives his foot into your side, kicking you while screaming vulgarities. You curl up into a fetal position to protect yourself as best you can as you're now at the mercy of these 4 armed soldiers.
+				*line_break
+				*line_break
+				*goto 2_4_11_torture
+		#hide out.
+			You're in the 8th floor, coincidentally the floor you had been recuperating in the past few weeks. You don't hear any sounds of conflict; the soldiers haven't arrived.
+			*line_break
+			*line_break
+			Being particularly familiar with this place, you find yourself a hiding spot inside an emergency supply closet. Squeezing yourself under the hose reel, you close the doors and remain as quiet as possible, praying for them not to find you.
+			*line_break
+			*line_break
+			Waiting with baited breath, you hear the sound of boots on the hospital floor get louder and louder. You're certain they've arrived at this floor. 
+			
+
+		
