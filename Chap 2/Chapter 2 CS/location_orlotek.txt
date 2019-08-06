@@ -1,3 +1,1 @@
-[b]Orlotek[/b]
-*line_break
-*line_break
+*gosub_scene location_description

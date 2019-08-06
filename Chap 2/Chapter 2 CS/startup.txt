@@ -13,6 +13,7 @@
 	chapter3_dawn
 	ending
 	death
+	world_map
 
 *comment character
 *create name "nobody"
@@ -69,6 +70,11 @@
 *create travel_hours 0
 *create travel_hours_check 12
 *create travel_disrupt 0
+*comment location stats
+*create supplies ""
+*create economy ""
+*create infrastructure ""
+*create population ""
 
 *comment time
 *comment change this only
@@ -78,6 +84,7 @@
 *create day 0
 *create month 0
 *create year 0
+*create economy_latest_refresh 0
 
 *comment NPCs
 *create sergeant "Kosnik"
@@ -99,10 +106,118 @@
 *comment 0 for no civ killed, 1 for man killed, 2 for man and wife killed
 *create chap1_kill_civilian 0
 
+*comment chapter 2_4_sonia: 0 for sonia never confront dr karll, 1 for sonia did
+*create soniaconfront 0
 *comment achievements
 
-*comment save/load system
+*comment World Init
+*comment Cities
+*create economy_dovica 9
+*create infrastructure_dovica 45387
+*create population_dovica 47109
+*create supplies_dovica 46189
 
-*comment *sm_init sir_yes_sir | 3
+*create economy_strazova 10
+*create infrastructure_strazova 48260
+*create population_strazova 45732
+*create supplies_strazova 45853
+
+*create economy_giralmore 6
+*create infrastructure_giralmore 34259
+*create population_giralmore 33584
+*create supplies_giralmore 26030
+
+*create economy_kobelin 6
+*create infrastructure_kobelin 36367
+*create population_kobelin 29475
+*create supplies_kobelin 32310
+
+*create economy_lutengrad 7
+*create infrastructure_lutengrad 35462
+*create population_lutengrad 32976
+*create supplies_lutengrad 37679
+
+*comment town
+*create economy_fraven 3
+*create infrastructure_fraven 8830
+*create population_fraven 6742
+*create supplies_fraven 6564
+
+*create economy_poppany 3
+*create infrastructure_poppany 6058
+*create population_poppany 9536
+*create supplies_poppany 6131
+
+*create economy_orlotek 4
+*create infrastructure_orlotek 7164
+*create population_orlotek 7287
+*create supplies_orlotek 7026
+
+*create economy_sutin 4
+*create infrastructure_sutin 6861
+*create population_sutin 8510
+*create supplies_sutin 8155
+
+*create economy_novina 3
+*create infrastructure_novina 5922
+*create population_novina 6545
+*create supplies_novina 9635
+
+
+*create economy_cancove 2
+*create infrastructure_cancove 2269
+*create population_cancove 4555
+*create supplies_cancove 4879
+
+*create economy_jazin 2
+*create infrastructure_jazin 3470
+*create population_jazin 2615
+*create supplies_jazin 3878
+
+*create economy_trev 1
+*create infrastructure_trev 4799
+*create population_trev 2532
+*create supplies_trev 4276
+
+*create economy_madre 1
+*create infrastructure_madre 3300
+*create population_madre 4430
+*create supplies_madre 4868
+
+*create economy_ruzno 1
+*create infrastructure_ruzno 2481
+*create population_ruzno 3938
+*create supplies_ruzno 4500
+
+*create economy_vanka 2
+*create infrastructure_vanka 4337
+*create population_vanka 2817
+*create supplies_vanka 2461
+
+*create economy_inkaz 1
+*create infrastructure_inkaz 1472
+*create population_inkaz 2113
+*create supplies_inkaz 1173
+
+*create economy_boledov 2
+*create infrastructure_boledov 4527
+*create population_boledov 3036
+*create supplies_boledov 2042
+
+*create economy_horiad 1
+*create infrastructure_horiad 2503
+*create population_horiad 2644
+*create supplies_horiad 1946
+
+*create economy_ivonan 2
+*create infrastructure_ivonan 1737
+*create population_ivonan 1566
+*create supplies_ivonan 3073
+
+
+*comment save/load system
+*comment *sm_init blood_on_my_hands | 3
 *comment *sm_save 0 | false | Autosave - Startup
+
+
 *finish

@@ -1,0 +1,173 @@
+*comment Towns
+*create crime_cancove 2
+*create economy_cancove 4
+*create infrastructure_cancove 1
+*create productivity_cancove 5
+*create population_cancove 1087
+
+*create crime_fraven 4
+*create economy_fraven 4
+*create infrastructure_fraven 5
+*create productivity_fraven 4
+*create population_fraven 2413
+
+*create crime_jazin 2
+*create economy_jazin 3
+*create infrastructure_jazin 4
+*create productivity_jazin 2
+*create population_jazin 1212
+
+*create crime_poppany 5
+*create economy_poppany 2
+*create infrastructure_poppany 3
+*create productivity_poppany 4
+*create population_poppany 3006
+
+*create crime_trev 3
+*create economy_trev 1
+*create infrastructure_trev 4
+*create productivity_trev 5
+*create population_trev 4343
+
+*create crime_madre 4
+*create economy_madre 2
+*create infrastructure_madre 5
+*create productivity_madre 2
+*create population_madre 2013
+
+*create crime_orlotek 2
+*create economy_orlotek 4
+*create infrastructure_orlotek 5
+*create productivity_orlotek 2
+*create population_orlotek 2748
+
+*create crime_ruzno 5
+*create economy_ruzno 3
+*create infrastructure_ruzno 3
+*create productivity_ruzno 5
+*create population_ruzno 1506
+
+*create crime_vanka 4
+*create economy_vanka 4
+*create infrastructure_vanka 5
+*create productivity_vanka 3
+*create population_vanka 1627
+
+
+*create crime_inkaz 3
+*create economy_inkaz 3
+*create infrastructure_inkaz 2
+*create productivity_inkaz 3
+*create population_inkaz 3552
+
+*create crime_sutin 3
+*create economy_sutin 4
+*create infrastructure_sutin 3
+*create productivity_sutin 1
+*create population_sutin 2906
+
+*create crime_boledov 1
+*create economy_boledov 1
+*create infrastructure_boledov 4
+*create productivity_boledov 5
+*create population_boledov 1228
+
+*create crime_horiad 5
+*create economy_horiad 1
+*create infrastructure_horiad 1
+*create productivity_horiad 3
+*create population_horiad 2796
+
+*create crime_ivonan 1
+*create economy_ivonan 3
+*create infrastructure_ivonan 2
+*create productivity_ivonan 1
+*create population_ivonan 1122
+
+*create crime_novina 1
+*create economy_novina 5
+*create infrastructure_novina 2
+*create productivity_novina 3
+*create population_novina 2762
+
+*comment NW Towns
+*comment Cancove
+*set economy_locale "cancove"
+*gosub locale_state_update
+
+*comment Fraven
+*set economy_locale "fraven"
+*gosub locale_state_update
+
+*comment Jazin
+*set economy_locale "jazin"
+*gosub locale_state_update
+
+*comment Poppany
+*set economy_locale "poppany"
+*gosub locale_state_update
+
+*comment Trev
+*set economy_locale "trev"
+*gosub locale_state_update
+
+*comment SW Towns
+*comment Madre
+*set economy_locale "madre"
+*gosub locale_state_update
+
+*comment Orlotek
+*set economy_locale "orlotek"
+*gosub locale_state_update
+
+*comment Ruzno
+*set economy_locale "ruzno"
+*gosub locale_state_update
+
+*comment Vanka
+*set economy_locale "vanka"
+*gosub locale_state_update
+
+*comment NE Towns
+*comment Inkaz
+*set economy_locale "inkaz"
+*gosub locale_state_update
+
+*comment Sutin
+*set economy_locale "sutin"
+*gosub locale_state_update
+
+*comment SE Towns
+*comment Boledov
+*set economy_locale "boledov"
+*gosub locale_state_update
+
+*comment Horiad
+*set economy_locale "horiad"
+*gosub locale_state_update
+
+*comment Ivonan
+*set economy_locale "ivonan"
+*gosub locale_state_update
+
+*comment Novina
+*set economy_locale "novina"
+*gosub locale_state_update
+
+*comment Farmland
+*comment Kobelin Farmland
+*comment Madrevan Plantation
+*comment Strazov Plantation
+
+*comment Forest
+*comment Clover Wood
+*comment Giral Forest
+*comment Holly Thicket
+*comment Zornov’s Grove
+
+*comment Mountains
+*comment Dinaric Ridge
+*comment Lonely Hill
+*comment Slavec Mountains - North
+*comment Slavec Mountains – Central
+*comment Slavec Mountains - South

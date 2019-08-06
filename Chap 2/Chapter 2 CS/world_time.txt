@@ -1,4 +1,9 @@
 *label time_calc
+*if game_hour >= (economy_latest_refresh + 168)
+	*set economy_latest_refresh game_hour
+	*comment this refreshes all the city/town stats
+	*gosub_scene world_economy
+
 *set hour (game_hour modulo 24)
 *if game_hour > 24
 	*set day round((game_hour / 24) modulo 30)

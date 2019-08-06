@@ -1,0 +1,129 @@
+*comment this script updates all the city/town populations and supply
+*comment markets have yet to be implemented
+
+*temp economy_locale ""
+*comment Cities
+*comment Dovica
+*set economy_locale "dovica"
+*gosub locale_state_update
+*comment Giralmore
+*set economy_locale "giralmore"
+*gosub locale_state_update
+*comment Kobelin
+*set economy_locale "kobelin"
+*gosub locale_state_update
+*comment Lutengrad
+*set economy_locale "lutengrad"
+*gosub locale_state_update
+*comment Strazova
+*set economy_locale "strazova"
+*gosub locale_state_update
+
+*comment Towns
+*comment Cancove
+*set economy_locale "cancove"
+*gosub locale_state_update
+*comment Fraven
+*set economy_locale "fraven"
+*gosub locale_state_update
+*comment Jazin
+*set economy_locale "jazin"
+*gosub locale_state_update
+*comment Poppany
+*set economy_locale "poppany"
+*gosub locale_state_update
+*comment Trev
+*set economy_locale "trev"
+*gosub locale_state_update
+*comment Madre
+*set economy_locale "madre"
+*gosub locale_state_update
+*comment Orlotek
+*set economy_locale "orlotek"
+*gosub locale_state_update
+*comment Ruzno
+*set economy_locale "ruzno"
+*gosub locale_state_update
+*comment Vanka
+*set economy_locale "vanka"
+*gosub locale_state_update
+*comment Inkaz
+*set economy_locale "inkaz"
+*gosub locale_state_update
+*comment Sutin
+*set economy_locale "sutin"
+*gosub locale_state_update
+*comment Boledov
+*set economy_locale "boledov"
+*gosub locale_state_update
+*comment Horiad
+*set economy_locale "horiad"
+*gosub locale_state_update
+*comment Ivonan
+*set economy_locale "ivonan"
+*gosub locale_state_update
+*comment Novina
+*set economy_locale "novina"
+*gosub locale_state_update
+*return
+
+*label locale_state_update
+*comment death and birth rate
+*temp rate 0.05
+*comment check
+*temp supplies "supplies_"&economy_locale
+*temp economy "economy_"&economy_locale
+*temp infrastructure "infrastructure_"&economy_locale
+*temp population "population_"&economy_locale
+*comment prevent 0 errors
+*if {population} = 0
+	*set {population} -0.0001
+*comment seasonality
+*temp factor_season 0
+*rand factor_season 80 120
+*set factor_season factor_season/100
+*comment crowding
+*temp factor_crowding 0.0
+*set factor_crowding  {infrastructure} / {population}
+*comment economy
+*temp factor_economy 0.0
+*set factor_economy {economy} / 100
+*comment calc productivity
+*temp productivity factor_season * factor_crowding
+*set productivity +factor_economy
+*if productivity > 1.3
+	*set productivity 1.2
+*if productivity < 0.7
+	*set productivity 0.8
+*set productivity round(productivity*100)/100
+*comment consumption / production calc
+*temp supplies_consumption {population}
+*temp supplies_production round({population} * productivity)
+*comment consumption surplus calc
+*temp consumption_surplus {supplies} - {population}
+*if consumption_surplus <= 0
+	*set consumption_surplus 0
+*set consumption_surplus consumption_surplus * 0.25
+*set consumption_surplus +supplies_production
+*comment consumption ratio calc
+*temp consumption_ratio supplies_consumption / consumption_surplus
+*temp supplies_delta supplies_production -supplies_consumption
+*comment birth rate
+*temp birth rate/consumption_ratio
+*set birth round(birth*{population})
+*comment death rate
+*temp death rate*consumption_ratio
+*set death round(death*{population})
+*temp popn_delta round(birth-death)
+*comment locale change variables
+*comment supplies calc
+*set {supplies} +supplies_delta
+*set {supplies} round({supplies})
+*if {supplies} < 0
+	*set {supplies} 0
+*comment popn calc
+*set {population} +popn_delta
+*set {population} round({population})
+*if {population} < 0
+	*set {population} 0
+*return

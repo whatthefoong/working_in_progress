@@ -1,0 +1,61 @@
+*comment maybe can add day/night cycle?
+[b]$!{location}[/b]
+*line_break
+…
+*line_break
+*set supplies "supplies_"&location
+*set economy "economy_"&location
+*set infrastructure "infrastructure_"&location
+*set population "population_"&location
+*comment population and infrastructure
+*temp infra_upper_limit {infrastructure} * 1.15
+*temp infra_lower_limit {infrastructure} * 0.85
+*comment metropolis x > 45000
+*if ({infrastructure} > 45000)
+	A sprawling metropolis, $!{location} dominates the landscape, with stacks of apartments packed 	alongside modern office blocks.
+	*if {population} > infra_upper_limit
+		It seems like the city is overflowing with people - the roads are jam-packed with traffic and thousands of haphazardly constructed shanties lean against salvaged bamboo and corrugated sheets.
+	*if ({population} > infra_lower_limit) and ({population} <= infra_upper_limit)
+		The bustling city buzzes with the hubbub of day to day life, the dry cackle of radio sets booming the latest pop songs mixing with the sound of civilians haggling over the produce brought in from the surrounding countryside.
+	*if {population} < infra_lower_limit
+		The streets are considerably emptier than you remember. You spot many abandoned houses as soldiers roam aimlessly with cigarettes and rifles in hand. The quiet feels eerie in such a gargantuan city - a sign of troubled times perhaps?
+*comment medium city 20000 > x <= 45000
+*if ({infrastructure} > 20000) and ({infrastructure} <= 45000)
+	$!{location} is one of the few medium sized cities in Morovia, with a well-organized grid of roads demarcating the various residential and commercial districts.
+	*if {population} > infra_upper_limit
+		The streets are full of refugees, civilians and soldiers milling about without much purpose. You hear a passer-by lamenting about the recent housing shortages and influx of refugees.
+	*if ({population} > infra_lower_limit) and ({population} <= infra_upper_limit)
+		It's business as usual, with the usual buzz of traffic and commerce blending into a cacophony of sound. Soldiers mingle amongst the civilians, perusing the random street stands for a bargain.
+	*if {population} < infra_lower_limit
+		Despite the many apartment blocks, there aren't as many people around. Most of the streets you pass by have the occasional loiterer, but otherwise, it's quiet.
+*comment small city 10000 > x <= 20000
+*if ({infrastructure} > 10000) and ({infrastructure} <= 20000)
+	$!{location} is little more than a small city. A modest place without much history, the buildings here look relatively new.
+	*if {population} > infra_upper_limit
+		And yet the number of tents and makeshift housing stretches far beyond the city limits, with refugees and civilians congregating into loosely defined camps.
+	*if ({population} > infra_lower_limit) and ({population} <= infra_upper_limit)
+		The tenements that dot the gray city skyline seem to come alive, with the eclectic drone of conversation and the dry static of televisions.
+	*if {population} < infra_lower_limit
+		It seems relatively quiet, even for a city this size. Perhaps the people have been conscripted or left for other places.
+*comment medium town 5000 > x <= 10000
+*if ({infrastructure} > 5000) and ({infrastructure} <= 10000)
+	A medium sized town with all the essentials, $!{location} seems like a good place to rest and refresh after traveling.
+	*if {population} > infra_upper_limit
+		Not that you are the only people here, it seems - the town is filled with laborers and refugees holding out under improvised tarpaulin shelters that seems to be on the verge of collapse.
+	*if ({population} > infra_lower_limit) and ({population} <= infra_upper_limit)
+		The town seems to have a good amount of life in it despite all that was happening in Morovia. A truck loaded with laborers ambles by as you enter the town. There are also a number of open shops along the street.
+	*if {population} < infra_lower_limit
+		After all, there doesn't seem to be much going on around here. It should be quite easy to find a place for everyone.
+*comment small town x < 5000
+*if ({infrastructure} <= 5000)
+	$!{location} is a small town with a handful of scattered buildings forming the town cluster. With barely any sign of offices or commerce, most of the residents must work in the lands around the town.
+	*if {population} > infra_upper_limit
+		Despite being a small place, there seems to be a lot of people in $!{location} today. Most of the folk keep to themselves, having erected tents and other forms of temporary shelters.
+	*if ({population} > infra_lower_limit) and ({population} <= infra_upper_limit)
+		As you enter the town, you begin to see small signs of life - a patron stumbling out of the local bar, a pair of soldiers taking a smoke outside the town hall and the odd civilian milling about.
+	*if {population} < infra_lower_limit
+		There's barely anyone around - the town is dead quiet.
+*comment delete this
+*goto_scene world_map
+*comment delete this
+*return
