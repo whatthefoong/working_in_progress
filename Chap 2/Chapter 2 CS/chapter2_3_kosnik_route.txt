@@ -242,20 +242,22 @@ You approach the sergeant with utmost caution, fearful that he might take his an
 *line_break
 "You mean to say you chucked a radio like a major league baseball player for no reason? Seriously, what's bothering you?"  Sliding back into your seat. you cross your arms and rest them against the table top, looking expectantly at the sergeant's hulking figure towering over you. He opens his mouth slightly, but no sound escapes from his lips. Sighing, he knits his brows in frustration, plopping back down as the chair creaks loudly under his large frame.
 *fake_choice
-	*comment set diff relationship increase for all 3 options
 	#Convince him to spill.
+		*set sergeant_rs + 5
 		"Come on, we've been through hell and back, can't you trust me at least a little? I just wanna help."
 		*line_break
 		*line_break
 		${sergeant} regards you with a pensive expression. After a few moments, he pipes up, "You're right, you're right. It's not that I don't trust you, it's just that it's difficult for me to open up about this. But since its you, I don't think that's an issue."
 		*goto 2_4_2_1_kosnik_woes
 	#Assure him that everything will be fine.
+		*set sergeant_rs + 3
 		"Well, whatever it is, I'm sure everything will be fine. So chin up and don't fret too much over it, yeah?" You pat ${sergeant} lightly on the shoulder, giving him a slight grin
 		*line_break
 		*line_break
 		"You don't know that." ${sergeant} murmurs under his breath, though his expression seems to soften somewhat.
 		*goto 2_4_2_1_kosnik_woes
 	#Leave him alone, he's not ready to talk.
+		*set sergeant_rs - 3
 		${sergeant} remains uncharacteristically silent, as he continues to stare at the table, avoiding your eyes.
 		*line_break
 		*line_break
@@ -275,7 +277,7 @@ You approach the sergeant with utmost caution, fearful that he might take his an
 		"Yeah. My mother is the only family I have left. I… Honestly, I can't bear to lose her too, not before I…"
 		*line_break
 		*line_break
-		The news must have shaken him up pretty badly. Of all the times spent with him, this is the first time seeing ${sergeant} in such a vulnerable state, not even when he's completely drunk. Speaking of which… an idea creeps into your head, one which put a devilish grin upon your lips.
+		The news must have shaken him up pretty badly. Of all the times spent with him, you have never seen ${sergeant} in such a vulnerable state, not even when he's completely drunk. Speaking of which… An idea pops into your head, one which put a devilish grin upon your lips.
 		*line_break
 		*line_break
 		"Hey, you know what will make you feel better? How does a night out in the bar with a couple of the boys sound? It's been so long since we last went. My treat."
@@ -288,10 +290,60 @@ You approach the sergeant with utmost caution, fearful that he might take his an
 		*line_break
 		*line_break
 		You are almost out of the door when you hear ${sergeant} call you by your name. You turn around, and notice ${sergeant} looking at you sheepishly, before muttering out a quick "thanks".
-		*comment "Hey, you know what'll perk you up? A night at the bar. Come on, my treat." 	Kosnik gets tipsy, spills more of his backstory, you kiss him (maybe)
+		*goto 2_4_2_2_bar_tryst
+
+*label 2_4_2_2_bar_tryst
+The night rolls around, and you gather your squad for a well deserved night out at the local bar. Clearly in high spirits, everyone begins talking and singing at the top of their lungs, their rowdy behavior a usual occurrence for times like this. Smiling softly to yourself, you wonder how much wilder they're going to get once some alcohol enters their systems.
+*line_break
+*line_break
+Upon entering the bar, your squad erupts into a cheer loud enough to kill you with the secondhand embarrassment. You herd the unlawful bunch to the nearest table, before plopping down on the nearest seat yourself, ready for the crazy night ahead.
+*line_break
+*line_break
+A few drinks later, you start to feel your cheeks flush a little. "Next round's on me!" you belt out, and a chorus of cheers burst out from everyone in the bar. Grabbing another bottle of beer, you take a long swig, taking delight in the cool liquid sliding down your throat and the bitter aftertaste that follows. Looking around, most of your squad are lounging around the bar, clearly inebriated. Wait a minute, you don't seem to see the sergeant around anywhere near the table. Turning around, you notice ${sergeant} hunched over at the bar counter, twirling a glass of whiskey in his hands.
+*line_break
+*line_break
+You approach the bar and park yourself down next to ${sergeant}. He raises his head and regards you for a moment, before breaking into a grin. "Fucking hell! Tonight has been awesome! You're awesome, commander." ${sergeant} turns over shoves his finger straight in your face, jabbing you in the nose. You double back slightly, noticing the obvious slur in the sergeant's speech, a clear evidence of his state of drunkenness - a rare occurrence given his high tolerance of alcohol. 
+*line_break
+*line_break
+"So, how're you holding up? You know, about the news this afternoon" You probe, sipping your beer casually. ${sergeant} jolts up slightly, before slumping back down onto the counter. "Yeah, I'm fine… I guess. Nothing I can do about it. Are you worrying about me, commander? That's nice, but I'm okay, really. You should take this time to enjoy yourself, you know. Do something you really want to. We don't get many opportunities like this anymore."
+*line_break
+*line_break
+Hmm, ${kosnik} has a point…
+*fake_choice
+	#Stay with ${sergeant}.
+		*set sergeant_rs +5
+		Nonetheless, you decide to stay with the sergeant for the rest of the night. You just know that his drunken cheerfulness is merely a facade, and deep down he's still taking the news pretty hard. You're way too indebted to him to leave him alone when he's at such a vulnerable moment.
+		*line_break
+		*line_break
+		"Well, if there's anything I can help with, I'm here." 
+		*line_break
+		*line_break
+		${sergeant} stares deeply into your eyes. "Thanks, commander. Looks like I can't hide anything from you, can I?"
+		*line_break
+		*line_break
 		
+		*fake_choice
+			#Kiss him on the lips
+				The alcohol messes with your judgment. No. Deep down, you probably want this all along.  
+			#What? NO!
+				You shoot up in your seat. That was close. You don't see ${sergeant} that way. Or do you? God damn it, you can't think straight.
+	#Join your team and waste the night away.
+		*set sergeant_rs +3
+		There's no getting through to the sergeant when he's like this. You decide to join the rest in their party	. You give the sergeant a friendly pat on the shoulder, before returning to your table. At this point in time most of the rest are either completely hammered, with a few of them playing pool or lounging about the jukebox. You flit about the survivors, catching up with the rest.
+		*goto 2_4_3_DFFM_letter
+	#Flirt with the lady that just sauntered into the bar.
+		*set sergeant_rs - 10
+		There's no getting the sergeant out of his slump. Oh well, you decide to leave him alone and make the best use of your night, trying to ignore the slight guilt that gnaws your insides. He'll be fine. You approach a pretty woman that caught your eye a few moments ago, now sitting alone at the bar sipping her drink.
+		*line_break
+		*line_break
+		"Hey there, I don't believe in cheesy pick up lines, so I'll just ask you directly: can I buy you a drink?" You slide up next to her as suavely as possible, flashing her your most charming smile.
+		*line_break
+		*line_break
+		She looks up and giggles softly. "You know, that's not the worst way someone's tried to pick me up, so why not?" She leans closer to you and you feel her sizing you up with those smoky eyes. "You know, you're pretty easy on the eyes as well. I guess I could use the company." Her hand playfully brushes past your knee, sending shivers up your spine. As the night progresses, you continue to chat and drink with the woman. Before long, the alcohol overwhelms your thoughts, as the noise and your surroundings melt together into a unrecognizable blur.
+		*goto 2_4_3_DFFM_letter
+
 *label 2_4_3_DFFM_letter
-A dull, throbbing pain flares up in your head as you try to sit up in your bed, the glare of the morning sun piercing your eyes relentlessly. Man, your alcohol tolerance has really gone down. You used to be able to shake away the headache and go for a half hour morning jog right before breakfast, but now the hangover from the night before hits you like a ton of bricks. You squeeze your eyes shut, trying to will away the grogginess, but to no avail. You could really use a fresh pot of coffee, though judging from the amount of sunlight pouring through the window, you'd be lucky to grab a slice of bread from the mess hall.
+A dull, throbbing pain flares up in your head as you try to sit up in your bed, the glare of the morning sun piercing your eyes relentlessly. Man, your alcohol tolerance has really gone down. You used to be able to shake away the headache and go for a half hour morning jog right before breakfast, but now the hangover from the night before hits you like a ton of bricks. You squeeze your eyes shut, trying to will away the grogginess, but to no avail. You could really use a fresh pot of coffee, though judging from the amount of sunlight pouring through the window, you'd be lucky to grab even a slice of bread from the mess hall.
 *line_break
 *line_break
 With immense effort, you try to push yourself off the bed despite your vision still appearing to be swaying slightly. As you shoot your hands out beside you to support your weight, your left hand brushes past a smooth surface, a stark contrast to the coarse material of the issued bedsheets, a sense of perplexity registering in your brain. You look down to see an envelope partially tucked under your pillow, a good half of it sticking out as if to intentionally catch your attention. Strange, you spot nothing of the sort the previous night, but no surprises there, seeing that you can't even remember how you got back in the first place.
@@ -380,7 +432,7 @@ A hand comes clamping down onto your shoulder, and you almost jump out of your s
 You take a deep breath to calm your nerves. "It's nothing, ${sergeant}, probably just not enough sleep." You give ${sergeant} a feeble smile, hoping it'll ease his worry slightly. ${sergeant} frowns at you with slight suspicion, but decides to drop the matter.
 *line_break
 *line_break
-All of a sudden, you hear a faint rustling in the bushes. You turn around, clutching your gun, aiming it at the source of the noise. "Get back!" You whisper sharply at your men, when out of the bushes pops an ape. "Uh, sir? It's just a wild monkey, there're tons of them all around." One of the men pipes up. The rest of the group sniggers, trying to suppress their laughter.
+All of a sudden, you hear a faint rustling in the bushes. You turn around, clutching your gun, aiming it at the source of the noise. "Get back!" You whisper sharply at your men, when out of the bushes pops an ape. "Uh, commander? It's just a wild monkey, there're tons of them all around." One of the men pipes up. The rest of the group sniggers, trying to suppress their laughter.
 *line_break
 *line_break
 The happiness turns out to be short lived, as a short burst of gunshot resounds through the air. A bullet catches one of your privates in his thigh, causing him to lose balance and fall over to the floor, wailing and clutching his leg. "Ambush!!" yelled Kosnik. You scream at the other two to head for cover before rushing to the fallen private, dragging him behind the nearest tree you can find. Acting quickly, you tear off a strip of cloth from his uniform and tie it securely around the bullet wound, stopping the blood, all the while you hear the smattering of guns firing all around you.
@@ -393,8 +445,12 @@ Bloody hell. The enemy really took advantage of the patrol routes. Of all days t
 		*line_break
 		*line_break
 		"Hold your ground and continue to open fire!" You yell at the top of your lungs, trying to make yourself heard amidst the gunfire.
+		*line_break
+		*line_break
+		"Yes, commander!" came the chorus of replies. With a newfound vigor, your team continue to rain assault upon the enemies.
 		*goto 2_4_4_1_stat_check
-	#Go the long way and surround the enemy
+	#Go the long way and surround the enemy.
+		*set finesse + 5%
 		The distance between you and the enemy puts them with the upper hand. Plus, they have the added advantage of knowing your location, while you only have an inkling of their general hiding place. No, it'll be better for your guys to close up the distance.
 		*line_break
 		*line_break
@@ -405,19 +461,72 @@ Bloody hell. The enemy really took advantage of the patrol routes. Of all days t
 		*goto 2_4_4_1_stat_check
 
 *label 2_4_4_1_stat_check
-*if physical + finesse > 19
+*page_break
+*if physical + finesse >= 20
 	*goto 2_4_4_2_win_ambush
 *if physical + finesse < 20
 	*goto 2_4_4_2_lose_ambush
 		
 *label 2_4_4_2_win_ambush
+[i]Stat Check: Physical + Finesse >= 20[/i]
+*line_break
+*line_break
 Unexpectedly, you feel the enemy's gunfire come to a abrupt halt. Making the best use of this unprecedented opportunity, you dash forward and dive for cover behind a nearby tree. From your new position, you can see the enemy fumbling about where they lie, struggling to reload their ammunition.
 *line_break
 *line_break
 Taking advantage of this perfect opportunity, you take careful aim. With two deadly, precise shots, you quickly eliminate half the enemy's forces. You can sense the obvious panic from your opponents as the other two members of their teams fumble more and more in their position, exposing themselves more by the minute. Within a few quick moments, the rest of your squad hastily eliminate the opposing threat.	*goto MRPA_route
 
 *label 2_4_4_3_lose_ambush
-
+[i]Stat Check: Physical + Finesse < 20[/i]
+*line_break
+*line_break
+"Commander! Enemy's fire is too heavy! We can't do a single thing against them!" One of the men screams while cowering behind a tree. He's not wrong. The opposing force suddenly launch into an offensive maneuver that completely throws you off. The array of bullets that whiz past gives your team zero openings to launch a counter offense. Damn it!
+*line_break
+*line_break
+"Fucking bastards!" You hear ${sergeant} yell out. He barely gets a shot out before having to duck for cover again. Damn it. At this rate, you are all just sitting ducks. You better do something fast, before they take you all down.
+*line_break
+*line_break
+You grit your teeth. Unloading your empty magazine, you snap a fresh one in place and continue to fire blindly into the thick vegetation. Hell. this seems like a futile effort.
+*line_break
+*line_break
+"Man down! Man down!" You hear the frantic cries of your men. Your heart drops as you hear the two words that you dread to hear the most, but you can't afford to be distracted now. All the more reason for you to suppress the opposition so that you can get your team to safety.
+*line_break
+*line_break
+"Pull back! This is suicide!" Gesturing at ${sergeant}, you wave your arms wildly, signaling him to lead the other two out of this place while you hold them back. Without waiting for his reply, you peep out from behind your cover and fire a fresh volley of shots, providing them the perfect opportunity to pull out.
+*line_break
+*line_break
+You continue to unload your ammunition in their direction, when all of a sudden you feel your right arm going numb. You look down and you see a spurt of blood gushing out, seeping into the soil under you. Biting your teeth, you place your left hand over the bullet hole in an attempt to stop the blood from flowing, but the wound is too deep. You feel yourself getting light headed as you attempt to crawl to safety, but you barely have the strength to drag your entire body weight across the floor. The gunfire has stopped, but there is an incessant buzzing in your head.
+*line_break
+*line_break
+A crunch. Footsteps across the leaves and branches strewn across the forest. You muster all your strength to lift your head, and you see two soldiers in LOM uniform approaching you with their guns raised.
+*line_break
+*line_break
+"Sir! What do we do with him?" The one on the left barks, his small frame making him look puny in comparison to the person towering next to him.
+*line_break
+*line_break
+"Hmm. He holds a high ranking position. Maybe he could be useful to the LOM." Came the deep, booming reply. With a swift kick, he sends your rifle sliding away from your torso, as the officer kneel down and addresses you directly. "How about it? Join the LOM cause, and we'll let you live. If not, you can be food for the animals."
+*line_break
+*line_break
+Panting, you consider your options. You're at the mercy of these soldiers, no doubt about it.
+*fake_choice
+	#Surrender
+		Fuck this shit. There's no other way you're getting out of this situation alive. With much effort, you nod feebly, agreeing to his demands.
+		*line_break
+		*line_break
+		"Alright! Team 1, take our guest here and get his wound looked at. We've completed our initial recon, so we're moving out. It's risky to go any further. Moreover, our cover's blown so I'm sure the MRPA bastards will be right back."
+		*line_break
+		*line_break
+		You barely register the replies of "aye!", when you feel your consciousness slipping away from you, the loss of blood taking its toll.
+		*goto LOM_route
+	#Reject his offer.
+		With the last of your strength, you gather up a mouthful of saliva and spit in the LOM officer's face. You'd rather die than turn over to the damn enemy.
+		*line_break
+		*line_break
+		The LOM officer wipes away the spit with the back of his gloves. With a swift motion, he gestures to the other soldier, drawing a line across his throat.
+		*line_break
+		*line_break
+		[b]BLAM![/b]
+		*goto_scene death
 
 *label 2_4_5_LOM_aid
 "Alright, you ready for our patrol, commander?" A doe-eyed rookie soldier blurts out enthusiastically. It's once again time for your weekly patrols, but since you're taking the morning shift, there will be two more privates tagging along. You sling your usual gear over your shoulders, giving the recruits a short grunt before taking off on your own, the two quickly shuffling behind you.

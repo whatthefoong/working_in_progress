@@ -104,52 +104,218 @@ As you approach the barricade, your car stops in front of the opening as a coupl
 *return
 
 *label travel_event_3
-*comment rescue couple stuck on road (need repair kit), and they'll reward you.
-As you cruise down the road, you notice a battered SUV further down along the road shoulder. A young couple blocks your way ahead, waving frantically at you as they spot your vehicle approaching them.
+*comment rescue couple stuck on road (need repair kit), and they'll reward you. can add a small line for stat check to prompt the player.
+*if intellect >= 30
+	[i]Stat Check: Intellect >= 30[/i]
+*if intellect < 30
+	[i]Stat Check: Intellect < 30[/i]
+As you cruise down the road, you notice a battered SUV further down along the road shoulder, with a young couple waving frantically at you as they spot your vehicle approaching them.
 *line_break
 *line_break
-You lightly tap the brakes and steer your vehicle behind the stationery car, having no choice but to stop. "What seems to be the problem here?"
+You lightly tap on the brake pedal with your right foot, pulling the vehicle to a gradual stop besides the couple before winding down the window. "What seems to be the problem here?"
 *line_break
 *line_break
 "Oh thank god, we were thinking that there'll be no other people coming down this godforsaken road. As you can see, we encountered some car problems, and our phones ran out of juice so we can't call for help. Is there any way you can help us?" The man pleads, looking at you with pitiable eyes.
+*if intellect >= 30
+	*line_break
+	*line_break
+	You analyze the current situation. The car seems old and worn out, and you do spot a trail of smoke emitting out of the front hood. Plus, the young couple looks genuinely worried. It's probably not a huge risk to stop and help them.
 *fake_choice
-	*selectable_if (repair kit > 0) #Help them with their vehicle troubles
-		"I guess you're in luck. I have a spare repair kit here. Come on, let's see if we can fix the problem.
-		*if engineering > 14
-			Heading to the broken down vehicle, you pop the hood open. Hmm, it seems like a simple overheating problem resulting in a blown wire. Given your skills however, the problem is nothing you can't handle. In a jiffy, the car is up and running again, the engine purring smoothly. 
+	#Help them
+		*if repair kit > 0
+			[i]Repair kit > 1[/i]
+			*set repair_kit - 1
+			*line_break
+			*line_break
+			"I guess you're in luck. I have a spare repair kit here. Come on, let's see if we can fix the problem."
+			*line_break
+			*line_break
+			You head over to the broken down car and pop the hood open. Seems like a simple problem. Grabbing the repair kit, you make a few tweaks here and there, taking care of the problem In a jiffy. Before long, you manage to get the car up and running again.	 Giving the ignition key a quick twist, the engine sputters to life, the smooth purr music to the ears of the elated couple.		
 			*line_break
 			*line_break
 			"Thank you so much! Honestly, we were in such a bind. If not for your help, we could have been stuck out here forever. We must give you a small reward to express our gratitude." The couple grasp your hand and shake it profusely. The man takes out his wallet, grabs a few notes and presses them into your hand firmly. With a final wave, the couple hop into the car and speed off. You smile as you saunter back to your car and continue along your way.
-		*if engineering < 15
-	#Drive away.
-		"I'm sorry, I can't help you there. I hope someone else comes by soon." With a nonchalant shrug, you head back into your vehicle and slam the door shut.
+		*if repair kit = 0, engineering >= 1
+			[i]Repair kit = 0[/i]
+			[i]Stat Check: Engineering >= 15[/i]
+			*line_break
+			*line_break
+			Heading to the broken down vehicle, you pop the hood open. Hmm, it seems like a simple overheating problem resulting in a blown wire. Given your skills however, the problem is nothing you can't handle. In a jiffy, you you manage to get the car up and running again.	 Giving the ignition key a quick twist, the engine sputters to life, the smooth purr music to the ears of the elated couple. 
+			*line_break
+			*line_break
+			"Thank you so much! Honestly, we were in such a bind. If not for your help, we could have been stuck out here forever. We must give you a small reward to express our gratitude." The couple grasp your hand and shake it profusely. The man takes out his wallet, grabs a few notes and presses them into your hand firmly. With a final wave, the couple hop into the car and speed off. You smile as you saunter back to your car and continue along your way.
+		*if engineering < 1
+			[i]Stat Check: Engineering <15[/i]
+			*line_break
+			*line_break
+			Heading to the broken vehicle, you pop the hood open, but the complexities of working the insides of a vehicle confounds you. You scratch your head in puzzlement, trying to figure it out, but to no avail.
+			*line_break
+			*line_break
+			Dejectedly, you turn to the couple, the gleam in their eyes showing that they're expecting good news. You sigh and break the news to them, explaining that you're unable to rectify the problem.
+			*line_break
+			*line_break
+			"It's fine, you did try to help, so thank you nonetheless." The woman tries to keep her voice chirpy, but their crestfallen expressions betray their disappointment. You hastily excuse yourself after wishing them the best of luck and retreat back to your vehicle and driving off.
+	#Ignore them and drive away.
+		"I'm sorry, I can't help you there. I hope someone else comes by soon." With a nonchalant shrug, you roll up your window.
 		*line_break
 		*line_break
-		"Please wait! Could you at least…." You turn the key in the ignition and drive off before the man can finish his sentence.
+		"Please wait! Could you at least…." You floor the gas pedal before the man can finish his sentence, the dejected expressions of the young couple in your rear view mirror the last thing you see as your vehicle accelerates, kicking up a cloud of dust in its wake.
 *return
 
 *label travel_event_4
 *comment similar event, but the couple are highway robbers and they take some of your supplies at random
+*if intellect >= 30
+	[i]Stat Check: Intellect >= 30[/i]
+*if intellect < 30
+	[i]Stat Check: Intellect < 30[/i]
+As you cruise down the road, you notice a battered SUV further down along the road shoulder, with a young couple waving frantically at you as they spot your vehicle approaching them.
+*line_break
+*line_break
+You lightly tap on the brake pedal with your right foot, pulling the vehicle to a gradual stop besides the couple before winding down the window. "What seems to be the problem here?"
+*line_break
+*line_break
+"Oh thank god, we were thinking that there'll be no other people coming down this godforsaken road. As you can see, we encountered some car problems, and our phones ran out of juice so we can't call for help. Is there any way you can help us?" The man pleads, looking at you with pitiable eyes.
+*if intellect >= 30
+	*line_break
+	*line_break
+	You analyze the current situation. The car seems to be in pristine condition, with no signs of wear and tear. It seems a little suspicious for it to break down in such an isolated stretch of road. You look over at the couple. The young woman seems far from worried, indifferent even. Glancing back at the man, you notice a suspicious bulge in the front pocket of his jeans, and you know he's definitely not just happy to see you…
+*fake_choice
+	#Help them
+		You're probably over-thinking this. Sighing, you park your vehicle behind theirs, before stepping out. "Alright, I'll help you take a look."
+		*line_break
+		*line_break
+		You pop open the hood of the car and peer inside. Strange, the engine seems to be in decent condition, and even after fiddling with the parts for a while, you can't seem to find anything wrong with it. You straighten your back and prepare to turn back to the couple, when you feel something cold and hard pressing into your back. The familiar click that follows confirms your worst fear, as you slowly raise your hands up into the air.
+		*line_break
+		*line_break
+		"That's it, ease back out nice and slow." The man drawls, the previous facade of friendliness absent from his voice, replaced by a tinge of menace.
+		*line_break
+		*line_break
+		"Easy, we don't want to kill you. We'd much rather have what you have in the car as well as your money." The woman snickers as she sashays in front of you, before sliding her hands down your pockets and pulling out your wallet and keys. In a swift motion, she tosses the wallet over to her partner in crime before making her way over to your vehicle.
+		*line_break
+		*line_break
+		The man presses the barrel of the pistol deeper into your back, pushing you towards their own car. "Keep your back to the car. If you try anything funny, I'll shoot." You begrudgingly press yourself against their car, helplessly watching as the couple help themselves to your supplies and transferring them to their own boot. Catching your eye, the woman winks at you. "Thanks for the stuff, darling."
+		*line_break
+		*line_break
+		With a quick flick of the wrist, the man throws your wallet back at you, and you catch it with one smooth movement. "Nothing personal, mate." That cocky smirk fills you with rage, as you feel your fists clenching up into a tight ball. Helpless to do anything, you watch as the couple hop back into their own car and accelerates in the direction you just came from.
+		*line_break
+		*line_break
+		Fuck it all! They most of your money and your supplies. You kick your tire a few times in frustration, before heading back into the drivers seat, slamming the door with an intense force. Taking a few deep breaths to calm down, you slowly drive off into the distance.
+	#Ignore them and drive away.
+		"I'm sorry, I can't help you there. I hope someone else comes by soon." With a nonchalant shrug, you roll up your window.
+		*line_break
+		*line_break
+		"Please wait! Could you at least…." You floor the gas pedal before the man can finish his sentence. Looking up into the rear view mirror, you swear you can see the face of the man contorting in fury before a cloud of dust envelops his figure.
 *return
 
 *label travel_event_5
 *comment YOUR car broke down, either call a tow truck or need a repair kit.
+You roll your window down, enjoying the breeze flowing through your face as you cruise down the road. Ahh, this is the life, you think to yourself,
+*line_break
+*line_break
+The moment the thought pops into your head, you hear a loud [b]BANG![/b]. The car jolts violently, sending it careening down the other lane. A wave of panic washes over you as you jerk the steering wheel to the right, trying to regain control over the vehicle, while slamming your foot down onto the brake pedal. A grating screech pierces your ears as the car shudders violently while slowing down, before finally coming to a complete stop at the side of the road.
+*line_break
+*line_break
+You fling the door open and step outside, The lopsided manner that your car leans to the side already preempts you in regards to the situation, but still your heart sinks when you spot the blown tire.
+*page_break
+*if repair_kit > 0
+	*set repair_kit - 1
+	Wait a minute, you have a repair kit in your car! With that, replacing a flat tire should be a breeze.
+	*line_break
+	*line_break
+	Grabbing the repair kit and the spare tire hanging off the back of your vehicle, you hastily set off to work, loosening the lug nuts holding the tire in place. Setting the jack under the car, you lift the back of the vehicle enough for the tire to be hovering slightly above the ground. "Good riddance", you mutter to yourself as you pull out the defunct tire. Without missing a beat, you fit the spare tire into the housing and screw it in place.
+	*line_break
+	*line_break
+	You take a step back, allowing yourself a moment to admire your work. Packing up the rest of your tools, you throw them into the boot along with the punctured tire, and continue on your journey. 
+*if repair_kit = 0
+	Damn it! Not only are you stuck in the middle of nowhere, you have no means of fixing the flat tire without the proper tools. Gritting your teeth, you pull out your cellphone and contact the nearest town, explaining your current predicament and asking if it's possible to send a mechanic.
+	*line_break
+	*line_break
+	A few excruciating hours later, you see a rusty pick up truck rolling down the road, and you breathe a sigh of relief. Finally. The mechanic, a muscular young woman in green overalls, pulls up behind you and hop out of her vehicle, inspecting the damage done to yours. Approaching you in a careful manner, she asks, "you the one with the busted tire, right? I‘ll get right to it, if you could kindly stand aside."
+	*line_break
+	*line_break
+	Without needing to be told a second time, you take a few paces away from your busted up car and watch as the mechanic gets to work. Her deft hands make light work of the repairs, with each action executed perfectly without any unnecessary movements, and within minutes she pulls out the old tire and replaces it with a new one. Satisfied, she stands up and admires her own work before turning to you. "Alright, nothing but a simple fix. You're welcome for that. That'll be fifty dollars."
+	*line_break
+	*line_break
+	You pull out your wallet and grab the required amount and handing it over, mumbling something about her services being a little overpriced. Paying no heed to your paltry complains, she counts the notes in her hand, before tucking it into her pocket and giving you a huge grin. "Thanks! Pleasure doing business with you."
+	*line_break
+	*line_break
+	You give her a cursory handshake thanking her for her services before heading back to your vehicle and driving off, continuing on your journey. 
 *return
 
 *label travel_event_6
-event_6
+*comment you see a dog, you can pick it up and it'll take up your resources, but you'll gain charm, or you can leave it alone. Depending on travel distance,charm can increase differently  ):
+You feel the cool wind rushing past your face as you roll the window down, and you feel much more refreshed breezing through this long winding road, with only the occasional vehicle heading in the opposite direction.
+*line_break
+*line_break
+A small speck in the distance catches your eye, and you wonder if that's a person slowly making its way along the road. Only upon getting closer do you realize that it is a fairly large dog, slowly ambling along the road in the same direction. You slow down considerably and steer slightly away from the curb, careful not to accidentally brush against the dog. As your vehicle approaches, the sound prompts the dog to perk its head up and turn towards you, its tongue hanging loosely out of its mouth. You bring the car to a complete stop as the dog stares straight into your eyes, holding your gaze. There's no civilization for miles around, so this must be a stray, but strangely enough it seems fairly tame.
+*fake_choice
+	#Take the dog along with you!
+		*set charm + 5%
+		You finally understand where the term "puppy dog eyes" came about, despite those eyes belonging to a full grown dog. You simply can't leave it out here in the streets to fend for itself. You pull up ahead and hop off, making your way towards the dog in a non-threatening manner. The dog continues to stare at you, tilting its head slightly. You reach out a hand, but the dog shudders and back away slightly.
+		*line_break
+		*line_break
+		An idea pops into your head. You head back to your car and reach into your backpack, digging around furiously before pulling out what you're looking for: a peanut butter sandwich. Tearing away the plastic wrap, you jog briskly back to the dog, who remains rooted the same position you left it. Tearing a sizable chunk of the sandwich, you gently lower it a few paces in front of the dog. You can see that your action piques its interest. Pacing forward, the curious canine sniffs at the piece of sandwich, before gobbling it up with a newfound fervor. You smile, approaching the ravenous dog with the rest of your sandwich, and it takes several bites straight out of your hand. With the other hand, you reach out and stroke its torso gently. As it finishes the last remaining bite, you pick up the poor dog and carry it back to your car with surprisingly no resistance. As it settles down in your passenger seat, its body pulsing while it pants, you buckle up and drive off.
+		*line_break
+		*line_break
+		Along the way, you share some of your food and water with your newfound friend. It guzzles down everything you put in its way, and before long it starts to show signs of affection, nuzzling you with its nose or licking your hand as you reach out to stroke it. The drive becomes less lonely with this lovable bundle of fur as your traveling companion.
+		*line_break
+		*line_break
+		Before long, you arrive at your destination. You glance sadly at your new friend, knowing that it can't possibly stay with you for long. You can't possibly bring it along on all your missions. You bend down, slowly explaining to the dog that this is where you say your goodbyes as you nuzzle its face one last time. The dog looks at you for awhile, before trotting away, wandering into the streets. You give it one last look before turning away, heading into your destination.
+	#Leave it alone.
+		You break away from the canine's gaze. No, you can't just go around picking up strays. It's made it long enough till now, it'll survive for a while more at least. You try not to look at the poor dog, pushing the thoughts of it out of your mind as you slowly drive off, continuing the journey to your next destination.
 *return
 
 *label travel_event_7
 event_7
+*comment you race a road thug, and your driving skills improve
+*set driving + 1
+Cruising down this long stretch of road, you take in the gorgeous scenery along the way. It's moments like these that remind you of the hidden beauty of Morovia. You crank up the radio slightly, the soft music complimenting the peacefulness of the moment.
+*line_break
+*line_break
+[b]VRRRRRRROOOOOOMMMMMMM[/b]
+*line_break
+*line_break
+A deafening roar fills the air, shattering the tranquility. You look up and spot a car hurtling towards you at breakneck speed, the size of the car growing exponentially in your rear-view mirror. Your eyes twitch slightly, irritated by the obnoxiousness of such a driver, nonetheless you keep to yourself, continuing to drive calmly along.
+*line_break
+*line_break
+The approaching car swerves into the adjacent lane, matching your speed. Catching your attention, you can't help but to glance sidewards. A bright red convertible with its top down greets your eyes, the driver a young man in his mid 20s. With one hand, he raise his shades and look at you in a condescending manner, before smirking to himself, his arms resting against the edge of the car. Out of nowhere, he honks twice before speeding up and cutting into your lane, and you can see his head rearing back in laughter.
+*line_break
+*line_break
+That's it. You were planning on ignoring the entire situation, but this young punk has to be put in his place. You floor the accelerator and swerve into the adjacent lane, keeping up with his speed. Your vehicle might not have the capacity to take him on a full blown race, but you still can outmaneuver this bastard. You speed on slightly ahead, such that your car inches slightly more forward than his. You turn around and see the panic in his eyes as he tries to break away, but you are giving him little to no breathing space as you sandwich him between your vehicle and the curb.
+*line_break
+*line_break
+Time for the finishing touch. With a quick jerk of the steering wheel, you swerve your vehicle to the side slightly, causing the boot to nudge the front of his convertible. A mere light brush, but the speed of his car meant that the momentum is amplified, and the impact sends his car careening to the side. You quickly speed off to avoid the ensuing impact, chuckling to yourself as you see his car spinning several rounds before hitting the curb. Hey, who knew you were such a good driver?
 *return
 
 *label travel_event_8
 event_8
+*comment you pass by a nice scenery, and you feel more relaxed.
+You cruise along the seemingly never-ending stretch of road, taking in the sights as you go along. The sunlight reflects on the azure lake, providing a visual treat as the light waves seem to be shimmering in the daylight. In the distance, you spot a few hills and knolls, with little huts lining the base of these hills. It's sights like these that reminds you of the glorious nature abound the lands of Morovia: the impressive mountain ranges of Slavec towering over the rest of the country, the lush yet mysterious woods and groves, and the rushing rivers that cut through the country, providing waters to numerous towns and villages.
+*line_break
+*line_break
+You fiddle with the dials on the radio, finally stopping when you hear the soft, instrumental tracks coming out of the speakers. It sure is nice to take such a break every once in a while. The drive provides a much needed respite, and you savor every minute of it before arriving at your destination.
 *return
 
 *label travel_event_9
 event_9
+*comment swimming related? you stop for a break along a lake and spot a kid slipping in, and you dive in to save him. swimming +1
+*set physical + 5%
+*set swimming + 1
+As you drive along the road, you spot a small, calm lake shimmering in the sun. You could really use a break, you think to yourself as you pull up to the nearby clearing. Grabbing your backpack, you slam the door shut, heading to the edge of the lake. In the distance across the lake, you spot a group of children sitting on the edge of a pier, giggling and playing about, their feet kicking up waves of water at their peers. Upon seeing you, they wave enthusiastically at you, and you can't help but wave back. You take off your boots and socks and lay them on the shore, before placing your backpack next to your shoes, grabbing a sandwich from within.
+*line_break
+*line_break
+Following the children's example, you wade slightly into the shoreline, enjoying the gentle lapping of miniature waves on your toes, a feeling that puts you at ease almost immediately. You take a large bite of the sandwich, your eyes gazing lazily at the lake's reflection, a perfect mirror of the landscape in the distance.
+*line_break
+*line_break
+"Help, help!" A voice cries out, drawing your attention. You turn to the children, and to your shock you notice a boy flailing helplessly in the water. You leap into action almost immediately, dropping your sandwich and diving into the water, taking the shortest possible path to reach the drowning boy. Breathe, pull, breathe, pull. With steady and powerful strokes, you close the distance between you and the group of children, and before long you reach the boy, whom is struggling to stay afloat at this point. Wasting no time, you place your arms around him and tilt him backwards, leaning against your torso as you kick against the water, pushing you back towards the nearest shoreline.
+*line_break
+*line_break
+Before long, you feel your feet kicking against the sandy seafloor as you approach the shallows. You swing the boy around, carrying him on your back as you slowly crawl up to the edge of the shore as you hear the boy coughing relentlessly. The children frantically dash towards the two of you, their faces a look of worry and terror. You slowly lower the boy on his back as he continue to wheeze and sputter, and you take the moment to catch your own breath.
+*line_break
+*line_break
+After a couple of minutes, you turn to the group of children gathering around the boy, hugging him tightly as tears streak down their faces. "What do you think you all are doing?! If you don't know how to swim, don't horse around a lake! If I wasn't around, you could have been in serious trouble!" The children look visibly startled, and a few of them starts bawling outright. They probably aren't expecting a full blown lecture from someone who just saved their friend, but you feel that you have to knock some sense into them. Seeing their pitiful looks, you soften considerably. "Just be more careful in the future, alright? You all better be going home before your parents start to worry."
+*line_break
+*line_break
+Nodding in shame, the children wipe their tears and slowly shuffle away supporting their still dazed friend, but not before uttering a quick "thank you". Sighing, you make your way back to where you left your bag and shoes. With a quick change of clothes, you pick up your stuff and head back to your vehicle, and soon you're continuing your journey to your destination.
 *return
 
 *label travel_event_10
