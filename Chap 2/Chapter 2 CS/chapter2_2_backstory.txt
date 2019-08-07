@@ -7,34 +7,85 @@
 	*goto sonia_route_1
 
 *label kosnik_route_1
-Sergeant Kosnik drags a chair and plops it beside you, the screeching of the metal legs as they rattle across the wooden floor pierced the stale, damp air. "Heck of time we went through back there eh? How're you holding up?"
+Sergeant $!{sergeant} drags a chair across the wooden floorboards, its metal legs rattling along with a jarring screech. $!{sergeant} ignores your wincing and plops the chair beside you, giving you a friendly pat on the shoulder.
 *line_break
 *line_break
-You shrug nonchalantly, brushing off the sergeant's concern with a feeble "fine".
+"Heck of time we went through back there eh? How're you holding up?"
+*fake_choice
+	# I feel amazing! Never been better.
+		*set sergeant_rs %+5
+		"I feel pretty amazing! Never been better. That was one heck of a fight wasn't it?"
+		*line_break
+		*line_break
+		"That's the spirit! I'm sure there will be many more chances to get those LOM scum!"
+		*goto sgt_no_console
+	# I'm fine
+		You shrug nonchalantly, brushing off the sergeant's concern with a feeble "I'm fine".
+		*goto sgt_console
+	# Not too great. Pretty shit actually.
+		"Not too great… Pretty shit actually. I'm still thinking of what happened back there."
+		*goto sgt_console
+*label sgt_console
 *line_break
 *line_break
-Positioning himself on the edge of the chair, Sergeant Kosnik leans his elbows on his knees before cocking his head to the side. 	"So, I've been serving with you for quite a while now eh. Come to think of it, you haven't once told me why did you choose to join the army? You don't really strike me as the type for this line of work." Sergeant Kosnik grunts as he pulls out a cigarette, rolling it between his fingers for a while before raising it to his lips. 
+"Hey, what's done is done. It happens to the best of us. Just got to take it in your stride y'know." Sergeant $!{sergeant} forces a tired smile.
+*label sgt_no_console
 *line_break
 *line_break
-You remain silent for a moment, glancing hesitantly at the sergeant as he clicks his lighter. In your short stint in the army, he has been a reliable ally, following your orders with due diligence, but yet not afraid to help you take command in times of crises. Heck, the events of the past few days has already proven that you can entrust your life in this man's hands. No harm telling him your story, you muse, as the familiar, acrid smoke that you've gotten used to waft through your nose.
+There is a moment of silence as Sergeant ${sergeant} takes the crude kettle off boil and pours a thin sweetened tea, the clink of the metal spoon against glass as he stirs. He places a glass on the table before sitting and taking a slow, deliberate sip.
+*line_break
+*line_break
+"The tea's been shit since the war started." He says to no one in particular. "War is bad for business, I heard the foreign merchants haven't been coming to dock."
+*line_break
+*line_break
+You take the tea gratefully, gulping down the first before pouring a second. It's basically hot water and sugar at this point.
+*page_break
+Sergeant $!{sergeant} grunts as he pulls out a cigarette, rolling it between his fingers for a while before raising it to his lips.
+*line_break
+*line_break
+"So, we've been in this shit hole for a while now eh. How the fuck did you end up here anyway? Don't seem to strike me as a guns blazing machete wielding army type." $!{sergeant} smiles at you, the scar across his face shining in the warm glow of the solitary flickering light bulb.
+*line_break
+*line_break
+You look at the man who had pulled you through the firefight at Orlotek as he flicks his lighter and the tip of the cigarette curls back into a bright ember. $!{sergeant} leans back, blowing out a cloud of the familiar, acrid smoke into the stale, damp air.
 *goto 2_2_1_choice_rationale
 
 *label sonia_route_1
-"How're we doing this fine day? Feeling better?" trills the doctor as she enters the room, her usual perky attitude providing a stark contrast to the bleak aura of the hospital wards.
+"How're we doing this fine day? Feeling better?" trills doctor ${doctor} as she enters the room, her usual perky attitude a stark contrast to the bleak vibe of the hospital wards.
 *line_break
 *line_break
-You manage to eke out a small shrug at the rhetorical question, wincing as a dull pain pressed against your shoulders. "Eh, could be a lot worse."
+Doctor $!{doctor} places a steaming mug onto your bedside table. "It's not great though, it's hard to get good tea in the markets these days with the war and all."
+*fake_choice
+	# I feel great! Thank you.
+		*set doctor_rs %+5
+		"I feel great! Thanks for the tea."
+		*line_break
+		*line_break
+		"That's great to hear! You look much better than when you first came in. Anyway, I'll just do some routine checks. It might take awhile, but I'll leave you to rest after I'm done, I promise." Sonia chirps, before turning to one of the nurses and mutters some instructions.
+		*goto doc_no_console
+	# I'm fine
+		You shrug nonchalantly, brushing off the doctor's concern with a feeble "I'm fine".
+		*goto doc_console
+	# I feel quite weak actually. Pretty shitty.
+		"I feel quite weak actually… Pretty shitty to be honest."
+		*goto doc_console
+
+*label doc_console
+You manage to eke out a small shrug at the rhetorical question, shoulders tightening as a dull pain strains at the effort.
 *line_break
 *line_break
-Sonia chuckles softly. "That's right, at least your condition is stabilizing, as compared to that terrible state you were in when you were brought here. Anyway, I'll just do some routine checks. It might take awhile, but I'll leave you to your rest after I'm done, I promise." Sonia chirps, before turning to one of the nurses and mutters some instructions. 	Your eyes instinctively follow the doctor as she flits around the room, fiddling with the machines and tubes weaving around your bed.
+"Well, at least your condition is stabilizing, compared to that terrible state you were in when you first came in. Anyway, I'll just do some routine checks. It might take awhile, but I'll leave you to rest after I'm done, I promise." Sonia chirps, before turning to one of the nurses and mutters some instructions.
+*label doc_no_console
 *line_break
 *line_break
-"So, a military personnel, huh? We don't get many of your types around these parts, with camps having their own military hospitals and clinics and whatnots. What made you join the army in the first place?" Sonia inquires, snapping you out of your reverie. You can't help but notice that despite the question, her eyes remain fixated on her tasks, occasionally glancing down to her clipboard to scribble a few lines - probably asking out of courtesy or to simply start a conversation rather than legitimate curiosity.
+Your eyes instinctively follow the doctor as she flits around the room, fiddling with the machines and tubes weaving around your bed.
 *line_break
 *line_break
-Oh well, why the heck not, she'll be here for awhile, and you, probably even longer.
+"So, a military commander, huh? I bet you must have some pretty crazy stories. How did you end up in the army in the first place?" Sonia inquires, snapping you out of your reverie.
+*line_break
+*line_break
+You can't help but notice that despite the question, her eyes remain fixated on her tasks, hands constantly busying themselves - scribbling notes, checking gauges and deftly clearing out the tubes.
 *goto 2_2_1_choice_rationale
-	
+
 *label 2_2_1_choice_rationale
 *line_break
 *line_break
@@ -54,7 +105,7 @@ Thinking back, the choice you made to join the military wasn't one that was made
 		Granted, the trainings were physically and mentally exhausting, but you managed to rise above that. Given your above-average performance, you soon caught the eye of your commanders, which gave you an opportunity to take up command positions within a MRPA battalion, and before long you rose to the rank of a captain, having command of your own unit. Of course, a higher rank means a better pay as well.
 		*page_break
 		*if kosnik = 1
-			"Hey, don't sweat it! I know tons of guys who enlisted for the cha-ching. Ain't no shame in that. Hell, I've managed to keep my family well-fed all these months because of what I do here." Sergeant Kosnik guffaws, slapping your back. You smile sheepishly in return, slightly relieved that the sergeant understands your motivation, allowing you to feel a little more at ease.
+			"Hey, don't sweat it! I know tons of guys who enlisted for the cha-ching. Ain't no shame in that. Hell, I've managed to keep my family well-fed all these months because of what I do here." Sergeant $!{sergeant} guffaws, slapping your back. You smile sheepishly in return, slightly relieved that the sergeant understands your motivation, allowing you to feel a little more at ease.
 			*line_break
 			*line_break
 			"Yeah, at least the money's going back to my family, where it'll at least be useful."
@@ -104,7 +155,7 @@ Thinking back, the choice you made to join the military wasn't one that was made
 						"Man, that's tough, but on the bright side at least we're not dependent on those Torian bastards any more, right? I mean, the Torians and Hadans did take advantage of our people, our land, our resources. No sir, Morovia should belong to the Morovians! And hey, once we get back on our feet, I'm sure your family business would pick up again." Sarge threw the butt onto the floor, grinding it with the tip of his boot. "Ah well, at least things are starting to pick up with you here in the MRPA huh? I bet your family has less to worry about now that you're picking up the slack. Hey, anytime you need help, you feel free to approach me yeah?"
 						*line_break
 						*line_break
-						With that, Sergeant Kosnik swings his muscular frame around the seat of the chair and stumble onto his feet. Placing both his hands on your shoulders, he gives you one last pat before turning around, brusquely brushing aside the flap of the tent and stepping back outside.
+						With that, Sergeant $!{sergeant} swings his muscular frame around the seat of the chair and stumble onto his feet. Placing both his hands on your shoulders, he gives you one last pat before turning around, brusquely brushing aside the flap of the tent and stepping back outside.
 					*if sonia =1
 						You sigh, hesitantly explaining to Sonia your parent's failing businesses while trying to gloss over your heritage as much as you can. You don't really like mentioning the fact that your father comes from Hada, especially with tensions running high within the country, and being from a mixed family might trigger some… extreme reactions from more nationalistic idealists. But with Sonia, you feel that she would be more understanding at least.
 						*line_break
@@ -132,16 +183,16 @@ Thinking back, the choice you made to join the military wasn't one that was made
 					*line_break
 					*line_break
 					*if kosnik =1
-						Sergeant Kosnik pulls the chair closer. "Shit, man. I had no idea. I'm sure they're safe, didn't recent reports mention that Madre is still free from LOM influence? That should give you a peace of mind for now, right?
+						Sergeant $!{sergeant} pulls the chair closer. "Shit, man. I had no idea. I'm sure they're safe, didn't recent reports mention that Madre is still free from LOM influence? That should give you a peace of mind for now, right?
 						*line_break
 						*line_break
-						You turn to Sergeant Kosnik and smile weakly. "Yeah, I guess. I'll just have to wait and see then. Thanks."
+						You turn to Sergeant $!{sergeant} and smile weakly. "Yeah, I guess. I'll just have to wait and see then. Thanks."
 						*line_break
 						*line_break
 						"Alright, it ain't getting any earlier. I gotta go check up on the other men. You have a good rest, commander."
 						*line_break
 						*line_break
-						With that, Sergeant Kosnik swings his muscular frame around the seat of the chair and stumble onto his feet. Placing both his hands on your shoulders, he gives you one last pat before turning around, brusquely brushing aside the flap of the tent and stepping back outside.
+						With that, Sergeant $!{sergeant} swings his muscular frame around the seat of the chair and stumble onto his feet. Placing both his hands on your shoulders, he gives you one last pat before turning around, brusquely brushing aside the flap of the tent and stepping back outside.
 					*if sonia =1
 						"I know you're worried about your family, but it's not like you can do anything about that while you're lying in bed here. My advice is, follow the doctor's orders, and the faster you get better, the faster you can contact your family and make sure all is well with them." Sonia chides, giving the impression of a mother scolding a belligerent child.
 						*line_break
@@ -166,7 +217,7 @@ Thinking back, the choice you made to join the military wasn't one that was made
 					*if kosnik =1	
 						*line_break
 						*line_break
-						Sergeant Kosnik falls silent for a while, before looking back at you. "You know, my parents used to work in the mines… Now it's just my mom. But that's a story for another time. Anyway, what I want to say is this: miners are fucking tough, tougher than you think. If anything happens, I'm sure they'll be able to deal with it. So chin up, brother, I'm sure your family is doing well"
+						Sergeant $!{sergeant} falls silent for a while, before looking back at you. "You know, my parents used to work in the mines… Now it's just my mom. But that's a story for another time. Anyway, what I want to say is this: miners are fucking tough, tougher than you think. If anything happens, I'm sure they'll be able to deal with it. So chin up, brother, I'm sure your family is doing well"
 						*line_break
 						*line_break
 						The sergeant's words lights up a small spark of hope in you, and unknowingly you find yourself smirking at him, with a mumbled thanks.
@@ -175,7 +226,7 @@ Thinking back, the choice you made to join the military wasn't one that was made
 						"Alright, it ain't getting any earlier. I gotta go check up on the other men. You have a good rest, commander."
 						*line_break
 						*line_break
-						With that, Sergeant Kosnik swings his muscular frame around the seat of the chair and stumble onto his feet. Placing both his hands on your shoulders, he gives you one last pat before turning around, brusquely brushing aside the flap of the tent and stepping back outside.
+						With that, Sergeant $!{sergeant} swings his muscular frame around the seat of the chair and stumble onto his feet. Placing both his hands on your shoulders, he gives you one last pat before turning around, brusquely brushing aside the flap of the tent and stepping back outside.
 					*if sonia =1
 						"I know you're worried about your family, but it's not like you can do anything about that while you're lying in bed here. My advice is, follow the doctor's orders, and the faster you get better, the faster you can contact your family and make sure all is well with them." Sonia chides, giving the impression of a mother scolding a belligerent child.
 						*line_break
@@ -205,13 +256,13 @@ Thinking back, the choice you made to join the military wasn't one that was made
 		*line_break
 		*line_break
 		*if kosnik =1
-			Sergeant Kosnik draws another long puff before sighing, a stream of smoke emerging from his nostrils. "Yeah, I kinda get what you mean. Heck, I don't do this for enjoyment, I ain't some sick freak. But the way things are going now, it won't be long before the entire nation goes up in flames. And that sure won't be a pretty sight for anyone. Sometimes I worry for my mother back at home, you know. It ain't easy getting by alone, and now she'll have to worry about being caught up in this fucking mess."
+			Sergeant $!{sergeant} draws another long puff before sighing, a stream of smoke emerging from his nostrils. "Yeah, I kinda get what you mean. Heck, I don't do this for enjoyment, I ain't some sick freak. But the way things are going now, it won't be long before the entire nation goes up in flames. And that sure won't be a pretty sight for anyone. Sometimes I worry for my mother back at home, you know. It ain't easy getting by alone, and now she'll have to worry about being caught up in this fucking mess."
 			*line_break
 			*line_break
 			As the sergeant mentions his concern, you can't help but worry about your own family as well. It's been ages since they've kept in touch with you, and you always fear that something might happen to them if you don't manage to keep in contact. 
 			*line_break
 			*line_break
-			As if reading your mind, Sergeant Kosnik asks, "What about your family? You worried about them? Actually, come to think of it, I've never heard you talk much about your family, though we've been serving in the same unit together for quite awhile."
+			As if reading your mind, Sergeant $!{sergeant} asks, "What about your family? You worried about them? Actually, come to think of it, I've never heard you talk much about your family, though we've been serving in the same unit together for quite awhile."
 			*line_break
 			*line_break
 			He's right. Come to think of it, you haven't really sat down and talked to the sergeant like this before.
@@ -240,7 +291,7 @@ Thinking back, the choice you made to join the military wasn't one that was made
 		*line_break
 		*line_break
 		*if kosnik =1
-			A low hissing sound escapes from Sergeant Kosnik's lips as he inhales. "God damn, you're even crazier than me, you son of a bitch. And I thought I had a few screws loose, staying in the army in such a crazy ass time."
+			A low hissing sound escapes from Sergeant $!{sergeant}'s lips as he inhales. "God damn, you're even crazier than me, you son of a bitch. And I thought I had a few screws loose, staying in the army in such a crazy ass time."
 			*line_break
 			*line_break
 			Shaking his head, the sarge takes one last drag of his cigarette before flicking the butt onto the floor and grinding it with the sole of his boot.

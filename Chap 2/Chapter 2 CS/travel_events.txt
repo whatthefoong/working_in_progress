@@ -1,4 +1,4 @@
-﻿*temp travel_event_chance 0
+*temp travel_event_chance 0
 *rand travel_event_chance 0 50
 *temp travel_event 0
 *rand travel_event 1 12
