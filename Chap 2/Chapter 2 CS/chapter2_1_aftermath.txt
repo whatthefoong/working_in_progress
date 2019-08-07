@@ -70,32 +70,32 @@ A hand-rolled cigarette smolders as it hangs loosely from his lips. He offers yo
 		It feels good to drift, to allow the mind to wander away from the death and loss of the morning. 		You toss the lighter back to Sergeant ${sergeant} with gratuitous thanks. That really hit the spot.
 	# Don't smoke in the vehicle.
 		*set sergeant_rs %-10
-		Kosnik gives you an incredulous look.
+		$!{sergeant} gives you an incredulous look.
 		*line_break
 		*line_break
 		"I don't want to be breathing in that second-hand smoke, and frankly, it's a fire hazard." you explain.
 		*line_break
 		*line_break
-		[i]Seriously?[/i] Kosnik mutters under his breath. He grumbles but knows better than to disobey your orders, taking one final pull, he chucks the rest of it out onto the road. "What a fucking waste."
+		[i]Seriously?[/i] $!{sergeant} mutters under his breath. He grumbles but knows better than to disobey your orders, taking one final pull, he chucks the rest of it out onto the road. "What a fucking waste."
 		*goto kosnik_intro
 	# Refuse politely.
 		You raise your hand to indicate that you're good, but smile and nod to show that you appreciate the offer.
 		*line_break
 		*line_break
-		"Well, it's your loss Commander." Sergeant ${sergeant} shrugs, pocketing the goods.
+		"Well, it's your loss Commander." Sergeant $!{sergeant} shrugs, pocketing the goods.
 *line_break
 *line_break
-Kosnik takes a long drag from his own cigarette.  You watch the glowing end inch ever so closely to his fingers, before he removes the stick from his mouth to exhale a thick cloud of smoke.
+$!{sergeant} takes a long drag from his own cigarette.  You watch the glowing end inch ever so closely to his fingers, before he removes the stick from his mouth to exhale a thick cloud of smoke.
 *label kosnik_intro
 *line_break
 *line_break
-"Got to hand it to you, Commander, I thought we were fucked back there." He chuckles. "Somehow, with your help, we made it out of there. I don't believe in miracles but that was something else." Sergeant ${sergeant} trails off, his expression hardening, not meeting your gaze.
+"Got to hand it to you, Commander, I thought we were fucked back there." He chuckles. "Somehow, with your help, we made it out of there. I don't believe in miracles but that was something else." Sergeant $!{sergeant} trails off, his expression hardening, not meeting your gaze.
 *line_break
 *line_break
 "You ever think that we… we shouldn't have survived?"
 *line_break
 *line_break
-His words are barely audible over the roar of the engine and the howls of the wind, but they reach you. Sergeant ${sergeant} unconsciously touches the scar on his face.
+His words are barely audible over the roar of the engine and the howls of the wind, but they reach you. Sergeant $!{sergeant} unconsciously touches the scar on his face.
 *fake_choice
 	# We fight to protect our loved ones. Gotta live to keep doing that.
 		"Well. We survived didn't we? But hey, I'm just fighting to protect my family back home."
