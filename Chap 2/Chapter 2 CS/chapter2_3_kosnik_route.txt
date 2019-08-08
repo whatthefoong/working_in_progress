@@ -1,5 +1,6 @@
 *comment Kosnik's route
 *temp stop_looters 0
+*temp num_covo_kosnik 0
 *label 2_4_1_kosnik_patrol
 Being back at the barracks means that you have to fulfill your regular duties. Time flies by as you continue to churn out mission plans, conduct physical and tactical drills, and fulfill your weekly patrol duties. After a few weeks of rest, the aches and bruises incurred from the previous mission has already fade away into a distant memory.
 *line_break
@@ -311,7 +312,7 @@ You approach the bar and park yourself down next to ${sergeant}. He raises his h
 Hmm, ${kosnik} has a point…
 *fake_choice
 	#Stay with ${sergeant}.
-		*set sergeant_rs +5
+		*set sergeant_rs +5%
 		Nonetheless, you decide to stay with the sergeant for the rest of the night. You just know that his drunken cheerfulness is merely a facade, and deep down he's still taking the news pretty hard. You're way too indebted to him to leave him alone when he's at such a vulnerable moment.
 		*line_break
 		*line_break
@@ -321,15 +322,81 @@ Hmm, ${kosnik} has a point…
 		${sergeant} stares deeply into your eyes. "Thanks, commander. Looks like I can't hide anything from you, can I?"
 		*line_break
 		*line_break
-		
+		"I just can't help worrying about the situation in my hometown. Fucking sucks knowing there's nothing you can do about it though." ${kosnik} bangs his fist on the bar, rattling a few glasses. You sit there silently, taking an occasional sip of your drink. You have completely no idea how to console ${sergeant}. Maybe it's better to take his mind off his worries by talking about other topics. Come to think of it, ${sergeant} previously asked you about your background, but you know little to no information about the sergeant's story.
+		*label talk_to_kosnik
+		*set num_covo_kosnik + 1
+		*if num_covo_kosnik >= 2,
+			*goto kosnik_next_convo
 		*fake_choice
-			#Kiss him on the lips
-				The alcohol messes with your judgment. No. Deep down, you probably want this all along.  
+			*hide_reuse #What's your family like?
+				${sergeant} takes a long, deep sigh. Reaching into his pocket, he pulls out a cigarette holder and a lighter, and pushes a stick into his mouth. He takes a slow drag before speaking, his eyes focusing on the bar table right before him."
+				*line_break
+				*line_break
+				"I grew up in a small mining village near Ruzno, the only child to two miners. Back in the village, no one had enough resources to support more than 1 child, so families like mine were the majority. It was a little lonely, growing up as an only child. Not like there was much time for leisure. As soon as I was physically capable, my free time were all spent down in the mines or helping out in some related way."
+				*line_break
+				*line_break
+				"Anyway, my father… he died when I was a teen, so for the longest time it was just my mother and me. She's the only family I have left… I don't know what to do if she's gone too. I can't fucking let that happen. I can't!"				
+				*line_break
+				*line_break
+				That explains why ${sergeant} has been so worried about the situation in Ruzno. Anyone would be, given what ${sergeant} has gone through. You decide to ask him one more question.
+				*goto talk_to_kosnik
+			*hide_reuse #How did you get your scar?
+				You regret your words as soon as the question leaves your lips. Is that even something you should be asking about? Will it be a sensitive or touchy topic for ${sergeant}? Damn it, you should at least think a little before you open your mouth. You apologize almost immediately, hoping that the question did not offend the sergeant.
+				*line_break
+				*line_break
+				To your surprise, ${sergeant} seems unperturbed by the frankness of your question.
+				*line_break
+				*line_break
+				"No… It's okay. I think you have a right to know too, commander." Taking a deep breath, ${sergeant}'s fingers slowly trail up to his face, tracing the burnt patch of skin that covers almost half his face. "Growing up in a mining family, I had to pick up the trade somehow. More people working means more income, after all. 
+				*if background = mining
+					You would know, wouldn't you, commander? 
+				So I was a young teen, eager to learn, still fucking clueless about a lot of things though. My old man thought he could teach this ignorant bastard a few things, so I started following him down into the mines, learning the ropes and all that shit. Well, I got cocky. Thought I could handle everything myself and got complacent. It was lunchtime, and stupidly I thought that I could head down and get more work done. And so I popped back in on my own."
+				*line_break
+				*line_break
+				"Of course, the old man noticed that I was gone right away. He came in after me to help, but he trusted that I had taken the necessary safety precautions on my own. Thing was, I fucking forgot to ensure that the fans were working to regulate the methane gas in the mining chamber. As we worked, the amount of methane buildup has reached a dangerous level. Not large enough to cause an big scale explosion, mind you, but the concentration was sufficient to trigger a mini explosion. My father… he died in that blast. I was lucky to be further away, but the explosion still threw me off my feet. Slammed into the wall and knocked the air right out of my fucking lungs. I blacked out after that."
+				*line_break
+				*line_break
+				"I woke up in the hospital a few hours later, my face hurt like hell. Turns out the other miners heard the blast and rushed in. They found me on the floor, but by the time they rushed my to the hospital my flesh was so burnt that the doctors couldn't do anything about it. My father wasn't so lucky. From what I've heard, the explosion gave him major burns all over his body. By the time they reached him, he had already breathed his last"
+				*line_break
+				*line_break
+				${sergeant} begins to fiddle with his glass, falling completely silent. You stare at the sergeant in awe. You always figured that he got his scar in a firefight or in an intense training exercise, but you never would have guessed that the story behind it is related to his tragic past. You decide to ask him one more question.
+				*goto talk_to_kosnik
+			*hide_reuse #Why did you join the MRPA?
+				"To be frank, the job pays better than slaving your life away in the mines. I was able to support my mother for years after enlisting, and that was before all this conflict started and shit. Also, I couldn't stay in Ruzno after…" ${sergeant}'s voice trails off, and a look of distress and guilt crosses his face.
+				*line_break
+				*line_break
+				You raise your brows quizzically. and the sergeant grabs his drink and pours it down his throat, signaling the bartender for a refill. He sighs, before struggling to continue.
+				*line_break
+				*line_break
+				"The… incident left me in a wreck. The guilt was eating me from the inside - I can't even step foot into the mines without being reminded of it. I.. I couldn't fucking stand being there anymore. So I told myself, I gotta leave. Well, by a stroke of luck, I knew of someone who was enlisting in the army, so I thought I'd give it a try. Who knows, maybe by doing something for the country can I erase this fucking guilt, wash away my shame."
+				*line_break
+				*line_break
+				Wow, you had no idea. The ${sergeant} in your eyes has always been a sturdy pillar of support not just for your team, but you as well. You never would have guessed that he was so troubled, so broken on the inside as well.
+				*line_break
+				*line_break
+				Now you finally understand what makes ${sergeant} tick. You decide to ask him one more question.
+				*goto talk_to_kosnik 
+			*hide_reuse #What do you think of the MRPA?
+		*label kosnik_next_convo
+		As you open your mouth, ${sergeant} cuts you off immediately. "Alright, alright, enough about me. In any case, I'm really glad that you're here, willing to listen to this sorry son of a bitch griping about his past. A toast, to us!"
+		*line_break
+		*line_break
+		You can't help but smile as ${sergeant} grabs a bottle of whiskey and pours it into your glass. "Cheers, ${sergeant}." You raise your glass and clink it with the one resting in ${sergeant}'s hand before gulping it down, feeling the burn as it travels down your throat.
+		*line_break
+		*line_break
+		As you put down your glass, you feel a heavy force on your back, startling you. You look up to see ${sergeant} with his hand placed across your shoulders. "I mean it though, commander. I'm really, really fucking lucky to have someone like you by my side. It makes things a little easier knowing that you're here with me." ${sergeant} leans in dangerously close, his face merely inches away from yours, and you inhale in the sharp tang of the alcohol on his breath.
+		*line_break
+		*line_break
+		Wait, what? You look up and catch the sergeant's eyes, staring deeply into your own. Very slowly, ${sergeant} continues to lean in closer and closer…
+		*fake_choice
+			*comment progress 
+			#Kiss him!
+				Your own breathing becomes irregular, as you feel your heart palpitating, threatening to burst out of your chest. You can feel your cheeks flushing, but at this point you're pretty sure that's not because of the alcohol. Closing your eyes, you lean in as well, as your lips meet ${sergeant}'s. For such a tough guy, he has surprisingly soft lips. 
 			#What? NO!
-				You shoot up in your seat. That was close. You don't see ${sergeant} that way. Or do you? God damn it, you can't think straight.
+				Okay this situation is becoming stranger by the minute. You don't see the sergeant that way, or do you? Either way, you can't think clearly at the moment, and the alcohol is not helping. Gently, you push him aside, 
 	#Join your team and waste the night away.
 		*set sergeant_rs +3
-		There's no getting through to the sergeant when he's like this. You decide to join the rest in their party	. You give the sergeant a friendly pat on the shoulder, before returning to your table. At this point in time most of the rest are either completely hammered, with a few of them playing pool or lounging about the jukebox. You flit about the survivors, catching up with the rest.
+		There's no getting through to the sergeant when he's like this. You decide to join the rest in their party	. You give the sergeant a friendly pat on the shoulder, before returning to your table. At this point in time most of the rest are either completely hammered, with a few of them playing pool or lounging about the jukebox. You flit about the rest of your crew, catching up about their lives.
 		*goto 2_4_3_DFFM_letter
 	#Flirt with the lady that just sauntered into the bar.
 		*set sergeant_rs - 10
@@ -435,7 +502,7 @@ You take a deep breath to calm your nerves. "It's nothing, ${sergeant}, probably
 All of a sudden, you hear a faint rustling in the bushes. You turn around, clutching your gun, aiming it at the source of the noise. "Get back!" You whisper sharply at your men, when out of the bushes pops an ape. "Uh, commander? It's just a wild monkey, there're tons of them all around." One of the men pipes up. The rest of the group sniggers, trying to suppress their laughter.
 *line_break
 *line_break
-The happiness turns out to be short lived, as a short burst of gunshot resounds through the air. A bullet catches one of your privates in his thigh, causing him to lose balance and fall over to the floor, wailing and clutching his leg. "Ambush!!" yelled Kosnik. You scream at the other two to head for cover before rushing to the fallen private, dragging him behind the nearest tree you can find. Acting quickly, you tear off a strip of cloth from his uniform and tie it securely around the bullet wound, stopping the blood, all the while you hear the smattering of guns firing all around you.
+The happiness turns out to be short lived, as a short burst of gunshot resounds through the air. A bullet catches one of your privates in his thigh, causing him to lose balance and fall over to the floor, wailing and clutching his leg. "Ambush!!" yelled ${sergeant}. You scream at the other two to head for cover before rushing to the fallen private, dragging him behind the nearest tree you can find. Acting quickly, you tear off a strip of cloth from his uniform and tie it securely around the bullet wound, stopping the blood, all the while you hear the smattering of guns firing all around you.
 *line_break
 *line_break
 Bloody hell. The enemy really took advantage of the patrol routes. Of all days they have to target your patrol. Fuck it, taking down this ambush will redeem yourself for your mistake.

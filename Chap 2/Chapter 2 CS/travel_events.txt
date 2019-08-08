@@ -18,18 +18,21 @@
 *return
 
 *comment travel_event index
-*comment 1 - Vehicle Breakdown
-*comment 2 - Accident (ambush)
+*comment 1,2 - Road checkpoint (LOM / MRPA dep on territory)?
 *comment 3 - Accident (actual)
-*comment 4 - Village in need of help
-*comment 5 - Chance to scavenge a battle field
-*comment 6 - Merchant looking for escort
-*comment 7 - Road checkpoint (LOM / MRPA dep on territory)?
-*comment 8 - Got lost (travel delay) (changed to 10)
-*comment 9 - IED
-*comment 10 - Village with cheap wares
-*comment 11 - Village for recruitment
-*comment 12 - Bandits!
+*comment 4 - Accident (ambush)
+*comment 5 - Vehicle Breakdown
+*comment 6 - Dog Travel Companion
+*comment 7 - Street racing
+*comment 8 - Nice scenery (no effect)
+*comment 9 - Swimming rescue
+*comment 10 - Got lost (travel delay)
+*comment 11 - Village with cheap wares
+*comment 12 - Merchant looking for escort
+*comment 13 - IED
+*comment 14 - Village in need of help
+*comment 15 - Chance to scavenge a battle field
+*comment 16 - Village for recruitment
 
 *label travel_event_1
 *comment MRPA security check
@@ -336,13 +339,50 @@ Nodding in shame, the children wipe their tears and slowly shuffle away supporti
 
 *label travel_event_10
 *set travel_hours +travel_delay
-You swear the map showed a left turn. But after making ${travel_event_chance} left turns (or so you think), you're not so sure anymore. By the time you drag yourselves to ${location_choice_name}, you've wasted another ${travel_delay} hours.
+You swear the map shows a left turn. But after making ${travel_event_chance} left turns (or so you think), you're not so sure anymore. By the time you drag yourselves to ${location_choice_name}, you've wasted another ${travel_delay} hours.
 *return
 
 *label travel_event_11
-event_11
+*comment village with cheap wares
 *return
 
 *label travel_event_12
-event_12
+*comment merchant looking for escort
+Just as you're about to hop into your car and head straight to ${location_choice_name}, you hear a voice shouting in your general direction. Turning around, you see a round, pudgy man running towards you, or rather, attempting to. Upon reaching a few meters from where you stand, he leans forward and try to catch his breath, palms resting on his knees.
+*line_break
+*line_break
+"Hey… [i]huff[/i] are you by… [i]huff[/i]… by any chance, going [i]cough cough[/i] to ${location_choice_name}?" The rotund man sputters. Man, he is really out of shape.
+*line_break
+*line_break
+"And what if I am?" You mutter coolly. You can't see how this has anything to do with this man here.
+*line_break
+*line_break
+The man regains his usual posture. Standing up straight, you notice that there there is a certain air to how the man carries himself, an image of confidence, though his voice suggests a cheerful personality. "I'm a traveling merchant, looking to buy and sell my wares across different cities and towns." As he says that, he gestures behind him with a showy flourish of his right arm, and you notice crates of goods stacked against each other.
+*line_break
+*line_break
+"However, there has been a slight issue with my usual transportation, and as of now I am unable to ferry my goods. As I've overheard, you seem to be headed to ${location_choice_name}, which just so happens to be where my next intended destination is as well. If you would be so kind, do you mind helping out a poor merchant? I guarantee that I'll find some way to repay your goodwill should you choose to help me."
+*line_break
+*line_break
+Hmm… You mull over his words for a moment. On one hand, the merchant promised a reward, but agreeing to help him definitely will take up a bit of your time, as you'll need to help him load and unload his wares. Moreover, you might even need to drop him off at some other part of ${location_choice_name}.
+*fake_choice
+	#Help him
+		Blah
+	#Leave him
+		Blah
+*return
+
+*label travel_event_13
+*comment IED
+*return
+
+*label travel_event_14
+*comment village in need of help
+*return
+
+*label travel_event_15
+*comment Change to scavenge a battle field
+*return
+
+*label travel_event_16
+*comment village for recruitment
 *return
