@@ -1,5 +1,6 @@
 *temp travel_event_chance 0
-*rand travel_event_chance 0 50
+*comment change this
+*rand travel_event_chance 1000 1000
 *temp travel_event 0
 *rand travel_event 1 12
 *temp travel_delay 0

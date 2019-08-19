@@ -1,3 +1,4 @@
+*set chap_tracker 2
 [b]Chapter 2: Aftermath[/b]
 *line_break
 *line_break
@@ -32,7 +33,7 @@ Just a few weeks ago, they had been fellow comrades. But the civil war has force
 Looking out at the dusty dirt tracks stretching out endlessly behind you, with the grandiose slavic mountains towering over the entire landscape, it seems almost peaceful. Like any other cross-country drive across this beautiful land you've called home your entire life. Morovia. Well, ever since the independence it has been called the People's Republic of Morovia. Not that it really matters. After all, the mountains don't give a fuck what you call them.
 *line_break
 *line_break
-Most of your men have retreat into the truck to escape the heat, the occasional grumbled comment about the weather punctuating the snores of weary men. The fine sand coats your skin, but apart from the rugged jitters of the truck and the potholes every few minutes, you feel calm.
+Most of your men have retreated into the truck to escape the heat, the occasional grumbled comment about the weather punctuating the snores of weary men. The fine sand coats your skin, but apart from the rugged jitters of the truck and the potholes every few minutes, you feel calm.
 *line_break
 *line_break
 "Commander…"
@@ -45,7 +46,7 @@ Most of your men have retreat into the truck to escape the heat, the occasional 
 		*set name "Pavlov"
 	# My name is...
 		*input_text name
-"Commander ${name}
+"Commander ${name}?"
 *line_break
 *line_break
 A voice snaps you out of your thoughts. It's Sergeant ${sergeant}, his well-worn Morovian Republic People’s Army uniform stained with dark brown patches of blood and sweat. The prominent MRPA insignia on his shoulder indicating his rank as a first sergeant, assigned to assist you with your platoon.
