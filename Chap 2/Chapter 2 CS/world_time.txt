@@ -4,6 +4,35 @@
 	*comment this refreshes all the city/town stats
 	*gosub_scene world_economy
 
+*comment this helps to time keep for all the quests
+*if chap_tracker = 3
+	*if allegiance = "MRPA"
+		*if chap3_key_events_mrpa = 2
+			*if game_hour >= key_events_time_tracker
+				*set game_hour key_events_time_tracker
+				*goto_scene chapter3_fresh_blood key_event_2
+		*if chap3_key_events_mrpa = 3
+			*if game_hour >= key_events_time_tracker
+				*set game_hour key_events_time_tracker
+				*goto_scene chapter3_fresh_blood key_event_3
+		*if chap3_key_events_mrpa = 4
+			*if game_hour >= key_events_time_tracker
+				*set game_hour key_events_time_tracker
+				*goto_scene chapter3_fresh_blood key_event_4
+	*if allegiance = "LOM"
+		*if chap3_key_events_lom = 2
+			*if game_hour >= key_events_time_tracker
+				*set game_hour key_events_time_tracker
+				*goto_scene chapter3_fresh_blood key_event_2
+		*if chap3_key_events_lom = 3
+			*if game_hour >= key_events_time_tracker
+				*set game_hour key_events_time_tracker
+				*goto_scene chapter3_fresh_blood key_event_3
+		*if chap3_key_events_lom = 4
+			*if game_hour >= key_events_time_tracker
+				*set game_hour key_events_time_tracker
+				*goto_scene chapter3_fresh_blood key_event_4
+
 *set hour (game_hour modulo 24)
 *if game_hour > 24
 	*set day round((game_hour / 24) modulo 30)
