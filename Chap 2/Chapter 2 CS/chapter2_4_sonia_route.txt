@@ -853,12 +853,12 @@ You turn your attention to the doctor, still seated, looking relieved.
 *goto 2_4_3_confront2
 
 *label 2_4_3_confront2
-*if soniaconfront = 0
+*if chap2_soniaconfront = 0
 	You decide to confront the doctor yourself. Clearly something incredibly shady is going on. Besides, in public the doctor's options become more limited. Should he try to run or attack you, there would be many avenues for help.
 	*line_break
 	*line_break
 	You stride up to the doctor, plopping into the now vacant seat across him before he can even refuse.
-*if soniaconfront = 1
+*if chap2_soniaconfront = 1
 	The two of you approach Doctor Karll, who looks strangely relieved.
 	*line_break
 	*line_break
@@ -868,7 +868,7 @@ You turn your attention to the doctor, still seated, looking relieved.
 The brief relief on the doctor's face is immediately erased, replaced once again with fear and trepidation. 
 *line_break
 *line_break
-*if soniaconfront = 0
+*if chap2_soniaconfront = 0
 	You remain silent for a good while, letting him over-think, seeding fear.
 	*line_break
 	*line_break
@@ -878,7 +878,7 @@ The brief relief on the doctor's face is immediately erased, replaced once again
 	He's sweating bullets, despite the air conditioning. "M-man? What man, I don't know what you're talking about-"
 	*line_break
 	*line_break
-*if soniaconfront = 1
+*if chap2_soniaconfront = 1
 	You take the initiative to play the bad cop in this situation. You pressure him, 
 "Your coat's looking a lot lighter now… where did those pills go?"
 *line_break
@@ -887,35 +887,35 @@ The doctor turns ghostly pale. He might just fade into nothing if you keep prodd
 *line_break
 *line_break
 You lean forward, your voice a menacing whisper. "Don't try anything funny. 
-*if soniaconfront = 0
+*if chap2_soniaconfront = 0
 	I 
-*if soniaconfront = 1
+*if chap2_soniaconfront = 1
 	we 
 can shout for help right now and out you where you sit, but 
-*if soniaconfront = 0
+*if chap2_soniaconfront = 0
 	I'm 
-*if soniaconfront = 1
+*if chap2_soniaconfront = 1
 	we're 
 going to give you one chance to explain yourself. You even [i]think[/i] about lying, and its curtains for you, you understand me Doc?"
 *line_break
 *line_break
-*if soniaconfront = 1
+*if chap2_soniaconfront = 1
 	Doctor ${doc	tor} elbows you lightly, indicating for you to lower the intensity. She sighs, then asks her colleague "Karll, please. Just tell us what's happening here. We could have called the authorities right away, but we wanted to at least hear you out. Alright?" 
 	*line_break
 	*line_break
 The doctor gulps audibly. "A-alright, the jig is up, I understand, I'll tell you everything. J-just promise you won't tell anyone else what I'm about to tell you alright? Th-th-they'll kill me if they find out!" 
 *line_break
 *line_break
-*if soniaconfront = 0
+*if chap2_soniaconfront = 0
 	You don't show any signs of agreement, and instead use your gaze to press him on. 
-*if soniaconfront = 1
+*if chap2_soniaconfront = 1
 	Doctor ${doctor} and you turn to look at one another, before turning back to Karll. 
 He takes a deep breath before continuing. 
 *line_break
 *line_break
-*if soniaconfront = 0
+*if chap2_soniaconfront = 0
 	"My name is Doctor Karll. 
-*if soniaconfront = 1
+*if chap2_soniaconfront = 1
 	"
 I'm a member of the Liberators of Morovia (LOM). I'm sure you've heard of them?"
 *line_break
@@ -938,16 +938,16 @@ Doctor Karll seems to be getting fired up mid-speech, a true patriot deep within
 "I began questioning God, why oh why would he make me suffer like this? What had I done to deserve such a fate… but then I received an answer. The LOM approached me, and offered to help my family. In exchange for medicine, they would pay me money to bail my son out-" he opens his hand to show a fistful of green bills that had been palmed to him by the man. "Plus, this medicine will be helping Morovians, so they can recover and fight back the Torian menace! Its a win-win!"
 *line_break
 *line_break
-*if soniaconfront = 0
+*if chap2_soniaconfront = 0
 	"C-commander… surely you must recognize the problem within our society? These Torians that you work for… they don't care about you. You're just a pawn to them, expendable. If you wish… I can put in a good word with the LOM, I'm sure a commander like you would be most appreciated. If you're not interested in joining, that's fine. Just please… please don't reveal this to anyone… this is my only chance at justice…"
-*if soniaconfront = 1
+*if chap2_soniaconfront = 1
 	"Miss ${doctor}… Commander… surely you must recognize the problem within our society? These Torians that we work for… they don't care about us. We're just a pawn to them, expendable. If you wish… I can put in a good word with the LOM, I'm sure a commander like you would be most appreciated. A-a-and they are certainly in need of doctors as well, Miss ${doctor}, I know that for a fact! If you're not interested in joining, that's fine. Just please… please don't reveal this to anyone… this is my only chance at justice…"
 *line_break
 *line_break
 Having finished his monologue, Doctor Karll seems deeply satisfied, like he finally had the chance to get that off his chest. You're unsure what to feel. You don't get the sense that the doctor is lying, and his depiction of Torians certainly lines up with what you've witnessed over the last few weeks. 
 *line_break
 *line_break
-*if soniaconfront = 1
+*if chap2_soniaconfront = 1
 	Sonia sits by your side, quiet. Her gaze is distant, deep in thought. It seems even she is unsure on what would be the right move here.
 	*line_break
 	*line_break
@@ -969,7 +969,7 @@ What will you do?
 		The doctor eyes widen, unable to believe what he just heard. "I-I'm sorry, could you repeat that?"
 		*line_break
 		*line_break
-		*if soniaconfront = 1
+		*if chap2_soniaconfront = 1
 			${doctor} turns to you as well, eyes wide in bewilderment. You avoid her gaze.
 			*line_break
 			*line_break
@@ -982,7 +982,7 @@ What will you do?
 		"V-very good, I'll put in a good word for you with my contact then. I'll let you know if I receive any updates."
 		*line_break
 		*line_break
-		*if soniaconfront = 1
+		*if chap2_soniaconfront = 1
 			He looks at ${doctor}, expectant for an answer. However her eyes are still glued on you. Only when Doctor Karll clears his throat does ${doctor} finally tear her gaze away from you.
 			*line_break
 			*line_break
@@ -993,16 +993,16 @@ What will you do?
 			*line_break
 			*line_break
 		There's a palpable awkwardness in the air now. After a little bit of thumb-twiddling, Doctor Karll bids 
-		*if soniaconfront = 0
+		*if chap2_soniaconfront = 0
 			you 
-		*if soniaconfront = 1
+		*if chap2_soniaconfront = 1
 			the two of you 
 		farewell, 			hops off his stool, and leaves. He walks past you, still in deep contemplation, and whispers "Welcome to the right side, Commander."
 		*line_break
 		*line_break
-		*if soniaconfront = 0
+		*if chap2_soniaconfront = 0
 			You are left alone with your thoughts.
-		*if soniaconfront = 1
+		*if chap2_soniaconfront = 1
 			The two of you are now alone. Despite the chatter of the cafeteria, the atmosphere is so tense it seems to suffocate you.
 			*line_break
 			*line_break
@@ -1040,7 +1040,7 @@ What will you do?
 		*line_break
 		*line_break
 		The doctor tilts his head to one side, unsure of what you're trying to say.
-		*if soniaconfront = 1
+		*if chap2_soniaconfront = 1
 			*line_break
 			*line_break
 			${doctor} looks at you from the corner of her eye, but doesn't say anything.
@@ -1058,7 +1058,7 @@ What will you do?
 		You shoot a glare at him to shut him up. "Go, before I change my mind."
 		*line_break
 		*line_break
-		*if soniaconfront = 0
+		*if chap2_soniaconfront = 0
 			Doctor Karll gulps, and gets off the chair, leaving you. As he walks past he mutters, "Thank you for sparing me, Commander, it truly means a lot."
 		*if sonia confront = 1
 			Doctor Karll gulps, and turns to look at ${doctor} for a second opinion. She nods, indicating that she shares the same decision. 
@@ -1070,12 +1070,12 @@ What will you do?
 		You run your fingers through your hair, exasperated, exhausted. Choosing the path of inaction… surely if nobody finds out, you won't be held responsible? No, you can't be held responsible for anything that happens after this… right?
 		*line_break
 		*line_break
-		*if soniaconfront = 0
+		*if chap2_soniaconfront = 0
 			Unable to come to a decision, you get up from your seat and grab some food. The food today isn't as good as it normally is… 
 			*line_break
 			*line_break
 			There's a bitter taste in your mouth.
-		*if soniaconfront = 1
+		*if chap2_soniaconfront = 1
 			You hear an exasperated sigh to your side, as your accomplice leans forward, crumpling into herself before sitting upright. She looks at you, looking just as wary as you feel.
 			*line_break
 			*line_break
@@ -1115,7 +1115,7 @@ What will you do?
 		Tears are trickling down his face. Snot dribbles down his nose. He is a mess, realizing that this is the end of the line for him. The commuters around you have begun to pay attention to you two.
 		*line_break
 		*line_break
-		*if soniaconfront = 1
+		*if chap2_soniaconfront = 1
 			Karll turns to ${doctor} for support, sobbing, but she looks away, looking at the ground. "Sorry Karll… you did this to yourself."
 			*line_break
 			*line_break
@@ -1125,18 +1125,18 @@ What will you do?
 		Before you can finish your sentence, the doctor makes a break for it, crying out for his life. Doing your best to keep up, crutch under your arm, you shout "Stop that doctor! He's a thief!". Though most of the people in the cafeteria are too stunned to intervene, the crowd makes movement difficult for the doctor. Eventually, security arrives, apprehending the ruined doctor.
 		*line_break
 		*line_break
-		*if soniaconfront = 0		
+		*if chap2_soniaconfront = 0		
 			Authorities were called. The doctor was taken away, and you never saw him again. You gave your side of the story to the officers and other doctors, and was thanked for your assistance. Reporting the crime to the relevant parties was a good move on your part, they said.
-		*if soniaconfront = 1
+		*if chap2_soniaconfront = 1
 			${doctor} called the authorities. The doctor was taken away, and you never saw him again. Both ${doctor} and you had to give your sides of the story to the officers, and were thanked for your assistance. Reporting the crime to the relevant parties was the right thing to do, they said.
 		*line_break
 		*line_break
 		Life resumed, though the staff seemed more watchful of you, making sure this crazy commander didn't go wandering into random rooms anymore. You didn't hear about any news of what happened with Doctor Karll. The hospital likely wanted to keep this incident private. Everyone pretended like nothing had happened, and slowly but surely, the whole debacle faded into a memory.
 		*line_break
 		*line_break
-		*if soniaconfront = 0
+		*if chap2_soniaconfront = 0
 			You remember, though. Only you seemed to care about Doctor Karll's story. When you told the authorities about how the Torians had framed his son for a crime he didn't do, they dismissed you hurriedly.
-		*if soniaconfront = 1
+		*if chap2_soniaconfront = 1
 			You and ${doctor} remember, however. Every time you saw ${doctor} you wanted to bring up the topic, but somehow couldn't find a right way of doing so. It felt like such a charged subject that it would be better not to even bring it up. 
 		*line_break
 		*line_break
@@ -1148,7 +1148,7 @@ What will you do?
 		*line_break
 		Is there?
 		*goto_scene chapter2_4_sonia_hospital_raid
-	*selectable_if (soniaconfront = 0) #Blackmail Doctor Karll for some of his profits.
+	*selectable_if (chap2_soniaconfront = 0) #Blackmail Doctor Karll for some of his profits.
 		*set dollars +300
 		You spend a long time deep in your thoughts. Doctor Karll sits in front of you, waiting patiently, his fate still resting in your hands.
 		*line_break
@@ -1327,7 +1327,7 @@ She turns to look at you. "What do you think?"
 		*line_break
 		*line_break
 		She rises from her seat and begins striding towards Doctor Karll's table, without hesitation. You follow behind.
-		*set soniaconfront 1
+		*set chap2_soniaconfront 1
 		*goto 2_4_3_confront2
 		
 =======

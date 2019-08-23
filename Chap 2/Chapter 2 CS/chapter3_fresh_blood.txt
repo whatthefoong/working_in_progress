@@ -1,0 +1,67 @@
+*set chap_tracker 3
+[b]Chapter 3: Fresh Blood[/b]
+*line_break
+*line_break
+*label key_event_1
+*comment event 2 is set 2 weeks from independence
+*set key_events_time_tracker 336
+*comment actual key event
+*if allegiance = "MRPA"
+	*set chap3_key_events_mrpa 2
+	[mrpa key event 1 - initiation into MRPA]
+	*set location_choice "vanka"
+*if allegiance = "LOM"
+	*set chap3_key_events_lom 2
+	[lom key event 1 - initiation into LOM]
+	*set location_choice "novina"
+*page_break
+*gosub_scene world_map travel_func
+
+*label key_event_2
+*comment event 3 is set 3 weeks from independence
+*set key_events_time_tracker 504
+*comment actual key event
+*if allegiance = "MRPA"
+	*set chap3_key_events_mrpa 3
+	[mrpa key event 2 - minor recruitment drive]
+	*comment if player hits quota via questionable means
+	[mrpa key event 2a - civilian riot and massacre]
+	*comment if player doesn't hit quota
+	[mrpa key event 2b - threaten MC's family]
+*if allegiance = "LOM"
+	*set chap3_key_events_lom 3
+	[lom key event 2 - guerilla warfare]
+*page_break
+*comment change this!!!
+*goto_scene location_orlotek
+*comment change this!!!
+
+*label key_event_3
+*comment event 4 is set 5 weeks from independence
+*set key_events_time_tracker 840
+*comment actual key event
+*if allegiance = "MRPA"
+	*set chap3_key_events_mrpa 4
+	[mrpa key event 3 - MRPA press conference]
+
+*if allegiance = "LOM"
+	*set chap3_key_events_lom 4
+	[lom key event 3 - drug/arms smuggling]
+*page_break
+*comment change this!!!
+*goto_scene location_orlotek
+*comment change this!!!
+
+*label key_event_4
+*comment actual key event
+*if allegiance = "MRPA"
+	*set chap3_key_events_mrpa 5
+	[mrpa key event 4 - sent to Lutengrad, under siege]
+
+*if allegiance = "LOM"
+	*set chap3_key_events_lom 5
+	[lom key event 4 - assault on Lutengrad]
+*page_break
+*comment change this!!!
+*goto_scene location_orlotek
+*comment change this!!!

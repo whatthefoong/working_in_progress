@@ -3,6 +3,7 @@
 
 *scene_list
 	startup
+	chapter3_fresh_blood
 	world_map
 	chapter1_1_first_blood
 	chapter1_2_counterattack
@@ -10,10 +11,8 @@
 	chapter2_2_backstory
 	chapter2_3_kosnik_route
 	chapter2_4_sonia_route
-	chapter3_dawn
 	ending
 	death
-	world_map
 
 *comment character
 *create name "nobody"
@@ -101,13 +100,36 @@
 *create mrpa_official_rs 0
 
 *comment events
+*create chap_tracker 1
+
+*comment Chapter 1
 *comment 0 for kosnik 1 for sonia
 *create chap1_kosnik_or_sonia 0
 *comment 0 for no civ killed, 1 for man killed, 2 for man and wife killed
 *create chap1_kill_civilian 0
 
+*comment Chapter 2
+*comment rationale for joining: 1 for money, 2 for, 3 for
+*create chap2_join_rationale 0
 *comment chapter 2_4_sonia: 0 for sonia never confront dr karll, 1 for sonia did
-*create soniaconfront 0
+*create chap2_soniaconfront 0
+*comment chap2_choose_side: "mrpa" or "lom"
+*create chap2_choose_side "mrpa"
+
+*comment Chapter 3
+*comment quests
+*create key_events_time_tracker 0
+*create side_quest_time_tracker 0
+
+*comment mrpa: 1 initiation. 2 recruitment. 3 press conference. 4 siege.
+*create chap3_key_events_mrpa 1
+
+*comment lom: 1 initiation. 2 guerilla. 3 smuggling conference. 4 assault.
+*create chap3_key_events_lom 1
+
+*comment communcal quests
+*create chap3_events_delivery 0
+
 *comment achievements
 
 *comment World Init
