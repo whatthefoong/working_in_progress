@@ -29,10 +29,9 @@
 *comment 10 - Got lost (travel delay)
 *comment 11 - Village with cheap wares
 *comment 12 - Merchant looking for escort
-*comment 13 - IED
-*comment 14 - Village in need of help
-*comment 15 - Chance to scavenge a battle field
-*comment 16 - Village for recruitment
+*comment 13 - Village in need of help
+*comment 14 - Chance to scavenge a battle field
+*comment 15 - Village for recruitment
 
 *label travel_event_1
 *comment MRPA security check
@@ -344,6 +343,10 @@ You swear the map shows a left turn. But after making ${travel_event_chance} lef
 
 *label travel_event_11
 *comment village with cheap wares
+The road stretches ahead, seemingly endless. You sigh as you put your hand to your chin, keeping one hand on the steering wheel. You can't wait to get to ${location_choice_name} as soon as possible.
+*line_break
+*line_break
+*comment take a break in a nearby village, the village selling all its wares because they fleeing the war.
 *return
 
 *label travel_event_12
@@ -365,24 +368,42 @@ The man regains his usual posture. Standing up straight, you notice that there t
 *line_break
 Hmm… You mull over his words for a moment. On one hand, the merchant promised a reward, but agreeing to help him definitely will take up a bit of your time, as you'll need to help him load and unload his wares. Moreover, you might even need to drop him off at some other part of ${location_choice_name}.
 *fake_choice
-	#Help him
-		Blah
-	#Leave him
-		Blah
+	#Offer your aid
+		Eh, what do you have to lose? You're both heading towards the same destination anyway. Might as well help out a man in need.
+		*line_break
+		*line_break
+		"Alright. Load up your stuff on the back, but hurry up. I can't afford to dawdle here any more." You stride towards the pile, knowing that if you let the man do all the work the hours will just drag on before he's even halfway done.
+		*line_break
+		*line_break
+		Immediately, the merchant's face lights up. "Oh thank you so much, kind sir! Really, I can't express my thanks enough!" The jolly voice follows behind you as the merchant trudges frantically to catch up with you.
+		*line_break
+		*line_break
+		With your help, the both of you load up all the merchant's goods onto your vehicle in a jiffy. Soon, you're out on the road, the merchant happily jabbering away in the passenger seat. Strangely, his company makes the road a little less lonely as he shares with you various anecdotes and advice. Before long, you've arrived at ${location_choice_name}.
+		*line_break
+		*line_break
+		Dropping the merchant off, you help him unload his wares and bid him farewell. Before you return to your vehicle, however, the merchant grabs you by your wrist.
+		*line_break
+		*line_break
+		"Hey, I really owe you big time. I've got to repay you somehow, but I can't just give you some of my goods. I have a business to run, after all. However, I can give you a huge discount, almost at cost price, for whatever catches your eye. What say you?"
+		*line_break
+		*line_break
+		Wow, that's certainly generous of him. Well, no reason not to take him up on his offer.
+		*comment can code in various goods at super low price here, not sure if we should have a fixed list of goods or rotating/random.
+	#Leave him, you don't have time for this.
+		"I'm really sorry, I'm in a hurry." You walk back to your vehicle steadfastly, the cries of protest from the man falling on deaf ears.
+		*line_break
+		*line_break
+		Jumping into your vehicle, you take one last glance at the man, who has fallen to his knees, a dejected figure kneeling on the ground. You fixate your eyes on the road in front of your windscreen and drive away towards ${location_choice_name}.  
 *return
 
 *label travel_event_13
-*comment IED
-*return
-
-*label travel_event_14
 *comment village in need of help
 *return
 
-*label travel_event_15
-*comment Change to scavenge a battle field
+*label travel_event_14
+*comment Chance to scavenge a battle field
 *return
 
-*label travel_event_16
+*label travel_event_15
 *comment village for recruitment
 *return
