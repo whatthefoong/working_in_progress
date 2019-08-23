@@ -633,7 +633,7 @@ Where would you like to travel to?
 	*set location_scene "location_"&location
 *gosub location_naming_func
 *comment delete this line - for map / travel test
-*comment *goto_scene world_map
+*goto_scene world_map
 *comment delete this line - for map / travel test
 *goto_scene {location_scene}
 
