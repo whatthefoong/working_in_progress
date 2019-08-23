@@ -19,7 +19,7 @@
 
 *label key_event_2
 *comment event 3 is set 3 weeks from independence
-*set key_events_time_tracker 504
+*set key_events_time_tracker 370
 *comment actual key event
 *if allegiance = "MRPA"
 	*set chap3_key_events_mrpa 3
