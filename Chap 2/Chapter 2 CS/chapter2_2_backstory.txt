@@ -1,5 +1,29 @@
 *comment setting the background for MC
 *page_break
+You smile bitterly at how quickly things had changed.
+*line_break
+*line_break
+What brings you here indeed.
+*line_break
+*line_break
+At the macro level, it had all started with the declaration of independence, with the Torian colonial masters granting Morovia a new lease of life and creating an immediate power struggle. Not to say that the violence was unprecedented, after all, the road to independence had been a hasty and rocky one. Morovia had been under the colonial rule of the Torians for centuries, as did most of the neighboring countries. Years of independence advocacy by activists had fallen on deaf ears or simply led to quick arrests and long jail sentences. But a recent wave of nationalism that had rushed across the peninsula, giving the latent dissatisfaction for colonial rule a voice and a movement. Large scale marches and protests were organized, with hundreds of thousands of Morovians marching on to the capital in Strazova.
+*line_break
+*line_break
+The Torians weren't willing to risk life and limb for a foreign colony situated half-way around the world. Despite their well-drilled armies and technological superiority, they were outnumbered more than 50 angry Morovians to each Torian soldier. Besides, what they lacked in manpower, they made up for in money. Tons of money. Within months, the Torians had hand-picked a new Morovian government and paved the way for the independence of the newly minted People's Republic of Morovia while retaining key positions in industry and having an advisory role to the nation.
+*line_break
+*line_break
+President Montaro, the newly "elected" president of Morovia, saw this relationship as mutually beneficial, after all, Morovia needs external support to grow. Most Morovians lacked the skills, experience and education to lead an entire nation or run the various resource extraction companies, and the Torians provided much needed financial, governance and military expertise.
+*line_break
+*line_break
+With the financial backing of the Torians and the need for an independent army, the Morovian government started running a series of recruitment drives to started to entice many able-bodied men and women to join the Morovian Republic People's Army, the MRPA, with the promise of a stable paycheck and a noble career. Thus, you had decided to pack your bags and head straight to the nearest recruitment center, which thereafter they shipped you off to the nearest MRPA drill camp.
+*line_break
+*line_break
+However, one of the major Morovian warlords - General Kontessa, saw this arrangement and mustering of forces as a mere masquerade of Torian imperialist colonialism. He demanded for the immediate withdrawal of the Torians and a true "Morovia for Morovians", which was, of course, unconditionally denied. It is said that he had thrown a fit of rage, swore at President Montaro and called him a "fucking Torian monkey", before storming off. Within days of the independence, General Kontessa had mobilised the soldiers loyal to him, as well as convinced many of the MRPA generals to join him to "free Morovia from the hands of colonial tyranny and oppression". In stereotypical coup fashion, General Kontessa announcemed a coup and launched an assault on Strazova.
+*line_break
+*line_break
+At least, that's what you had gathered through a patchwork of sources, from the general in-barrack gossip and banter to the official bulletins and illicit radio broadcasts. Nobody really knew what was happening, or who was right, or what was right. The only truth was that Morovia was being torn to shreds by the civil war, with the MRPA and LOM fighting a fierce battle for control, and possibly, the future of Morovia.
+*page_break
+"How did I get here you say?" You sigh. "Honestly, I don't even know."
 *if chap1_kosnik_or_sonia = 0
 	*goto kosnik_route_1
 *if chap1_kosnik_or_sonia = 1
@@ -9,7 +33,7 @@
 Sergeant $!{sergeant} drags a chair across the wooden floorboards, its metal legs rattling along with a jarring screech. $!{sergeant} ignores your wincing and plops the chair beside you, giving you a friendly pat on the shoulder.
 *line_break
 *line_break
-"Heck of time we went through back there eh? How're you holding up?"
+He laughs. "Fair enough. No one really knows how they end up anywhere anyhow. Still, that was one heck of a fight. How're you holding up?"
 *fake_choice
 	# I feel amazing! Never been better.
 		*set sergeant_rs %+5
@@ -49,10 +73,10 @@ You look at the man who had pulled you through the firefight at ${location_name}
 *goto 2_2_1_choice_rationale
 
 *label sonia_route_1
-"How're we doing this fine day? Feeling better?" trills doctor ${doctor} as she enters the room, her usual perky attitude a stark contrast to the bleak vibe of the hospital wards.
+Doctor ${doctor} laughs. "Well, I haven't heard an answer more honest than that in a while. Why don't you help yourself to some tea and get your mind off things?"
 *line_break
 *line_break
-Doctor $!{doctor} places a steaming mug onto your bedside table. "It's not great though, it's hard to get good tea in the markets these days with the war and all."
+Doctor $!{doctor} places a steaming mug onto your bedside table. "It's not great though, it's hard to get good tea in the markets these days with the war and all. Anyhow, how're you doing?"
 *fake_choice
 	# I feel great! Thank you.
 		*set doctor_rs %+5
@@ -79,21 +103,26 @@ You manage to eke out a small shrug at the rhetorical question, shoulders tighte
 Your eyes instinctively follow the doctor as she flits around the room, fiddling with the machines and tubes weaving around your bed.
 *line_break
 *line_break
-"So, a military commander, huh? I bet you must have some pretty crazy stories. How did you end up in the army in the first place?" $!{doctor} inquires, snapping you out of your reverie.
+"So, a military commander, huh? I bet you must have some pretty crazy stories. How did you end up in the army?" $!{doctor} inquires, snapping you out of your reverie.
 *line_break
 *line_break
 You can't help but notice that despite the question, her eyes remain fixated on her tasks, hands constantly busying themselves - scribbling notes, checking the gauges and deftly clearing out the tubes.
 *goto 2_2_1_choice_rationale
 
 *label 2_2_1_choice_rationale
+*page_break
+Thinking back, you remember the day you had made the fateful decision - filling out the forms and going through the proper procedure under the hawkish scrutiny of the drill sergeants. A few weeks earlier, a smartly uniformed soldier had pressed a flyer into your hands - urging you to do your part for Morovia and join the Morovian Republic People's Army, or MRPA for short. 
 *line_break
 *line_break
-Thinking back, you remember the day you had made the fateful decision - filling out the forms and going through the proper procedure under the hawkish scrutiny of the drill sergeants. Just weeks before, a smartly uniformed soldier had pressed a flyer into your hands - urging you to do your part for Morovia and join the Morovian Republic People's Army, or MRPA for short.
+Morovia never had it's own army - after all, it had been a Torian colony for the past 150 years. The Torian colonial masters ran the entire country, from it's governance, economy, education, health-care and security. Having established large-scale operations and Torian conglomerates to extract the many natural resources in Morovia, the Torians (and a highly select group of Morovians) became extremely wealthy, while the rest of the country struggled to make a living working in the Torian plantations and mines.
 *line_break
 *line_break
-It wasn't a spur of the moment decision back then, and walking into the dusty barracks was a culmination of many factors, but ultimately it was the…
+This, amongst other reasons, led to a surge in pro-independence support in Morovia. Morovians were disgruntled at the increasingly extravagant lifestyles of the Torians, and with other Torian ex-colonies such as the neighboring Hada successfully negotiating for independence, national sentiment for self-governance grew at an increasing rate. Marches and peaceful demonstrations were organized, and to the great surprise of everyone, the Torians had made the unprecedented decision to call for snap democratic elections (having already prepared their own cherry-picked party, the Morovian People’s Party, or MPP). With the various political parties scrambling to organize themselves, the MPP won easily and were hastily established as the government (and puppet) of Morovia.
+*line_break
+*line_break
+The new Morovia needed it's own army, and hence started to run massive recruitment drives to quickly train and staff up. That was how you ended up in the army. But even then, it wasn't a spur of the moment decision back then, and walking into the dusty barracks was a culmination of many factors, but ultimately it was the…
 *fake_choice
-	#Money! The military pays well, and I could use the steady paycheck.
+	# Money! The military pays well, and I could use the steady paycheck.
 		*set chap2_join_rationale 1
 		Of course it was the money. Why else would you risk getting shot in the face? Besides, nobody could deny that it was, and still is, a pressing concern. After all, money makes the world go round doesn't it?
 		*line_break
@@ -104,10 +133,16 @@ It wasn't a spur of the moment decision back then, and walking into the dusty ba
 		"It seemed like a good opportunity, and with the escalating tensions, I knew I could quickly rise the ranks."
 		*line_break
 		*line_break
-		Granted, the trainings were physically and mentally exhausting, but you managed to rise above that. It was easy to outshine most of the other recruits, and you soon caught the eye of your commanders, which gave you an opportunity to take up command positions within a MRPA battalion, and before long you rose to the rank of a lieutenant and given the command of your own platoon. Of course, a higher rank means a better pay as well.
+		Granted, the trainings were physically and mentally exhausting, but you managed to rise above that. It was easy to outshine most of the other recruits, and you soon caught the eye of your commanders, which gave you an opportunity to take up command positions within a MRPA battalion, and before long you rose to the rank of a Lieutenant and given the command of your own platoon. Of course, a higher rank means a better pay as well.
+		*line_break
+		*line_break
+		"Well, back then nobody knew that we would have such a bloody civil war on our hands either."
+		*line_break
+		*line_break
+		"I guess..? But as long as the money keeps coming…"
 		*page_break
 		*if chap1_kosnik_or_sonia = 0
-			"Hey, don't sweat it! I know tons of guys who enlisted for the cha-ching. Ain't no shame in that. Hell, I've managed to keep my family well-fed all these months because of what I do here." Sergeant $!{sergeant} guffaws, slapping your back. You smile, appreciating the sergeant's cheery candor.
+			"You sound like the tons of enlistees who just sign up for the cha-ching. Ain't no shame in that. Hell, I've managed to keep my family well-fed all these months because of what I do here." Sergeant $!{sergeant} guffaws, slapping your back. You smile, appreciating the sergeant's cheery candor.
 			*line_break
 			*line_break
 			"Yeah, family's one thing. And the economy in Morovia is in the shits now. Who's going to pay you to tend to their plantations when it could be bombed to hell and back the next day?"
@@ -140,7 +175,7 @@ It wasn't a spur of the moment decision back then, and walking into the dusty ba
 			*line_break
 			Hmm, come to think of it, it's been ages since you've last talked to your family.
 			*goto 2_2_1_choice_family
-	#My love for the country! To fight for what I believe is right.
+	# My love for the country! To fight for what I believe is right.
 		*set chap2_join_rationale 2
 		"I just want to do my part as a citizen of this country, as simple as that."
 		*line_break
@@ -158,13 +193,14 @@ It wasn't a spur of the moment decision back then, and walking into the dusty ba
 		"I mean it - Morovia needs us now, more than ever. We are a new nation, fighting for our place amongst the other independent nations in the world. If we don't fight for our land, who will?"
 		*line_break
 		*line_break
-		*progress
-		Right, Morovia is your home, after all. After the Torians left, you were as excited as any other that Morovia finally got its independence. However, a faction of the military were unhappy that many Torians still held important positions in the political and financial sector, and as such broke away and declared a coup under the name of the Liberators of Morovia, the LOM. The ensuing uprisings and sieges escalated far quicker than anyone expected, and the tension swept the entire nation into a state of frenzy. Hence, when you saw the news report from the military encouraging more people to enlist, you immediately leaped at the chance to sign up as a fresh recruit.
+		Right, Morovia is your home, after all. You didn't sign up for a civil war, but you signed up to be a part of the new, free Morovia. Your chest had swelled with pride as you stood in the hall, hand raised and swearing the oath to protect the people of Morovia from harm. In return, they had given you a rifle, entrusted you with the right to act on behalf of the state, to kill and uphold what was right.
 		*line_break
 		*line_break
-		Of course, the trainings were physically and mentally exhausting, but spurred on by the frequent news reports of civilian casualties and mindless destruction, you pushed through the drills with utmost drive. Before long, your stellar performance caught the eye of several commanders within the Morovian Republic People's Army, and before long you rose quickly to the rank of a Captain and were given command of your own unit within the MRPA.
+		Of course, the trainings were physically and mentally exhausting, but you pushed through the drills with utmost drive. Before long, your stellar performance caught the eye of several commanders within the Morovian Republic People's Army, and before long you rose quickly to the rank of a Lieutenant and were given command of your own unit within the MRPA.
 		*line_break
 		*line_break
+		That said, the oath didn't say anything about shooting fellow Morovians though - the civil war had changed everything.
+		*page_break
 		*if chap1_kosnik_or_sonia = 0
 			Sergeant $!{sergeant} draws another long puff before sighing, a stream of smoke emerging from his nostrils. "Yeah, I kinda get what you mean. Heck, I don't do this for enjoyment, I ain't some sick freak. But the way things are going now, it won't be long before the entire nation goes up in flames. And that sure won't be a pretty sight for anyone. Sometimes I worry for my mother back at home, you know. It ain't easy getting by alone, and now she'll have to worry about being caught up in this fucking mess."
 			*line_break
@@ -175,7 +211,7 @@ It wasn't a spur of the moment decision back then, and walking into the dusty ba
 			As if reading your mind, Sergeant $!{sergeant} asks, "What about your family? You worried about them? Actually, come to think of it, I've never heard you talk much about your family, though we've been serving in the same unit together for quite awhile."
 			*line_break
 			*line_break
-			He's right. Come to think of it, you haven't really sat down and talked to the sergeant like this before.
+			He's right. Come to think of it, you've never really had time to talk with $!{sergeant} either.
 			*goto 2_2_1_choice_family
 		*if chap1_kosnik_or_sonia = 1
 			"That's really pretty noble of you. Can't say I disagree though. Ever since this mess started, the hospital has became busier and busier with each passing day. The staff are already burning out, and yet the rate of patients coming in aren't slowing down in the slightest." Sonia furrowed her brows as she appear to sink deeper into thought.
@@ -184,22 +220,22 @@ It wasn't a spur of the moment decision back then, and walking into the dusty ba
 			Clearing your throat, you try to break away from the topic. "Well, we'll just have to do our best and hope things work out for themselves, like what my ma used to say."
 			*line_break
 			*line_break
-			"Oh? That's the first I time I've heard you mention your family, isn't it?" The distraction proves to be effective, piquing Sonia's curiosity at the mention of your upbringing, her expression regaining a semblance of her usual cheery self.
+			"Oh? That's the first I time I've heard you mention your family, isn't it?" The doctor perks up an eyebrow.
 			*line_break
 			*line_break
 			Hmm, come to think of it, it's been ages since you've last talked to your family.
 			*goto 2_2_1_choice_family
-	#the excitement of it all! You've always envisioned yourself in a military career.
+	# Adventure! A military career seemed the most exciting.
 		*set chap2_join_rationale 3
-		"To be frank, I've always wanted to do something a little larger than life, something extraordinary. The military seems like a perfect choice, don't you think?"
+		"To be frank, I've always wanted to do something a little larger than life, something extraordinary. The military seems like a perfect choice, don't you think? I mean, this whole thing is a giant adventure!"
 		*line_break
 		*line_break
-		The way you see it, the various factions of the civil war are merely insignificant, inconsequential. The Liberators of Morovia broke away from the military to stage a coup, protesting against the Torian presence in the political and economic realm even though the Torians promised full independence for Morovia. As a response, the Torians started to back whatever's left of the military, forming the Morovian Republic People's Army in order to counter the threat posed by the LOM. To be honest, you're not as concerned with the politics of it all. All you knew was that when the MRPA was seeking new recruits, you jumped in immediately with little hesitation.
+		The way you see it, the civil war was possibly the best and worse thing that could have happened. With the Liberators of Morovia breaking away from the military to stage a coup and protesting against the Torian presence, Morovia was in a state of upheaval and turmoil. You weren't too concerned with the politics, but the whole affair meant being thrust into a giant adventure of a conflict. Not that it was planned - you had enlisted with the Morovian Republic People's Army simply because you thought it would be cool to shoot a gun and kick down doors. The civil war just made things a lot more… different.
 		*line_break
 		*line_break
-		After enlistment, your enthusiasm and drive for the military pushed you to take your trainings more seriously than your peers, and with that you produced excellent results, catching the eye of several commanders. Before long, you rose quickly to the rank of a Captain and were given command of your own unit within the MRPA.
-		*line_break
-		*line_break
+		Back then, your knack for adventure and willingness - no, eagerness to get your hands dirty saw you pushing yourself way harder than your peers, and excelling in training. You caught the eye of several commanders with your fearlessness, and before long, you have risen quickly to the rank of a Lieutenant and was given command of your own unit within the MRPA.
+		*page_break
+		*progress
 		*if chap1_kosnik_or_sonia = 0
 			A low hissing sound escapes from Sergeant $!{sergeant}'s lips as he inhales. "God damn, you're even crazier than me, you son of a bitch. And I thought I had a few screws loose, staying in the army in such a crazy ass time."
 			*line_break
@@ -233,14 +269,14 @@ It wasn't a spur of the moment decision back then, and walking into the dusty ba
 			*line_break
 			Right, You didn't expect Sonia to follow up with more questions. 
 			*goto 2_2_1_choice_family
-
+*progress
 *label 2_2_1_choice_family
 You don't really mention it to others that often, but you come from a family of…
 *fake_choice
-	#thriving entrepreneurs with booming businesses.
+	#thriving entrepreneurs with a booming businesses.
 		*set background 1
 		*set charm +1
-		Your family has always been running a couple of small businesses here and there. After all, your father was a Hadan migrant that came to Morovia to expand his trade business, bringing cheap supplies from Morovia back into Hada, as well as make use of the cheaper labor and manufacturing costs of Morovia, which was how he came to meet the blossoming young daughter of a local factory owner, whom he married a few years after. In fact, much of your childhood has been spent with your parents educating you on business strategies, how to read and negotiate with people, smooth-talking them over to get things done your way. "The art of the deal", as your father likes to call it. Sadly, with the independence of Morovia from Torim, the withdrawal of Torian investment dealt a large blow to your family's ventures. Without the proper finances. they simply could not compete with the larger conglomerates.
+		Your family had always been running a couple of small businesses here and there. After all, your father was a Hadan migrant that came to Morovia to expand his trade business, bringing cheap supplies from Morovia back into Hada as well as make use of the cheaper labor and manufacturing costs of Morovia, which was how he came to meet the blossoming young daughter of a local factory owner, whom he married a few years after. In fact, much of your childhood has been spent with your parents educating you on business strategies, how to read and negotiate with people, smooth-talking them over to get things done your way. "The art of the deal", as your father likes to call it. Sadly, with the independence of Morovia from Torim, the withdrawal of Torian investment dealt a large blow to your family's ventures. Without the proper finances. they simply could not compete with the larger conglomerates.
 		*line_break
 		*line_break
 		Before long, your family's businesses ran dry and collapsed upon itself. Luckily, your family has a sizable saving. Coupled with the inheritance from the previous generations, your family's coffers would at least be able to last for a quite a while. However, you know that this is only a temporary solution, as the cost of living and basic necessities are rising exponentially as the conflict means that resources are getting scarcer by the day. 
@@ -342,16 +378,3 @@ You don't really mention it to others that often, but you come from a family of�
 *goto 
 
 *label 2_3_letter
-True enough, the road to independence had been a hasty and rocky one. Morovia had been under the colonial rule of the Torians for centuries, as did most of the neighboring countries. Years of independence advocacy by activists had fallen on deaf ears or simply led to quick arrests and long jail sentences. But a recent wave of nationalism that had rushed across the peninsula, giving the latent dissatisfaction for colonial rule a voice and a movement. Large scale marches and protests were organized, with hundreds of thousands of Morovians marching on to the capital in Strazova.
-*line_break
-*line_break
-The Torians weren't willing to risk life and limb for a foreign colony situated half-way around the world. Besides, what they lacked in manpower, they made up for in money. Tons of money. Within months, the Torians had hand-picked a new Morovian government and paved the way for the independence of the newly minted People's Republic of Morovia while retaining key positions in industry and having an advisory role to the nation.
-*line_break
-*line_break
-President Montaro, the newly "elected" president of Morovia, sees this relationship as mutually beneficial, after all, Morovia needs external support to grow. Most Morovians lacked the skills and experience to lead an entire nation, and the Torians provided much needed financial, governance and military expertise.
-*line_break
-*line_break
-With the financial backing of the Torians and the need for an independent army, the Morovian government started running a series of recruitment drives to started to entice many able-bodied men and women to join the Morovian Republic People's Army, the MRPA, with the promise of a stable paycheck and a noble career. Thus, you decided to pack your bags and head straight to the nearest recruitment center, which thereafter they shipped you off to the nearest MRPA drill camp.
-*line_break
-*line_break
-However, 	one of the major Morovian warlords - General Kontessa, saw this arrangement and mustering of forces 		as a mere masquerade of Torian imperialist colonialism. He demanded for the immediate withdrawal of the Torians and a true "Morovia for Morovians", which was, of course, unconditionally denied. It is said that he had thrown a fit of rage, swore at President Montaro and called him a "fucking Torian monkey", before storming off. Within days of the independence, General Kontessa had mobilised the soldiers loyal to him, as well as convinced many of the MRPA generals to join him to "free Morovia from the hands of colonial tyranny and oppression". In stereotypical coup fashion, General Kontessa announcemed a coup and launched an assault on Strazova.
