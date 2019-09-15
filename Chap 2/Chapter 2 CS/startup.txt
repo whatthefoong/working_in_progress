@@ -3,14 +3,14 @@
 
 *scene_list
 	startup
-	chapter3_fresh_blood
-	world_map
 	chapter1_1_first_blood
 	chapter1_2_counterattack
 	chapter2_1_aftermath
 	chapter2_2_backstory
 	chapter2_3_kosnik_route
 	chapter2_4_sonia_route
+	chapter3_fresh_blood
+	world_map
 	ending
 	death
 

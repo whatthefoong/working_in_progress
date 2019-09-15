@@ -155,7 +155,7 @@ His words are barely audible over the roar of the engine and the howls of the wi
 You nod.
 *line_break
 *line_break
-"Well, that makes your winning rate 100% doesn't it?" Sergeant ${sergeant} chuckles. "So what brings you to this war?"
+"Well, that makes your win rate 100% doesn't it?" Sergeant ${sergeant} chuckles. "So what brings you to this war?"
 *goto_scene chapter2_2_backstory
 
 *label sonia_route

@@ -274,7 +274,7 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 							*line_break
 							*line_break
 							You bring the radio up to your mouth. “Great work soldiers, scavenge what munitions and weapons you can find and regroup to the last building. We'll re-draw the defence plans and wait for extraction. Out.”
-							*goto 4_stat_check
+							*goto 4_stat_check_win
 						#Repeat your guerrilla tactics from other buildings. 
 							*set marksmanship +1
 							*set light_rounds -4
@@ -310,7 +310,7 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 							*line_break
 							*line_break
 							You laugh lightly. “Relax sergeant. Letting that armored truck go might not have been the best idea. But we minimized our losses like this while still pushing the enemy back. That’s a win in my book.” Your words trail off as you feel the fatigue start to hit you. You lean up against the brick wall, finally letting your eyes rest, if just for a moment.
-							*goto 4_stat_check
+							*goto 4_stat_check_win
 						#Wait and watch the enemy’s movement.
 							*set counter_attack_score +1
 							The enemy are caught out in panic, scurrying between rubble and crumbling house while cursing and shouting incoherently. Surely now an officer of sorts would reveal himself and try to reorganize the enemy.
@@ -353,7 +353,7 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 							*fake_choice
 								# Take the shot and kill the commander
 									*set marksmanship +1
-									*set counter_attack_score +1
+									*set counter_attack_score -3
 									*set men -3
 									“Teams 3 and 4, hold your position. Teams 1 and 2, keep your aim on that man, fire on my signal.” 
 									*line_break
@@ -394,9 +394,8 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 									Grimacing, you make one last command. “All teams, regroup to our last building, I repeat, regroup to our last building, over!” You set the radio aside hurriedly and rush out the door, ${sergeant} following suit.
 									*line_break
 									*line_break
-									*progress
 									Bullets scream by. And one of them hits you, just below the gut, stopping you dead in your tracks. It feels oddly painless. But the wetness confirms that you've been shot. You try to struggle forward, but your strength deserts you. The last thing you see is sergeant ${sergeant}, hauling you over his shoulder, before you collapse into darkness.
-									*goto 4_stat_check
+									*goto 4_stat_check_lose
 								#Wait for a better target. 
 									*goto waitout
 			#Hold your fire and wait for the situation to develop further
@@ -445,7 +444,7 @@ At least they don't seem to be in a rush. And the enemy doesn’t seem to be adv
 				*line_break
 				*line_break
 				Your head explodes into a world of pain, your vision blurring quickly as you slump to the ground.
-				*goto 4_stat_check
+				*goto 4_stat_check_lose
 
 	#Sneakily encircle the enemy and surprise them with an ambush!
 		*set charm %+5
@@ -529,7 +528,10 @@ What would you do?
 			*line_break
 			*line_break
 			The disorder brought upon by the initial strike saw the enemy forces too dispersed to launch an organized counter offense. Within minutes, the enemy soldiers are clearly overpowered, most of their men either lay injured or dead, with a few stray lone wolves firing at your squad, managing to find proper cover to engage. Even so, that’s nothing your men can’t handle.
-			*goto 4_stat_check
+			*line_break
+			*line_break
+			Very quickly, the enemy are beaten back and thrown into disarray! The survivors are quick to run, and your men let out whoops of delight!
+			*goto 4_stat_check_win
 		*if light_rounds < 8
 			*set light_rounds -6
 			*set counter_attack_score -1
@@ -561,7 +563,7 @@ What would you do?
 			*line_break
 			*line_break
 			Your orders are cut short by a shrill ringing, your head exploding in a world of pain as your vision blurs and you slump to the ground. The last thing you see is Sergeant ${sergeant}, leaning over, covered in blood. Your blood.
-			*goto 4_stat_check
+			*goto 4_stat_check_lose
 	#Hold your ground! You can continue to engage the enemy in this position.
 		*set logistics +1
 		*set counter_attack_score +1
@@ -575,7 +577,10 @@ What would you do?
 		*line_break
 		*line_break
 		His face contorts in agony as he clutches his shoulder, sinking to the ground. 		In the distance, the gunfire from the opposing side slowly peters out. Looks like	 it wouldn’t be long before your squad emerges victorious in this fight.
-		*goto 4_stat_check
+		*line_break
+		*line_break
+		Further gunfire quickly cuts down the remaining enemy forces, before they eventually break and retreat in disarray. Your men whoop in joy, chasing down the enemy remnants and securing the objective. You've beaten back the enemy!!
+		*goto 4_stat_check_win
 	#Beat a hasty retreat. You want to avoid any further pointless bloodshed.
 		*set counter_attack_score -1
 		*set men -2
@@ -607,7 +612,7 @@ What would you do?
 		*line_break
 		*line_break
 		Damn it! You have no choice. “Engage!! Return fire!!”
-		*goto 4_stat_check
+		*goto other_check
 
 *label 4_3_ambush_choice
 “Alright men, we might be outnumbered, but if we take them by surprise, we might just be able to come out of this as heroes. Or die as martyrs. So listen up.” The remains of your platoon huddle round, trying hard not to let their fatigue show.
@@ -795,8 +800,11 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 		Time seems to slow as you watch the red beret fly off and land into the water. With the officer slain, whatever remaining resistance crumbles immediately and the enemy starts to flee! Your men starts to cheer and whoop as they continue to punish the enemy forces.
 		*line_break
 		*line_break
-		In their effort to flee, the armored truck screams into reverse and pulls backwards, but instead of escaping, it crashes straight into the side of the bridge which gives way!!! It flies off the bridge, overturning and smashing into the stream. You’ve destroyed the enemy!!!
-		*goto 4_stat_check
+		In their effort to flee, the armored truck screams into reverse and pulls backwards, but instead of escaping, it crashes straight into the side of the bridge which gives way!!! It flies off the bridge, overturning and smashing into the stream. You’ve destroyed the enemy truck! 
+		*line_break
+		*line_break
+		The rest of the enemy troops immediately break, throwing down their weapons and fleeing for their lives as your men whoop in glee, gunning down the survivors.
+		*goto 4_stat_check_win
 	*if counter_attack_score < 1
 		*set counter_attack_score -1
 		Despite your best efforts, the enemy firepower is too great and they are responding in earnest. Your men are being shot at, and you’ve already taken a few casualties. It’s not looking good at all.
@@ -806,7 +814,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 		*line_break
 		*line_break
 		You feel a sharp pain at the side of your body, feeling numb in shock as you see the enemy officer grinning and charging towards you. It’s the last thing you see as you slip into unconsciousness.
-		*goto 4_stat_check
+		*goto 4_stat_check_lose
 
 *if ambush = 2
 	*if charm >= 10
@@ -936,6 +944,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 *label junction_ambush_check
 *if ambush = 2
 	*page_break
+	*label other_check
 	*if counter_attack_score >= 1
 		*set counter_attack_score +1
 		*page_break
@@ -948,8 +957,8 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 		"Look who's come to play…" ${sergeant} levels his rifle, squinting through his iron sights.
 		*line_break
 		*line_break
-		A single shot rings out, silencing the officer as he jerks back in his seat before slumping over. Panic erupts amongst the enemy, men screaming and fleeing as the armored truck turns and drives off. Sporadic gunfire continues, but the bulk of the enemy has fled!!!
-		*goto 4_stat_check
+		A single shot rings out, silencing the officer as he jerks back in his seat before slumping over. Panic erupts amongst the enemy, and the armored truck immediately turns and drives off. The remaining enemy soldiers look around in fear and confusion, before quickly throwing down their arms and fleeing for their lives! Your men whoop in glee, gunning down the survivors and cheering in victory! You've beaten back the enemy!!
+		*goto 4_stat_check_win
 
 	*if counter_attack_score < 1
 		*set counter_attack_score -1
@@ -964,7 +973,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 		*line_break
 		*line_break
 		You feel a sharp pain at the side of your body, feeling numb in shock as you see an enemy soldier grinning and charging towards you. It’s the last thing you see as you slip into unconsciousness.
-		*goto 4_stat_check
+		*goto 4_stat_check_lose
 
 *if ambush = 3
 	*set counter_attack_score +1
@@ -1069,8 +1078,8 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 		[b]BOOM!!![/b]
 		*line_break
 		*line_break
-		The armored truck explodes, shaking the entire building to its very foundation. One of the grenades must have found a weak spot! The remaining enemy troops flee instantly, throwing down their rifles and running in all directions as your men gun them down!
-		*goto 4_stat_check
+		The armored truck explodes, shaking the entire building to its very foundation. One of the grenades must have found a weak spot! The remaining enemy troops flee instantly, throwing down their rifles and running in all directions as your men gun them down! Victory is yours!! The men whoop in delight, firing wildly and cheering. You've beaten back the enemy!
+		*goto 4_stat_check_win
 	*if counter_attack_score < 1
 		*set counter_attack_score -1
 		[b]Dudududu-dum!!![/b]
@@ -1086,10 +1095,11 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 		*line_break
 		*line_break
 		It feels like your entire waist had been torn to shreds, blood is everywhere. You look down in shock, each ragged breath getting harder and harder. The floor rushes up as you collapse, your vision turning dark.
-		*goto 4_stat_check
+		*goto 4_stat_check_lose
 *goto 4_stat_check
 
 *label 4_stat_check
+*label 4_stat_check_win
 *page_break End of Chapter 1: First Blood
 *if truck_explode = 1
 	*set chap1_kosnik_or_sonia 0
@@ -1099,6 +1109,7 @@ The ammunition is redistributed hastily before you lead your men out of the hous
 	*set chap1_kosnik_or_sonia 0
 	*goto_scene chapter2_1_aftermath
 
+*label 4_stat_check_lose
 *if counter_attack_score < 1
 	*set chap1_kosnik_or_sonia 1
 	*goto_scene chapter2_1_aftermath
