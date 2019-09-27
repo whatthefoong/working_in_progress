@@ -235,7 +235,7 @@ The new Morovia needed it's own army, and hence started to run massive recruitme
 		*line_break
 		Back then, your knack for adventure and willingness - no, eagerness to get your hands dirty saw you pushing yourself way harder than your peers, and excelling in training. You caught the eye of several commanders with your fearlessness, and before long, you have risen quickly to the rank of a Lieutenant and was given command of your own unit within the MRPA.
 		*page_break
-		*progress
+
 		*if chap1_kosnik_or_sonia = 0
 			A low hissing sound escapes from Sergeant $!{sergeant}'s lips as he inhales. "God damn, you're even crazier than me, you son of a bitch. And I thought I had a few screws loose, staying in the army in such a crazy ass time."
 			*line_break
@@ -252,16 +252,16 @@ The new Morovia needed it's own army, and hence started to run massive recruitme
 			Right. You didn't have many opportunities to have a nice little chat like this with the sarge before. 
 			*goto 2_2_1_choice_family
 		*if chap1_kosnik_or_sonia = 1
-			"Wow, really? You joined the army because you just wanted to?" Sonia exclaims, drawing her attention away from the EKG machine momentarily.
+			"Wow, really? You joined the army because you just wanted to?" Sonia exclaims, drawing her attention away from the lines on the beeping machine beside your bed.
 			*line_break
 			*line_break
 			"Well, yeah. Wasn't it the same for you? Y'know, when you decided to pursue medicine?"
 			*line_break
 			*line_break
-			A silence envelops the room for a moment as Sonia contemplates your statement. "Since you put it that way… then yeah I guess it's kind of the same."
+			A silence envelops the room for a moment as Sonia contemplates your statement. "Since you put it that way… then yeah I guess it's kind of the same. A kind of feeling, or gut feel."
 			*line_break
 			*line_break
-			"There you have it. Anyway, it beats anything else I could possibly do back at home, probably will just get stuck with what my family has been doing for years"
+			"There you have it. Anyway, it beats anything else I could possibly do back at home, probably would have just gotten stuck with what my family has been doing for decades"
 			*line_break
 			*line_break
 			"Oh, really? What does your family do?"
@@ -269,47 +269,59 @@ The new Morovia needed it's own army, and hence started to run massive recruitme
 			*line_break
 			Right, You didn't expect Sonia to follow up with more questions. 
 			*goto 2_2_1_choice_family
-*progress
+
 *label 2_2_1_choice_family
 You don't really mention it to others that often, but you come from a family of…
 *fake_choice
 	#thriving entrepreneurs with a booming businesses.
 		*set background 1
 		*set charm +1
-		Your family had always been running a couple of small businesses here and there. After all, your father was a Hadan migrant that came to Morovia to expand his trade business, bringing cheap supplies from Morovia back into Hada as well as make use of the cheaper labor and manufacturing costs of Morovia, which was how he came to meet the blossoming young daughter of a local factory owner, whom he married a few years after. In fact, much of your childhood has been spent with your parents educating you on business strategies, how to read and negotiate with people, smooth-talking them over to get things done your way. "The art of the deal", as your father likes to call it. Sadly, with the independence of Morovia from Torim, the withdrawal of Torian investment dealt a large blow to your family's ventures. Without the proper finances. they simply could not compete with the larger conglomerates.
-		*line_break
-		*line_break
-		Before long, your family's businesses ran dry and collapsed upon itself. Luckily, your family has a sizable saving. Coupled with the inheritance from the previous generations, your family's coffers would at least be able to last for a quite a while. However, you know that this is only a temporary solution, as the cost of living and basic necessities are rising exponentially as the conflict means that resources are getting scarcer by the day. 
+		*set dollars +100
+		Your family had always been running a couple of small businesses here and there. After all, your father was a Hadan migrant that came to Morovia to expand his trade business, bringing cheap supplies from Morovia back into Hada as well as make use of the cheaper labor and manufacturing costs of Morovia, which was how he came to meet the blossoming young daughter of a local factory owner, whom he married a few years after. In fact, much of your childhood has been spent with your parents educating you on business strategies, how to read and negotiate with people, smooth-talking them over to get things done your way. "The art of the deal", as your father likes to call it. With the escalating crisis however, looters abounded and it was hard to keep the business afloat. The last you heard, things weren't going too great back home.
 		*line_break
 		*line_break
 		*if kosnik =1
-			However, you're not sure if you should mention your half Hadan heritage to the sergeant. You've known him long enough to know that the nationalistic sentiments within the man flows strongly and proudly. Any questionable part of your heritage would only diminish your credibility. No, better to conveniently leave out that part and let him see you as his trusty comrade-in-arms, striving for a better Morovia.
+			However, you're not sure if you should mention your half Hadan heritage to the sergeant. You've known him long enough to know that the nationalistic sentiments within the man flows strongly and proudly. Despite having gone through life and death situations with him, any questions about your mixed heritage would only serve to diminish your credibility… no, better to play it safe.
 			*line_break
 			*line_break
-			"My parents were entrepreneurs, but they couldn't sustain their business when the Torians left the country. With a failing business, I must do what I can to help support my parents and my siblings." You muttered.
+			"My parents were entrepreneurs, but things are getting harder with the craziness of the civil war. With all the militias and looters around, it's been impossible to run the business. Well, so I guess it's on me to support my parents and my siblings I guess. Courtesy of Morovia's coffers." You laugh bitterly.
 			*line_break
 			*line_break
-			"Man, that's tough, but on the bright side at least we're not dependent on those Torian bastards any more, right? I mean, the Torians and Hadans did take advantage of our people, our land, our resources. No sir, Morovia should belong to the Morovians! And hey, once we get back on our feet, I'm sure your family business would pick up again." Sarge threw the butt onto the floor, grinding it with the tip of his boot. "Ah well, at least things are starting to pick up with you here in the MRPA huh? I bet your family has less to worry about now that you're picking up the slack. Hey, anytime you need help, you feel free to approach me yeah?"
+			"Man, that's tough, but on the bright side at least we're not dependent on those Torian bastards any more, right? I mean, the Torians and Hadans took advantage of our people, our land, our resources. No, those fucking bastards can keep their dirty money and their grubby hands off our land. Morovia should belong to the Morovians!"
 			*line_break
 			*line_break
-			With that, Sergeant $!{sergeant} swings his muscular frame around the seat of the chair and stumble onto his feet. Placing both his hands on your shoulders, he gives you one last pat before turning around, brusquely brushing aside the flap of the tent and stepping back outside.
+			He pauses, lighting up another cigarette. He exhales a plum of thin, white smoke.
+			*line_break
+			*line_break
+			"This civil war is the crucible in which our nation will be born. Sooner or later, we will all get back on our feet, and I'm sure your family business would pick up again." ${sergeant} smiles reassuring, a knowing look about him. "Ah well, at least things are starting to pick up with you here in the MRPA huh? I bet your family has less to worry about now that you're picking up the slack. Hey, anytime you need help, I've got your back commander."
+			*line_break
+			*line_break
+			With that, Sergeant $!{sergeant} swings his muscular frame around the seat of the chair and stumbles onto his feet. "We all have our parts to play in this world - and I best get on my way." He gives you a firm pat on the shoulder, before turning around and brusquely brushing aside the flap of the tent to leave.
 		*if sonia =1
-			You sigh, hesitantly explaining to Sonia your parent's failing businesses while trying to gloss over your heritage as much as you can. You don't really like mentioning the fact that your father comes from Hada, especially with tensions running high within the country, and being from a mixed family might trigger some… extreme reactions from more nationalistic idealists. But with Sonia, you feel that she would be more understanding at least.
+			Not that a mixed heritage was any good given the mess of the civil war - rising nationalistic sentiments that simply being mixed could be antagonizing, even fatal. And even though ${doctor} was different from the others… still - it wasn't worth the risk. After all, there were other patients in the ward and one could never know who could be listening.
 			*line_break
 			*line_break
-			Although Sonia continues to tinker with the medical equipment in your room, her reduced pace suggests her increasing investment and interest in your story.
+			"My parents were entrepreneurs, but things are getting harder with the craziness of the civil war. With all the militias and looters around, it's been impossible to run the business. Well, so I guess it's on me to support my parents and my siblings I guess. Courtesy of Morovia's coffers." You laugh bitterly.
 			*line_break
 			*line_break
-			"Well, to me a patient is a patient. That's all that really matters to me, at least. To be completely honest, I don't really care if you're Hadan or Morovian, or even fully Torian. Heck, a bullet wound doesn't discriminate, so why should I?" 
+			Sonia continues to tinker with the medical equipment in your room as she leans over, slowly going through a medical checklist. She pauses thoughtfully, glancing over at you.
 			*line_break
 			*line_break
-			Dropping the clipboard to her side, Sonia glances up and meets your eye with a reassuring smile. "Anyway, I've completed your checks. Your body's holding up pretty well so far. A few more days of quality rest, and you could even be walking out of the hospital yourself. Emphasis on the rest, yeah?"
+			"Well, let's hope that this war boils over soon enough. We should be building roads and schools, not turning them into minefields and barracks…" ${doctor} sighs.
 			*line_break
 			*line_break
-			With that, Sonia turns around flits out into the corridor. Even after she leaves the room, you feel her words echoing inside your head, enveloping you with a warm feeling.
-	#middle class farmers and landowners. 
+			"Well, I do hope that your family rides this shitty period out. And if they ever need a doctor… you know who to call."
+			*line_break
+			*line_break
+			Dropping the clipboard to her side, ${doctor} winks and smiles. "Anyway, I've completed your checks. Your body's holding up pretty well so far. A few more days of quality rest, and you could even be walking out of the hospital yourself. Emphasis on the rest, yeah?"
+			*line_break
+			*line_break
+			With that, ${doctor} turns around flits out into the corridor.
+	*progress
+	# middle class farmers and landowners. 
 		*set background 2
 		*set finesse +1
+		*set dollars +50
 		Coming from a long line of Morovian farmers, your family has been involved in the agriculture industry for ages. As a matter of fact, your grandparents were able to afford a few hectares of land, and since then your family has been able to make a comfortable living by selling off fruits and produce. Of course, the occasional drought or flood meant that the year's bounty is at the mercy of the weather, but your family's experience in the field has allowed them to take countermeasures by diversifying their crops. Your time spent on the plantations as you were growing up were pretty enjoyable as well, where any free time not helping out in the field is spend weaving through the trees in the vast plantation, climbing trees and picking fruits as you deem fit. Your family wasn't filthy rich, but they managed to provide you with a decent life.
 		*line_break
 		*line_break
