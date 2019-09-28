@@ -347,6 +347,27 @@ You swear the map shows a left turn. But after making ${travel_event_chance} lef
 The road stretches ahead, seemingly endless. You sigh as you put your hand to your chin, keeping one hand on the steering wheel. You can't wait to get to ${location_choice_name} as soon as possible.
 *line_break
 *line_break
+All of a sudden, you spot a couple of buildings in the distance. You decide to pull up and take a break, looking for an opportunity to stock up on some essentials while you're at it.
+*line_break
+*line_break
+Navigating your way through the village, you notice that the buildings are in an extremely rundown state. In fact, it takes you a while to find an operational store; most storefronts are tightly guarded by a sheet of metal shutters.
+*line_break
+*line_break
+You hesitantly enter the store, a small nook amidst a dilapidated row of shops. The facade, you notice, has slowly begun to fall apart as patches of paint are peeling off, pooling into a small pile of chipped off pieces on the floor. You glance around - much of its stock are in disarray, strewn all over the shelves. You grab a nearby loaf of bread, noticing that said loaf is slightly hard to the touch, the bottom left corner with a slight tinge of green mold.
+*page_break
+"Ahem. Can I help you, good sir?" A low, husky voice coughs, catching you by surprise. You spin around and notice an old, feeble man sitting on a stool, as unmoving as a statue. His stillness, coupled with his small frame, must be the reason you completely missed his presence.
+*line_break
+*line_break
+You place the bread back down, wiping your hands on your pants as you slowly make your way towards the shopkeeper. "Why is the place so empty? There's hardly anyone out there in the streets."
+*line_break
+*line_break
+"Ahh. You see, there has been an increase in military activities around these parts. Coupled with some nasty rumors about how soldiers are planning on storming this place soon, many people in this villange can't help but to start swimming up to safer waters, if you catch my drift. I myself am planning on leaving soon, my daughter is coming to pick me up in a couple of days, but I can't just sit idly and wait. Plus, this shop holds so much meaning to me, I can't help but to stay with it as long as I can."
+*line_break
+*line_break
+That explains the ghost town. You take a peek outside. Nary a soul to be seen, still.
+*line_break
+*line_break
+
 *comment take a break in a nearby village, the village selling all its wares because they fleeing the war.
 *return
 

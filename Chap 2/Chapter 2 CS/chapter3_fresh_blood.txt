@@ -10,10 +10,156 @@
 	*set chap3_key_events_mrpa 2
 	[mrpa key event 1 - initiation into MRPA]
 	*set location_choice "vanka"
+	
 *if allegiance = "LOM"
 	*set chap3_key_events_lom 2
 	[lom key event 1 - initiation into LOM]
 	*set location_choice "novina"
+	You follow the captain of the LOM soldiers down the road, before coming to a stop in front of a line of beat up automobiles. Shoving you towards the very last one in line, a soldier grunts at you to get in. You can feel the air thick with hostility, as several LOM soldiers squeeze into the backseat after you. 	A sweat soaked uniform presses tightly on your arms throughout the seemingly never-ending journey, making you slightly uncomfortable as well as fidgety. As you feel its dampness rubbing against your bare skin, you can't wait for the drive to be over. 
+	*line_break
+	*line_break
+	You finally heave out a sigh of relief as the car jerks to a stop, and you're glad to finally breathe in some fresh air at long last. Stepping out of the vehicle, you take in your immediate surroundings. The familiar layout of a military campground greets your eyes, though comparatively less impressive in scale than the barracks you are used to. What overwhelms you, however, is the sheer number of people bustling about the grounds going about on their tasks.
+	*line_break
+	*line_break
+	Prodding you sharply from the back, the LOM captain snaps you out of your daze. "Follow me closely, and no funny business, you hear?" Before you can even respond, she turns around and breaks into a brisk march. Without hesitation, you quickly chase after her, afraid that you'll lose sight of her amidst the throes of soldiers. As you head deeper within the grounds, an uneasy feeling washes over you as you find yourself the subject of intense staring from all around, before realizing that your MRPA uniform sticks out like a tall weed, and people are anxious to rip you out by your roots. Hurriedly, you shadow the LOM captain even closer than ever.
+	*line_break
+	*line_break
+	Soon, you arrive at the entrance to a nondescript building. The captain marches straight in, and you follow suit. Over by the table you spot a man hunching over a map sprawled across a makeshift table. A deliberate cough from the captain catches the man's attention, directing his gaze to the both of you.
+	*page_break
+	"General, we have with us here a new… recruit, you could say. I think you might want to have a word with him yourself."
+	*line_break
+	*line_break
+	"Thank you, captain. You can dismiss yourself then. I'll get the status update of your mission at a later time then." The reply, a clear. booming voice, fills the entire tent. The captain gives a quick salute before ducking out. The general saunters over, sizing you up with his keen eyes as he closes the distance between the two of you.
+	*line_break
+	*line_break
+	"Let me introduce myself. I am General Kontessa, the commandant in charge of this battalion. To what do I owe the pleasure, especially from…" His eyes flicker towards your insignia on your chest. "a commander from the MRPA?"
+	*line_break
+	*line_break
+	You tense up slightly. The general's build is not much bigger than you, but the way he carries himself exudes an air of superiority that you can't help but feel slightly intimidated by his very presence. Unsurprisingly, you find yourself at a loss for words.
+	*line_break
+	*line_break
+	General Kontessa breaks into a light chuckle. "It's fine, I've gotten the brief from one of the other commanders. Who am I to look a gift horse in the mouth? Let alone such a fine soldier such as yourself. Oh yes, I've heard of your exploits, and I believe we can find a use for someone of your caliber. My only question is, why? Why would you choose to turn your back against the organization that has served you so well over the years?"
+	*fake_choice
+		#LOM is the future for Morovia! Viva la LOM!
+			*set LOMgeneral_rs -3%
+			"General, I believe that the LOM will be the future of Morovia, and as such, I pledge my undying loyalty to you." You yell out as you raise your hand in a formal salute.
+			*line_break
+			*line_break
+			The smile on Kontessa's face remains, but his eyes narrow slightly as he gazes into your eyes. "Commander, I have thousands of soldiers that are willing to put their lives on the line, but for what purpose do they do so? It's oh-so-easy to pay lip service in the heat of the moment, but for what purpose do you fight? Followers are easy to gain nowadays. A man with a mind of his own - now that's an asset."
+			*goto meet_LOM_rival
+		#I guess I wanted to see what's on the other side of the fence.
+			You ponder his question for a moment, before articulating the thoughts that run through your head. "To be honest, General, I'm a little disillusioned with everything that's going on with the MRPA, and the LOM seems to align with my values a little more, for now at least."
+			*line_break
+			*line_break
+			From the corner of your eye, you see Kontessa's lips widen into a bigger smile. "Well, commander, as a leader of the LOM, of course I would say that the MRPA are… misaligned, for the lack of a better word, but of course it is important to take things into perspective yourself and ultimately come to your own decisions."
+			*goto meet_LOM_rival
+		#I'm whimsical, sue me.
+			You raise your shoulders in a nonchalant shrug. "Well, general, I figured I'll just stick around and see how things go around here. If I like it, I'll stay. If not, who knows?"
+			*line_break
+			*line_break
+			To your surprise, Kontessa gives a hearty laugh. "Of course, commander. I hope that we can see eye to eye on many issues, and I look forward to developing you as an asset for the LOM."
+			*label meet_LOM_rival
+			*line_break
+			*line_break
+			"The long journey here must not have been easy, might I suggest that you head off for an early rest for now? I will address you and other new faces tomorrow after breakfast at the east wing. Just ask anyone for the directions. You'll find your quarters in the further down left, along with a change of clothes, as I doubt you would want to be seen wandering around in your current attire. Have a good evening, commander." General Kontessa turns away, heading back to the unattended work on his table.
+			*line_break
+			*line_break
+			Heading out, you wander around until you find the right building, turning into a room packed with bunk beds. You pick out a lower bunk that seems unoccupied and throw your belongings onto the foot of the bed, before collapsing straight into it. Despite the cold, lumpy mattress, you feel your eyelids drooping as the fatigue takes over, lulling you into a deep sleep.
+			*page_break
+			After a makeshift, barely filling breakfast, you find yourself in a room lined neatly with rows of plastic chairs and a small podium. You note that you're not the first to arrive, as there are already a few figures scattered sporadically, occupying a few chairs. You shuffle to one nearest to you and plop right down, a few seats down from a female soldier leaning forward in her chair with her elbows resting on her thighs. You sneak a few glances over. Her long, auburn hair is pulled back into a neat ponytail, her face staring straight into the distance in boredom. The LOM issued singlet reveals a pair of toned, well-defined arms, and you make a mental note not to cross her.
+			*line_break
+			*line_break
+			As if feeling your gaze upon her, she glances up and catches you looking over, catching your eyes. A scowl crosses her face. Shit, it seems like catching you staring has pissed her off slightly.
+			*fake_choice
+				#Go up and introduce yourself.
+					You don't have much of a choice. You shift your butt awkwardly across the chairs in between the two of you, before pulling up next to her.
+					*line_break
+					*line_break
+					"Hello there, and you are?" You make your tone a little too chipper, extending a hand towards her.
+					*line_break
+					*line_break
+					"You know, it's common courtesy to give your name while asking for another person's." Nonetheless, she grasps your hand in a firm handshake. "I'm Second Lieutenant ${lom_rival}. Can't say I've seen you around these parts before."
+					*line_break
+					*line_break
+					You apologize and introduce yourself, explaining that you're a fresh transfer.
+					*goto LOM_propaganda
+				#Give her a simple wave.
+					Staying in your seat, you give her a simple nod and smile, as if you only just so happen to make eye contact instead of sizing her up.
+					*line_break
+					*line_break
+					She stands up and closes the distance between the two of you. "Hey there, I don't believe we have met before. Second Lieutenant ${lom_rival} here. And you are?"
+					*line_break
+					*line_break
+					You give her a cursory introduction, explaining that you're a fresh transfer. She extends her hand and you shake it. "Pleasure to make your acquaintance."
+					*line_break
+					*line_break
+					*goto LOM_propaganda
+				#Look away and pretend nothing happened.
+					You quickly look away, pretending to notice something interesting on the adjacent wall.
+					*line_break
+					*line_break
+					"Hey punk, what're you staring at?" Fuck, attempting to play it casual seems to have made it even more conspicuous. She stands up and heads straight towards you as you steel yourself for the potential confrontation.
+					*line_break
+					*line_break
+					"I'm asking you, what're you staring at? You wanna have a go at me?" Her voice increases by several decibels, causing a few curious heads to turn around at the commotion.
+					*line_break
+					*line_break
+					"Sorry! I was just spacing out, I swear." You raise your hands up in defense, before extending one hand towards her and introducing yourself, hoping to steer the conversation towards another direction.
+					*line_break
+					*line_break
+					She continues to glare at you for awhile, before finally grasping your hand in a grip a lot tighter than necessary. "Second Lieutenant ${lom_rival}. Can't say I've seen you around before."
+					*line_break
+					*line_break
+					"I transferred over here recently."
+					*label LOM_propaganda
+					*line_break
+					*line_break
+					"Oh? So where were you posted to previously? I myself was at Inkaz, but I heard rumors that they're looking to post me somewhere else, that's why I'm back in this shit hole."
+					*line_break
+					*line_break
+					A drop of cold sweat trickles down your temple. You've casually managed to avoid mentioning your previous affiliation, but you're not sure how to fabricate a fake military history when you know close to nothing about the operations of the LOM.
+					*line_break
+					*line_break
+					Nervously, your eyes dart around the room, when you notice General Kontessa entering the room with a few other high ranking personnel. Lucky break.
+					*line_break
+					*line_break
+					You nudge ${lom_rival} and use this excuse to sink back into your seat, your eyes firmly planted on Kontessa. Fortunately, ${lom_rival} breaks away as well and straightens her posture.
+					*line_break
+					*line_break
+					"You all must be wondering why I have called this meeting with you all. Some of you here are new to the LOM, so allow me to introduce myself, for those who are not familiar with who I am. My name is General Kontessa, and I am in charge of this particular battalion. As you all know, the Liberators of Morovia aims to wrestle control from those MRPA scum, who are currently in power."
+					*line_break
+					*line_break
+					"However, we all know that the true power does not lie with the Morovians in charge of the MRPA. In fact, many of them are affiliated with the Torian dogs that used to rule this place. Are we truly independent? NO!" Kontessa slams both his fists onto the wooden platform of the podium, punctuating his last word with a resounding thud. "These MRPA scum still serve the Torian, and as such, Morovia can never truly be independent, not with the Torian bastards holding our chains like a puppet. With us, we can give Morovia the future it deserve; a Morovia by Morovians, for Morovians. The MRPA is weak, to allow themselves to be manipulated by the Torians, who still have their balls in a vice. When we overthrow the MRPA, we will cut ourselves free from the Torian dogs, and then we can finally deem ourselves as independent! Viva la LOM!"
+					*line_break
+					*line_break
+					With his last word, the room erupts into a loud cacophony of cheers and whistles. Kontessa raises his hands, and immediately the room falls silent again. "Now, my comrade in arms, we will be looking to expand our influences on our territories, and as such I have arranged for some of you to be called back from your post. I will need your help in administrating certain civilian areas, making sure that things run smooth. Remember, just because we are at war with the MRPA does not mean that we neglect our duty to our people. After all, without its citizens, a country is nothing. You will all receive your orders from your superiors soon, and with that, I seek your best efforts in pushing the LOM forward. Dismissed."
+					*line_break
+					*line_break
+					As the room starts to disperse, General Kontessa makes his way towards you. "Ahh, commander, I trust that you have rested well?"
+					*line_break
+					*line_break
+					"Well enough, General, thank you for your concern."
+					*line_break
+					*line_break
+					"Well, as mentioned, we will need your help in administrating one of the smaller rural towns in Novina, as we are currently facing a shortage of commanders with leadership experience. However, before that, I have a little task for you. Follow me." With that, Kontessa exits the room and make his way down the corridor, with you following closely behind.
+					*line_break
+					*line_break
+					Kontessa slowly makes his way deeper into the building, making several turns along the way, before stopping in front of a room in a dimly lit corridor.
+					*line_break
+					*line_break
+					"You see, commander, although I respect your decision to serve under the LOM, you must understand that, as an ex-MRPA official, I have my qualms about your motives. In order to confirm that you are indeed loyal to the LOM, I have a small little task for you.
+					*line_break
+					*line_break
+					With that, the general swings open the door, revealing a cramped room with a barred cell in the middle. Within the cell, you can make out a malnourished, barely dressed man.
+					*fake_choice
+						#Shoot him
+							BANG!
+							*goto
+						#Refuse to do so.
+							NO
+							*goto
+						#Shoot the General
+							*comment insta death route?
 *page_break
 *gosub_scene world_map travel_func
 
