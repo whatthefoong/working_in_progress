@@ -242,5 +242,4 @@
 *comment *sm_init blood_on_my_hands | 3
 *comment *sm_save 0 | false | Autosave - Startup
 
-
 *finish

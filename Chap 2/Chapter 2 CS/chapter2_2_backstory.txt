@@ -15,7 +15,7 @@ The Torians weren't willing to risk life and limb for a foreign colony situated 
 President Montaro, the newly "elected" president of Morovia, saw this relationship as mutually beneficial, after all, Morovia needs external support to grow. Most Morovians lacked the skills, experience and education to lead an entire nation or run the various resource extraction companies, and the Torians provided much needed financial, governance and military expertise.
 *line_break
 *line_break
-With the financial backing of the Torians and the need for an independent army, the Morovian government started running a series of recruitment drives to started to entice many able-bodied men and women to join the Morovian Republic People's Army, the MRPA, with the promise of a stable paycheck and a noble career. Thus, you had decided to pack your bags and head straight to the nearest recruitment center, which thereafter they shipped you off to the nearest MRPA drill camp.
+With the financial backing of the Torians and the need for an independent army, the Morovian government started running a series of recruitment drives and started to entice many able-bodied men and women to join the Morovian Republic People's Army, the MRPA, with the promise of a stable paycheck and a noble career. Thus, you had decided to pack your bags and head straight to the nearest recruitment center, which thereafter they shipped you off to the nearest MRPA drill camp.
 *line_break
 *line_break
 However, one of the major Morovian warlords - General Kontessa, saw this arrangement and mustering of forces as a mere masquerade of Torian imperialist colonialism. He demanded for the immediate withdrawal of the Torians and a true "Morovia for Morovians", which was, of course, unconditionally denied. It is said that he had thrown a fit of rage, swore at President Montaro and called him a "fucking Torian monkey", before storming off. Within days of the independence, General Kontessa had mobilised the soldiers loyal to him, as well as convinced many of the MRPA generals to join him to "free Morovia from the hands of colonial tyranny and oppression". In stereotypical coup fashion, General Kontessa announcemed a coup and launched an assault on Strazova.
@@ -66,10 +66,10 @@ You take the tea gratefully, gulping down the first before pouring a second. It'
 Sergeant $!{sergeant} grunts as he pulls out a cigarette, rolling it between his fingers for a while before raising it to his lips.
 *line_break
 *line_break
-"So, we've been in this shit hole for a while now eh. How the fuck did you end up here anyway? Don't seem to strike me as a guns blazing machete wielding army type." $!{sergeant} smiles at you, the scar across his face shining in the warm glow of the solitary flickering light bulb.
+"So, we've been in this shit hole for a while now eh. How the fuck did you end up in the army anyway? Don't seem to strike me as a guns blazing machete wielding army type." $!{sergeant} smiles at you, the scar across his face shining in the warm glow of the solitary flickering light bulb.
 *line_break
 *line_break
-You look at the man who had pulled you through the firefight at ${location_name} as he flicks his lighter and the tip of the cigarette curls back into a bright ember. $!{sergeant} leans back, blowing out a cloud of the familiar, acrid smoke into the stale, damp air.
+You look at the man who had pulled you through the firefight at Orlotek as he flicks his lighter and the tip of the cigarette curls back into a bright ember. $!{sergeant} leans back, blowing out a cloud of the familiar, acrid smoke into the stale, damp air.
 *goto 2_2_1_choice_rationale
 
 *label sonia_route_1
@@ -280,7 +280,7 @@ You don't really mention it to others that often, but you come from a family ofâ
 		Your family had always been running a couple of small businesses here and there. After all, your father was a Hadan migrant that came to Morovia to expand his trade business, bringing cheap supplies from Morovia back into Hada as well as make use of the cheaper labor and manufacturing costs of Morovia, which was how he came to meet the blossoming young daughter of a local factory owner, whom he married a few years after. In fact, much of your childhood has been spent with your parents educating you on business strategies, how to read and negotiate with people, smooth-talking them over to get things done your way. "The art of the deal", as your father likes to call it. With the escalating crisis however, looters abounded and it was hard to keep the business afloat. The last you heard, things weren't going too great back home.
 		*line_break
 		*line_break
-		*if kosnik =1
+		*if chap1_kosnik_or_sonia = 0
 			However, you're not sure if you should mention your half Hadan heritage to the sergeant. You've known him long enough to know that the nationalistic sentiments within the man flows strongly and proudly. Despite having gone through life and death situations with him, any questions about your mixed heritage would only serve to diminish your credibilityâ€¦ no, better to play it safe.
 			*line_break
 			*line_break
@@ -297,7 +297,7 @@ You don't really mention it to others that often, but you come from a family ofâ
 			*line_break
 			*line_break
 			With that, Sergeant $!{sergeant} swings his muscular frame around the seat of the chair and stumbles onto his feet. "We all have our parts to play in this world - and I best get on my way." He gives you a firm pat on the shoulder, before turning around and brusquely brushing aside the flap of the tent to leave.
-		*if sonia =1
+		*if chap1_kosnik_or_sonia =1
 			Not that a mixed heritage was any good given the mess of the civil war - rising nationalistic sentiments that simply being mixed could be antagonizing, even fatal. And even though ${doctor} was different from the othersâ€¦ still - it wasn't worth the risk. After all, there were other patients in the ward and one could never know who could be listening.
 			*line_break
 			*line_break
@@ -317,53 +317,67 @@ You don't really mention it to others that often, but you come from a family ofâ
 			*line_break
 			*line_break
 			With that, ${doctor} turns around flits out into the corridor.
-	*progress
 	# middle class farmers and landowners. 
 		*set background 2
 		*set finesse +1
 		*set dollars +50
-		Coming from a long line of Morovian farmers, your family has been involved in the agriculture industry for ages. As a matter of fact, your grandparents were able to afford a few hectares of land, and since then your family has been able to make a comfortable living by selling off fruits and produce. Of course, the occasional drought or flood meant that the year's bounty is at the mercy of the weather, but your family's experience in the field has allowed them to take countermeasures by diversifying their crops. Your time spent on the plantations as you were growing up were pretty enjoyable as well, where any free time not helping out in the field is spend weaving through the trees in the vast plantation, climbing trees and picking fruits as you deem fit. Your family wasn't filthy rich, but they managed to provide you with a decent life.
+		You come from a long ancestry of farmers, your family had been involved in the agriculture industry for as long as anyone could remember. Father had told the same story at every family gathering - while working on the plantation, your great grandfather had smuggled produce to the black market by skivving off a sack each day. And through sheer grit and determination, and pure chutzpah, he had managed to save up enough to buy a small plot of land. The rest, as they say, was his story.
 		*line_break
 		*line_break
-		These days, however, things were not going as well as they used to be. By a stroke of luck, the conflict between the LOM and the MRPA has not spread to the immediate vicinity of your hometown, but the rising tension has led to fewer workers willing to continue working in the fields, citing either the potential to be caught up in the firefight or the need to return back to their own villages to ensure the safety of their families as a reason to leave. As the number of workers dwindled, there is only so much your family themselves can handle, and as such they had to resort to selling half the plantation off to wealthier merchants.
+		Literally.
 		*line_break
 		*line_break
-		You sigh out loud. "My family used to own a few plantations in Madre, but last I heard a few months ago, they're struggling with the manpower needed to maintain the plantations, with the conflict and whatnot. I haven't been able to contact them since, and I'm in the dark of any current developments in the area. It's worrying, to say the least."
+		He had made sure that all the beneficiaries of the land, your father included, were to memorize the facts of his life and his achievements to boot. Half of which were highly doubtful, like having been a general in the army as well as being the first Morovian ninja in the world. Still - they made for some exciting stories growing up. Back when you took everything at face value at least.
 		*line_break
 		*line_break
-		*if kosnik =1
-			Sergeant $!{sergeant} pulls the chair closer. "Shit, man. I had no idea. I'm sure they're safe, didn't recent reports mention that Madre is still free from LOM influence? That should give you a peace of mind for now, right?
+		Of course, the occasional drought or flood meant that the year's bounty is at the mercy of the weather, but your family's experience in the field has allowed them to take countermeasures by diversifying their crops. Your time spent on the plantations as you were growing up were pretty enjoyable as well, where any free time not helping out in the field is spend weaving through the trees in the vast plantation, climbing trees and picking fruits as you deem fit. Your family wasn't filthy rich, but they managed to provide you with a decent life.
+		*line_break
+		*line_break
+		These days, however, things were not going as well as they used to be. By a stroke of luck, the conflict between the LOM and the MRPA has not spread to the immediate vicinity of your hometown, but the rising tension has led to fewer workers willing to continue working in the fields, citing either the potential to be caught up in the firefight or the need to return back to their own villages to ensure the safety of their families as a reason to leave. As the number of workers dwindled, there is only so much your family themselves could handle, and as such they had to resort to selling half the plantation off to wealthier merchants.
+		*line_break
+		*line_break
+		You sigh out loud. "My family used to own a few plantations in Madre, but last I heard a few months ago, they're struggling to find good workers. With the ongoing conflict, who's going to work on a plantation which might be burned down tomorrow? The markets are fucked, and nobody knows how long this is going to last. Plus, selling anything to the wrong side could get the entire family shot, or whatever a young punk militia might do. It's worrying, to say the least."
+		*line_break
+		*line_break
+		*if chap1_kosnik_or_sonia = 0
+			Sergeant $!{sergeant} pulls the chair closer. "That sounds fucking shitty. I hope they're safe, didn't recent reports mention that Madre is still free from LOM influence? That should give you a peace of mind for now, right?
 			*line_break
 			*line_break
 			You turn to Sergeant $!{sergeant} and smile weakly. "Yeah, I guess. I'll just have to wait and see then. Thanks."
 			*line_break
 			*line_break
-			"Alright, it ain't getting any earlier. I gotta go check up on the other men. You have a good rest, commander."
+			"Alright, it's getting late. I gotta go check up on the other men. You have a good rest, commander."
 			*line_break
 			*line_break
 			With that, Sergeant $!{sergeant} swings his muscular frame around the seat of the chair and stumble onto his feet. Placing both his hands on your shoulders, he gives you one last pat before turning around, brusquely brushing aside the flap of the tent and stepping back outside.
-		*if sonia =1
-			"I know you're worried about your family, but it's not like you can do anything about that while you're lying in bed here. My advice is, follow the doctor's orders, and the faster you get better, the faster you can contact your family and make sure all is well with them." Sonia chides, giving the impression of a mother scolding a belligerent child.
+		*if chap1_kosnik_or_sonia =1
+			"I know you're worried about your family, but it's not like you can do anything about that while you're lying in bed here. My advice is, follow the doctor's orders, and the faster you get better, the faster you can contact your family and make sure all is well with them." ${doctor} chides, giving the impression of a mother scolding a belligerent child.
 			*line_break
 			*line_break
 			You hate to admit it, but she's right - you can't do anything while you're confined to your bed right now. You give a weary sigh before nodding your head in compliance.
 			*line_break
 			*line_break
-			Dropping the clipboard to her side, Sonia glances up and meets your eye with a reassuring smile. "Anyway, I've completed your checks. Your body's holding up pretty well so far. A few more days of quality rest, and you could even be walking out of the hospital yourself. Emphasis on the rest, got it?"
+			Dropping the clipboard to her side, ${doctor}  glances up and meets your eye with a reassuring smile. "Anyway, I've completed your checks. Your body's holding up pretty well so far. A few more days of quality rest, and you could even be walking out of the hospital yourself. Emphasis on the rest, got it?"
 			*line_break
 			*line_break
 			With that, Sonia turns around flits out into the corridor, leaving your room silent and empty once again.
 	#humble and hardworking miners.
 		*set background 3
 		*set physical +1
-		Your family has been making a living in the mines for as long as you can remember, you yourself are no exception. In your early childhood years, you have been helping out by panning for ores by the riverside. As you got older, you started accompanying the older men deeper into the mines to excavate whatever precious metals you can lay your eyes on.  Sure, the work was taxing, but on the bright side you did manage to tone your body better than any gym routine could provide. Although your family made barely the minimum wage, they made do with the simpler things in life, preferring to be contented with what you already have, than coveting for more material possessions.
+		Your family has been making a living in the mines for as long as you can remember, and you were born into the mines. In your early childhood years, you have been helping out by panning for precious minerals, dredging through silt and mud with your knees deep in the cold rivulets that ran down the Slavec Mountains.
 		*line_break
 		*line_break
-		However, as the conflict escalated, parts of the mine were seized by the government, laying claim to the minerals excavated in order to help fund the war effort. As most of the minerals are being siphoned off to fatten the MRPA reserves, your family is getting even less than the paltry sum they were originally given, but hey, at least they still have a job. However, you can't help but worry about your family making ends meet.
+		As you got older, you started accompanying the older men deeper into the mines to excavate whatever precious metals you could lay your eyes on. The work was taxing, and the conditions were brutal. Diseases often broke out amongst the miners, and there were fatal accidents almost daily. It was a cruel place to be in, but it was the only thing you knew.
 		*line_break
 		*line_break
-		"My family has been working in the mines down at Ruzno for a couple of generations now. Recently it seems that the MRPA has established their presence at the mines, so I'm not sure how things are at the moment. I haven't been in contact with them for awhile nowâ€¦"
-		*if kosnik =1	
+		Still, despite the monotonous drudgery, you all made do. Your friends and fellow miners would sing ribald songs as they went along, and your memories of home were strangely happy. Sometimes one of your family would unearth a giant diamond and be handsomely rewarded by the mine operators, and the entire family would come together to celebrate - with cold beers and a bountiful meal of whatever was available from the local store.
+		*line_break
+		*line_break
+		However, as the conflict escalated, parts of the mine were seized by the government, laying claim to the minerals excavated in order to help fund the war effort. As most of the minerals are being siphoned off to fatten the MRPA reserves, your family is getting even less than the paltry sum they were originally given, and the last you heard, it was getting worse and worse. You can't help but worry about your family making ends meet.
+		*line_break
+		*line_break
+		"My family has been working in the mines down at Ruzno for a couple of generations now. Recently it seems that the MRPA has established their presence at the mines, so I'm not sure how things are at the moment. I haven't been in contact with them for awhile nowâ€¦ But those mines hold incredible strategic value - whoever owns them literally owns a pile of gold, and means to fund their own war efforts."
+		*if chap1_kosnik_or_sonia = 0
 			*line_break
 			*line_break
 			Sergeant $!{sergeant} falls silent for a while, before looking back at you. "You know, my parents used to work in the minesâ€¦ Now it's just my mom. But that's a story for another time. Anyway, what I want to say is this: miners are fucking tough, tougher than you think. If anything happens, I'm sure they'll be able to deal with it. So chin up, brother, I'm sure your family is doing well"
@@ -376,7 +390,7 @@ You don't really mention it to others that often, but you come from a family ofâ
 			*line_break
 			*line_break
 			With that, Sergeant $!{sergeant} swings his muscular frame around the seat of the chair and stumble onto his feet. Placing both his hands on your shoulders, he gives you one last pat before turning around, brusquely brushing aside the flap of the tent and stepping back outside.
-		*if sonia =1
+		*if chap1_kosnik_or_sonia =1
 			"I know you're worried about your family, but it's not like you can do anything about that while you're lying in bed here. My advice is, follow the doctor's orders, and the faster you get better, the faster you can contact your family and make sure all is well with them." Sonia chides, giving the impression of a mother scolding a belligerent child.
 			*line_break
 			*line_break
@@ -386,7 +400,39 @@ You don't really mention it to others that often, but you come from a family ofâ
 			Dropping the clipboard to her side, Sonia glances up and meets your eye with a reassuring smile. "Anyway, I've completed your checks. Your body's holding up pretty well so far. A few more days of quality rest, and you could even be walking out of the hospital yourself. Emphasis on the rest, got it?"
 			*line_break
 			*line_break
-			With that, Sonia turns around flits out into the corridor, leaving your room silent and empty once again.
-*goto 
+			With that, ${doctor} turns around flits out into the corridor, leaving your room silent and empty once again.
+*goto label 2_3_letter
 
 *label 2_3_letter
+*page_break
+All this talk has left you feeling nostalgic, and you can't help but to fish out your wallet. From the back compartment, you pull out a wrinkled photo - a letter your parents had given you the day you left to enlist in the MRPA.
+*line_break
+*line_break
+You unfurl it carefully, making sure not to damage the frail material. "Our dear child, we're so proud of you." The words were scrawled onto the paper with dark black ink.
+*line_break
+*line_break
+"Even though the future is uncertain for all of Morovia, we're sure that you will do a great job in the new army, and mature to become a wonderful soldier. Who knows, you might even do so well that you might end up becoming a general and leading the entire army! Imagine that! My own child leading the new Morovian army! What a sight that would be."
+*line_break
+*line_break
+*if background = 1
+	"But one day at a time child - things aren't going to be easy, but always know that you can count on us, your dear parents, if anything goes wrong. We have many friends in the new government, and even though business isn't as good as it used to be, we'll always be here supporting you."
+*if background = 2
+	"But let's not get ahead of ourselves - we are farmers, so remember the lessons of the land, and don't get to cocky. Mother earth can be generous, but she can also be brutal, so always prepare for the worst and remember that we are always supporting you!"
+*if background = 3
+	"And while we might not be well connected or rich, the spirit of a miner is strong and when the going gets tough, know that nothing can be worst than 16 hour shifts in a cramped dark shaft, breaking rock after rock to get nothing. You'll be fine. And know that we are always supporting you!"
+*line_break
+*line_break
+"Please remember to stay safe, the army is still the army, but always remember to drink a lot of water, and eat well, or as well as army rations can be. Papa and mama will be alright - we have lived a long time, and we will be able to take care of ourselves, so don't worry about us. Just focus on doing well, and know that no matter what. We are proud of you."
+*line_break
+*line_break
+"We love you. All the best!"
+*line_break
+*line_break
+You blink away the hot tears that had begun to roll down your cheeks. Your family beams back at you in the photo - it had been taken before you had left, and everyone seemed so happy. It seemed so long ago. And things were so different back then. You mouth a silent prayer before folding the photo back into your wallet and wish that you might one day see them again.
+*page_break
+*if chap1_kosnik_or_sonia = 0
+	*goto_scene chapter2_3_kosnik_route
+*if chap1_kosnik_or_sonia = 1
+	*goto_scene chapter2_4_sonia_route
+
+
