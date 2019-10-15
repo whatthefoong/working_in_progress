@@ -18,7 +18,8 @@
 *create name "nobody"
 *create rank "Commander"
 *create allegiance "MRPA"
-*create background ""
+*comment background 1 for entrepreneur, 2 for farmers/landowners.
+*create background 0
 *create dollars 100
 
 *comment key traits
@@ -240,6 +241,5 @@
 *comment save/load system
 *comment *sm_init blood_on_my_hands | 3
 *comment *sm_save 0 | false | Autosave - Startup
-
 
 *finish
